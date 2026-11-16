@@ -58,4 +58,82 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 
 ## Alternatives
 
-_Pending: the second research pass (Singapore rental, set builders, turf, other factories, cost benchmarks) is being added._
+**Headline:** nobody in Singapore or Malaysia rents a full themed 9–18-hole course. Local rental firms only have single, plain putting modules. **So a local custom build is the only route that fits six weeks without shipping risk.** That matches the hybrid recommendation.
+
+### 1. Singapore and Malaysia: who to contact this week
+
+**Set builders and prop makers (main route: get 2–3 quotes)**
+
+| Company | Why them | Contact | Confidence |
+|---|---|---|---|
+| **Props Factory (S) Pte Ltd**, Woodlands | Themed 3D props since 2000. Clients listed include Universal Studios, Resorts World Sentosa, Singapore Zoo and Changi. **Best fit for the 4 hero props.** | info@propsfactory.com.sg · [propsfactory.com.sg](https://propsfactory.com.sg) · [registry](https://recordowl.com/company/props-factory-s-pte-ltd) | Verified: company is live |
+| **Right-Space**, Defu | Builds custom booths in-house (from about S$8k per booth). Platforms, rails and graphics are their daily work. | [right-space.com.sg](https://right-space.com.sg/?p=1614) | Verified listing |
+| **Giant Carpentry** | Event carpentry: makes, transports, installs and takes down. | sales@giantcarpentry.com · 6983 5693 | **Only source is a paid press release.** Check their portfolio before relying on them. |
+| **Corzzair Sdn Bhd** (Johor, serves Singapore) | Props in foam, fibreglass, wood and acrylic; Resorts World Sentosa listed as a client. Can truck across the Causeway, so no sea freight. | [corzzair.com](https://corzzair.com/?p=11540) | Verified listing; price advantage unconfirmed |
+| **Your own production or set crew** | If the church's production team or volunteer carpenters can build the platforms, labour (the biggest cost) drops sharply. | Internal | **Ask first** |
+
+**Turf (prefer stock that's in Singapore now)**
+
+| Company | Offer | Contact |
+|---|---|---|
+| **Craftway Floral**, Katong | Putting turf sold without installation (1 × 1 m pieces, 4 mm); events listed as a use. Price on quote. **Check 4 mm is enough for a good roll. Ask for a sample and compare with GreenTurf.** | info@craftwayfloral.com.sg · [link](https://craftwayfloral.com.sg/synthetic-golf-turf/) |
+| **GreenTurf** | "ProPutt" turf system laid over carpet or hardwood. Price on quote. | enquiry@greenturf.asia · [link](https://greenturf.asia/solutions/pro-golf-turf-system/) |
+| ibuild sportscape | Design-and-install putting greens only, no turf-only sales. Probably not a fit. | [link](https://ibuild.sg/artificial-putting-green) |
+| Carousell seller ("EcoPutt", 8 mm) | About S$13.20 per metre (1 m roll), seen in a search snippet only. **Unverified.** | |
+
+**Rental (fallback, kids' holes, price floor)**
+
+| Company | Offer | Public price |
+|---|---|---|
+| **The Propz Company**, Admiralty | Single putting modules: rectangle 3.0 × 0.75 m, zig-zag 3.6 × 0.7 m, and a 2.5 × 0.8 m "putt putt" | S$200, S$200 and S$550 per module before GST, delivery extra. **All showed out of stock online, so enquire.** sales@thepropzcompany.com · 6481 5900 · [link](https://www.thepropzcompany.com/mini-golf-putt-putt) |
+| Bigtop, Woodlands | "Mini golf putting green" listed among its carnival games | No price · hello@bigtop.com.sg |
+| CarnivalGuru | Homepage says it rents customisable portable mini golf, but there's no product page | [contact](https://www.carnivalguru.com.sg/contact/) |
+| Party People SG | Lists a "Mini Golf Game" | [contact](https://partypeople.com.sg/contact-us/) |
+
+**What this tells us:** rental modules are small and plain, a long way from your references. They're useful as **extra kids' holes**, as a **backup** if one built hole fails, or as a **floor price**, not as the course itself.
+
+### 2. Chinese manufacturers (Alibaba listings only, so treat with caution)
+
+| Supplier | Offer | Listed price | Notes |
+|---|---|---|---|
+| Guangzhou Infinity Technology | 9-hole indoor commercial course | US$10,400–11,990 per set | Alibaba Verified; IAAPA listed; mainly makes VR rides. **The only one worth a "do you have ready stock + air freight?" message**, and only if reuse is real. |
+| Guangzhou Chuzhuang Info Tech | Neon "glow" course | €342–393 per "piece" (unclear) | 7 years on Alibaba, Verified |
+| Guangzhou Shuangqiang Game | Neon putting challenge | US$330–349 per set | About 1 year, not Verified. Avoid. |
+| **Kinray Industries**, Dongguan | **Accessories:** black-light (UV) cups, putters, balls | Putters US$5.50–6.50; balls US$0.26–0.29; cups minimum 20 | Exports to Southeast Asia. **Useful for the ops kit by air express.** |
+| Jiangsu Regal Grass / Zhejiang Xingu | Turf mills | US$4.22–4.91 per m² | Minimum 1,000 m², far more than we need |
+
+None of these listings state lead times. Sources: [Alibaba showroom](https://www.alibaba.com/showroom/mini-golf-course.html), [IAAPA: Guangzhou Infinity](https://iaapa.org/partners/marketplace/guangzhou-infinity-technology-co-ltd), [Kinray](https://www.made-in-china.com/showroom/kinraygolf/).
+
+### 3. International makers (benchmarks, not options for 31 Dec)
+
+| Maker | Style | Price | Asia |
+|---|---|---|---|
+| Milco (US) | 9 carpeted aluminium modules plus a cart; glow version | Quote only | Not stated |
+| Bungee Supply (US) | LED neon 9-hole course, 2 × 8 ft aluminium holes | US$11,999 with LED, US$8,999 without; 4–6 weeks to build; out of stock | Ships worldwide |
+| Castle Golf "PAR 2 GO" (US) | 9-hole modular course that fits in a box truck | Quote | Not stated |
+| Adventure Golf & Sports (US) | Modular panels; 360Golf scoring tech | "AnyWhereLinks" from US$30,305 | Not stated |
+| Mini Golf Creations (Australia) | Permanent builds | A$550k–1.85M per course | Says it works in Singapore and Malaysia |
+| Natureworks (Australia) | Sculptures; does short-term events; supplies props only | Quote | Not stated |
+
+None of them rent in Asia. Sources: [Bungee](https://bungeesupply.com/led-games/led-neon-9-hole-mini-golf-course/), [AGS](https://landscapearchitect.com/ladetails/landscape-product/putting-greens/adventure-golf-sports/anywherelinks-anywherelinks-jr), [Mini Golf Creations](https://minigolfcreations.com/mini-golf-construction-costs/), [Natureworks](https://natureworks.com.au/products/minigolf-theming/custom-mini-golf-packages/custom-designed-mini-golf-course).
+
+### 4. China-to-Singapore shipping (verified)
+- Sea freight Shenzhen to Singapore takes 5–15 days port to port for a part-container load, or 8–20 days door to door. Customs clearance takes 1–3 days. ([JCtrans](https://m.jctrans.com/en/news/13122/), [Goodhope](https://goodhopefreight.com/info/freight/chinatosingapore.html))
+- Singapore needs an **import permit before arrival**, and **GST is payable on import**. ([Singapore Customs](https://www.customs.gov.sg/businesses/importing-goods/import-procedures))
+- Add 3–5 weeks of production for anything custom, which comes to **6–8 weeks in total. That misses 28 Dec** unless the order is placed this week, from ready stock, by air.
+
+## Recommendation
+
+1. **Build locally.** Ask **Props Factory** to quote the 4 hero props, and **Right-Space and/or Giant Carpentry** (check their portfolio) to quote the platforms, rails and LED. Get **Corzzair** as a Johor comparison. Ask your **own production crew** first.
+2. **Turf:** get samples from **Craftway** and **GreenTurf** this week and pick on roll quality and fire certificate.
+3. **Accessories:** UV cups, putters and balls from Kinray by air express, or buy locally.
+4. **Fallback:** ask Propz and Bigtop about availability on 31 Dec for 2–4 rental modules (extra kids' holes or backup).
+5. **Factories:** one "ready stock?" message to Guangzhou Infinity *only if* reuse is likely. Park Huadong for a possible permanent outdoor course later.
+
+All quote requests: `06-rfq-templates.md`. Log every reply below.
+
+## Quote log
+
+| Date | Supplier | For | Price | Dates offered | Notes |
+|---|---|---|---|---|---|
+| | | | | | |

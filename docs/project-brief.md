@@ -96,6 +96,10 @@ Most Alibaba listings called "mini golf course" are home putting mats. Useful se
 | Greenspan Projects brochure | Indoor 9-hole course needs about 185–240 m² | https://cdn.asp.events/CLIENT_DMG_Even_3A648F5C_9502_5004_99E8F7AED794D022/sites/SEA-2023-Arabic/media/libraries/brochures/12749-Greenspan-Projects-Adventure-Golf-Brochure-2023.pdf |
 | ROLLER blog | Indoor 18-hole course about 5,000–10,000 sq ft; indoor 9-hole about 1,500–7,000 sq ft | https://www.roller.software/blog/cost-to-build-a-miniature-golf-course |
 
+## Later research (16 Nov 2026, Claude Code)
+
+Huadong Play evaluation, Singapore suppliers, other factories and cost benchmarks: see `04-sourcing.md` and `08-budget-model.md`. Planning logic: `01-how-to-think-about-this.md`.
+
 ## Ideas
 
 Number the holes 10 down to 1, so finishing the course mirrors the midnight countdown, with hole 1 nearest the stage. The reference image's set pieces map well onto ten holes: windmill, barn tunnel, water wheel, curved path, plus simpler bank shots and ramps to keep build costs down.
