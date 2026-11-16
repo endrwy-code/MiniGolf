@@ -19,10 +19,12 @@ A 10-hole indoor mini golf course for the HOGC countdown party on 31 December 20
 
 These came from Claude's research in claude.ai. Treat them as proposals until the team confirms.
 
-- Hybrid build: buy only the turf (local or overseas, whichever guarantees delivery by mid-December); a local carpenter or set builder makes bases, borders and obstacles from plywood or hard-coated foam.
-- Put the course in one half of the auditorium (Zone A or B) and keep the other half for the party.
-- Number the holes 10 down to 1 to mirror the countdown, with hole 1 nearest the stage.
-- Look and feel from `reference/inspiration-backyard-minigolf.jpg` (windmill, red barn tunnel, water wheel, timber edging), translated into an indoor modular build.
+- Hybrid build: buy only the turf (prefer local stock; import only if delivery by about 4 Dec is guaranteed in writing); a local set builder makes bases, borders and obstacles from plywood or hard-coated foam. See `docs/04-sourcing.md`.
+- Art direction "Neon Countdown": dark turf, LED strip hidden under rail caps, UV paint, big 10→1 number totems. The backyard set pieces (windmill, barn) are rebuilt as glow props. Alternative: "Bright Carnival". Deciding question: how lit is the room during golf? See `docs/02-reference-decoder.md`.
+- Linear one-way layout in Zone A: queue at the booth end, holes 10→1 toward the stage, exit into the party. See `floorplan/layout-draft-zone-a.png`.
+- 10 holes in the mix 4 hero (8 Windmill, 4 Barn, 2 Clock, 1 Midnight) · 4 mid · 2 simple; about 72 m² net turf, order about 85 m². See `docs/03-hole-spec-sheet.md`.
+- Ops: 5-stroke cap, hole 1 keeps the ball, about 7–9 volunteers per shift. See `docs/07-operations-and-safety.md`.
+- Huadong Play: not suitable for this event (outdoor landscape and playground products; no indoor or modular course shown). Revisit only if a reusable course is wanted for 2027.
 
 ## Key numbers
 
@@ -37,22 +39,31 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Central strip | ≈ 23.7 × 2.4 m | Estimated |
 | Stage zone depth | ≈ 6 m | Estimated |
 | Floor area for 10 holes | ≈ 200–270 m² | Rule of thumb |
-| Turf for 10 holes | ≈ 60–80 m² | Estimate until holes are designed |
+| Turf for 10 holes | ≈ 72 m² net; order ≈ 85 m² | From spec sheet v1 (design target) |
+| Course footprint incl. walkway and queue | ≈ 46 × 11.4 m (Zone A) | Draft layout v1 |
+| Throughput | ≈ 100–120 players/hour at 2–2.5 min per hole | Estimate; time it at the dry run |
 | Players on course at once | ≈ 40 (one group of 4 per hole) | Estimate |
 
 Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json`. Picture: `floorplan/auditorium-simplified.png`.
 
-## Timeline (working back from 31 Dec 2026)
+## Timeline (gates; full detail in `docs/05-timeline-and-critical-path.md`)
 
-- Week of 16 Nov: lock the 10 hole designs and sizes, get turf quotes (one local, one overseas with air freight), book a builder, confirm the load-in window.
-- Late Nov to mid-Dec: build and paint bases, borders and obstacles.
-- Mid-Dec: turf arrives; fit turf, cut cups, test-play every hole.
-- 21 Dec: everything finished (buffer week).
-- From about 26 Dec (if Christmas services use the auditorium): load in, set up, test.
+- G0 Fri 20 Nov: budget ceiling, crowd estimate, reuse yes or no, install window confirmed.
+- G1 Wed 25 Nov: art direction and hole list frozen; builder chosen from at least 2 quotes; turf ordered; rental fallback quote in hand.
+- G2 Fri 4 Dec: prototype hole built and test-played. Turf in hand by about 7 Dec.
+- G3 Fri 18 Dec: all 10 holes built; full dry-run assembly; timed play-test.
+- G4 Wed 23 Dec: totems, kit and transport ready.
+- G5 Wed 30 Dec, 6 pm: installed, test-played, venue safety walk passed. If weekend services use the auditorium on 26–27 Dec, install is only Mon 28 to Wed 30 Dec.
 - 31 Dec: event.
 
 ## Open questions
 
+- Budget ceiling? (biggest gap)
+- Reuse after 31 Dec: yes, no or maybe? (decides build versus buy)
+- How lit is the auditorium while golf runs? (decides the art direction)
+- Hours golf runs, and when it closes before midnight?
+- Are the dark blocks along the top wall doors or exits? (the draft walkway runs there)
+- Is there a workshop or spare hall for a dry-run assembly in mid-December?
 - Load-in window around Christmas services?
 - Where will floor cables run on the night: along the walls, or under raised hole bases?
 - Ceiling height, door and load-in route widths, floor finish.
@@ -69,10 +80,13 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json`. Picture: `f
 
 ## Next tasks
 
-1. A to-scale spec sheet for the 10 holes: footprint, lane width, obstacles, turf m² per hole, materials, build notes. One document both the builder and turf suppliers can use.
-2. A layout of the 10 holes in Zone A or B that avoids cable runs and leaves room to walk and queue.
-3. When the team adds the 3D model: place the holes to scale and generate a preview.
-4. A request-for-quote message for turf suppliers (local and overseas).
+Done 16 Nov: spec sheet v1, draft layout v1, quote-request templates, planning guide, timeline, ops plan.
+
+1. Team answers the G0 questions; record the answers in the decision log.
+2. Send the quote requests (`docs/06-rfq-templates.md`) and log the replies in `docs/04-sourcing.md`.
+3. Fill in `docs/08-budget-model.md` with real quotes.
+4. Revise the layout once the vertical cable drops, exits and the party zone are confirmed (`tools/make_layout_svg.py`).
+5. When the team adds the 3D model: place the holes to scale and generate a preview.
 
 ## Working rules
 
@@ -98,6 +112,18 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json`. Picture: `f
 
 ## Files
 
+- `README.md`: reading order and status.
+- `docs/01-how-to-think-about-this.md`: constraints, truths, decision order, supplier scoring.
+- `docs/02-reference-decoder.md`: what each reference is and what to copy.
+- `docs/03-hole-spec-sheet.md`: build standard and the 10 holes.
+- `docs/04-sourcing.md`: Huadong evaluation, alternatives, recommendation.
+- `docs/05-timeline-and-critical-path.md`: gates and the week-by-week plan.
+- `docs/06-rfq-templates.md`: quote requests for builders, turf, rental and factories.
+- `docs/07-operations-and-safety.md`: throughput, staffing, kit and safety checklist.
+- `docs/08-budget-model.md`: cost structure.
+- `floorplan/layout-draft-zone-a.svg` and `.png`: draft layout, generated by `tools/make_layout_svg.py`.
+- `reference/user-refs/`, `reference/video-frames/`: the team's inspiration photos and stills from the Walker Art Center video.
+- `reference/supplier-evidence/`: what suppliers actually show (e.g. Huadong's product images).
 - `docs/project-brief.md`: full context, label key, research with links, quality checklist, decision log.
 - `floorplan/auditorium-simplified.svg` and `.png`: simplified plan with dimensions.
 - `floorplan/auditorium-dimensions.json`: zones, measurements, cable runs and power flags in metres.
