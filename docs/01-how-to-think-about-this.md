@@ -70,6 +70,8 @@ So a full factory order is only realistic if the supplier has **ready-made stock
 
 ### Truth 4: The real fork is reuse.
 
+> **Resolved 17 Nov:** one night only, movable, no reuse. So: build locally, and spend on the look and the flow. See `08-budget-model.md`.
+
 | If the course is… | Then… |
 |---|---|
 | **Truly one night** | Build locally (hybrid): buy turf, and a local set builder makes everything else. Spend on the look and the flow. |

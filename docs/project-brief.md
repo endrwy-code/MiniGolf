@@ -113,3 +113,4 @@ Add a dated row whenever something is decided, and update the "Decided" section 
 | 2026-11-16 | Course is for a one-off event | Team |
 | 2026-11-16 | Event is the countdown party on 31 Dec 2026 | Team |
 | 2026-11-16 | 10 holes | Team |
+| 2026-11-17 | One night only: temporary, movable set-up; no permanent install; no reuse planned | Team |

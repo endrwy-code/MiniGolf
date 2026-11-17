@@ -17,7 +17,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Reference decoder](docs/02-reference-decoder.md) | What each inspiration photo really is, and what to copy |
 | [10-hole spec sheet](docs/03-hole-spec-sheet.md) | Build standard plus the 10 holes, for the builder and turf supplier |
 | [Draft layout](floorplan/layout-draft-zone-a.png) | 10 holes in Zone A, played 10 → 1 toward the stage |
-| [Budget model](docs/08-budget-model.md) | Cost structure and what to get quotes for |
+| [Scale and budget](docs/08-budget-model.md) | Movable formats, quantities, person-days, four cost scenarios, levers |
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies and factories |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
 | [Project brief](docs/project-brief.md) | Original context, floorplan decode, earlier research and the **decision log** |
@@ -25,12 +25,12 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 
 ## Status (16 Nov 2026)
 
-**Decided:** one-off event · 31 Dec 2026 · 10 holes.
+**Decided:** one night only · 31 Dec 2026 · 10 holes · temporary, movable set-up (no permanent install, no reuse).
 
 **Needed by Fri 20 Nov (Gate 0):**
 - [ ] Budget ceiling
 - [ ] Expected crowd, and the hours golf runs
-- [ ] Reuse after 31 Dec: yes, no or maybe?
+- [ ] Who builds: church crew, split, or outsourced?
 - [ ] Install window confirmed (are 26–27 Dec used for services?)
 
 **Recommended, not decided:** hybrid local build · Neon Countdown art direction · Zone A linear layout · 4 hero holes (8, 4, 2, 1).

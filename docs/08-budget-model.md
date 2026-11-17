@@ -1,64 +1,142 @@
-# Budget model
+# Scale and budget (one night, movable)
 
-**Purpose:** help the team set a **budget ceiling this week** (Gate 0), before any quotes come back. Every figure here is an **estimate** unless a source is linked. **Replace each line with a real quote** as it arrives, and log it in `04-sourcing.md`.
+**Decided 17 Nov 2026:** one night only. Movable and temporary; nothing permanent; no reuse planned.
 
-US$ converted at about S$1.30. Check the current rate.
+Every figure here is an **estimate** unless a source is linked. Replace lines with real quotes as they arrive, and log them in `04-sourcing.md`. US$ converted at about S$1.30.
 
-## What drives the cost
+---
 
-1. **Labour for platforms and props.** By far the biggest line. Whether the church's own production or volunteer crew can build changes the total more than anything else.
-2. **The number and ambition of hero holes.** A hero prop can cost as much as three simple holes.
-3. **Logistics:** transport, install crew over 28–30 Dec, removal and storage or disposal.
-4. Turf, LED and kit are comparatively small.
+## 1. What "movable" can mean: three formats
 
-## Three budget bands (estimates for setting a ceiling)
+| Format | How it works | Install | Plays | Looks | Cost |
+|---|---|---|---|---|---|
+| **A. Flat-pack platforms (recommended)** | Low plywood decks (about **75 mm** high) in panels two people can carry, bolted together on site; rails, turf and LED pre-fitted; props sit on top | 1.5–2 days, 6 people | Good: real sunk cups, true roll | Custom, like the references | Medium |
+| B. Roll-in units | Each hole built as 1–3 big sections on hidden castors; wheel in, lock, plug in | Half a day | Good | Same as A | A + about 10–15% (castors, stiffer frames); needs doors ≥ 1.3 m, a ramp or lift, and storage space |
+| C. Floor-laid | Turf laid on the floor; freestanding weighted rails; raised "volcano" cups | 1 day | OK (cups sit on the surface, the roll is less true) | Carnival-game | Low |
 
-| Line | Lean | Target | Showpiece | Notes |
-|---|---|---|---|---|
-| 10 hole platforms and rails, built | 8,000 | 15,000 | 25,000 | About S$800 / 1,500 / 2,500 per hole. Estimate. |
-| 4 hero props (windmill, barn, clock, 2027 arch) | 4,000 | 12,000 | 24,000 | About S$1,000 / 3,000 / 6,000 each. Estimate. |
-| Turf, about 85 m² | 2,100 | 3,400 | 4,300 | S$25 / 40 / 50 per m². Benchmark: factory putting turf US$20.60–40 per m² ([brief](project-brief.md)). |
-| LED strip, power supplies, UV floods | 1,300 | 2,500 | 4,000 | About 150 m of strip. Estimate. |
-| Totems and graphics | 800 | 1,500 | 3,000 | 10 printed totems, plus wraps on the hero holes |
-| Ops kit: putters, balls, cups, bins | 1,000 | 1,500 | 2,000 | Benchmark: putters US$5.50–6.50, balls US$0.26–0.29 at factory price ([Kinray](https://www.made-in-china.com/showroom/kinraygolf/)) |
-| Transport, install, removal | 2,000 | 4,000 | 6,000 | Estimate; depends on crew and the install window |
-| **Subtotal** | **19,200** | **39,900** | **68,300** | |
-| Contingency 15% | 2,900 | 6,000 | 10,200 | Keep it. Something always breaks. |
-| **Total (S$)** | **≈ 22,000** | **≈ 46,000** | **≈ 79,000** | |
+**Why 75 mm instead of the 120 mm in spec v1:** for one night, a lower deck means less timber, lighter panels and a smaller trip edge. A sunk cup still fits: the ball is 43 mm, so a cup about 60 mm deep works. **The trade-off:** cables can't run under the holes, so production routes floor cables around the course. Choose B only if the install window shrinks to hours, or if the floor must be cleared before midnight.
 
-**How to read this:** it's not a quote. It tells you which *size* of conversation to have. If the ceiling is about S$10k, the plan changes: fewer hero holes, the church crew builds, and maybe 6–8 holes. If it's S$40–50k, the plan as written is realistic.
+---
 
-## Reality checks from the research
+## 2. The scale of the whole project
 
-| Benchmark | Figure | Source |
+| Measure | Amount | Notes |
 |---|---|---|
-| Singapore rental: one plain putting module | S$200–550 before GST, delivery extra | [The Propz Company](https://www.thepropzcompany.com/mini-golf-putt-putt) |
-| 9-hole portable rental abroad | A$990 for 3 hours (Perth); C$3,899 for 18 holes (Toronto) | [Perth](https://www.perthbouncycastlehire.com.au/jumping-castle-choice/blue-mobile-mini-golf-hire-9-hole/), [Toronto](https://abbeyroadentertainment.com/rentals-and-services/portable-mini-golf-course-18-holes) |
-| Imported 9-hole indoor set (China, Alibaba) | US$10,400–11,990 (≈ S$13.5–15.5k) **plus** freight, GST, theming and install | [Guangzhou Infinity](https://iaapa.org/partners/marketplace/guangzhou-infinity-technology-co-ltd) |
-| US LED neon 9-hole set | US$11,999 (≈ S$15.6k) plus shipping; out of stock | [Bungee Supply](https://bungeesupply.com/led-games/led-neon-9-hole-mini-golf-course/) |
-| US modular commercial | From US$30,305 (≈ S$39k) | [AGS AnyWhereLinks](https://landscapearchitect.com/ladetails/landscape-product/putting-greens/adventure-golf-sports/anywherelinks-anywherelinks-jr) |
-| Permanent themed course | A$550k–1.85M | [Mini Golf Creations](https://minigolfcreations.com/mini-golf-construction-costs/) |
-| Tech venue (Puttshack-style) | About US$12M per venue | [ICSC, Apr 2022](https://icsc.com/news-and-views/icsc-exchange/the-hottest-new-experiential-retail-category) |
+| Floor used | ≈ 46 × 11.4 m (≈ 520 m²) including walkway and queue; holes themselves ≈ 300 m² | Zone A, draft layout v1 |
+| Plywood (18 mm, 2.44 × 1.22 m sheets) | **≈ 70 sheets** | About 33 for decks, 14 for rails, 25 for props and features |
+| Timber battens | ≈ 360 m | Under the decks |
+| Rails | ≈ 140 m of border | Around 10 holes |
+| Turf | ≈ 72 m² net, order ≈ 85 m² | Spec sheet v1 |
+| LED strip | ≈ 150 m, plus about 10 power supplies | Hidden under the rail caps |
+| Big props | 4 (windmill, barn, clock, 2027 arch) | Plus 4 smaller features: pin field, tunnel wall, ramp, bridge |
+| Total weight | **≈ 3 tonnes** | |
+| Transport | 1–2 lorry loads (24-ft) each way | About 25–30 m³, mostly the props |
+| Work | **≈ 120 person-days** (≈ 900 hours for a professional crew; plan 1,200–1,400 hours if volunteers) | Breakdown below |
+| Crew during the build | ≈ 5 people full-time for about 4 weeks | 30 Nov to 18 Dec |
+| Crew on the night | 7–9 volunteers per shift | `07-operations-and-safety.md` |
 
-**What this tells you:** a generic imported 9-hole neon set *looks* cheap, at about S$15k. But you'd still pay freight, GST and install, it wouldn't be themed, and it **probably can't arrive in time**. The local build costs about the same at the Lean-to-Target level, is fully custom and can be test-played before the night.
+**For comparison**, this is roughly the work of building **2–3 trade-show booths**, or a small stage set. Local booth builders start at about S$8k per booth ([Right-Space](https://right-space.com.sg/?p=1614)).
 
-## Cost per player (a useful way to explain it)
+### Where the 120 person-days go
 
-At about 110 players an hour over 3 hours, about 330 people play:
+| Task | Person-days |
+|---|---|
+| Design and drawings | 4 |
+| 2 simple holes (about 3 each) | 6 |
+| 4 mid holes (about 5 each) | 20 |
+| 4 hero platforms (about 3 each) | 12 |
+| 4 hero props (windmill 10, 2027 arch 8, barn 8, clock 6) | 32 |
+| Painting and finishing | 10 |
+| LED fitting and testing | 7 |
+| Dry-run assembly and play-test | 8 |
+| Install (6 people × 2 days) | 12 |
+| Removal (6 people × 1 day) | 6 |
+| **Total** | **117** |
+
+**The props are almost a third of the work.** That's the main lever on cost (section 5).
+
+---
+
+## 3. The scale of each build
+
+| Class | Holes | Footprint | Deck panels | Rail | Weight per hole | Effort | Materials per hole |
+|---|---|---|---|---|---|---|---|
+| **Simple** | 10, 9 | 5.0 × 1.2–2.4 m | 2–3 | 12–15 m | ≈ 120 kg | ≈ 3 person-days | S$500–900 |
+| **Mid** | 7, 6, 5, 3 | 5–6 × 1.2–2.4 m | 3–5 | 13–16 m | ≈ 150–250 kg | ≈ 5 person-days | S$800–1,600 |
+| **Hero** | 8, 4, 2, 1 | 5–6 × 1.2–3.0 m, plus a prop | 3–5, plus a prop in 2–4 pieces | 13–15 m | ≈ 250–400 kg | ≈ 11 person-days | S$1,500–3,500 |
+
+**Hero prop sizes (design targets):**
+- **Windmill:** about 2.2 m tall; sails about 1.8 m across; base about 1.2 × 1.2 m with a ball tunnel about 200 mm wide.
+- **Barn:** about 1.2 m wide × 1.0 m deep × 1.3 m tall, with a tunnel.
+- **Clock:** a round green 3.0 m across, printed as a clock face; hands about 1.2 m and 0.9 m long act as fixed bumpers.
+- **2027 arch:** about 2.4 m wide × 2.2 m tall, flat-packed and lit.
+
+**Every piece must break down to fit through the load-in doors** (measure them) and be carried by two people (≤ 35–40 kg).
+
+---
+
+## 4. Cost: four ways to build it
+
+### Materials (the same in every build route)
+
+| Line | Low (S$) | High (S$) | Basis |
+|---|---|---|---|
+| Plywood, about 72 sheets | 3,200 | 5,400 | S$45–75 per sheet (estimate). No Singapore list price found; a Malaysian listing shows RM118 for an 18 mm 4×8 sheet, so Singapore will be higher. Get a quote from a timber merchant. |
+| Battens, feet, bolts, screws, glue | 1,000 | 2,000 | Estimate |
+| Paint, primer, UV paint | 600 | 1,200 | Estimate |
+| Turf, 85 m² | 1,700 | 4,300 | S$20–50 per m². Benchmark: factory putting turf US$20.60–40 per m² ([brief](project-brief.md)) |
+| LED strip, power supplies, wiring | 1,200 | 2,900 | 24V COB strip in Singapore: about S$3–6 per m (budget), S$11 per m (dimmable kit), S$34 per m (trade) ([Carousell](https://www.carousell.sg/led-strip-light/q/), [Desertcart](https://www.desertcart.sg/products/815400683-cob-led-strip-light-24v-16-4ft-touch-dimmable-led.md), [RS](https://sg.rs-online.com/web/p/led-strip-lights/2070825)) |
+| UV floods | 400 | 1,200 | **Free if production lends them** |
+| Prop extras (foam, PVC pipe, acrylic, motor) | 800 | 2,000 | Estimate |
+| Totems and graphic wraps | 1,100 | 3,000 | Estimate |
+| Putters, balls, cups | 700 | 1,700 | Factory benchmark: putters US$5.50–6.50, balls US$0.26–0.29 ([Kinray](https://www.made-in-china.com/showroom/kinraygolf/)) |
+| Transport, about 4 lorry trips | 600 | 1,400 | Estimate |
+| Disposal after the event | 300 | 800 | Skip bin, or donate the holes |
+| **Materials total** | **≈ 11,600** | **≈ 25,800** | |
+
+### Labour assumption
+A carpenter in Singapore earns about **S$150–250 a day** ([pricing guide via search](https://dojobusiness.com/blogs/news/carpenter-project-pricing); an events-company job posting at S$3,800–5,500 a month ([foundit](https://www.foundit.sg/job/carpenter-gravity-events-pte-ltd-singapore-36222598))). A company **bills** more than the wage to cover overheads and margin, so this model uses **S$250–400 per person-day**. That's an estimate.
+
+### The four scenarios (including 15% contingency)
+
+| Scenario | Who builds | Cash cost (S$) | Midpoint | Risk |
+|---|---|---|---|---|
+| **1. Church crew builds everything** | Volunteers or production team; buy tools | **≈ 14k–31k** | ≈ 20k | Needs about **1,200+ volunteer hours in December**, the busiest month for church production |
+| **2. Split (recommended to explore)** | A prop shop builds the 4 hero props; a paid lead carpenter (about 20 days) leads volunteers on the platforms | **≈ 30k–56k** | ≈ 40k | Balanced: the showpieces are done by professionals; volunteers do repetitive work under a lead |
+| **3. Fully outsourced** | A set builder does everything, including install and removal | **≈ 50k–91k** | ≈ 65k | Lowest effort for the team; depends on one supplier's December capacity |
+| **4. Floor-laid, minimal props** | Volunteers | **≈ 6k–12k** | ≈ 9k | Cheapest. Looks and plays like a carnival game, not your references |
+
+**For reference:** renting 10 plain putting modules locally costs about S$2k–5.5k plus delivery ([Propz](https://www.thepropzcompany.com/mini-golf-putt-putt): S$200–550 per module before GST; showing out of stock online).
+
+### Why the ranges are wide, and how to narrow them
+Two unknowns drive most of the range: **who builds** and **how ambitious the 4 hero props are**. Settle those two and the estimate should narrow to about ±20%. The quotes from Props Factory and one set builder will settle both.
+
+### Cost per player
+At about 110 players an hour over 3 hours, about **330 people play**:
 
 | Total | Cost per player |
 |---|---|
-| S$22k | ≈ S$67 |
-| S$46k | ≈ S$140 |
-| S$79k | ≈ S$239 |
+| S$9k (floor-laid) | ≈ S$27 |
+| S$20k (church crew) | ≈ S$61 |
+| S$40k (split) | ≈ S$121 |
+| S$65k (outsourced) | ≈ S$197 |
 
-If the course is **reused** (youth events, camps, next year), divide by the total players across all uses. That's the strongest argument for screwing parts together rather than gluing them, and for storing the course afterwards.
+---
 
-## Ways to cut cost without looking cheap
+## 5. Levers: spend less without looking cheap
 
-- **The church crew builds the platforms; professionals build only the 4 hero props.**
-- Fewer hero holes (2 instead of 4): put the money into the clock (2) and the midnight finale (1).
-- Use painted surfaces instead of turf on some areas (the Walker course does this). It's cheaper and more graphic.
-- Make one platform module design and repeat it, so the cutting is faster.
-- Get putters and balls from a factory by air express instead of buying them retail.
-- Sell or donate the course afterwards, or plan to reuse it.
+| Lever | Saves (estimate) | Cost to the experience |
+|---|---|---|
+| **2 hero props instead of 4** (keep the clock and the 2027 arch) | ≈ 16 person-days plus S$1–3k of materials. Outsourced, that's ≈ S$6–9k | Small, if the two you keep are great |
+| Straight and L-shaped lanes only (no curves) | ≈ 15–20% of the platform labour | Small; the Walker course is mostly straight lines |
+| Painted surfaces instead of turf on accents | Some turf, and graphic impact goes **up** | None |
+| Borrow UV floods and spare LED from production | S$0.4–1.2k | None |
+| Static windmill instead of a motorised one | A motor, plus a failure risk | Small |
+| Factory putters and balls by air express | S$0.5–1k against retail | None |
+| Donate or sell the holes afterwards | Disposal cost, plus a little back | None |
+
+## 6. Ballpark to set the ceiling
+
+> **For a 10-hole, movable, one-night course that looks like your references: plan around S$35–45k (the split route).** It could be done for about S$20k if the church crew has capacity in December, and S$9k gets a basic floor-laid version. Professional end to end, plan on S$60k+.
+
+These are estimates to frame Gate 0. They're not quotes.

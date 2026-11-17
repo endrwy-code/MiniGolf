@@ -8,12 +8,12 @@ Play order runs **10 down to 1** (the countdown). Hole 1 is the finale, nearest 
 
 | Item | Spec | Why |
 |---|---|---|
-| Base | 18 mm plywood deck on timber battens (≤ 400 mm apart), on rubber levelling feet. Playing surface about **120 mm** above the floor. | Room for the cup depth and for cables underneath. Nothing gets screwed into the venue floor. |
+| Base | 18 mm plywood deck on 45 mm timber battens (≤ 400 mm apart), on rubber levelling pads. Playing surface about **75 mm** above the floor (revised 17 Nov from 120 mm: one night and movable). | Enough depth for a sunk cup, less timber, lighter panels and a lower trip edge. Floor cables are routed around the course, not under it. Nothing gets screwed into the venue floor. |
 | Modules | Each panel ≤ 2.44 × 1.22 m (one plywood sheet) and ≤ 35 kg. Bolted together with alignment dowels. Every panel labelled (e.g. `H7-B`). | Two people carry each panel, panels fit through doors, and set-up is fast and repeatable. |
 | Level | ≤ 3 mm deviation over 2 m. Check with a level **and** a roll test with a ball. | A tilted lane is the most common reason a hole plays badly. |
 | Rails (borders) | 100 mm above the playing surface, solid inner face, 45 mm thick. Cap rail about 70 mm wide with a **30–40 mm outside overhang** to hide the LED strip. Rounded corners. | Consistent rebound, a hidden LED glow and no sharp edges. |
 | Playing surface | Short-pile putting turf (10–15 mm) or dense needle-punch carpet. Fix it with removable carpet tape or contact adhesive on the deck, not the floor. | Smooth, predictable roll. |
-| Cup | 108 mm diameter (standard golf hole), ≥ 90 mm deep, with a light ring or contrasting collar. | Readable in a dark room. |
+| Cup | 108 mm diameter (standard golf hole), about 60 mm deep (the ball is 43 mm), bottom about 10 mm above the floor, with a light ring or contrasting collar. | Fits the 75 mm deck and is readable in a dark room. |
 | Tee | 300 × 300 mm rubber tee mat, or a painted circle, at the walkway end. | Clear start point. |
 | Platform edges | Contrasting colour and LED glow on every exposed edge. A 1:4 bevel ramp at the tee entry. | Trip safety in low light. |
 | Ball containment | 300 mm clear acrylic or mesh guard on any ramp or raised tier. | Keeps balls off the walkway and out of the crowd. |
