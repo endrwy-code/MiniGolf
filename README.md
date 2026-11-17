@@ -17,6 +17,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Reference decoder](docs/02-reference-decoder.md) | What each inspiration photo really is, and what to copy |
 | [10-hole spec sheet](docs/03-hole-spec-sheet.md) | Build standard plus the 10 holes, for the builder and turf supplier |
 | [Draft layout](floorplan/layout-draft-zone-a.png) | 10 holes in Zone A, played 10 → 1 toward the stage |
+| **Concept renders** | What the course looks like: [holes, Neon](concepts/holes-neon.png) · [course, Neon](concepts/course-neon.png) · [holes, Carnival](concepts/holes-carnival.png) · [course, Carnival](concepts/course-carnival.png) |
 | [Scale and budget](docs/08-budget-model.md) | Movable formats, quantities, person-days, four cost scenarios, levers |
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies and factories |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
@@ -41,7 +42,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 docs/          planning documents (numbered in reading order)
 floorplan/     auditorium plan, dimensions JSON, draft layout, source screenshots
 reference/     inspiration photos and video stills
-tools/         make_layout_svg.py: regenerates the layout from the dimensions JSON
+concepts/      isometric concept renders of the holes and the whole course (two art directions)
+tools/         make_layout_svg.py (layout) · make_concepts.py (concept renders)
 ```
 
 Regenerate the layout after editing the dimensions or hole plan:
