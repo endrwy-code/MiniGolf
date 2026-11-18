@@ -7,7 +7,7 @@ Researched 16 Nov 2026. Prices and claims change, so re-check before relying on 
 | Route | Verdict for 31 Dec |
 |---|---|
 | **Hybrid local build** (buy turf; a Singapore set builder makes holes and props) | **Recommended.** It's the only route that gives a custom look, fits the date and lets us test-play before the night. |
-| **Rent a portable course** | **Get a quote this week as a price ceiling and fallback.** Less custom, but lowest risk. |
+| **Rent a portable course** | **A full course can't be rented locally; only single carnival putting lanes.** Get one quote as a price floor and fallback, and ask builders for a hire-basis price. Details: `09-rental-options.md`. |
 | **Huadong Play** | **Credible manufacturer, wrong product for this job.** Revisit only if HOGC wants a permanent outdoor course later. |
 | **Other factory order (China or international)** | **Only with ready-made stock shipping within days**, and only if the course will be reused. Otherwise it's a 2027 decision. |
 
@@ -88,9 +88,11 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 | **The Propz Company**, Admiralty | Single putting modules: rectangle 3.0 × 0.75 m, zig-zag 3.6 × 0.7 m, and a 2.5 × 0.8 m "putt putt" | S$200, S$200 and S$550 per module before GST, delivery extra. **All showed out of stock online, so enquire.** sales@thepropzcompany.com · 6481 5900 · [link](https://www.thepropzcompany.com/mini-golf-putt-putt) |
 | Bigtop, Woodlands | "Mini golf putting green" listed among its carnival games | No price · hello@bigtop.com.sg |
 | CarnivalGuru | Homepage says it rents customisable portable mini golf, but there's no product page | [contact](https://www.carnivalguru.com.sg/contact/) |
-| Party People SG | Lists a "Mini Golf Game" | [contact](https://partypeople.com.sg/contact-us/) |
+| Party People SG | Lists a "Mini Golf Game" (0.8 × 2 m), a zig-zag and a "premium golf game" | [contact](https://partypeople.com.sg/contact-us/) |
+| The Carnival Fair | Zig Zag golf game (0.5–0.8 × 1.5–2 m; its two pages disagree) | Priced by guests and hours · [link](https://www.thecarnivalfair.com.sg/products/zig-zag-golf-game-rental) |
+| Funco | Carnival games with "branding options, themed panels, or custom colour schemes upon request"; no golf item confirmed | [link](https://www.funco.com.sg/carnival-games) |
 
-**What this tells us:** rental modules are small and plain, a long way from your references. They're useful as **extra kids' holes**, as a **backup** if one built hole fails, or as a **floor price**, not as the course itself.
+**What this tells us:** rental modules are small and plain, a long way from your references. They're useful as **extra kids' holes**, as a **backup** if one built hole fails, or as a **floor price**, not as the course itself. Full rental check (quality, customisation, how to book, hire-basis builds, renting stage decks as bases): `09-rental-options.md`.
 
 ### 2. Chinese manufacturers (Alibaba listings only, so treat with caution)
 
@@ -127,7 +129,7 @@ None of them rent in Asia. Sources: [Bungee](https://bungeesupply.com/led-games/
 1. **Build locally.** Ask **Props Factory** to quote the 4 hero props, and **Right-Space and/or Giant Carpentry** (check their portfolio) to quote the platforms, rails and LED. Get **Corzzair** as a Johor comparison. Ask your **own production crew** first.
 2. **Turf:** get samples from **Craftway** and **GreenTurf** this week and pick on roll quality and fire certificate.
 3. **Accessories:** UV cups, putters and balls from Kinray by air express, or buy locally.
-4. **Fallback:** ask Propz and Bigtop about availability on 31 Dec for 2–4 rental modules (extra kids' holes or backup).
+4. **Fallback:** ask Propz, The Carnival Fair, Bigtop, Party People and CarnivalGuru about availability on 31 Dec for 2–4 rental lanes (extra kids' holes or backup). Ask every builder for a **hire-basis** price too (`09-rental-options.md`).
 5. **Factories:** one "ready stock?" message to Guangzhou Infinity *only if* reuse is likely. Park Huadong for a possible permanent outdoor course later.
 
 All quote requests: `06-rfq-templates.md`. Log every reply below.

@@ -17,7 +17,7 @@ The questions are designed to **test** suppliers as well as get prices. A suppli
 > We're [Church/Team] in Singapore and are planning a 10-hole indoor mini golf course for a one-off event on 31 Dec 2026, set up inside an auditorium. We'd like a quote to build it.
 >
 > **Scope** (draft spec attached):
-> - 10 modular holes on raised plywood platforms (about 120 mm high), each made of panels two people can carry, bolted together, on rubber feet (nothing fixed to the venue floor)
+> - 10 modular holes on low plywood platforms (about 75 mm high), each made of panels two people can carry, bolted together, on rubber feet (nothing fixed to the venue floor)
 > - Timber or plywood rails (100 mm), with a cap overhang hiding LED strip (low voltage)
 > - Turf fitting (we can supply the turf, or you can; please price both)
 > - 4 hero props: windmill, barn tunnel, giant clock green, and a "2027" arch
@@ -32,7 +32,8 @@ The questions are designed to **test** suppliers as well as get prices. A suppli
 > 4. Photos of 2–3 similar builds you've done (events, exhibitions, props), and one client we can speak to.
 > 5. Fire-rating certificates you can provide for paints, vinyl and any foam.
 > 6. A price for storage after the event, and what happens to the materials if we don't keep them.
-> 7. Payment terms.
+> 7. **Please also price it on a hire basis:** you build, install and remove the course, and keep all the materials afterwards. It's a one-night event and we don't plan to reuse it. What is the difference from the buy price?
+> 8. Payment terms.
 >
 > We're deciding by **Wed 25 Nov**.
 >
@@ -69,13 +70,15 @@ The questions are designed to **test** suppliers as well as get prices. A suppli
 >
 > Hi [Name],
 >
-> Do you have a portable mini golf set we could rent for an indoor event on 31 Dec 2026 (install 28–30 Dec)?
+> Do you have mini golf or putting units we could rent for an indoor evening event on 31 Dec 2026 (install 28–30 Dec)? We're interested in either 10 units or 2–4 units.
 >
-> 1. How many holes, what do they look like (photos), and what is each hole's footprint?
-> 2. Can holes be themed or branded (wraps, signage, lighting)?
-> 3. Price for 10 holes including delivery, setup, teardown and putters and balls.
-> 4. Is the 31 Dec date available? Can you hold it until 25 Nov?
-> 5. Fire-rating paperwork for indoor use?
+> 1. How many golf units do you have in stock, and how many different designs? Please send **photos of the actual units you would send** (not stock photos), with length, width, edge height and how the ball is returned.
+> 2. Can they be branded or themed? Exactly what (printed panel, sticker, colour)? The price and lead time, and a photo of a past branded job?
+> 3. Can we place our own free-standing props and lighting next to or over the units? Is there anything we must not attach?
+> 4. Price for 10 units and for 4 units, with delivery between 28 and 30 Dec and collection on **Fri 1 Jan (public holiday)** or Sat 2 Jan. Is it charged per day or per event, and do the days before the event count? Any holiday or after-hours surcharge? Please include setup, teardown, putters and balls.
+> 5. Deposit, damage and cancellation terms. What counts as damage?
+> 6. Is the date available? Can you hold it until **Wed 25 Nov**?
+> 7. Fire-rating paperwork for indoor use?
 >
 > Thanks,
 > [Name]
