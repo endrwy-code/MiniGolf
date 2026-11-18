@@ -206,6 +206,12 @@ line(cx, Z(lz0), cx, Z(lz1), GREY, 1, 'marker-start="url(#a)" marker-end="url(#a
 line(X(RX1), Z(RZ0), cx + 3, Z(RZ0), LIGHT, 0.5, 'stroke-dasharray="2 2"')
 line(X(RX1), Z(RZ1), cx + 3, Z(RZ1), LIGHT, 0.5, 'stroke-dasharray="2 2"')
 
+# runway to the bottom wall: 10.25 + 1.3 (derived), drawn in the strip past the tip
+bx = X(RX1 + 2.6)
+dim_v(bx, Z(RZ1), Z(D), "", "left")
+t(bx - 6, Z((RZ1 + D) / 2) - 2, f"{fmt(round(D - RZ1, 2))} m", 12, INK, "end")
+t(bx - 6, Z((RZ1 + D) / 2) + 12, f"= {fmt(round(lz0 - RZ1, 2))} + {fmt(LF['depth'])}", 11, GREY, "end")
+
 # room width (measured, rough) and length (not re-measured)
 dim_v(OX - 22, Z(0), Z(D), "", "left")
 t(OX - 30, Z(D / 2) - 2, f"{fmt(D)} m", 12, INK, "end")

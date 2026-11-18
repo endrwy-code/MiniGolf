@@ -38,6 +38,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Auditorium width | 25.6 m (11.65 + 2.4 + 10.25 + 1.3) | Measured 18 Nov, rough |
 | Auditorium length | 54.7 m | Not re-measured: from the old cable plan; team says unchanged. The 18 Nov sketch draws the room shorter beyond the golf limit, so check it |
 | Runway (raised, part of stage) | 22.54 × 2.4 m, stage front to tip; 11.65 m from the top wall | Measured 18 Nov; height unknown |
+| Runway to the bottom wall | 11.55 m (10.25 to the LF platform + its 1.3 m depth) | Derived from measured values |
 | LF platform | 1.3 m deep, against the bottom wall, 10.25 m from the runway | Depth measured; length and position along the wall not measured |
 | Speaker stands beside the runway | Stick out 51.5 cm (two per side, stairs nearest the stage) | Measured; positions not measured |
 | Golf limit | 27 m from the stage front = 4.46 m past the runway tip | 27 m measured; 4.46 m derived |

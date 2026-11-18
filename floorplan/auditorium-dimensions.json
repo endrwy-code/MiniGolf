@@ -143,6 +143,7 @@
     { "id": "runway_width", "value": 2.4, "axis": "z", "confidence": "measured" },
     { "id": "runway_to_lf_platform", "value": 10.25, "axis": "z", "confidence": "measured" },
     { "id": "lf_platform_depth", "value": 1.3, "axis": "z", "confidence": "measured" },
+    { "id": "runway_to_bottom_wall", "value": 11.55, "axis": "z", "confidence": "derived: 10.25 + 1.3" },
     { "id": "top_wall_to_lf_platform", "value": 24.3, "axis": "z", "confidence": "measured (written on the sketch; equals 11.65 + 2.4 + 10.25)" },
     { "id": "room_width", "value": 25.6, "axis": "z", "confidence": "measured, rough" },
     { "id": "runway_length_stage_front_to_tip", "value": 22.54, "axis": "x", "confidence": "measured" },
