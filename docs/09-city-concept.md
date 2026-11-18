@@ -1,5 +1,7 @@
 # The city: look, layout, flow and story (draft v1, 18 Nov)
 
+**Update, 18 Nov (later):** the team set a New York direction. The look and hole skins here are superseded by [`10-new-york-concept.md`](10-new-york-concept.md), and the layout by layout v3 inside the golf zone. Sections 4 (play order and capacity) and 6 (gimmicks and time budget) still apply.
+
 **Status:** Claude's response to the team's direction of 18 Nov. Everything here is a recommendation for the team to decide, not a decision. Measured values are marked as measured; everything else is an estimate. Hole mechanics and build standards stay as in [`03-hole-spec-sheet.md`](03-hole-spec-sheet.md) until the team changes them.
 
 ## What the team asked for (18 Nov)

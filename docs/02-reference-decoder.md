@@ -83,6 +83,40 @@ What this means for our course: [`09-city-concept.md`](09-city-concept.md).
 
 ---
 
+## Photo 6: "Electric Greens" indoor course (added 18 Nov, later)
+`reference/user-refs/06-indoor-electric-greens-led-glow.jpg`
+
+**What it is.** An indoor venue in a brick basement. Low platforms with **stacked, ribbed sides**, coloured felt surfaces, and **a coloured LED strip at the base of every platform** that washes the floor, a different colour per hole. Ribbed bollard tables, warm wall lights, and one neon script sign on the wall.
+
+**Why it looks good:** the colour is on the floor around each hole, not on the hole itself, so every hole seems to float. The room is dim, not dark: the warm wall lights keep faces, the floor and the ball visible.
+**What to copy:** each hole's own colour at the deck base (it doubles as the trip-edge marker), a strip under the rail cap, one neon-style sign per hole, a dim warm room.
+**What not to copy:** coloured felt everywhere. Turf rolls better; use coloured surfaces only where they mean something.
+
+---
+
+## Photo 7: hot dog hole, "Let's Be Frank" (added 18 Nov, later)
+`reference/user-refs/07-hot-dog-hole-oversized-props.jpg`
+
+**What it is.** The same hole that appears in the Walker Art Center video frames below. A plain, short rectangular deck with a white fascia. All the personality comes from three oversized food props (a hot dog, giant fries, a mustard bottle) and a big pun sign with a cartoon hot dog behind the hole.
+
+**Why it looks good:** you get the joke in one second from across the room, and the sign is the photo backdrop.
+**What to copy:** oversized everyday objects as obstacles, and a pun sign at the end of every hole. A cheap deck with expensive-looking props.
+**What not to copy:** this sign's wording and its mascot. They're someone else's design.
+
+---
+
+## Photo 8: bicycle-wheel hole (added 18 Nov, later)
+`reference/user-refs/08-bicycle-wheel-hole-found-objects.jpg`
+
+**What it is.** An outdoor course. A long straight lane between brick borders, with real bicycle wheels stood upright on the turf as a slalom.
+
+**Why it looks good:** a found object repeated becomes a pattern, and it costs almost nothing.
+**What to copy:** free or cheap found objects (bike wheels, cans, crates), used several times on one hole. Robustness note: each object must either touch the rail or leave a gap of at least 0.25 m, or balls will wedge.
+
+What the three photos mean for our course: [`10-new-york-concept.md`](10-new-york-concept.md).
+
+---
+
 ## Video: Walker Art Center "Skyline" mini golf
 `reference/video-frames/walker-skyline-contact-sheet-*.jpg`
 
@@ -125,3 +159,5 @@ What this means for our course: [`09-city-concept.md`](09-city-concept.md).
 **The question that decides it:** how will the auditorium be lit while golf is running? Ask production.
 
 > **Update 18 Nov:** the team's reference is now the Pixar Putt pop-up (photos 1, 4, 5), which is bright colour lit from above, not neon. The recommendation moves to a third option, **"Bright City"**: the Carnival palette and materials, laid out as a clustered city, lit by the room's rig, with LED kept to safety edges and a few signature glows. It works in a dark room or a lit one, provided production puts some light on the course area. So the question to production becomes "can you light the golf zone?" rather than "how dark is the room?" See [`09-city-concept.md`](09-city-concept.md).
+
+> **Update 18 Nov (later):** the team set a New York direction, with holes like photos 7 and 8 and lighting like photo 6. The recommendation is now **"New York Countdown"**: the repeated frame from Bright City, each hole with its own LED colour at the deck base, a neon-style pun sign per hole, and a dim warm wash from the rig rather than a dark room. See [`10-new-york-concept.md`](10-new-york-concept.md).

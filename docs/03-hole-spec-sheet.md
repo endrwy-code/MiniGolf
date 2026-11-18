@@ -2,6 +2,8 @@
 
 **Status:** draft for the team to edit. Nothing here is decided. The dimensions are design targets, not measurements. This one document is meant for the builder, the turf supplier and the team.
 
+**18 Nov (later):** the New York proposal in [`10-new-york-concept.md`](10-new-york-concept.md) would replace the ten holes below (names, props and some mechanics). The build standard below still applies to it. Nothing is decided until the team confirms.
+
 Play order runs **10 down to 1** (the countdown). Hole 1 is the finale, nearest the stage. Layout: `floorplan/layout-draft-zone-a.svg`.
 
 ## Build standard (applies to every hole)
