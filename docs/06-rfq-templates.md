@@ -115,7 +115,7 @@ Send this even if you're leaning local. Their answers tell you whether they're r
 
 ## E. Freelance carpenter (route C, about 12 days)
 
-For route C in `11-route-c-carpenter-build.md`: one paid carpenter builds the structure, volunteers paint and dress. Attach the layout (`floorplan/layout-v3-nyc.png`) and the hole-by-hole table from that doc.
+For route C in `11-route-c-carpenter-build.md`: one paid carpenter builds the structure, volunteers paint and dress. Attach the carpenter's pack (`carpenter-pack/countdown-golf-carpenter-pack.pdf`; how to use it: `12-carpenter-pack.md`).
 
 > Subject: Carpentry for a one-off indoor mini golf course, about 12 days in December
 >
@@ -123,9 +123,9 @@ For route C in `11-route-c-carpenter-build.md`: one paid carpenter builds the st
 >
 > We're [Church/Team] in Singapore, building a 10-hole indoor mini golf course for one night, 31 Dec 2026, in an auditorium. Volunteers will paint and dress everything. We're looking for a carpenter to build the structure.
 >
-> **The work** (layout and hole list attached):
-> - About 130 m of timber rail (45 × 95 mm on edge), in sections two people can carry, held down by plates under the playing surface. Nothing is fixed to the venue floor.
-> - Ten low cup pads (about 50–60 mm high, bevelled), and a few simple features: a hump, a gangway ramp and a wall with three tunnels.
+> **The work** (drawings attached):
+> - About 140 m of timber rail (45 × 95 mm on edge), in sections two people can carry, held down by plates under the playing surface. Nothing is fixed to the venue floor.
+> - Ten low raised greens (about 60 mm, with a bevel) where the cups go, and a few simple features: a hump, a gangway and a wall with three tunnels.
 > - Flat cut-out props on braced bases (1.5–3 m tall), a ball-collecting box and a small booth frame.
 > - One prototype hole by Fri 4 Dec, the rest by Fri 18 Dec for a dry-run assembly, and help with the install on 28–29 Dec.
 >

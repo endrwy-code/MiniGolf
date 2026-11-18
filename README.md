@@ -24,7 +24,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Draft layout v1](floorplan/layout-draft-zone-a.png) | Superseded: 10 holes in a line in Zone A |
 | **Concept renders** (predate the city concept) | What the course looks like: [holes, Neon](concepts/holes-neon.png) · [course, Neon](concepts/course-neon.png) · [holes, Carnival](concepts/holes-carnival.png) · [course, Carnival](concepts/course-carnival.png) |
 | [Scale and budget](docs/08-budget-model.md) | Movable formats, quantities, person-days, four cost scenarios, levers |
-| **[Route C: carpenter + volunteers](docs/11-route-c-carpenter-build.md)** | **18 Nov: how to do New York for S$6–10k: what changes, hole by hole, a costed plan (≈ S$9.5k), who does what, the cut list, schedule and risks** |
+| **[Route C: carpenter + volunteers](docs/11-route-c-carpenter-build.md)** | **18 Nov: how to do New York for S$6–10k: what changes, hole by hole, a costed plan (≈ S$10.9k, ≈ S$9.8k with cuts), who does what, the cut list, schedule and risks** |
+| **[Carpenter's pack](carpenter-pack/countdown-golf-carpenter-pack.pdf)** · [what a carpenter needs](docs/12-carpenter-pack.md) | **18 Nov: 16 A3 drawing sheets for route C (details, every hole, materials), plus a plain-English guide to what a carpenter needs and how to read the drawings** |
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies, factories and a freelance carpenter |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
 | [Status page](status/countdown-golf-status.html) | 18 Nov: one visual page with the gates, what's decided, today's changes, the plaza layout, capacity and cost. Published privately as an Artifact |

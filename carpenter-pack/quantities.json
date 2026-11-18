@@ -1,0 +1,60 @@
+{
+ "rail_m": 139.9,
+ "green_and_bevel_m2": 28.5,
+ "plates": 182,
+ "rail_lengths": 66,
+ "green_sheets_12mm": 12,
+ "frame_batten_m": 132,
+ "holes": {
+  "10": {
+   "rail_m": 15.0,
+   "green_bevel_m2": 1.59,
+   "min_gap_mm": 262
+  },
+  "9": {
+   "rail_m": 11.6,
+   "green_bevel_m2": 1.25,
+   "min_gap_mm": 430
+  },
+  "8": {
+   "rail_m": 14.0,
+   "green_bevel_m2": 2.2,
+   "min_gap_mm": 320
+  },
+  "7": {
+   "rail_m": 13.4,
+   "green_bevel_m2": 1.63,
+   "min_gap_mm": 267
+  },
+  "6": {
+   "rail_m": 14.6,
+   "green_bevel_m2": 5.72,
+   "min_gap_mm": null
+  },
+  "5": {
+   "rail_m": 15.6,
+   "green_bevel_m2": 2.67,
+   "min_gap_mm": 300
+  },
+  "4": {
+   "rail_m": 14.2,
+   "green_bevel_m2": 2.17,
+   "min_gap_mm": null
+  },
+  "3": {
+   "rail_m": 13.4,
+   "green_bevel_m2": 2.57,
+   "min_gap_mm": 384
+  },
+  "2": {
+   "rail_m": 13.6,
+   "green_bevel_m2": 7.35,
+   "min_gap_mm": 344
+  },
+  "1": {
+   "rail_m": 14.3,
+   "green_bevel_m2": 1.38,
+   "min_gap_mm": null
+  }
+ }
+}
