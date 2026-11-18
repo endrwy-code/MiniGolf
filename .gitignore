@@ -3,3 +3,4 @@ CLAUDE.local.md
 .env.*
 node_modules/
 .DS_Store
+.cache/
