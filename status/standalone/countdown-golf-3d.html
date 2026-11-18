@@ -67,15 +67,22 @@ main{padding-block:16px 8px}
 .app{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;align-items:start}
 @media (max-width:1000px){.app{grid-template-columns:minmax(0,1fr)}}
 
-.viewer{position:relative;height:min(80vh,840px);min-height:440px;border-radius:12px;overflow:hidden;background:var(--scene-bg);border:1px solid var(--rule);touch-action:none}
+.viewer{--inset-t:0px;--inset-r:0px;--inset-b:0px;--inset-l:0px;position:relative;height:min(80vh,840px);min-height:440px;border-radius:12px;overflow:hidden;background:var(--scene-bg);border:1px solid var(--rule);touch-action:none}
 @media (max-width:1000px){.viewer{height:min(68vh,620px);min-height:360px}}
 .viewer canvas:not(.minimap){display:block;width:100%;height:100%}
-.views{position:absolute;top:10px;left:10px;right:10px;display:flex;flex-wrap:wrap;gap:6px;z-index:3;pointer-events:none}
-.views button{pointer-events:auto;font:600 .8rem/1.2 var(--font-body);color:var(--label-ink);background:var(--label-bg);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(4px)}
-.views button[aria-pressed="true"]{background:var(--now);color:#1b1404;border-color:var(--now)}
-.hint{position:absolute;left:10px;bottom:10px;z-index:3;font-size:.76rem;color:var(--label-ink);background:var(--label-bg);padding:6px 10px;border-radius:6px;max-width:calc(100% - 20px);pointer-events:none}
-.stamp{position:absolute;right:10px;bottom:10px;z-index:3;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--label-ink);background:var(--label-bg);padding:5px 8px;border-radius:6px;pointer-events:none}
-@media (max-width:640px){.stamp{display:none}}
+/* full screen: the browser's own where it's allowed, otherwise the viewer fills the window */
+.viewer:fullscreen{height:100%;width:100%;border:0;border-radius:0;--inset-t:env(safe-area-inset-top,0px);--inset-r:env(safe-area-inset-right,0px);--inset-b:env(safe-area-inset-bottom,0px);--inset-l:env(safe-area-inset-left,0px)}
+.viewer:-webkit-full-screen{height:100%;width:100%;border:0;border-radius:0}
+.viewer.full{position:fixed;inset:0;z-index:100;height:auto;min-height:0;border:0;border-radius:0;--inset-t:env(safe-area-inset-top,0px);--inset-r:env(safe-area-inset-right,0px);--inset-b:env(safe-area-inset-bottom,0px);--inset-l:env(safe-area-inset-left,0px)}
+body.lock{overflow:hidden}
+/* the only things on the 3D view: three icon buttons in the top-right corner */
+.corner{position:absolute;top:calc(10px + var(--inset-t));right:calc(10px + var(--inset-r));z-index:5;display:flex;gap:6px}
+.icon-btn{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.22);background:var(--label-bg);color:var(--label-ink);cursor:pointer;backdrop-filter:blur(4px);padding:0}
+.icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.icon-btn[aria-pressed="true"],.icon-btn[aria-expanded="true"]{background:var(--now);color:#1b1404;border-color:var(--now)}
+.icon-btn .ic-exit{display:none}
+.icon-btn[aria-pressed="true"] .ic-exit{display:inline}
+.icon-btn[aria-pressed="true"] .ic-enter{display:none}
 .labels{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
 .lbl{position:absolute;left:0;top:0;transform:translate(-50%,-50%);white-space:nowrap;font:600 .7rem/1.2 var(--font-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--label-ink);background:var(--label-bg);padding:3px 7px;border-radius:4px;will-change:transform}
 .lbl.risk{background:rgba(178,58,42,.92)}
@@ -127,17 +134,37 @@ footer p{max-width:100ch}
 code{font-family:var(--font-mono);font-size:.9em}
 @media (prefers-reduced-motion: reduce){.bullets button{transition:none}}
 
-/* walk mode: joystick bottom-left, map bottom-right, hint between them */
-.views button#v-walk{border-color:var(--now)}
-.views button#v-walk[aria-pressed="true"]{background:var(--now);color:#1b1404}
-.viewer.walking .hint,.viewer.walking .stamp{display:none}
+/* walk mode: touch pad bottom-left, map bottom-right (each can be switched off in Settings) */
 .viewer:focus-visible{outline:2px solid var(--now);outline-offset:-2px}
-.joy{position:absolute;left:14px;bottom:14px;z-index:3;width:112px;height:112px;border-radius:50%;background:var(--label-bg);border:1.5px solid rgba(255,255,255,.28);touch-action:none;cursor:grab;display:grid;place-items:center}
+.joy{position:absolute;left:calc(14px + var(--inset-l));bottom:calc(14px + var(--inset-b));z-index:3;width:112px;height:112px;border-radius:50%;background:var(--label-bg);border:1.5px solid rgba(255,255,255,.28);touch-action:none;cursor:grab;display:grid;place-items:center}
 .joy::before{content:"";position:absolute;inset:30%;border-radius:50%;border:1px dashed rgba(255,255,255,.25)}
 .joy .knob{width:46px;height:46px;border-radius:50%;background:var(--now);box-shadow:0 2px 8px rgba(0,0,0,.4);pointer-events:none}
-.minimap{position:absolute;right:12px;bottom:12px;z-index:3;width:176px;height:113px;border-radius:8px;border:1px solid rgba(255,255,255,.25);cursor:crosshair;touch-action:none}
-.walk-hint{position:absolute;left:142px;right:202px;bottom:14px;z-index:3;font-size:.76rem;line-height:1.35;color:var(--label-ink);background:var(--label-bg);padding:7px 10px;border-radius:6px;text-align:center;pointer-events:none}
-@media (max-width:640px){.walk-hint{display:none}.minimap{width:150px;height:96px}}
+.minimap{position:absolute;right:calc(12px + var(--inset-r));bottom:calc(12px + var(--inset-b));z-index:3;width:176px;height:113px;border-radius:8px;border:1px solid rgba(255,255,255,.25);cursor:crosshair;touch-action:none}
+@media (max-width:640px){.minimap{width:150px;height:96px}}
+
+/* settings drawer: slides over the right side of the 3D view, works in full screen too */
+.drawer{position:absolute;top:0;right:0;bottom:0;z-index:6;width:min(350px,94%);overflow-y:auto;overscroll-behavior:contain;background:var(--surface);color:var(--ink);border-left:1px solid var(--rule);box-shadow:-12px 0 32px rgba(0,0,0,.28);padding:calc(14px + var(--inset-t)) calc(16px + var(--inset-r)) calc(24px + var(--inset-b)) 16px;display:grid;align-content:start;gap:14px}
+.dr-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.dr-head h2{font-size:1.15rem;font-weight:900}
+.dr-x{width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:transparent;color:var(--ink);font:600 1rem/1 var(--font-body);cursor:pointer}
+.dr-sec{display:grid;gap:8px;border-top:1px solid var(--rule);padding-top:12px;min-width:0}
+.dr-sec h3{font-size:.95rem;font-weight:800}
+.dr-label{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-top:2px}
+.dr-fine{font-size:.78rem;color:var(--ink-3);line-height:1.4}
+.dr-primary{font:700 .92rem/1.2 var(--font-body);padding:11px 12px;border-radius:8px;border:0;background:var(--now);color:#1b1404;cursor:pointer}
+.dr-primary[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;background:var(--surface-2);padding:4px;border-radius:9px}
+.seg button{font:600 .8rem/1.2 var(--font-body);color:var(--ink-2);background:transparent;border:0;border-radius:6px;padding:7px 4px;cursor:pointer;display:grid;gap:2px;justify-items:center;text-align:center}
+.seg button small{font:500 .68rem/1.1 var(--font-mono);color:var(--ink-3)}
+.seg button[aria-checked="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.dr-range{display:flex;justify-content:space-between;align-items:baseline;font-size:.86rem;font-weight:650}
+.dr-range output{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-2)}
+.drawer input[type=range]{width:100%;accent-color:var(--accent);margin:0}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.vgrid button{font:600 .8rem/1.2 var(--font-body);padding:9px 10px;border-radius:8px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;text-align:left}
+.vgrid button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.bullets.small{gap:6px}
+.bullets.small button{width:38px;height:38px;font-size:1rem}
 </style>
 </head>
 <body>
@@ -2146,7 +2173,7 @@ export { OrbitControls };
     <div>
       <p class="eyebrow">HOGC countdown party · Layout v3 · New York Countdown · Proposal, not decided</p>
       <h1>Countdown Golf in 3D</h1>
-      <p class="lede">Ten New York places at 11:59 pm on New Year's Eve, built to scale inside the golf zone from the 18 Nov tape measurements. Orbit around or walk it at eye height, switch the room lighting, and tap a hole to stand at its tee.</p>
+      <p class="lede">Ten New York places at 11:59 pm on New Year's Eve, built to scale inside the golf zone from the 18 Nov tape measurements. Orbit around or walk it at a real person's height, go full screen, and tap a hole to stand at its tee. Everything else is under Settings, top right of the view.</p>
     </div>
     <a class="back" href="https://claude.ai/artifact/EUmyNjaUzF9bkhidKNNRUn" target="_blank" rel="noopener">Open the status page</a>
   </div>
@@ -2154,54 +2181,106 @@ export { OrbitControls };
 
 <main class="wrap">
   <div class="app">
-    <div class="viewer" id="viewer" tabindex="0" aria-label="3D viewer. In walk mode, use W A S D or the arrow keys to walk.">
-      <div class="views" role="group" aria-label="Camera views">
-        <button type="button" id="v-golf" data-view="golf" aria-pressed="true">Golf zone</button>
-        <button type="button" id="v-walk" aria-pressed="false">Walk around</button>
-        <button type="button" id="v-room" data-view="room" aria-pressed="false">Whole room</button>
-        <button type="button" id="v-down" data-view="downtown" aria-pressed="false">Downtown</button>
-        <button type="button" id="v-mid" data-view="midtown" aria-pressed="false">Midtown</button>
-        <button type="button" id="v-eye" data-view="eye" aria-pressed="false">Eye level</button>
-        <button type="button" id="v-stage" data-view="stage" aria-pressed="false">From the stage</button>
-        <button type="button" id="v-top" data-view="top" aria-pressed="false">Top down</button>
-      </div>
+    <div class="viewer" id="viewer" tabindex="0" aria-label="3D view of the course. Settings, full screen and walking are in the buttons at the top right.">
       <div class="labels" id="labels"></div>
-      <p class="hint">Drag to orbit · scroll or pinch to zoom · right-drag or two fingers to pan · tap a hole</p>
-      <span class="stamp">To scale · positions ±1 m</span>
+      <div class="corner" role="group" aria-label="Viewer buttons">
+        <button type="button" class="icon-btn" id="b-walk" aria-pressed="false" aria-label="Walk around" title="Walk around">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M11 21l2-6-2-3 1-4 3 3h3M8 12l2-4h2M13 15l3 6"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="b-full" aria-pressed="false" aria-label="Full screen" title="Full screen">
+          <svg class="ic-enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>
+          <svg class="ic-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="b-settings" aria-expanded="false" aria-controls="drawer" aria-label="Settings" title="Settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+        </button>
+      </div>
       <div class="joy" id="joy" hidden aria-hidden="true"><div class="knob"></div></div>
       <canvas class="minimap" id="minimap" hidden aria-label="Map: tap to jump there"></canvas>
-      <p class="walk-hint" id="walkHint" hidden>W A S D or arrow keys to walk · Shift to hurry · drag to look · tap a hole number to jump to its tee · Esc to stop</p>
+
+      <aside class="drawer" id="drawer" hidden aria-labelledby="dr-h">
+        <div class="dr-head"><h2 id="dr-h">Settings</h2><button type="button" class="dr-x" id="dr-close" aria-label="Close settings">✕</button></div>
+
+        <section class="dr-sec" aria-labelledby="dw-h">
+          <h3 id="dw-h">Walk around</h3>
+          <button type="button" class="dr-primary" id="d-walk" aria-pressed="false">Start walking</button>
+          <div class="dr-label" id="person-l">Who's walking</div>
+          <div class="seg" role="radiogroup" aria-labelledby="person-l">
+            <button type="button" role="radio" id="p-child" data-person="child" aria-checked="false">Child<small>1.28 m</small></button>
+            <button type="button" role="radio" id="p-adult" data-person="adult" aria-checked="true">Average adult<small>1.66 m</small></button>
+            <button type="button" role="radio" id="p-tall" data-person="tall" aria-checked="false">Tall adult<small>1.88 m</small></button>
+          </div>
+          <p class="dr-fine" id="personNote"></p>
+          <div class="dr-label" id="pov-l">Viewpoint</div>
+          <div class="seg" role="radiogroup" aria-labelledby="pov-l">
+            <button type="button" role="radio" id="pov-first" data-pov="first" aria-checked="true">Your eyes</button>
+            <button type="button" role="radio" id="pov-third" data-pov="third" aria-checked="false">Behind you</button>
+          </div>
+          <div class="dr-range"><label for="fov">Field of view</label><output id="fovOut" for="fov">75°</output></div>
+          <input type="range" id="fov" min="45" max="110" step="1" value="75">
+          <p class="dr-fine">Measured across the long side of the screen. About 70–80° looks natural; wider shows more but stretches the edges.</p>
+          <div class="toggles">
+            <button type="button" id="o-bob" data-opt="bob" aria-pressed="true">Step bob</button>
+            <button type="button" id="o-map" data-opt="map" aria-pressed="true">Map</button>
+            <button type="button" id="o-pad" data-opt="pad" aria-pressed="false">Touch pad</button>
+          </div>
+          <p class="dr-fine" id="keysNote">W A S D or the arrow keys to walk, Shift to hurry, Q and E to turn, drag to look, Esc to stop. On a phone, switch on the touch pad.</p>
+        </section>
+
+        <section class="dr-sec" aria-labelledby="dv-h">
+          <h3 id="dv-h">Camera</h3>
+          <div class="vgrid" role="group" aria-labelledby="dv-h">
+            <button type="button" id="v-golf" data-view="golf" aria-pressed="true">Golf zone</button>
+            <button type="button" id="v-room" data-view="room" aria-pressed="false">Whole room</button>
+            <button type="button" id="v-down" data-view="downtown" aria-pressed="false">Downtown</button>
+            <button type="button" id="v-mid" data-view="midtown" aria-pressed="false">Midtown</button>
+            <button type="button" id="v-eye" data-view="eye" aria-pressed="false">Eye level</button>
+            <button type="button" id="v-stage" data-view="stage" aria-pressed="false">From the stage</button>
+            <button type="button" id="v-top" data-view="top" aria-pressed="false">Top down</button>
+          </div>
+          <p class="dr-fine">Drag to orbit, scroll or pinch to zoom, right-drag or two fingers to pan, tap a hole to see it from the tee.</p>
+        </section>
+
+        <section class="dr-sec" aria-labelledby="light-h">
+          <h3 id="light-h">Room lighting</h3>
+          <div class="opts" role="radiogroup" aria-labelledby="light-h">
+            <button type="button" class="opt" id="l-glow" data-light="glow" role="radio" aria-checked="true"><b>Party glow</b><small>The proposal: dim warm wash from the rig, LED glow at every deck base and rail</small></button>
+            <button type="button" class="opt" id="l-house" data-light="house" role="radio" aria-checked="false"><b>House lights on</b><small>Clearest view of the layout and the props</small></button>
+            <button type="button" class="opt" id="l-dark" data-light="dark" role="radio" aria-checked="false"><b>Room fully dark</b><small>LEDs only. Shows why the room needs some light for safety</small></button>
+          </div>
+        </section>
+
+        <section class="dr-sec" aria-labelledby="show-h">
+          <h3 id="show-h">Show</h3>
+          <div class="toggles">
+            <button type="button" id="t-labels" data-layer="labels" aria-pressed="true">Labels</button>
+            <button type="button" id="t-people" data-layer="people" aria-pressed="true">People for scale</button>
+            <button type="button" id="t-routes" data-layer="routes" aria-pressed="true">Walk routes</button>
+            <button type="button" id="t-flats" data-layer="flats" aria-pressed="true">Skyline flats</button>
+            <button type="button" id="t-sight" data-layer="sight" aria-pressed="false">Console sightline</button>
+            <button type="button" id="t-ext" data-layer="ext" aria-pressed="false">Runway extension?</button>
+          </div>
+          <p class="dr-fine">Labels switch on and off separately for walking and for the cameras.</p>
+        </section>
+
+        <section class="dr-sec" aria-labelledby="dj-h">
+          <h3 id="dj-h">Jump to a hole</h3>
+          <div class="bullets small" id="jumpBullets" role="group" aria-labelledby="dj-h"></div>
+          <p class="dr-fine">While walking, this puts you at the tee, facing the cup.</p>
+        </section>
+
+        <p class="dr-fine">To scale. Hole positions ±1 m until the stage depth and stair positions are measured.</p>
+      </aside>
+
       <div class="status" id="status">Loading the 3D model…</div>
     </div>
 
     <aside class="panel">
-      <section class="pcard" aria-labelledby="light-h">
-        <h2 id="light-h">Room lighting</h2>
-        <p class="sub">The team's brief: every hole glows in its own colour, and the room stays light enough to see the floor, the ball and each other.</p>
-        <div class="opts" role="radiogroup" aria-labelledby="light-h">
-          <button type="button" class="opt" id="l-glow" data-light="glow" role="radio" aria-checked="true"><b>Party glow</b><small>The proposal: dim warm wash from the rig, LED glow at every deck base and rail</small></button>
-          <button type="button" class="opt" id="l-house" data-light="house" role="radio" aria-checked="false"><b>House lights on</b><small>Clearest view of the layout and the props</small></button>
-          <button type="button" class="opt" id="l-dark" data-light="dark" role="radio" aria-checked="false"><b>Room fully dark</b><small>LEDs only. Shows why the room needs some light for safety</small></button>
-        </div>
-      </section>
-
       <section class="pcard" aria-labelledby="holes-h">
         <h2 id="holes-h">Holes</h2>
         <div class="bullets" id="bullets" role="group" aria-label="Choose a hole"></div>
         <div class="bullets-legend"><span>Downtown: 10 → 6</span><span>Midtown: 5 → 1</span></div>
         <div class="info" id="info" aria-live="polite"></div>
-      </section>
-
-      <section class="pcard" aria-labelledby="show-h">
-        <h2 id="show-h">Show</h2>
-        <div class="toggles">
-          <button type="button" id="t-labels" data-layer="labels" aria-pressed="true">Labels</button>
-          <button type="button" id="t-people" data-layer="people" aria-pressed="true">People for scale</button>
-          <button type="button" id="t-routes" data-layer="routes" aria-pressed="true">Walk routes</button>
-          <button type="button" id="t-flats" data-layer="flats" aria-pressed="true">Skyline flats</button>
-          <button type="button" id="t-sight" data-layer="sight" aria-pressed="false">Console sightline</button>
-          <button type="button" id="t-ext" data-layer="ext" aria-pressed="false">Runway extension?</button>
-        </div>
       </section>
 
       <section class="pcard note" aria-labelledby="real-h">
@@ -2211,6 +2290,7 @@ export { OrbitControls };
           <li>Not measured, drawn where the sketch shows them: stage depth (6 m used), stair and speaker-stand positions, the stage's curved corners, the sound console's size, the LF platform's length, the doors, and the room length (54.7 m from the old cable plan).</li>
           <li>Placeholders: stage and runway height 0.8 m, speaker stands 1.6 m, console riser 0.3 m. No ceiling is drawn because its height isn't known.</li>
           <li>Design targets, not measurements: 75 mm decks, 100 mm rails, 2 m street-sign totems, skyline flats 2.4–3.6 m, Christmas tree 3 m, ball-drop tower 3.6 m. Props are concept shapes, not construction drawings.</li>
+          <li>People: typical body sizes, not measurements of anyone. Average adult 1.66 m (between a typical Singapore man, about 1.72 m, and woman, about 1.60 m); child about 8 years old, 1.28 m.</li>
           <li>Not shown: floor cables. They were drawn on the old cable-plan geometry and still need re-placing.</li>
         </ul>
       </section>
@@ -3001,7 +3081,20 @@ const flats = new THREE.Group(); scene.add(flats);
   }
 });
 
-/* ------------------------------------------------------------------ people for scale (1.6 m) */
+/* ------------------------------------------------------------------ people, built to typical human proportions
+   stature H: legs to 0.47 H, shoulders at 0.82 H, head 0.13 H tall, eyes about 0.11 m below the top of the head */
+function figure(H, shoulders, colour, skinTone) {
+  const g = new THREE.Group(), k = H / 1.66;
+  const legM = MC('#2A2D36', { roughness: 0.85 }), body = MC(colour, { roughness: 0.85 }), skin = MC(skinTone, { roughness: 0.75 });
+  for (const sx of [-1, 1]) { const r = 0.06 * k; mesh(new THREE.CapsuleGeometry(r, 0.48 * H - 2 * r, 4, 8), legM, g, sx * shoulders * 0.2, 0.24 * H, 0); }
+  const rt = shoulders / 2, tl = Math.max(0.05, 0.37 * H - 2 * rt);
+  const torso = mesh(new THREE.CapsuleGeometry(rt, tl, 4, 12), body, g, 0, 0.45 * H + (tl + 2 * rt) / 2, 0); torso.scale.z = 0.5;
+  for (const sx of [-1, 1]) { const r = 0.04 * k; mesh(new THREE.CapsuleGeometry(r, 0.33 * H, 4, 8), body, g, sx * (rt - 0.02), 0.62 * H, 0); }
+  cyl(0.045 * k, 0.05 * k, 0.06 * H, skin, g, 0, 0.85 * H, 0, 10);
+  mesh(new THREE.SphereGeometry(0.066 * H, 16, 12), skin, g, 0, H - 0.066 * H, 0);
+  return g;
+}
+/* ------------------------------------------------------------------ people for scale (adults 1.66 m, some children 1.28 m) */
 const people = new THREE.Group(); scene.add(people);
 const PEOPLE_SPOTS = [];
 {
@@ -3012,8 +3105,8 @@ const PEOPLE_SPOTS = [];
   for (const n of [9, 2]) { const h = H[n]; if (!h) continue; spots.push(l2w(h, h.L / 2 - 0.6, (h.W / 2 + 0.55))); }
   for (const [x, z] of [[HUB[0] + 1.6, (HUB[1] + HUB[3]) / 2 - 0.37], [HUB[0] + 2.2, (HUB[1] + HUB[3]) / 2 - 0.37], [HUB[0] + 1.9, (HUB[1] + HUB[3]) / 2 + 0.37], [HUB[0] + 2.4, (HUB[1] + HUB[3]) / 2 + 0.37], [35.5, 16.5], [36.2, 8.5]]) spots.push([x, z]);
   PEOPLE_SPOTS.push(...spots);
-  const body = new THREE.CapsuleGeometry(0.17, 0.95, 4, 10), head = new THREE.SphereGeometry(0.11, 12, 10), skin = M('#C9A88A', { roughness: 0.8 });
-  spots.forEach(([x, z], i) => { mesh(body, MC(cols[i % cols.length], { roughness: 0.9 }), people, x, 0.645, z); mesh(head, skin, people, x, 1.5, z); });
+  const skins = ['#C9A88A', '#8D5A3B', '#E3C2A0', '#6B4329', '#D8B08C'];
+  spots.forEach(([x, z], i) => { const child = i % 4 === 3; const f = figure(child ? 1.28 : 1.66, child ? 0.30 : 0.43, cols[i % cols.length], skins[i % skins.length]); f.position.set(x, 0, z); f.rotation.y = (i * 2.399) % (Math.PI * 2); people.add(f); });
 }
 
 /* ------------------------------------------------------------------ layers: sightline, runway extension */
@@ -3090,15 +3183,16 @@ addLabel('Runway extension? If built, it runs through the hub', [RW.x1 + 4.3, RU
 const selLabel = addLabel('', [0, 0, 0], 'sel', 'sel');
 
 const layers = { labels: true, people: true, routes: true, flats: true, sight: false, ext: false };
+const labelsOn = () => walking ? settings.walkLabels : layers.labels;
 function applyLayers() {
   people.visible = layers.people; routes.visible = layers.routes; flats.visible = layers.flats; sight.visible = layers.sight; ext.visible = layers.ext;
-  document.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-pressed', String(layers[b.dataset.layer])));
+  document.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.layer === 'labels' ? labelsOn() : layers[b.dataset.layer])));
 }
 const v3 = new THREE.Vector3();
 function updateLabels() {
   const w = viewer.clientWidth, h = viewer.clientHeight;
   for (const L of LABELS) {
-    const on = L.layer === 'sel' ? !!selected : (layers.labels && (L.layer === 'labels' || layers[L.layer]));
+    const on = L.layer === 'sel' ? !!selected : (labelsOn() && (L.layer === 'labels' || layers[L.layer]));
     if (!on) { L.el.hidden = true; continue; }
     v3.copy(L.pos).project(camera);
     if (v3.z > 1 || v3.z < -1 || Math.abs(v3.x) > 1.2 || Math.abs(v3.y) > 1.2) { L.el.hidden = true; continue; }
@@ -3109,11 +3203,11 @@ function updateLabels() {
 
 /* ------------------------------------------------------------------ camera views and fly-to */
 const VIEWS = {
-  golf: { pos: [44, 19, 34], tgt: [21.5, 0, 12.8] },
+  golf: { pos: [39.5, 15.5, 29.5], tgt: [21.5, 0, 12.8] },
   room: { pos: [60, 30, 42], tgt: [27, 0, 12.8] },
   downtown: { pos: [31, 9.5, -4.5], tgt: [21.5, 0, 5.4] },
   midtown: { pos: [31, 9.5, 30.5], tgt: [21.5, 0, 20.3] },
-  eye: { pos: [29.4, 1.65, 15.5], tgt: [18.5, 1.1, 21.0] },
+  eye: { pos: [29.4, 1.55, 15.5], tgt: [18.5, 1.0, 21.0] },
   stage: { pos: [5.0, STAGE_H + 1.65, RW_AXIS], tgt: [30, 0.6, RW_AXIS] },
   top: { pos: [21.5, 44, 12.86], tgt: [21.5, 0, 12.85] },
 };
@@ -3133,11 +3227,11 @@ let selected = null;
 const bullets = document.getElementById('bullets');
 const info = document.getElementById('info');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-for (const h of HOLES) {
-  const b = document.createElement('button'); b.type = 'button'; b.id = 'hole-' + h.n; b.textContent = h.n;
+for (const [host, prefix, closeDrawer] of [[bullets, 'hole-', false], [document.getElementById('jumpBullets'), 'jump-', true]]) for (const h of HOLES) {
+  const b = document.createElement('button'); b.type = 'button'; b.id = prefix + h.n; b.textContent = h.n; b.dataset.n = h.n;
   b.style.setProperty('--c', h.glow); b.style.setProperty('--t', inkOn(h.glow));
   b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', `Hole ${h.n}, ${h.name}`);
-  b.addEventListener('click', () => { if (walking) { select(h.n, false); goToTee(h); } else select(h.n, true); }); bullets.appendChild(b);
+  b.addEventListener('click', () => { if (closeDrawer) openDrawer(false); if (walking) { select(h.n, false); goToTee(h); } else select(h.n, true); }); host.appendChild(b);
 }
 function highlight(n) {
   for (const k in holeGroups) { const f = holeGroups[k].userData.fascia; f.emissive.set('#000000'); f.emissiveIntensity = 0; }
@@ -3145,7 +3239,7 @@ function highlight(n) {
 }
 function select(n, fly) {
   selected = n; const h = H[n]; highlight(n);
-  document.querySelectorAll('#bullets button').forEach(b => b.setAttribute('aria-pressed', String(+b.textContent === n)));
+  document.querySelectorAll('#bullets button, #jumpBullets button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.n === n)));
   info.style.setProperty('--c', h.glow);
   info.innerHTML = `<div class="eyebrow">Hole ${h.n} · ${h.d === 'A' ? 'Downtown' : 'Midtown'} · ${esc(h.cls)}</div>
     <span class="street">${esc(h.name)}</span>
@@ -3176,23 +3270,54 @@ renderer.domElement.addEventListener('pointerup', e => {
 controls.addEventListener('start', () => { tween = null; });
 
 
-/* ------------------------------------------------------------------ walk around: first person at eye height (1.6 m) */
-const EYE = 1.6, BODY_R = 0.25, WALK_V = 1.5, RUN_V = 3.2, TURN_V = 1.8;
-const walkBtn = document.getElementById('v-walk'), joy = document.getElementById('joy'), knob = joy.querySelector('.knob');
-const mini = document.getElementById('minimap'), walkHint = document.getElementById('walkHint');
-if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) walkHint.textContent = 'Use the pad to walk · drag to look · tap a hole number to jump to its tee';
-let walking = false, yaw = 0, pitch = 0;
-const me = new THREE.Vector2(34.6, RW_AXIS);            // arrival: on the party side of the golf limit, facing the Tee Booth
-const ARRIVE = { x: 34.6, z: RW_AXIS + 2.4, yaw: Math.atan2(1, 0.12) };
+/* ------------------------------------------------------------------ walk around at human scale
+   Typical body figures, not measurements of anyone: stature, eye height (about 0.11 m below the top of the head),
+   shoulder width (the collision width), comfortable and brisk walking speed. Step length is about 0.41 × stature.
+   The average adult sits between a typical Singapore man (about 1.72 m) and woman (about 1.60 m). */
+const PEOPLE = {
+  child: { label: 'Child, about 8', h: 1.28, eye: 1.17, shoulders: 0.30, walk: 1.1, hurry: 1.6 },
+  adult: { label: 'Average adult', h: 1.66, eye: 1.55, shoulders: 0.43, walk: 1.35, hurry: 1.9 },
+  tall: { label: 'Tall adult', h: 1.88, eye: 1.76, shoulders: 0.48, walk: 1.45, hurry: 2.1 },
+};
+const TURN_V = 1.8;
+const coarse = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+const settings = { fov: 75, person: 'adult', pov: 'first', bob: !reduceMotion, map: true, pad: coarse, walkLabels: false };
+try {
+  const saved = JSON.parse(localStorage.getItem('countdownGolf3d.v1') || '{}');
+  if (saved && typeof saved === 'object') {
+    if (Number.isFinite(saved.fov)) settings.fov = Math.min(110, Math.max(45, Math.round(saved.fov)));
+    if (PEOPLE[saved.person]) settings.person = saved.person;
+    if (saved.pov === 'first' || saved.pov === 'third') settings.pov = saved.pov;
+    for (const k of ['bob', 'map', 'pad', 'walkLabels']) if (typeof saved[k] === 'boolean') settings[k] = saved[k];
+  }
+} catch (e) { /* stored settings are a convenience */ }
+const saveSettings = () => { try { localStorage.setItem('countdownGolf3d.v1', JSON.stringify(settings)); } catch (e) { /* ignore */ } };
+let P = PEOPLE[settings.person];
+
+const btnWalk = document.getElementById('b-walk'), dWalk = document.getElementById('d-walk');
+const joy = document.getElementById('joy'), knob = joy.querySelector('.knob'), mini = document.getElementById('minimap');
+const fovIn = document.getElementById('fov'), fovOut = document.getElementById('fovOut'), personNote = document.getElementById('personNote');
+let walking = false, yaw = 0, pitch = 0, bobPhase = 0, bobAmt = 0;
+const me = new THREE.Vector2(34.6, RW_AXIS);
+const ARRIVE = { x: 34.6, z: RW_AXIS + 2.4, yaw: Math.atan2(1, 0.12) };   // party side of the golf limit, facing the Tee Booth
 const keys = new Set(), joyV = { x: 0, y: 0 };
 const MOVE_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'KeyQ', 'KeyE', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight']);
 
-// what you can't walk through: hole footprints from the layout script, the stage, runway (with stairs and speaker
-// stands), skyline flats, the Tee Booth desk and queue ropes, the console, the LF platform and the people
+/* field of view: the slider sets the angle across the long side of the screen */
+function applyFov() {
+  const a = camera.aspect || 1, f = settings.fov * Math.PI / 180;
+  camera.fov = a >= 1 ? 2 * Math.atan(Math.tan(f / 2) / a) * 180 / Math.PI : settings.fov;
+  camera.updateProjectionMatrix();
+  fovIn.value = settings.fov; fovOut.textContent = settings.fov + '°';
+}
+fovIn.addEventListener('input', () => { settings.fov = +fovIn.value; applyFov(); saveSettings(); });
+
+/* what you can't walk through: hole footprints from the layout script, the stage, runway (with stairs and speaker
+   stands), skyline flats, the Tee Booth desk and queue ropes, the console, the LF platform and the people */
 const RECTS = [], CIRCLES = [];
-function addPoly(P) { const [a, b, c] = P; const ex = [b[0] - a[0], b[1] - a[1]], ey = [c[0] - b[0], c[1] - b[1]]; const lu = Math.hypot(ex[0], ex[1]), lv = Math.hypot(ey[0], ey[1]); RECTS.push({ cx: (a[0] + c[0]) / 2, cz: (a[1] + c[1]) / 2, ux: ex[0] / lu, uz: ex[1] / lu, hu: lu / 2, hv: lv / 2 }); }
+function addPoly(Q) { const [a, b, c] = Q; const ex = [b[0] - a[0], b[1] - a[1]], ey = [c[0] - b[0], c[1] - b[1]]; const lu = Math.hypot(ex[0], ex[1]), lv = Math.hypot(ey[0], ey[1]); RECTS.push({ cx: (a[0] + c[0]) / 2, cz: (a[1] + c[1]) / 2, ux: ex[0] / lu, uz: ex[1] / lu, hu: lu / 2, hv: lv / 2 }); }
 const addBox = (x0, z0, x1, z1) => addPoly([[x0, z0], [x1, z0], [x1, z1], [x0, z1]]);
-for (const polys of Object.values(LAYOUT.footprints || {})) for (const P of polys) addPoly(P);
+for (const polys of Object.values(LAYOUT.footprints || {})) for (const Q of polys) addPoly(Q);
 addBox(-1, -1, SX, ROOM_W + 1);
 addBox(RW.x0, RW.z0 - STAND_OUT, RW.x1, RW.z1 + STAND_OUT);
 for (const [x0, x1] of [[apronX, 21.0], [21.6, 27.0], [27.6, 32.6]]) { addBox(x0, -1, x1, 0.45); addBox(x0, ROOM_W - 0.45, x1, ROOM_W + 1); }
@@ -3206,35 +3331,74 @@ for (const [x0, x1] of [[apronX, 21.0], [21.6, 27.0], [27.6, 32.6]]) { addBox(x0
 }
 addBox(CONSOLE.x0, CONSOLE.z0, CONSOLE.x1, CONSOLE.z1);
 addBox(LF.x0, LF.z0, LF.x1, LF.z1);
-for (const [x, z] of PEOPLE_SPOTS) CIRCLES.push({ x, z, r: 0.18 });
-function blocked(x, z, r = BODY_R) {
+for (const [x, z] of PEOPLE_SPOTS) CIRCLES.push({ x, z, r: 0.2 });
+function blocked(x, z, r = P.shoulders / 2) {
   if (x < 0.3 || x > ROOM_L - 0.3 || z < 0.3 || z > ROOM_W - 0.3) return true;
   for (const [zw, along, out] of STAGE_CURVES) { const a = (x - SX) / (out + r), b = (z - zw) / (along + r); if (x >= SX && a * a + b * b < 1) return true; }
   for (const R of RECTS) { const dx = x - R.cx, dz = z - R.cz; if (Math.abs(dx * R.ux + dz * R.uz) < R.hu + r && Math.abs(-dx * R.uz + dz * R.ux) < R.hv + r) return true; }
   for (const C of CIRCLES) if (Math.hypot(x - C.x, z - C.z) < C.r + r) return true;
   return false;
 }
-const eyeTarget = () => { const cp = Math.cos(pitch); return [me.x - Math.sin(yaw) * cp * 4, EYE + Math.sin(pitch) * 4, me.y - Math.cos(yaw) * cp * 4]; };
+
+/* you, seen from behind: the same proportions as the scale figures, in a yellow jacket with a cap showing which way you face */
+const avatar = new THREE.Group(); avatar.visible = false; scene.add(avatar);
+function buildAvatar() {
+  avatar.clear();
+  const f = figure(P.h, P.shoulders, '#F2C230', '#C9A88A'); avatar.add(f);
+  const k = P.h / 1.66, hr = 0.066 * P.h, capM = MC('#C8273A', { roughness: 0.6 });
+  mesh(new THREE.SphereGeometry(hr + 0.008, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2), capM, avatar, 0, P.h - hr, 0);
+  box(0.15 * k, 0.012, 0.11 * k, capM, avatar, 0, P.h - hr, -(hr + 0.045 * k));   // the brim points the way you face
+}
+function setPerson(id) {
+  settings.person = id; P = PEOPLE[id]; buildAvatar();
+  document.querySelectorAll('[data-person]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.person === id)));
+  personNote.textContent = `${P.h.toFixed(2)} m tall, eyes at ${P.eye.toFixed(2)} m, ${Math.round(P.shoulders * 100)} cm across the shoulders. Walks at ${P.walk} m/s and hurries at ${P.hurry} m/s, so crossing the 27 m golf zone takes about ${Math.round(27 / P.walk)} seconds, as it would on the night.`;
+  if (walking && !tween) camera.position.y = P.eye;
+}
+document.querySelectorAll('[data-person]').forEach(b => b.addEventListener('click', () => { setPerson(b.dataset.person); saveSettings(); }));
+function setPov(v) { settings.pov = v; document.querySelectorAll('[data-pov]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.pov === v))); }
+document.querySelectorAll('[data-pov]').forEach(b => b.addEventListener('click', () => { setPov(b.dataset.pov); saveSettings(); }));
+function applyOpts() {
+  document.querySelectorAll('[data-opt]').forEach(b => b.setAttribute('aria-pressed', String(!!settings[b.dataset.opt])));
+  mini.hidden = !(walking && settings.map); joy.hidden = !(walking && settings.pad);
+}
+document.querySelectorAll('[data-opt]').forEach(b => b.addEventListener('click', () => { settings[b.dataset.opt] = !settings[b.dataset.opt]; applyOpts(); saveSettings(); }));
+
+/* camera pose for the current position: at your eyes, or 3 m behind and above you */
+const dirFrom = (yw, pt) => [-Math.sin(yw) * Math.cos(pt), Math.sin(pt), -Math.cos(yw) * Math.cos(pt)];
+function camPose() {
+  if (settings.pov === 'third') {
+    const back = 2.4 * (P.h / 1.66) + 0.5, pt = pitch - 0.24, d = dirFrom(yaw, pt);
+    const pos = [me.x + Math.sin(yaw) * back, P.eye + 0.6, me.y + Math.cos(yaw) * back];
+    return { pos, tgt: [pos[0] + d[0] * 4, pos[1] + d[1] * 4, pos[2] + d[2] * 4], pt };
+  }
+  const d = dirFrom(yaw, pitch), pos = [me.x, P.eye, me.y];
+  return { pos, tgt: [pos[0] + d[0] * 4, pos[1] + d[1] * 4, pos[2] + d[2] * 4], pt: pitch };
+}
 function placeAt(x, z, faceYaw, ms = 700) {
   me.set(x, z); yaw = faceYaw; pitch = -0.08;
-  flyTo([x, EYE, z], eyeTarget(), ms);
+  avatar.position.set(x, 0, z); avatar.rotation.y = yaw;
+  const c = camPose(); flyTo(c.pos, c.tgt, ms);
+}
+function syncWalkButtons() {
+  btnWalk.setAttribute('aria-pressed', String(walking)); btnWalk.setAttribute('aria-label', walking ? 'Stop walking' : 'Walk around'); btnWalk.title = walking ? 'Stop walking' : 'Walk around';
+  dWalk.setAttribute('aria-pressed', String(walking)); dWalk.textContent = walking ? 'Stop walking' : 'Start walking';
 }
 function enterWalk() {
   if (walking) return;
-  walking = true; controls.enabled = false;
-  viewer.classList.add('walking'); joy.hidden = false; mini.hidden = false; walkHint.hidden = false;
-  walkBtn.setAttribute('aria-pressed', 'true'); document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', 'false'));
-  camera.fov = 62; camera.updateProjectionMatrix();
+  walking = true; controls.enabled = false; viewer.classList.add('walking');
+  camera.near = 0.08; camera.updateProjectionMatrix();
+  document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', 'false'));
+  syncWalkButtons(); applyOpts(); applyLayers();
   placeAt(ARRIVE.x, ARRIVE.z, ARRIVE.yaw, 1100);
   try { viewer.focus({ preventScroll: true }); } catch (e) { /* focus is a convenience */ }
 }
 function exitWalk() {
   if (!walking) return;
-  walking = false; keys.clear(); joyV.x = joyV.y = 0; knob.style.transform = '';
-  viewer.classList.remove('walking'); joy.hidden = true; mini.hidden = true; walkHint.hidden = true;
-  walkBtn.setAttribute('aria-pressed', 'false');
-  camera.fov = 42; camera.updateProjectionMatrix();
-  const t = eyeTarget(); controls.target.set(t[0], 1.0, t[2]); controls.enabled = true; controls.update();
+  walking = false; keys.clear(); joyV.x = joyV.y = 0; knob.style.transform = ''; avatar.visible = false;
+  viewer.classList.remove('walking'); camera.near = 0.2; camera.updateProjectionMatrix();
+  syncWalkButtons(); applyOpts(); applyLayers();
+  const d = dirFrom(yaw, 0); controls.target.set(me.x + d[0] * 4, 1.0, me.y + d[2] * 4); controls.enabled = true; controls.update();
 }
 function goToTee(h) {
   const t = h.th * Math.PI / 180, face = Math.atan2(-Math.cos(t), -Math.sin(t));
@@ -3243,7 +3407,10 @@ function goToTee(h) {
     if (!blocked(x, z)) { placeAt(x, z, face); return; }
   }
 }
-walkBtn.addEventListener('click', () => walking ? exitWalk() : enterWalk());
+const toggleWalk = () => walking ? exitWalk() : enterWalk();
+btnWalk.addEventListener('click', toggleWalk);
+dWalk.addEventListener('click', () => { openDrawer(false); toggleWalk(); });
+
 function walkStep(dt) {
   let f = 0, s = 0, turn = 0;
   if (keys.has('KeyW') || keys.has('ArrowUp')) f += 1;
@@ -3255,19 +3422,33 @@ function walkStep(dt) {
   f -= joyV.y; s += joyV.x;
   yaw += turn * TURN_V * dt;
   const len = Math.hypot(f, s); if (len > 1) { f /= len; s /= len; }
-  const v = (keys.has('ShiftLeft') || keys.has('ShiftRight')) ? RUN_V : WALK_V;
+  const v = (keys.has('ShiftLeft') || keys.has('ShiftRight')) ? P.hurry : P.walk;
   const dx = (-Math.sin(yaw) * f + Math.cos(yaw) * s) * v * dt, dz = (-Math.cos(yaw) * f - Math.sin(yaw) * s) * v * dt;
+  const x0 = me.x, z0 = me.y;
   if (dx || dz) {
     if (blocked(me.x, me.y) || !blocked(me.x + dx, me.y + dz)) { me.x += dx; me.y += dz; }
     else if (!blocked(me.x + dx, me.y)) me.x += dx;
     else if (!blocked(me.x, me.y + dz)) me.y += dz;
   }
-  camera.position.set(me.x, EYE, me.y);
-  camera.rotation.set(pitch, yaw, 0, 'YXZ');
+  // step bob: one gentle dip per step, at the real step rate for this walker (speed ÷ step length)
+  const speed = Math.hypot(me.x - x0, me.y - z0) / Math.max(dt, 1e-4);
+  bobAmt += ((speed > 0.05 ? 1 : 0) - bobAmt) * Math.min(1, dt * 6);
+  bobPhase += dt * Math.PI * 2 * speed / (0.41 * P.h);
+  const dip = settings.bob && !reduceMotion ? bobAmt * 0.022 * (P.h / 1.66) * (1 - Math.cos(bobPhase)) / 2 : 0;
+  avatar.position.set(me.x, 0, me.y); avatar.rotation.y = yaw;
+  const c = camPose();
+  camera.position.set(c.pos[0], c.pos[1] - dip, c.pos[2]);
+  camera.rotation.set(c.pt, yaw, 0, 'YXZ');
 }
 window.addEventListener('keydown', e => {
+  if (e.code === 'Escape') {
+    if (!drawer.hidden) { openDrawer(false); return; }
+    if (walking) { exitWalk(); return; }
+    if (viewer.classList.contains('full')) { toggleFull(); return; }
+    return;
+  }
   if (!walking || e.altKey || e.ctrlKey || e.metaKey) return;
-  if (e.code === 'Escape') { exitWalk(); return; }
+  if (e.target && e.target.closest && e.target.closest('.drawer')) return;
   if (MOVE_KEYS.has(e.code)) { keys.add(e.code); e.preventDefault(); }
 });
 window.addEventListener('keyup', e => keys.delete(e.code));
@@ -3277,13 +3458,13 @@ let look = null;
 renderer.domElement.addEventListener('pointerdown', e => { if (walking) look = { id: e.pointerId, x: e.clientX, y: e.clientY }; });
 window.addEventListener('pointermove', e => {
   if (!look || e.pointerId !== look.id || tween) return;
-  const k = e.pointerType === 'touch' ? 0.006 : 0.0045;
+  const k = (e.pointerType === 'touch' ? 0.006 : 0.0045) * settings.fov / 75;
   yaw += (e.clientX - look.x) * k; pitch = Math.max(-1.2, Math.min(1.2, pitch + (e.clientY - look.y) * k));
   look.x = e.clientX; look.y = e.clientY;
 });
 const endLook = e => { if (look && e.pointerId === look.id) look = null; };
 window.addEventListener('pointerup', endLook); window.addEventListener('pointercancel', endLook);
-// on-screen pad
+// touch pad
 let joyId = null;
 function moveJoy(e) {
   const r = joy.getBoundingClientRect(), R = r.width / 2, m = R * 0.6;
@@ -3307,14 +3488,15 @@ function buildMini() {
   x.fillStyle = 'rgba(232,217,184,.18)'; x.fillRect(GX * S, 0, (MM.x1 - GX) * S, ROOM_W * S);
   x.fillStyle = '#5B6070'; x.fillRect(0, 0, SX * S, ROOM_W * S); x.fillRect(RW.x0 * S, RW.z0 * S, (RW.x1 - RW.x0) * S, (RW.z1 - RW.z0) * S);
   x.fillStyle = '#C8273A'; x.fillRect(HUB[0] * S, HUB[1] * S, (HUB[2] - HUB[0]) * S, (HUB[3] - HUB[1]) * S);
-  for (const h of HOLES) { x.fillStyle = h.glow; for (const P of (LAYOUT.footprints || {})[h.n] || []) { x.beginPath(); P.forEach(([px, pz], i) => i ? x.lineTo(px * S, pz * S) : x.moveTo(px * S, pz * S)); x.closePath(); x.fill(); } }
+  for (const h of HOLES) { x.fillStyle = h.glow; for (const Q of (LAYOUT.footprints || {})[h.n] || []) { x.beginPath(); Q.forEach(([px, pz], i) => i ? x.lineTo(px * S, pz * S) : x.moveTo(px * S, pz * S)); x.closePath(); x.fill(); } }
   x.strokeStyle = '#14A06B'; x.lineWidth = 1.5 * miniDpr; x.setLineDash([4 * miniDpr, 3 * miniDpr]); x.beginPath(); x.moveTo(GX * S, 0); x.lineTo(GX * S, ROOM_W * S); x.stroke();
   miniBase = c;
 }
 function drawMini() {
+  if (mini.hidden) return;
   if (!miniBase || miniBase.width !== Math.round((mini.clientWidth || 176) * miniDpr)) buildMini();
   const x = mini.getContext('2d'), S = miniScale; x.clearRect(0, 0, mini.width, mini.height); x.drawImage(miniBase, 0, 0);
-  const px = me.x * S, pz = me.y * S, dirx = -Math.sin(yaw), dirz = -Math.cos(yaw), a = Math.atan2(dirz, dirx);
+  const px = me.x * S, pz = me.y * S, a = Math.atan2(-Math.cos(yaw), -Math.sin(yaw));
   x.fillStyle = 'rgba(255,255,255,.28)'; x.beginPath(); x.moveTo(px, pz); x.arc(px, pz, 22 * miniDpr, a - 0.55, a + 0.55); x.closePath(); x.fill();
   x.fillStyle = '#FFFFFF'; x.strokeStyle = '#111'; x.lineWidth = 1.5 * miniDpr; x.beginPath(); x.arc(px, pz, 3.6 * miniDpr, 0, Math.PI * 2); x.fill(); x.stroke();
 }
@@ -3324,14 +3506,54 @@ mini.addEventListener('pointerdown', e => {
   for (const d of [0, 0.4, 0.8, 1.2]) for (const [ox, oz] of [[0, 0], [d, 0], [-d, 0], [0, d], [0, -d]]) if (!blocked(wx + ox, wz + oz)) { placeAt(wx + ox, wz + oz, yaw, 500); return; }
 });
 
+/* settings drawer */
+const drawer = document.getElementById('drawer'), bSet = document.getElementById('b-settings');
+function openDrawer(open) {
+  if (drawer.hidden === !open) return;
+  drawer.hidden = !open; bSet.setAttribute('aria-expanded', String(open));
+  if (open) document.getElementById('dr-close').focus(); else if (document.activeElement && drawer.contains(document.activeElement)) bSet.focus();
+}
+bSet.addEventListener('click', () => openDrawer(drawer.hidden));
+document.getElementById('dr-close').addEventListener('click', () => openDrawer(false));
+
+/* full screen: the browser's own where it's allowed; otherwise the viewer fills the window */
+const bFull = document.getElementById('b-full');
+const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+function syncFull() {
+  const on = !!fsEl() || viewer.classList.contains('full');
+  bFull.setAttribute('aria-pressed', String(on)); bFull.setAttribute('aria-label', on ? 'Exit full screen' : 'Full screen'); bFull.title = on ? 'Exit full screen' : 'Full screen';
+  document.body.classList.toggle('lock', viewer.classList.contains('full'));
+  requestAnimationFrame(resize);
+}
+async function toggleFull() {
+  if (fsEl()) { try { await (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch (e) { /* ignore */ } }
+  else if (viewer.classList.contains('full')) viewer.classList.remove('full');
+  else {
+    const req = viewer.requestFullscreen || viewer.webkitRequestFullscreen;
+    if (req) { try { await req.call(viewer); } catch (e) { /* not allowed here */ } }
+    if (!fsEl()) await new Promise(r => setTimeout(r, 200));
+    if (!fsEl()) viewer.classList.add('full');
+  }
+  syncFull();
+}
+bFull.addEventListener('click', toggleFull);
+document.addEventListener('fullscreenchange', syncFull);
+document.addEventListener('webkitfullscreenchange', syncFull);
+
+setPerson(settings.person); setPov(settings.pov); applyOpts(); syncWalkButtons();
+
 /* ------------------------------------------------------------------ controls wiring */
-document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { exitWalk(); setView(b.dataset.view); }));
+document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { openDrawer(false); exitWalk(); setView(b.dataset.view); }));
 document.querySelectorAll('[data-light]').forEach(b => b.addEventListener('click', () => applyLight(b.dataset.light)));
-document.querySelectorAll('[data-layer]').forEach(b => b.addEventListener('click', () => { layers[b.dataset.layer] = !layers[b.dataset.layer]; applyLayers(); }));
+document.querySelectorAll('[data-layer]').forEach(b => b.addEventListener('click', () => {
+  const k = b.dataset.layer;
+  if (k === 'labels' && walking) { settings.walkLabels = !settings.walkLabels; saveSettings(); } else layers[k] = !layers[k];
+  applyLayers();
+}));
 
 function resize() {
   const w = viewer.clientWidth, h = viewer.clientHeight; if (!w || !h) return;
-  renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+  renderer.setSize(w, h, false); camera.aspect = w / h; applyFov();
 }
 new ResizeObserver(resize).observe(viewer);
 
@@ -3348,6 +3570,7 @@ renderer.setAnimationLoop((now) => {
   for (const f of animators) f(now / 1000, dt);
   if (tween) { const k = Math.min((now - tween.t0) / tween.ms, 1), e = ease(k); camera.position.lerpVectors(tween.p0, tween.p1, e); controls.target.lerpVectors(tween.q0, tween.q1, e); if (walking) camera.lookAt(controls.target); if (k >= 1) tween = null; }
   if (walking) { if (!tween) walkStep(dt); } else controls.update();
+  avatar.visible = walking && settings.pov === 'third';
   renderer.render(scene, camera);
   updateLabels();
   if (walking) drawMini();

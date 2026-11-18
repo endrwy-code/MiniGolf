@@ -27,7 +27,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies and factories |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
 | [Status page](status/countdown-golf-status.html) | 18 Nov: one visual page with the gates, what's decided, today's changes, the plaza layout, capacity and cost. Published privately as an Artifact |
-| [3D view](status/countdown-golf-3d.html) | 18 Nov (later): the New York holes on layout v3, to scale, with three lighting set-ups, a tee view of each hole and a walk mode at eye height. Published privately as an Artifact |
+| [3D view](status/countdown-golf-3d.html) | 18 Nov (later): the New York holes on layout v3, to scale, with three lighting set-ups, a tee view of each hole, full screen, and a walk mode at human scale (child, average adult or tall adult). Published privately as an Artifact |
 | [Project brief](docs/project-brief.md) | Original context, floorplan decode, earlier research and the **decision log** |
 | [`CLAUDE.md`](CLAUDE.md) | Project memory for Claude Code sessions |
 
