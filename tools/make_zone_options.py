@@ -1,7 +1,7 @@
 """Zone options and the plaza concept layout (to-scale plan SVGs, stdlib only).
 
 Usage:
-    python3 tools/make_zone_options.py floorplan/auditorium-dimensions.json floorplan [--png]
+    python3 tools/make_zone_options.py floorplan/auditorium-dimensions-v1-cable-plan.json floorplan [--png]
 
 Writes:
     zone-options.svg         where a "city" course could go, given the runway (3 candidate zones)
@@ -470,7 +470,7 @@ def figure_zone_options(stats):
     lx += 140
     leg.append(f'<line x1="{lx}" y1="{ly - 5}" x2="{lx + 22}" y2="{ly - 5}" stroke="#3B8BD9" stroke-width="1" stroke-dasharray="3 2.5"/><circle cx="{lx + 11}" cy="{ly - 5}" r="3.2" fill="#fff" stroke="#3B8BD9"/>')
     px_text(leg, lx + 28, ly, "Wi-Fi AP + data cable (est.; floor or rigged?)", 10.5)
-    px_text(leg, OX, H - 10, "Source: floorplan/auditorium-dimensions.json and floorplan/source-screenshots/ · drops and Wi-Fi points scaled off screenshots 01 and 04 (≈ ±1 m) · regenerate with tools/make_zone_options.py", 9.5, "#5F5E5A")
+    px_text(leg, OX, H - 10, "Source: floorplan/auditorium-dimensions-v1-cable-plan.json and floorplan/source-screenshots/ · drops and Wi-Fi points scaled off screenshots 01 and 04 (≈ ±1 m) · regenerate with tools/make_zone_options.py", 9.5, "#5F5E5A")
     head = []
     px_text(head, OX, 38, "Where a “city” course could go: three zones, now that the runway is confirmed", 18, "#2C2C2A", weight="600")
     px_text(head, OX, 60, "To scale (20 px = 1 m). Measured values are marked “measured”; everything else is an estimate or a guess to confirm. The runway is raised, so nobody walks across it:", 12, "#5F5E5A")
@@ -751,7 +751,7 @@ def figure_plaza(polys, res, stats):
         px_text(pe, PANEL_X, iy, ln, 10.5, "#444441"); iy += 14
     H = int(max(cv.Z(D_ROOM) + 66, iy + 18)) + 26
     foot = []
-    px_text(foot, OX, H - 14, "Source: floorplan/auditorium-dimensions.json · docs/03-hole-spec-sheet.md (footprints, names) · cables, drops and Wi-Fi points scaled off screenshots 01 and 04 · tools/make_zone_options.py", 9.5, "#5F5E5A")
+    px_text(foot, OX, H - 14, "Source: floorplan/auditorium-dimensions-v1-cable-plan.json · docs/03-hole-spec-sheet.md (footprints, names) · cables, drops and Wi-Fi points scaled off screenshots 01 and 04 · tools/make_zone_options.py", 9.5, "#5F5E5A")
     head = []
     px_text(head, OX, 38, "Draft layout v2 (concept): 10 holes as a city plaza at the runway tip", 18, "#2C2C2A", weight="600")
     px_text(head, OX, 60, "Concept for discussion, not a construction drawing. To scale (26 px = 1 m). Positions estimated ±1 m. The dashed runway extension is unconfirmed.", 12, "#5F5E5A")

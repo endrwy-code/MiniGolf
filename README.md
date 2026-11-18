@@ -17,7 +17,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Reference decoder](docs/02-reference-decoder.md) | What each inspiration photo really is, and what to copy |
 | [10-hole spec sheet](docs/03-hole-spec-sheet.md) | Build standard plus the 10 holes, for the builder and turf supplier |
 | **[The city concept](docs/09-city-concept.md)** | **18 Nov: the city brief, logic-checked. Look, where it goes, play order and capacity, story, gimmicks** |
-| [Zone options](floorplan/zone-options.png) · [Plaza layout v2](floorplan/layout-draft-plaza.png) | Where the course could go now the runway is confirmed; 10 holes as two districts at the runway tip |
+| **[Auditorium plan v2](floorplan/auditorium-simplified.png)** | **18 Nov: the team's tape measurements and the golf zone (stage side of a line 27 m from the stage front). Not-measured items are dashed** |
+| [Zone options](floorplan/zone-options.png) · [Plaza layout v2](floorplan/layout-draft-plaza.png) | Superseded by the golf zone (18 Nov), and drawn on the old cable-plan geometry: 10 holes as two districts at the runway tip |
 | [Draft layout v1](floorplan/layout-draft-zone-a.png) | Superseded: 10 holes in a line in Zone A |
 | **Concept renders** (predate the city concept) | What the course looks like: [holes, Neon](concepts/holes-neon.png) · [course, Neon](concepts/course-neon.png) · [holes, Carnival](concepts/holes-carnival.png) · [course, Carnival](concepts/course-carnival.png) |
 | [Scale and budget](docs/08-budget-model.md) | Movable formats, quantities, person-days, four cost scenarios, levers |
@@ -38,22 +39,28 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 - [ ] Who builds: church crew, split, or outsourced?
 - [ ] Install window confirmed (are 26–27 Dec used for services?)
 
-**Team input 18 Nov:** the central strip is a raised runway (part of the stage). Design brief: one coherent "city", not a line; fun holes; a story that works in any order.
+**Team input 18 Nov:** the central strip is a raised runway (part of the stage). Design brief: one coherent "city", not a line; fun holes; a story that works in any order. New tape measurements (width 25.6 m, runway 22.54 × 2.4 m) and the golf zone: golf stays on the stage side of a line 27 m from the stage front.
 
-**Recommended, not decided:** hybrid local build · Bright City art direction · plaza at the runway tip, two 5-hole districts sharing one hub · 4 hero holes (8, 4, 2, 1) · see [the city concept](docs/09-city-concept.md).
+**Recommended, not decided:** hybrid local build · Bright City art direction · two 5-hole districts sharing one hub (layout to redo inside the golf zone) · 4 hero holes (8, 4, 2, 1) · see [the city concept](docs/09-city-concept.md).
 
 ## Folder map
 
 ```
 docs/          planning documents (numbered in reading order)
-floorplan/     auditorium plan, dimensions JSON, draft layout, source screenshots
+floorplan/     auditorium plan v2, dimensions JSON (v2; v1 kept), draft layouts, source sketch and screenshots
 reference/     inspiration photos and video stills
 concepts/      isometric concept renders of the holes and the whole course (two art directions)
-tools/         make_layout_svg.py (layout v1) · make_zone_options.py (zones, layout v2) · flow_sim.py (capacity) · make_concepts.py (renders)
+tools/         make_floorplan.py (plan v2) · make_layout_svg.py (layout v1) · make_zone_options.py (zones, layout v2) · flow_sim.py (capacity) · make_concepts.py (renders)
 ```
 
-Regenerate the layout after editing the dimensions or hole plan:
+Redraw the auditorium plan after editing `floorplan/auditorium-dimensions.json`:
 
 ```bash
-python3 tools/make_layout_svg.py floorplan/auditorium-dimensions.json floorplan/layout-draft-zone-a.svg
+python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png
+```
+
+Regenerate the old v1 layout (v1 geometry) after editing its dimensions or hole plan:
+
+```bash
+python3 tools/make_layout_svg.py floorplan/auditorium-dimensions-v1-cable-plan.json floorplan/layout-draft-zone-a.svg
 ```

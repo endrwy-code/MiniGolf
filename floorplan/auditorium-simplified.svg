@@ -1,66 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1000" viewBox="0 0 680 500" role="img" font-family="Helvetica, Arial, sans-serif">
-  <title>Auditorium, simplified plan with dimensions</title>
-  <desc>Auditorium 54.7 by 27.1 metres. Stage zone at the left end, a central strip about 23.7 by 2.4 metres, a control booth at the right, two open floor zones about 46 by 11.6 metres each, main cable runs, and two overloaded circuits. Coordinates match floorplan/auditorium-dimensions.json at 10 px per metre, origin x=90, y=110.</desc>
-  <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-  </defs>
-  <rect x="0" y="0" width="680" height="500" fill="#FFFFFF"/>
-
-  <text x="40" y="30" font-size="16" font-weight="500" fill="#2C2C2A">Auditorium, simplified plan</text>
-  <text x="40" y="50" font-size="12" fill="#5F5E5A">Countdown party mini golf, 31 Dec 2026. Schematic: positions marked ≈ are estimates.</text>
-
-  <rect x="90" y="110" width="547" height="271" rx="4" fill="#FAFAF7" stroke="#888780" stroke-width="1"/>
-  <rect x="150" y="122" width="459.5" height="256" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-
-  <rect x="94" y="118" width="52" height="259" rx="4" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
-  <text x="120" y="240" font-size="14" font-weight="500" fill="#444441" text-anchor="middle">Stage?</text>
-  <text x="120" y="258" font-size="12" fill="#5F5E5A" text-anchor="middle">≈6 m</text>
-
-  <rect x="165" y="238" width="237" height="24" rx="4" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
-  <text x="283" y="254" font-size="12" fill="#444441" text-anchor="middle">Central strip ≈23.7 × 2.4 m</text>
-
-  <rect x="610" y="228" width="27" height="46" rx="3" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
-  <text x="604" y="290" font-size="12" fill="#444441" text-anchor="end">Booth?</text>
-
-  <line x1="190" y1="136" x2="470" y2="136" stroke="#E24B4A" stroke-width="1.5"/>
-  <line x1="190" y1="355" x2="470" y2="355" stroke="#E24B4A" stroke-width="1.5"/>
-  <line x1="95" y1="370" x2="605" y2="370" stroke="#E24B4A" stroke-width="3"/>
-
-  <text x="260" y="182" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">Zone A</text>
-  <text x="260" y="200" font-size="12" fill="#0F6E56" text-anchor="middle">≈46 × 11.6 m</text>
-  <text x="260" y="302" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">Zone B</text>
-  <text x="260" y="320" font-size="12" fill="#0F6E56" text-anchor="middle">≈46 × 11.6 m</text>
-
-  <circle cx="276" cy="221" r="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
-  <text x="266" y="225" font-size="12" fill="#791F1F" text-anchor="end">ND18 · 101% load</text>
-  <circle cx="280" cy="339" r="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
-  <text x="270" y="343" font-size="12" fill="#791F1F" text-anchor="end">ND21 · 106% load</text>
-
-  <line x1="380" y1="124" x2="380" y2="236" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
-  <text x="388" y="184" font-size="12" fill="#444441">11.62 m</text>
-  <line x1="380" y1="264" x2="380" y2="376" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
-  <text x="388" y="324" font-size="12" fill="#444441">11.58 m</text>
-  <line x1="405" y1="256" x2="607" y2="256" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
-  <text x="506" y="248" font-size="12" fill="#444441" text-anchor="middle">20.73 m</text>
-
-  <line x1="92" y1="92" x2="635" y2="92" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
-  <text x="363" y="84" font-size="12" fill="#444441" text-anchor="middle">54.7 m</text>
-  <line x1="78" y1="112" x2="78" y2="379" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
-  <text x="72" y="249" font-size="12" fill="#444441" text-anchor="end">27.1 m</text>
-
-  <line x1="150" y1="384" x2="150" y2="408" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 3"/>
-  <line x1="609.5" y1="384" x2="609.5" y2="408" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 3"/>
-  <line x1="152" y1="400" x2="607" y2="400" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
-  <text x="380" y="420" font-size="12" fill="#444441" text-anchor="middle">45.95 m · stage edge to booth</text>
-
-  <rect x="90" y="443" width="14" height="14" rx="2" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="110" y="454" font-size="12" fill="#444441">Open floor</text>
-  <line x1="200" y1="450" x2="222" y2="450" stroke="#E24B4A" stroke-width="2"/>
-  <text x="228" y="454" font-size="12" fill="#444441">Main cable runs</text>
-  <circle cx="345" cy="450" r="5" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
-  <text x="356" y="454" font-size="12" fill="#444441">Circuit over 100%</text>
-  <text x="490" y="454" font-size="12" fill="#444441">Plain numbers = measured</text>
-  <text x="90" y="482" font-size="12" fill="#5F5E5A">Vertical cable drops every few metres are not shown. Source: floorplan/source-screenshots/.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2020" height="1512" viewBox="0 0 1010 756" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>Auditorium, simplified plan v2</title>
+<desc>Auditorium plan from the team's tape measurements on 18 Nov 2026: width 25.6 m (rough), runway 22.54 by 2.4 m, golf limit 27 m from the stage front with the mini golf on the stage side, LF platform, sound console, doors, stairs and speaker stands. Items not measured are dashed and grey. 15 px per metre.</desc>
+<rect x="0" y="0" width="1010" height="756" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker><pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#FFFFFF"/><path d="M0 4L4 0" stroke="#5F5E5A" stroke-width="0.7"/></pattern></defs>
+<text x="40.0" y="36.0" font-size="18" fill="#2C2C2A" text-anchor="start" font-weight="600">Auditorium, simplified plan · v2</text>
+<text x="40.0" y="58.0" font-size="12" fill="#5F5E5A" text-anchor="start">From the team's tape measurements on the hand sketch, 18 Nov 2026. Stage on the left, as in the cable-planning tool.</text>
+<text x="40.0" y="76.0" font-size="12" fill="#5F5E5A" text-anchor="start">Black numbers are measured. Grey dashed items and grey numbers are not measured: drawn where the sketch shows them. Don't build to them.</text>
+<rect x="190.0" y="150.0" width="405.0" height="384.0" fill="#E1F5EE" stroke="none" stroke-width="0" />
+<rect x="595.0" y="150.0" width="325.5" height="384.0" fill="#F6F1E7" stroke="none" stroke-width="0" />
+<rect x="100.0" y="150.0" width="90.0" height="384.0" fill="#E4E1D8" stroke="none" stroke-width="0" />
+<line x1="190.0" y1="150.0" x2="190.0" y2="534.0" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M190.0 150.0L227.5 150.0A37.5 60.0 0 0 1 190.0 210.0Z" fill="#E4E1D8" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M190.0 534.0L227.5 534.0A37.5 37.5 0 0 0 190.0 496.5Z" fill="#E4E1D8" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="145.0" y="312.0" font-size="13" fill="#2C2C2A" text-anchor="middle" font-weight="600">Stage</text>
+<text x="145.0" y="328.0" font-size="10" fill="#888780" text-anchor="middle" font-style="italic">depth not</text>
+<text x="145.0" y="340.0" font-size="10" fill="#888780" text-anchor="middle" font-style="italic">measured</text>
+<text x="193.8" y="223.0" font-size="10" fill="#888780" text-anchor="start" font-style="italic">curved stage edge</text>
+<text x="193.8" y="490.5" font-size="10" fill="#888780" text-anchor="start" font-style="italic">curved stage edge</text>
+<rect x="190.0" y="324.8" width="338.1" height="36.0" fill="#E4E1D8" stroke="#5F5E5A" stroke-width="1" />
+<text x="359.0" y="346.8" font-size="12" fill="#2C2C2A" text-anchor="middle">Runway (raised, part of the stage) · 22.54 × 2.4 m</text>
+<rect x="466.6" y="317.0" width="24.0" height="7.7" fill="#FAC775" stroke="#854F0B" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="466.6" y="360.8" width="24.0" height="7.7" fill="#FAC775" stroke="#854F0B" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="340.6" y="317.0" width="27.0" height="7.7" fill="#FAC775" stroke="#854F0B" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="340.6" y="360.8" width="27.0" height="7.7" fill="#FAC775" stroke="#854F0B" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="246.1" y="317.0" width="39.0" height="7.7" fill="url(#hatch)" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="246.1" y="360.8" width="39.0" height="7.7" fill="url(#hatch)" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="415.6" y="310.0" font-size="11" fill="#854F0B" text-anchor="middle">Speaker stands · stick out 51.5 cm</text>
+<text x="265.6" y="310.0" font-size="11" fill="#444441" text-anchor="middle">Stairs</text>
+<text x="415.6" y="383.5" font-size="10" fill="#888780" text-anchor="middle" font-style="italic">positions, lengths and stair depth not measured</text>
+<rect x="595.0" y="514.5" width="51.0" height="19.5" fill="#D9D5EC" stroke="none"/>
+<line x1="595.0" y1="514.5" x2="646.0" y2="514.5" stroke="#534AB7" stroke-width="1" />
+<line x1="646.0" y1="514.5" x2="646.0" y2="534.0" stroke="#534AB7" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="611.0" y="508.5" font-size="11" fill="#3C3489" text-anchor="start">LF platform · length not measured</text>
+<text x="652.0" y="528.2" font-size="12" fill="#2C2C2A" text-anchor="start">1.3 m</text>
+<rect x="860.5" y="275.2" width="60.0" height="135.0" fill="#FFFFFF" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="890.5" y="328.8" font-size="12" fill="#2C2C2A" text-anchor="middle" font-weight="600">Sound</text>
+<text x="890.5" y="343.8" font-size="12" fill="#2C2C2A" text-anchor="middle" font-weight="600">console</text>
+<text x="890.5" y="360.8" font-size="10" fill="#888780" text-anchor="middle" font-style="italic">size not</text>
+<text x="890.5" y="372.8" font-size="10" fill="#888780" text-anchor="middle" font-style="italic">measured</text>
+<text x="378.5" y="204.0" font-size="16" fill="#085041" text-anchor="middle" font-weight="600">Mini golf zone</text>
+<text x="378.5" y="222.0" font-size="12" fill="#0F6E56" text-anchor="middle">≈ 263 m² beside the runway</text>
+<text x="378.5" y="456.0" font-size="16" fill="#085041" text-anchor="middle" font-weight="600">Mini golf zone</text>
+<text x="378.5" y="474.0" font-size="12" fill="#0F6E56" text-anchor="middle">≈ 260 m² beside the runway</text>
+<text x="565.5" y="237.0" font-size="12" fill="#0F6E56" text-anchor="middle" transform="rotate(-90 565.5 237.0)">≈ 114 m² past the tip</text>
+<text x="747.8" y="240.0" font-size="16" fill="#6B5428" text-anchor="middle" font-weight="600">Other activities</text>
+<text x="747.8" y="258.0" font-size="12" fill="#6B5428" text-anchor="middle">beyond the golf limit</text>
+<line x1="595.0" y1="136.0" x2="595.0" y2="534.0" stroke="#0F6E56" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="595.0" y="130.0" font-size="12" fill="#085041" text-anchor="middle" font-weight="600">Golf limit · decided 18 Nov</text>
+<rect x="100.0" y="150.0" width="820.5" height="384.0" fill="none" stroke="#2C2C2A" stroke-width="2"/>
+<line x1="920.5" y1="190.5" x2="920.5" y2="223.5" stroke="#FFFFFF" stroke-width="4" />
+<path d="M920.5 190.5L887.5 190.5A33.0 33.0 0 0 1 920.5 223.5" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="926.5" y="205.0" font-size="11" fill="#444441" text-anchor="start">Door /</text>
+<text x="926.5" y="218.0" font-size="11" fill="#444441" text-anchor="start">exit</text>
+<line x1="920.5" y1="439.5" x2="920.5" y2="480.0" stroke="#FFFFFF" stroke-width="4" />
+<path d="M920.5 439.5L880.0 439.5A40.5 40.5 0 0 1 920.5 480.0" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="926.5" y="457.8" font-size="11" fill="#444441" text-anchor="start">Door /</text>
+<text x="926.5" y="470.8" font-size="11" fill="#444441" text-anchor="start">exit</text>
+<line x1="604.0" y1="151.0" x2="604.0" y2="323.8" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="610.0" y="241.4" font-size="12" fill="#2C2C2A" text-anchor="start">11.65 m</text>
+<line x1="604.0" y1="325.8" x2="604.0" y2="359.8" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="610.0" y="346.8" font-size="12" fill="#2C2C2A" text-anchor="start">2.4 m</text>
+<line x1="604.0" y1="361.8" x2="604.0" y2="513.5" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="610.0" y="441.6" font-size="12" fill="#2C2C2A" text-anchor="start">10.25 m</text>
+<line x1="604.0" y1="514.5" x2="604.0" y2="534.0" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<line x1="528.1" y1="324.8" x2="607.0" y2="324.8" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="528.1" y1="360.8" x2="607.0" y2="360.8" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="78.0" y1="151.0" x2="78.0" y2="533.0" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="72.0" y="346.0" font-size="12" fill="#2C2C2A" text-anchor="end"></text>
+<text x="70.0" y="340.0" font-size="12" fill="#2C2C2A" text-anchor="end">25.6 m</text>
+<text x="70.0" y="354.0" font-size="11" fill="#5F5E5A" text-anchor="end">(rough)</text>
+<line x1="101.0" y1="108.0" x2="919.5" y2="108.0" stroke="#888780" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)" stroke-dasharray="4 3"/>
+<text x="510.2" y="102.0" font-size="11" fill="#888780" text-anchor="middle" font-style="italic">54.7 m · from the old cable plan, not re-measured (team: unchanged)</text>
+<line x1="100.0" y1="538.0" x2="100.0" y2="570.0" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="190.0" y1="538.0" x2="190.0" y2="602.0" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="528.1" y1="538.0" x2="528.1" y2="570.0" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="595.0" y1="538.0" x2="595.0" y2="602.0" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="920.5" y1="538.0" x2="920.5" y2="570.0" stroke="#888780" stroke-width="0.5" stroke-dasharray="2 2"/>
+<line x1="101.0" y1="564.0" x2="189.0" y2="564.0" stroke="#888780" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)" stroke-dasharray="4 3"/>
+<text x="145.0" y="558.0" font-size="11" fill="#888780" text-anchor="middle" font-style="italic">not measured</text>
+<line x1="191.0" y1="564.0" x2="527.1" y2="564.0" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="359.0" y="558.0" font-size="12" fill="#2C2C2A" text-anchor="middle">22.54 m · stage front → runway tip</text>
+<line x1="529.1" y1="564.0" x2="594.0" y2="564.0" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="561.5" y="558.0" font-size="12" fill="#2C2C2A" text-anchor="middle">4.46 m*</text>
+<line x1="596.0" y1="564.0" x2="919.5" y2="564.0" stroke="#888780" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)" stroke-dasharray="4 3"/>
+<text x="757.8" y="558.0" font-size="11" fill="#888780" text-anchor="middle" font-style="italic">golf limit → back wall: not measured</text>
+<line x1="191.0" y1="596.0" x2="594.0" y2="596.0" stroke="#5F5E5A" stroke-width="1" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="392.5" y="590.0" font-size="12" fill="#2C2C2A" text-anchor="middle">27 m · stage front → golf limit</text>
+<rect x="40.0" y="627.0" width="14" height="14" rx="2" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="60.0" y="638.0" font-size="12" fill="#444441" text-anchor="start">Mini golf zone (team, 18 Nov)</text>
+<rect x="267.6" y="627.0" width="14" height="14" rx="2" fill="#F6F1E7" stroke="#6B5428" stroke-width="0.8"/>
+<text x="287.6" y="638.0" font-size="12" fill="#444441" text-anchor="start">Other activities</text>
+<rect x="412.0" y="627.0" width="14" height="14" rx="2" fill="#E4E1D8" stroke="#5F5E5A" stroke-width="0.8"/>
+<text x="432.0" y="638.0" font-size="12" fill="#444441" text-anchor="start">Stage and runway (raised)</text>
+<rect x="614.0" y="627.0" width="14" height="14" rx="2" fill="#FAC775" stroke="#854F0B" stroke-width="0.8"/>
+<text x="634.0" y="638.0" font-size="12" fill="#444441" text-anchor="start">Speaker stand</text>
+<rect x="739.2" y="627.0" width="14" height="14" rx="2" fill="url(#hatch)" stroke="#5F5E5A" stroke-width="0.8"/>
+<text x="759.2" y="638.0" font-size="12" fill="#444441" text-anchor="start">Stairs</text>
+<line x1="40.0" y1="658.0" x2="62.0" y2="658.0" stroke="#888780" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="68.0" y="662.0" font-size="12" fill="#444441" text-anchor="start">Not measured: drawn where the sketch shows it</text>
+<line x1="370.0" y1="658.0" x2="392.0" y2="658.0" stroke="#0F6E56" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="398.0" y="662.0" font-size="12" fill="#444441" text-anchor="start">Golf limit: 27 m from the stage front; golf on the stage side</text>
+<text x="40.0" y="692.0" font-size="11" fill="#5F5E5A" text-anchor="start">* 4.46 m = 27 − 22.54 (derived). Areas are derived from measured values, before the stage curves, stairs and speaker stands come off: golf zone ≈ 637 m² after the runway.</text>
+<text x="40.0" y="710.0" font-size="11" fill="#5F5E5A" text-anchor="start">Not shown: cable runs and drops, including two circuits over 100% (ND18 at 101%, ND21 at 106%). They still apply, but they were drawn on the old geometry and need re-placing.</text>
+<text x="40.0" y="728.0" font-size="11" fill="#5F5E5A" text-anchor="start">Sketch: floorplan/source-sketches/2026-11-18-hand-sketch-tape-measurements.jpg · data: floorplan/auditorium-dimensions.json · redraw: python3 tools/make_floorplan.py</text>
 </svg>

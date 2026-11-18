@@ -33,11 +33,31 @@ The screenshots come from an event cable and power planning tool, not an archite
 | "…e Blind 3–6" | Probably blinder lights (text is cut off on the left) | Medium |
 | Hamond FL | Unknown | Unknown |
 | White central strip | **A raised runway, part of the stage, joined to it in a cross shape (confirmed by the team 18 Nov).** Striped end probably steps or the joint with the stage; a dotted outline may be a proposed extension of about 8.6 m (estimated, unconfirmed) | High (purpose) |
-| Boxed structure at the right | Probably the control booth | Low |
+| Boxed structure at the right | **The sound console (confirmed by the team 18 Nov)** | High |
 
-### Measurements
+### Measurements v2 (18 Nov 2026, current)
 
-All four were taken by the team in the planning tool. Geometry and coordinates for every zone are in `floorplan/auditorium-dimensions.json`.
+The team measured the room with a tape and wrote the numbers on a hand sketch (`floorplan/source-sketches/2026-11-18-hand-sketch-tape-measurements.jpg`). These replace the cable-plan measurements below, which had the width and the runway length wrong. Geometry: `floorplan/auditorium-dimensions.json`. Plan: `floorplan/auditorium-simplified.png`.
+
+| Measurement | Value | How it's known |
+|---|---|---|
+| Room width | 25.6 m | Measured, rough |
+| Top wall to runway | 11.65 m | Measured |
+| Runway width | 2.4 m | Measured |
+| Runway to LF platform | 10.25 m | Measured |
+| LF platform depth | 1.3 m | Measured |
+| Top wall to LF platform | 24.3 m | Measured (= 11.65 + 2.4 + 10.25) |
+| Runway length, stage front to tip | 22.54 m | Measured |
+| Stage front to golf limit | 27 m | Measured |
+| Runway tip to golf limit | 4.46 m | Derived (27 − 22.54). The sketch's 4.9 m is wrong (team) |
+| Speaker stands, out from the runway side | 51.5 cm | Measured |
+| Room length | 54.7 m | Not re-measured: from the cable plan; the team says it is unchanged |
+
+The team also confirmed what's on the sketch. Each side of the runway has stairs nearest the stage and two speaker stands toward the tip. The two curves at the stage-end corners are part of the stage. The marks either side of the sound console are doors or exits. The 11.65 m side goes at the top when the plan is drawn stage-left. Still not measured: stage depth, golf limit to the sound console, the console's size, the stage curves, the positions and sizes of the stairs and stands, the LF platform's length, and the door positions.
+
+### Measurements v1 (16 Nov 2026, superseded)
+
+All four were taken by the team in the planning tool. Geometry and coordinates for every zone are in `floorplan/auditorium-dimensions-v1-cable-plan.json`.
 
 | Measurement | Value | Screenshot |
 |---|---|---|
@@ -116,3 +136,5 @@ Add a dated row whenever something is decided, and update the "Decided" section 
 | 2026-11-17 | One night only: temporary, movable set-up; no permanent install; no reuse planned | Team |
 | 2026-11-18 | Fact confirmed: the central strip is a raised runway, part of the stage, joined in a cross shape. Players can't cross it. No extra cross-arm: stage plus runway form the cross. Runway height still to confirm | Team |
 | 2026-11-18 | Design brief: holes read together as one coherent "city", not a straight line; each hole interesting to play; a story that works in any order. Look like the Pixar Putt references (method, not characters). Neon optional. Claude's response, not yet decided: `docs/09-city-concept.md` | Team |
+| 2026-11-18 | Fact: the team's tape measurements replace the cable-plan geometry. Width 25.6 m (rough) = 11.65 + 2.4 runway + 10.25 + 1.3 LF platform; runway 22.54 m from the stage front to its tip. The box at the back is the sound console; each side of the runway has stairs nearest the stage, then two speaker stands (51.5 cm out); the stage corners curve to the side walls; doors or exits either side of the console. Plan v2: `floorplan/auditorium-simplified.png` | Team |
+| 2026-11-18 | Golf zone: the mini golf stays on the stage side of a line 27 m from the stage front (4.46 m past the runway tip); the floor beyond it is for other activities. The plaza layout v2 sits mostly beyond this line, so it needs redoing | Team |

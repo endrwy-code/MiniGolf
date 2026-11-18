@@ -51,7 +51,7 @@ All six are about layout, repetition and lighting. None needs expensive props.
 
 ## 3. Where the city goes: the runway changes the layout
 
-What the runway means (geometry in `floorplan/auditorium-dimensions.json`):
+What the runway means (geometry in `floorplan/auditorium-dimensions-v1-cable-plan.json`):
 
 - Nobody can walk across it, so the two floor halves only join **beyond the runway tip**, between the runway end (about x 31.2) and the booth.
 - The floor near the runway and stage is where the crowd will gather for the countdown. Golf there would compete with the show.
