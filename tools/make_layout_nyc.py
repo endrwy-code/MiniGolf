@@ -7,7 +7,8 @@ Usage:
 Writes floorplan/layout-v3-nyc.svg (and .png with --png, rendered with the pre-installed
 Playwright Chromium) and floorplan/layout-v3-nyc.json. With --inject it also copies the hole
 data into the 3D page between the /* LAYOUT:BEGIN */ and /* LAYOUT:END */ markers, so the
-3D model and the plan always use the same positions.
+3D model and the plan always use the same positions. The footprints it exports (decks, totems and
+props beside them) are also what the 3D walk mode collides with.
 
 Everything here is a proposal (Claude, 18 Nov), not a decision. Hole positions sit on values
 that are not measured yet (stage depth, stair and speaker-stand positions), so treat them as
@@ -629,6 +630,7 @@ def export_json(res):
         "routes": {"A": [r(hop) for hop in route_A()], "B": [r(hop) for hop in route_B()]},
         "sightline": r(sight_poly()),
         "checks_m": {k: round(v[0], 2) for k, v in res.items() if isinstance(v, tuple)},
+        "footprints": {str(h["n"]): [r(P) for P in footprints(h)] for h in HOLES},
         "holes": holes,
     }
 
