@@ -58,7 +58,23 @@ What the runway means (geometry in `floorplan/auditorium-dimensions.json`):
 - The screenshots show a dotted outline that may extend the runway by about 8.6 m toward the booth (estimated). Nobody has confirmed it.
 - The team says the stage and runway form a cross. The screenshots show no cross-arm along the runway, so its position and size are needed.
 
-_Layout options and a to-scale draft are being added (zone areas, fit check)._
+**Three places the course could go** (drawn to scale in [`floorplan/zone-options.png`](../floorplan/zone-options.png)):
+
+| Option | Gross area | Shape | For | Against |
+|---|---|---|---|---|
+| A. Strip (the v1 layout) | ≈ 534 m² | 46 × 11.6 m | Already drawn; uses one side only | Forces a line. Shares the floor with the countdown crowd near the stage |
+| **B. Plaza at the runway tip** (recommended to test first) | ≈ 505 m² (≈ 484 m² as a U if the extension is built) | ≈ 19.7 × 25.6 m: the only square-ish floor | Room for a real cluster; both halves meet here; away from the countdown crowd | The booth's line of sight to the stage crosses it; two cable drops cut the south half; clearances are tight |
+| C. U around the runway | ≈ 673 m² | A U | The most room | Takes the most party floor; the runway splits it; it runs up to the audience area |
+
+**Draft v2 in the plaza** ([`floorplan/layout-draft-plaza.png`](../floorplan/layout-draft-plaza.png)): two districts of 5 holes, north and south of a low "boulevard" on the runway axis. Each district loops back to one hub (queue, putters, ball return) at the booth end. Hole footprints and names are from spec v1. The 10 holes take about 99 m², 20% of the plaza, which leaves room for wandering walkways and a queue. The script checks the clearances: every walkway ≥ 1.2 m, holes ≥ 1.25 m apart, hub ≥ 1.5 m clear. It still fits if the runway extension is built, with no hole moving.
+
+**What could break it** (confirm before anyone fixes a position):
+- **Cable drops ND31 and D42** (positions estimated ±1 m) cut the south half into strips. A 1 m shift could break District B. Ask production which floor cables stay on the night and whether any drops can move.
+- The walk from the hub to hole 5 runs along D42 for about 6 m and needs a continuous cable cover.
+- If the dark blocks along the top wall are exits, the north skyline flats have to move.
+- Where is the booth door? The hub sits 2.5 m from the booth face.
+- Wi-Fi access points sit near holes 7–10. This only matters if they're on floor stands rather than rigged.
+- Several clearances sit exactly at the 1.2 m and 1.5 m limits: there's no slack yet.
 
 ## 4. Play order and capacity
 

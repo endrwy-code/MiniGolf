@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2552" height="2208" viewBox="0 0 1276 1104" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>Zone options for the mini golf city</title>
+<desc>To-scale plan of the auditorium with the confirmed runway, its possible extension, estimated cables, an assumed audience zone, the booth sightline, and three candidate golf zones with gross areas.</desc>
+<defs>
+<marker id="arA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L9 5L1 9z" fill="#BA7517"/></marker>
+<marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L9 5L1 9z" fill="#534AB7"/></marker>
+<marker id="arK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5"/></marker>
+<marker id="arK0" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M8 1L2 5L8 9" fill="none" stroke="#5F5E5A" stroke-width="1.5"/></marker>
+<pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C9C6BC" stroke-width="1.2"/></pattern>
+<pattern id="hatchR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#EDBDB6" stroke-width="0.8"/></pattern>
+<pattern id="ramp" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4" height="4" fill="#F2C94C"/><line x1="0" y1="0" x2="0" y2="4" stroke="#2C2C2A" stroke-width="1.6"/></pattern>
+</defs>
+<rect x="0" y="0" width="1276" height="1104" fill="#FFFFFF"/>
+<text x="62.0" y="38.0" font-size="18" fill="#2C2C2A" text-anchor="start" font-weight="600">Where a “city” course could go: three zones, now that the runway is confirmed</text>
+<text x="62.0" y="60.0" font-size="12" fill="#5F5E5A" text-anchor="start" font-weight="400">To scale (20 px = 1 m). Measured values are marked “measured”; everything else is an estimate or a guess to confirm. The runway is raised, so nobody walks across it:</text>
+<text x="62.0" y="77.0" font-size="12" fill="#5F5E5A" text-anchor="start" font-weight="400">the two floor halves only connect beyond its tip (x 31.2 → booth). If the dashed extension is built, that open floor shrinks from ≈ 20.7 m to ≈ 12.1 m deep.</text>
+<rect x="62.0" y="170.0" width="1094.0" height="542.0" rx="3" fill="#FAFAF7" stroke="#888780" stroke-width="1" />
+<rect x="182.0" y="170.0" width="974.0" height="24.0" rx="0" fill="#E7E5DE" stroke="#B4B2A9" stroke-width="0.5" />
+<rect x="65.0" y="173.0" width="114.0" height="536.0" rx="2" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.75" />
+<rect x="182.0" y="426.4" width="504.4" height="48.0" rx="1" fill="#D9D6CC" stroke="#5F5E5A" stroke-width="1" />
+<rect x="686.4" y="426.4" width="171.6" height="48.0" rx="1" fill="none" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="1101.0" y="406.0" width="53.0" height="92.0" rx="2" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.75" />
+<rect x="182.0" y="194.0" width="360.0" height="232.4" rx="0" fill="url(#hatch)" stroke="#B4B2A9" stroke-width="0.5" />
+<rect x="182.0" y="474.4" width="360.0" height="231.6" rx="0" fill="url(#hatch)" stroke="#B4B2A9" stroke-width="0.5" />
+<text x="362.0" y="318.0" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="500" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >Assumed countdown audience zone</text>
+<text x="362.0" y="334.0" font-size="10" fill="#5F5E5A" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >(x 6–24 both sides; to confirm)</text>
+<text x="362.0" y="582.0" font-size="11" fill="#5F5E5A" text-anchor="middle" font-weight="500" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >Assumed countdown audience zone</text>
+<text x="362.0" y="598.0" font-size="10" fill="#5F5E5A" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >(to confirm)</text>
+<polygon points="686.4,426.4 1101.0,406.0 1101.0,498.0 686.4,474.4" fill="#FBE3D6" stroke="#D85A30" stroke-width="0.75" fill-opacity="0.75" stroke-dasharray="4 3"/>
+<text x="958.2" y="447.4" font-size="10" fill="#712B13" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >Keep props ≤ 1.5 m: booth sightline to the stage (to confirm)</text>
+<polyline points="262.0,222.0 822.0,222.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="262.0,660.0 822.0,660.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="72.0,690.0 1092.0,690.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="670.0,194.0 670.0,706.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="822.0,222.0 850.0,222.0 850.0,322.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="744.0,378.0 744.0,660.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="928.0,380.0 928.0,690.0" fill="none" stroke="#E24B4A" stroke-width="1.4" stroke-linecap="round"/>
+<polyline points="814.0,222.0 814.0,344.0" fill="none" stroke="#3B8BD9" stroke-width="0.9" stroke-dasharray="3 2.5"/>
+<polyline points="974.0,222.0 974.0,344.0" fill="none" stroke="#3B8BD9" stroke-width="0.9" stroke-dasharray="3 2.5"/>
+<circle cx="814.0" cy="260.0" r="3.2" fill="#FFFFFF" stroke="#3B8BD9" stroke-width="1" />
+<circle cx="814.0" cy="344.0" r="3.2" fill="#FFFFFF" stroke="#3B8BD9" stroke-width="1" />
+<circle cx="974.0" cy="260.0" r="3.2" fill="#FFFFFF" stroke="#3B8BD9" stroke-width="1" />
+<circle cx="974.0" cy="344.0" r="3.2" fill="#FFFFFF" stroke="#3B8BD9" stroke-width="1" />
+<circle cx="650.0" cy="340.0" r="3.2" fill="#FFFFFF" stroke="#3B8BD9" stroke-width="1" />
+<text x="122.0" y="430.0" font-size="13" fill="#2C2C2A" text-anchor="middle" font-weight="600" >Stage</text>
+<text x="122.0" y="450.0" font-size="9.5" fill="#5F5E5A" text-anchor="middle" font-weight="400" >(depth ≈ 6 m, est.)</text>
+<text x="414.2" y="457.4" font-size="11" fill="#2C2C2A" text-anchor="middle" font-weight="600" >Runway (raised, part of stage, confirmed)</text>
+<text x="772.2" y="492.4" font-size="9.5" fill="#444441" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >possible extension, est. ±1 m, not confirmed</text>
+<text x="302.0" y="417.4" font-size="9.5" fill="#993C1D" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >cross-arm position unknown (to confirm)</text>
+<text x="1128.0" y="398.0" font-size="10" fill="#444441" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >Booth (guess)</text>
+<text x="622.0" y="186.0" font-size="9.5" fill="#5F5E5A" text-anchor="middle" font-weight="400" >Dark blocks along the top wall: doors or exits? (to confirm)</text>
+<text x="552.0" y="217.0" font-size="9" fill="#A32D2D" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >north run (est.)</text>
+<text x="552.0" y="655.0" font-size="9" fill="#A32D2D" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >south run (est.)</text>
+<text x="882.0" y="685.0" font-size="9" fill="#A32D2D" text-anchor="middle" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >main trunk along bottom wall (est.)</text>
+<text x="664.0" y="282.0" font-size="9" fill="#A32D2D" text-anchor="end" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >trunk at tip (est.)</text>
+<text x="750.0" y="542.0" font-size="9" fill="#A32D2D" text-anchor="start" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >ND31 (est.)</text>
+<text x="934.0" y="562.0" font-size="9" fill="#A32D2D" text-anchor="start" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >D42 (est.)</text>
+<text x="856.0" y="298.0" font-size="9" fill="#A32D2D" text-anchor="start" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >D53 (est.)</text>
+<text x="982.0" y="370.0" font-size="9" fill="#1F5F9E" text-anchor="start" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >Wi-Fi APs + data (est.)</text>
+<circle cx="434.0" cy="392.0" r="18.0" fill="none" stroke="#A32D2D" stroke-width="0.75" stroke-dasharray="3 3"/>
+<circle cx="434.0" cy="392.0" r="4.0" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1" />
+<text x="458.0" y="398.0" font-size="9.5" fill="#791F1F" text-anchor="start" font-weight="500" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >ND18 101% load</text>
+<circle cx="442.0" cy="628.0" r="18.0" fill="none" stroke="#A32D2D" stroke-width="0.75" stroke-dasharray="3 3"/>
+<circle cx="442.0" cy="628.0" r="4.0" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1" />
+<text x="466.0" y="634.0" font-size="9.5" fill="#791F1F" text-anchor="start" font-weight="500" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >ND21 106% load</text>
+<text x="232.0" y="698.0" font-size="9" fill="#5F5E5A" text-anchor="start" font-weight="400" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >Other vertical drops cross both halves every few metres: not mapped, see source screenshots.</text>
+<line x1="182.0" y1="128.0" x2="1101.0" y2="128.0" stroke="#5F5E5A" stroke-width="0.8" marker-start="url(#arK0)" marker-end="url(#arK)"/>
+<line x1="182.0" y1="121.0" x2="182.0" y2="135.0" stroke="#5F5E5A" stroke-width="0.8" />
+<line x1="1101.0" y1="121.0" x2="1101.0" y2="135.0" stroke="#5F5E5A" stroke-width="0.8" />
+<text x="641.5" y="123.0" font-size="10" fill="#2C2C2A" text-anchor="middle" font-weight="500" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >45.95 m stage edge → booth (measured)</text>
+<line x1="686.4" y1="152.0" x2="1101.0" y2="152.0" stroke="#5F5E5A" stroke-width="0.8" marker-start="url(#arK0)" marker-end="url(#arK)"/>
+<line x1="686.4" y1="145.0" x2="686.4" y2="159.0" stroke="#5F5E5A" stroke-width="0.8" />
+<line x1="1101.0" y1="145.0" x2="1101.0" y2="159.0" stroke="#5F5E5A" stroke-width="0.8" />
+<text x="893.7" y="147.0" font-size="10" fill="#2C2C2A" text-anchor="middle" font-weight="500" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke" >20.73 m runway tip → booth (measured)</text>
+<line x1="1174.0" y1="194.0" x2="1174.0" y2="426.4" stroke="#5F5E5A" stroke-width="0.8" marker-start="url(#arK0)" marker-end="url(#arK)"/>
+<text x="1180.0" y="310.2" font-size="10" fill="#2C2C2A" font-weight="500" transform="rotate(90 1180.0 310.2)" text-anchor="middle">11.62 m (measured)</text>
+<line x1="1174.0" y1="474.4" x2="1174.0" y2="706.0" stroke="#5F5E5A" stroke-width="0.8" marker-start="url(#arK0)" marker-end="url(#arK)"/>
+<text x="1180.0" y="590.2" font-size="10" fill="#2C2C2A" font-weight="500" transform="rotate(90 1180.0 590.2)" text-anchor="middle">11.58 m (measured)</text>
+<line x1="62.0" y1="712.0" x2="62.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="62.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >0</text>
+<line x1="162.0" y1="712.0" x2="162.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="162.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >5</text>
+<line x1="262.0" y1="712.0" x2="262.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="262.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >10</text>
+<line x1="362.0" y1="712.0" x2="362.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="362.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >15</text>
+<line x1="462.0" y1="712.0" x2="462.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="462.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >20</text>
+<line x1="562.0" y1="712.0" x2="562.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="562.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >25</text>
+<line x1="662.0" y1="712.0" x2="662.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="662.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >30</text>
+<line x1="762.0" y1="712.0" x2="762.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="762.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >35</text>
+<line x1="862.0" y1="712.0" x2="862.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="862.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >40</text>
+<line x1="962.0" y1="712.0" x2="962.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="962.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >45</text>
+<line x1="1062.0" y1="712.0" x2="1062.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="1062.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >50</text>
+<line x1="1162.0" y1="712.0" x2="1162.0" y2="719.0" stroke="#888780" stroke-width="0.8" />
+<text x="1162.0" y="732.0" font-size="9" fill="#888780" text-anchor="middle" font-weight="400" >55</text>
+<line x1="55.0" y1="170.0" x2="62.0" y2="170.0" stroke="#888780" stroke-width="0.8" />
+<text x="51.0" y="175.0" font-size="9" fill="#888780" text-anchor="end" font-weight="400" >0</text>
+<line x1="55.0" y1="270.0" x2="62.0" y2="270.0" stroke="#888780" stroke-width="0.8" />
+<text x="51.0" y="275.0" font-size="9" fill="#888780" text-anchor="end" font-weight="400" >5</text>
+<line x1="55.0" y1="370.0" x2="62.0" y2="370.0" stroke="#888780" stroke-width="0.8" />
+<text x="51.0" y="375.0" font-size="9" fill="#888780" text-anchor="end" font-weight="400" >10</text>
+<line x1="55.0" y1="470.0" x2="62.0" y2="470.0" stroke="#888780" stroke-width="0.8" />
+<text x="51.0" y="475.0" font-size="9" fill="#888780" text-anchor="end" font-weight="400" >15</text>
+<line x1="55.0" y1="570.0" x2="62.0" y2="570.0" stroke="#888780" stroke-width="0.8" />
+<text x="51.0" y="575.0" font-size="9" fill="#888780" text-anchor="end" font-weight="400" >20</text>
+<line x1="55.0" y1="670.0" x2="62.0" y2="670.0" stroke="#888780" stroke-width="0.8" />
+<text x="51.0" y="675.0" font-size="9" fill="#888780" text-anchor="end" font-weight="400" >25</text>
+<text x="609.0" y="747.0" font-size="9.5" fill="#888780" text-anchor="middle" font-weight="400" >x (m) from the stage-end wall · room 54.7 × 27.1 m (planning-tool tooltip)</text>
+<text x="52.0" y="790.0" font-size="13" fill="#2C2C2A" text-anchor="start" font-weight="600">Option A: Strip (the v1 layout)</text>
+<text x="52.0" y="808.0" font-size="10.5" fill="#0F6E56" text-anchor="start" font-weight="500">≈ 534 m² gross</text>
+<rect x="52.0" y="824.0" width="355.6" height="176.2" rx="2" fill="#FAFAF7" stroke="#888780" stroke-width="0.8" />
+<rect x="53.0" y="825.0" width="37.0" height="174.2" rx="1" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5" />
+<rect x="91.0" y="831.8" width="117.0" height="75.5" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<rect x="91.0" y="922.9" width="117.0" height="75.3" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<polygon points="91.0,831.8 389.7,831.8 389.7,907.3 91.0,907.3" fill="#9FE1CB" stroke="#0F6E56" stroke-width="1.2" fill-opacity="0.85"/>
+<rect x="91.0" y="907.3" width="163.9" height="15.6" rx="0" fill="#D9D6CC" stroke="#5F5E5A" stroke-width="0.8" />
+<rect x="254.9" y="907.3" width="55.8" height="15.6" rx="0" fill="none" stroke="#5F5E5A" stroke-width="0.8" stroke-dasharray="3 2"/>
+<rect x="389.7" y="900.7" width="17.2" height="29.9" rx="1" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.6" />
+<text x="52.0" y="1016.1" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Long and thin (46 × 11.6 m): forces a line.</text>
+<text x="52.0" y="1030.2" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Shares the floor with the audience zone.</text>
+<text x="460.2" y="790.0" font-size="13" fill="#2C2C2A" text-anchor="start" font-weight="600">Option B: Plaza at the runway tip</text>
+<text x="460.2" y="808.0" font-size="10.5" fill="#BA7517" text-anchor="start" font-weight="500">≈ 505 m² gross; ≈ 484 m² as a U if the extension is built</text>
+<rect x="460.2" y="824.0" width="355.6" height="176.2" rx="2" fill="#FAFAF7" stroke="#888780" stroke-width="0.8" />
+<rect x="461.2" y="825.0" width="37.0" height="174.2" rx="1" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5" />
+<rect x="499.2" y="831.8" width="117.0" height="75.5" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<rect x="499.2" y="922.9" width="117.0" height="75.3" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<polygon points="663.2,831.8 791.4,831.8 791.4,998.2 663.2,998.2" fill="#FFE2A8" stroke="#BA7517" stroke-width="1.2" fill-opacity="0.85"/>
+<rect x="499.2" y="907.3" width="163.9" height="15.6" rx="0" fill="#D9D6CC" stroke="#5F5E5A" stroke-width="0.8" />
+<rect x="663.2" y="907.3" width="55.8" height="15.6" rx="0" fill="none" stroke="#5F5E5A" stroke-width="0.8" stroke-dasharray="3 2"/>
+<rect x="797.9" y="900.7" width="17.2" height="29.9" rx="1" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.6" />
+<line x1="718.9" y1="906.0" x2="718.9" y2="924.2" stroke="#BA7517" stroke-width="1.2" stroke-dasharray="2 2"/>
+<text x="460.2" y="1016.1" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">The only square-ish floor (19.7 × 25.6 m); both halves</text>
+<text x="460.2" y="1030.2" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">meet here. Away from the countdown crowd.</text>
+<text x="460.2" y="1044.2" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Booth sightline and two drops cross it.</text>
+<text x="868.4" y="790.0" font-size="13" fill="#2C2C2A" text-anchor="start" font-weight="600">Option C: U around the runway</text>
+<text x="868.4" y="808.0" font-size="10.5" fill="#185FA5" text-anchor="start" font-weight="500">≈ 673 m² gross</text>
+<rect x="868.4" y="824.0" width="355.6" height="176.2" rx="2" fill="#FAFAF7" stroke="#888780" stroke-width="0.8" />
+<rect x="869.4" y="825.0" width="37.0" height="174.2" rx="1" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5" />
+<rect x="907.4" y="831.8" width="117.0" height="75.5" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<rect x="907.4" y="922.9" width="117.0" height="75.3" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<polygon points="1024.4,831.8 1199.6,831.8 1199.6,907.3 1024.4,907.3" fill="#CFE3F7" stroke="#185FA5" stroke-width="1.2" fill-opacity="0.85"/>
+<polygon points="1024.4,922.9 1199.6,922.9 1199.6,998.2 1024.4,998.2" fill="#CFE3F7" stroke="#185FA5" stroke-width="1.2" fill-opacity="0.85"/>
+<polygon points="1071.4,907.3 1199.6,907.3 1199.6,922.9 1071.4,922.9" fill="#CFE3F7" stroke="#185FA5" stroke-width="1.2" fill-opacity="0.85"/>
+<rect x="907.4" y="907.3" width="163.9" height="15.6" rx="0" fill="#D9D6CC" stroke="#5F5E5A" stroke-width="0.8" />
+<rect x="1071.4" y="907.3" width="55.8" height="15.6" rx="0" fill="none" stroke="#5F5E5A" stroke-width="0.8" stroke-dasharray="3 2"/>
+<rect x="1206.1" y="900.7" width="17.2" height="29.9" rx="1" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.6" />
+<text x="868.4" y="1016.1" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Most floor, but the runway splits it: the halves</text>
+<text x="868.4" y="1030.2" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">only join beyond the tip. Takes floor from the party</text>
+<text x="868.4" y="1044.2" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">and edges the audience zone.</text>
+<rect x="62" y="1063" width="16" height="12" rx="1" fill="#D9D6CC" stroke="#5F5E5A"/>
+<text x="84.0" y="1074.0" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Runway (confirmed)</text>
+<rect x="206.39999999999998" y="1063" width="16" height="12" rx="1" fill="none" stroke="#5F5E5A" stroke-dasharray="4 3"/>
+<text x="228.4" y="1074.0" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Possible extension (est.)</text>
+<rect x="391.4" y="1063" width="16" height="12" rx="1" fill="url(#hatch)" stroke="#B4B2A9"/>
+<text x="413.4" y="1074.0" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Assumed audience zone</text>
+<rect x="553.2" y="1063" width="16" height="12" rx="1" fill="#FBE3D6" stroke="#D85A30"/>
+<text x="575.2" y="1074.0" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Booth sightline corridor</text>
+<line x1="732.4000000000001" y1="1069" x2="754.4000000000001" y2="1069" stroke="#E24B4A" stroke-width="2"/>
+<text x="760.4" y="1074.0" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Power cable (est.)</text>
+<line x1="872.4000000000001" y1="1069" x2="894.4000000000001" y2="1069" stroke="#3B8BD9" stroke-width="1" stroke-dasharray="3 2.5"/><circle cx="883.4000000000001" cy="1069" r="3.2" fill="#fff" stroke="#3B8BD9"/>
+<text x="900.4" y="1074.0" font-size="10.5" fill="#444441" text-anchor="start" font-weight="400">Wi-Fi AP + data cable (est.; floor or rigged?)</text>
+<text x="62.0" y="1094.0" font-size="9.5" fill="#5F5E5A" text-anchor="start" font-weight="400">Source: floorplan/auditorium-dimensions.json and floorplan/source-screenshots/ · drops and Wi-Fi points scaled off screenshots 01 and 04 (≈ ±1 m) · regenerate with tools/make_zone_options.py</text>
+</svg>

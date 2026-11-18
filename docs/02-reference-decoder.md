@@ -113,7 +113,7 @@ What this means for our course: [`09-city-concept.md`](09-city-concept.md).
 
 ## Putting it together: one art direction
 
-| Element | Neon Countdown (recommended) | Bright Carnival (alternative) |
+| Element | Neon Countdown (recommended 16 Nov; superseded 18 Nov, see below) | Bright Carnival (alternative) |
 |---|---|---|
 | Playing surface | Charcoal or black turf, accent colours on inlays | Green turf with colour inlays |
 | Edges | White or black rail with LED strip under the lip | Painted timber rail |
