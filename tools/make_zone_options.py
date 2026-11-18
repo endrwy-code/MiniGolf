@@ -379,7 +379,7 @@ def figure_zone_options(stats):
     cv.text(3.0, 14.0, "(depth ≈ 6 m, est.)", 9.5, "#5F5E5A")
     cv.text((RW["x"][0] + RW_X1) / 2 - 1.0, RW_ZC + 0.35, "Runway (raised, part of stage, confirmed)", 11, "#2C2C2A", weight="600")
     cv.text((EXT["x"][0] + EXT_X1) / 2, RW_Z1 + 0.9, "possible extension, est. ±1 m, not confirmed", 9.5, "#444441", halo=True)
-    cv.text(12.0, RW_Z0 - 0.45, "cross-arm position unknown (to confirm)", 9.5, "#993C1D", "middle", halo=True)
+    cv.text(12.0, RW_Z0 - 0.45, "no cross-arm (team, 18 Nov): stage + runway form the cross", 9.5, "#993C1D", "middle", halo=True)
     cv.text(53.3, BOOTH["z"][0] - 0.4, "Booth (guess)", 10, "#444441", halo=True)
     cv.text(28.0, 0.8, "Dark blocks along the top wall: doors or exits? (to confirm)", 9.5, "#5F5E5A")
     # cable labels
@@ -754,7 +754,7 @@ def figure_plaza(polys, res, stats):
     px_text(foot, OX, H - 14, "Source: floorplan/auditorium-dimensions.json · docs/03-hole-spec-sheet.md (footprints, names) · cables, drops and Wi-Fi points scaled off screenshots 01 and 04 · tools/make_zone_options.py", 9.5, "#5F5E5A")
     head = []
     px_text(head, OX, 38, "Draft layout v2 (concept): 10 holes as a city plaza at the runway tip", 18, "#2C2C2A", weight="600")
-    px_text(head, OX, 60, "Concept for discussion, not a construction drawing. To scale (26 px = 1 m). Positions estimated ±1 m. The runway's cross-arm and the dashed extension are unconfirmed.", 12, "#5F5E5A")
+    px_text(head, OX, 60, "Concept for discussion, not a construction drawing. To scale (26 px = 1 m). Positions estimated ±1 m. The dashed runway extension is unconfirmed.", 12, "#5F5E5A")
     px_text(head, OX, 77, "Hole footprints from the spec sheet. Confirm which floor cables and drops stay on the night before fixing any position: 75 mm decks cannot sit on a cable.", 12, "#5F5E5A")
     clip = (f'<clipPath id="cmap"><rect x="{cv.X(XL):.1f}" y="{cv.Z(0):.1f}" width="{(L_ROOM - XL) * S:.1f}" height="{D_ROOM * S:.1f}"/></clipPath>'
             f'<clipPath id="cins"><rect x="{ic.X(29.5):.1f}" y="{ic.Z(0):.1f}" width="{(L_ROOM - 29.5) * si:.1f}" height="{D_ROOM * si:.1f}"/></clipPath>')

@@ -114,5 +114,5 @@ Add a dated row whenever something is decided, and update the "Decided" section 
 | 2026-11-16 | Event is the countdown party on 31 Dec 2026 | Team |
 | 2026-11-16 | 10 holes | Team |
 | 2026-11-17 | One night only: temporary, movable set-up; no permanent install; no reuse planned | Team |
-| 2026-11-18 | Fact confirmed: the central strip is a raised runway, part of the stage, joined in a cross shape. Players can't cross it. Cross-arm position and runway height still to confirm | Team |
+| 2026-11-18 | Fact confirmed: the central strip is a raised runway, part of the stage, joined in a cross shape. Players can't cross it. No extra cross-arm: stage plus runway form the cross. Runway height still to confirm | Team |
 | 2026-11-18 | Design brief: holes read together as one coherent "city", not a straight line; each hole interesting to play; a story that works in any order. Look like the Pixar Putt references (method, not characters). Neon optional. Claude's response, not yet decided: `docs/09-city-concept.md` | Team |

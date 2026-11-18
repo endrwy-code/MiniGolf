@@ -10,7 +10,7 @@
 4. Each hole should be interesting to play: a gimmick that balances fun with taking a fair amount of time.
 5. A story that works in any order, so groups don't have to play in sequence and more people can play at once.
 
-The team also corrected a fact: the central strip is a **raised runway that is part of the stage**, joined to it in the shape of a cross.
+The team also corrected a fact: the central strip is a **raised runway that is part of the stage**, joined to it in the shape of a cross. (Confirmed later the same day: no extra cross-arm; the stage and runway together form the cross.)
 
 ## The short version
 
@@ -56,7 +56,7 @@ What the runway means (geometry in `floorplan/auditorium-dimensions.json`):
 - Nobody can walk across it, so the two floor halves only join **beyond the runway tip**, between the runway end (about x 31.2) and the booth.
 - The floor near the runway and stage is where the crowd will gather for the countdown. Golf there would compete with the show.
 - The screenshots show a dotted outline that may extend the runway by about 8.6 m toward the booth (estimated). Nobody has confirmed it.
-- The team says the stage and runway form a cross. The screenshots show no cross-arm along the runway, so its position and size are needed.
+- The stage and runway form the cross; there is no extra arm across the runway (team, 18 Nov).
 
 **Three places the course could go** (drawn to scale in [`floorplan/zone-options.png`](../floorplan/zone-options.png)):
 
@@ -160,7 +160,7 @@ A cheaper lever exists: 2 hero props instead of 4 (section 5 of the budget model
 ## 8. To decide by G1 (Wed 25 Nov)
 
 1. **Bright City as the art direction?** (replaces the Neon recommendation)
-2. **Where the course goes:** Strip, Plaza at the runway tip, or U around the runway (section 3). Needs production's answers on the countdown audience area, booth sightline, runway extension and cross-arm.
+2. **Where the course goes:** Strip, Plaza at the runway tip, or U around the runway (section 3). Needs production's answers on the countdown audience area, booth sightline and runway extension.
 3. **Play format:** fixed route, or a loop you can start anywhere (section 4).
 4. **Story:** "ten places, one moment", another idea, or no story. Then the hole names.
-5. **Questions for production this week:** can you light the golf zone? Is the runway extension being built? Where is the cross-arm? Does the booth need a clear sightline down the middle of the room? Where do guests come in?
+5. **Questions for production this week:** can you light the golf zone? Is the runway extension being built? Does the booth need a clear sightline down the middle of the room? Where do guests come in?

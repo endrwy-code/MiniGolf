@@ -16,7 +16,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on 31 December 20
 - Size: 10 holes.
 - Format: one night only; temporary and movable (flat-pack style); no permanent install; no reuse planned (17 Nov).
 - Design brief (18 Nov): the holes read together as one coherent "city", not a straight line; each hole is interesting to play; the story works in any order. Look like the Pixar Putt references (method, not characters). Neon optional.
-- Fact (18 Nov): the central strip is a raised runway, part of the stage, joined in a cross shape. Players can't cross it.
+- Fact (18 Nov): the central strip is a raised runway, part of the stage; stage plus runway form the cross (no extra cross-arm). Players can't cross it.
 
 ## Recommended, not yet decided
 
@@ -79,7 +79,7 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json`. Picture: `f
 - Budget.
 - The venue's fire-rating requirements for turf and foam.
 - Confirm the remaining guess on the plan: the right-hand box is the control booth. (Stage at the left end and the runway were confirmed 18 Nov.)
-- Runway: its height; where the cross-arm sits and how big it is; whether the dotted extension (≈ 8.6 m toward the booth) will be built.
+- Runway: its height; whether the dotted extension (≈ 8.6 m toward the booth) will be built.
 - Can production light the golf zone from the rig? (decides whether Bright City works in a dark room)
 - Where do guests enter the auditorium? Where will the countdown crowd stand? Does the booth need a clear sightline down the middle of the room?
 
@@ -96,7 +96,7 @@ Done 18 Nov: runway confirmed; Bright City concept (`docs/09-city-concept.md`); 
 1. Team answers the G0 questions; record the answers in the decision log.
 2. Send the quote requests (`docs/06-rfq-templates.md`) and log the replies in `docs/04-sourcing.md`.
 3. Fill in `docs/08-budget-model.md` with real quotes.
-4. Take the production questions in `docs/09-city-concept.md` section 8 to production this week (light the golf zone? runway extension and cross-arm? booth sightline? which floor cables and drops stay? where guests enter?).
+4. Take the production questions in `docs/09-city-concept.md` section 8 to production this week (light the golf zone? runway extension? booth sightline? which floor cables and drops stay? where guests enter?).
 5. Team decides by G1 (25 Nov): Bright City, plaza location, district format, story. Then revise `tools/make_zone_options.py` with the confirmed drops and exits, update the spec sheet's hole names, and redo the concept renders.
 6. When the team adds the 3D model: place the holes to scale and generate a preview.
 
