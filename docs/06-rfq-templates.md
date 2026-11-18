@@ -110,3 +110,37 @@ Send this even if you're leaning local. Their answers tell you whether they're r
 - Catalogue renders only, with no real photos or contactable references: treat as a trading company and be careful.
 - They won't commit to dates in writing: walk away.
 - Clear dates, real stock photos, references and certificates: worth a video call.
+
+---
+
+## E. Freelance carpenter (route C, about 12 days)
+
+For route C in `11-route-c-carpenter-build.md`: one paid carpenter builds the structure, volunteers paint and dress. Attach the layout (`floorplan/layout-v3-nyc.png`) and the hole-by-hole table from that doc.
+
+> Subject: Carpentry for a one-off indoor mini golf course, about 12 days in December
+>
+> Hi [Name],
+>
+> We're [Church/Team] in Singapore, building a 10-hole indoor mini golf course for one night, 31 Dec 2026, in an auditorium. Volunteers will paint and dress everything. We're looking for a carpenter to build the structure.
+>
+> **The work** (layout and hole list attached):
+> - About 130 m of timber rail (45 × 95 mm on edge), in sections two people can carry, held down by plates under the playing surface. Nothing is fixed to the venue floor.
+> - Ten low cup pads (about 50–60 mm high, bevelled), and a few simple features: a hump, a gangway ramp and a wall with three tunnels.
+> - Flat cut-out props on braced bases (1.5–3 m tall), a ball-collecting box and a small booth frame.
+> - One prototype hole by Fri 4 Dec, the rest by Fri 18 Dec for a dry-run assembly, and help with the install on 28–29 Dec.
+>
+> **Please tell us:**
+> 1. Your day rate, and how many days you'd estimate.
+> 2. Which days you're free between 30 Nov and 29 Dec.
+> 3. Whether you bring your own tools, and what you'd need from us (workspace, power, a helper).
+> 4. Photos of 2–3 things you've built (sets, booths, furniture).
+> 5. Whether you'd buy the timber or we should, and a timber merchant you'd recommend.
+>
+> We're deciding by **Wed 25 Nov**.
+>
+> Thanks,
+> [Name], [Role]
+
+**How to read the answers**
+- Over about S$300 a day, or more than 15 days: route C won't fit S$10k without cuts. Check the cut list in `11-route-c-carpenter-build.md` section 6.
+- Can't give fixed days in writing: keep looking. The route hangs on this one person.

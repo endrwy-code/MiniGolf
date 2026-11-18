@@ -52,7 +52,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Tallest props | 3–3.6 m (Christmas tree, Grand Central backdrop, ball-drop tower) | Design target; check the rig clearance |
 | Throughput | Ceiling ≈ 100–120 players/hour at 2–2.5 min per hole; realistic ≈ 75–90/h for the full 10 holes over a 3 h session (≈ 230–270 players); ≈ 2.3× that if each group plays one 5-hole district | Simulated (`tools/flow_sim.py`); time it at the dry run |
 | Build scale | ≈ 70 plywood sheets, ≈ 3 t, 1–2 lorry loads, ≈ 120 person-days | Estimate (`docs/08-budget-model.md`) |
-| Budget bands | Rent carnival lanes + dressing ≈ S$3–6k · DIY floor-laid ≈ S$1.7k bare / S$4–6.5k best value · carpenter + volunteers ≈ S$6–10k · church crew (raised decks) ≈ S$14–31k · split ≈ S$30–56k · outsourced ≈ S$50–91k | Estimate, not quotes; low-budget lines from Singapore listing prices 18 Nov (`docs/08-budget-model.md` §6) |
+| Budget bands | Rent carnival lanes + dressing ≈ S$3–6k · DIY floor-laid ≈ S$1.7k bare / S$4–6.5k best value · carpenter + volunteers ≈ S$6–10k (New York cut down: plan ≈ S$9.5k, `docs/11-route-c-carpenter-build.md`) · church crew (raised decks) ≈ S$14–31k · split ≈ S$30–56k · outsourced ≈ S$50–91k | Estimate, not quotes; low-budget lines from Singapore listing prices 18 Nov (`docs/08-budget-model.md` §6) |
 | Materials only, New York design, team builds | ≈ S$13–27k all bought in Singapore · ≈ S$11–22k buying the light items (turf, LED, neon, printing, putters) from China · ≈ S$9–19k with plywood and timber from China too (not recommended: heavy and on the critical path). Includes 15% contingency and 9% import GST | Estimate, not quotes (`docs/08-budget-model.md` §8) |
 | Deck height | ≈ 75 mm (revised from 120 mm) | Design target |
 | Players on course at once | ≈ 40 (one group of 4 per hole) | Estimate |
@@ -104,6 +104,8 @@ Done 18 Nov: runway confirmed; Bright City concept (`docs/09-city-concept.md`); 
 
 Done later on 18 Nov: the New York direction recorded; ten New York holes, robustness rules and lighting spec (`docs/10-new-york-concept.md`); layout v3 on the v2 geometry with checked clearances (`tools/make_layout_nyc.py`, `floorplan/layout-v3-nyc.png`); 3D model rebuilt on it; reference photos 06–08 saved.
 
+Done later on 18 Nov: route C (carpenter + volunteers, S$6–10k) broken down for the New York design (`docs/11-route-c-carpenter-build.md`), and a carpenter quote template (`docs/06-rfq-templates.md` E).
+
 1. Team answers the G0 questions; record the answers in the decision log.
 2. Send the quote requests (`docs/06-rfq-templates.md`) and log the replies in `docs/04-sourcing.md`.
 3. Fill in `docs/08-budget-model.md` with real quotes.
@@ -143,7 +145,7 @@ Done later on 18 Nov: the New York direction recorded; ten New York holes, robus
 - `docs/03-hole-spec-sheet.md`: build standard and the 10 holes.
 - `docs/04-sourcing.md`: Huadong evaluation, alternatives, recommendation.
 - `docs/05-timeline-and-critical-path.md`: gates and the week-by-week plan.
-- `docs/06-rfq-templates.md`: quote requests for builders, turf, rental and factories.
+- `docs/06-rfq-templates.md`: quote requests for builders, turf, rental, factories and a freelance carpenter (route C).
 - `docs/07-operations-and-safety.md`: throughput, staffing, kit and safety checklist.
 - `docs/08-budget-model.md`: scale and budget for a movable, one-night build (formats, quantities, person-days, four cost scenarios, levers, low-budget routes and a DIY bill of materials).
 - `docs/09-city-concept.md`: the 18 Nov city brief, logic-checked: Bright City look, where the course goes, play order and capacity, story, gimmicks, cost delta, decisions for G1. Its look is superseded by doc 10; its play-order and capacity analysis still applies.
@@ -158,6 +160,7 @@ Done later on 18 Nov: the New York direction recorded; ten New York holes, robus
 - `status/countdown-golf-status.html`: visual status page (18 Nov snapshot), published as a private Artifact at https://claude.ai/artifact/EUmyNjaUzF9bkhidKNNRUn. Republish from this file after decisions change. Fragment HTML (no doctype); the Artifact wraps it.
 - `status/countdown-golf-3d.html`: interactive 3D model of layout v3, the New York holes on the v2 geometry (three.js 0.186.1 from jsDelivr, pinned; vetted 18 Nov: no OSV advisories), published as a private Artifact at https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf. Three lighting set-ups (party glow, house lights, fully dark), a tee view and info card for every hole, and a walk mode at human scale (child 1.28 m, average adult 1.66 m, tall adult 1.88 m: typical eye heights, shoulder widths and walking speeds; your eyes or behind you; keys or touch pad, drag to look, a map, collisions with the holes, stage, runway and walls). Full-screen button and a field-of-view slider; all settings sit in a drawer behind the Settings button, so the view itself only shows three icon buttons. Its hole data block is injected by `tools/make_layout_nyc.py`: edit the script, not the block. Stage, runway, speaker-stand and console heights in it are placeholders.
 - `status/standalone/`: full HTML copies of both pages that open straight from disk in Chrome (the 3D one embeds three.js, so it works offline). Rebuild after editing either page: `python3 tools/make_standalone.py`.
+- `docs/11-route-c-carpenter-build.md`: route C (one paid carpenter, volunteers paint and dress, S$6–10k) applied to the New York design: what changes (floor-laid holes with raised cup pads, one LED layer, flat cut-out props), hole by hole with carpenter days, a costed plan (≈ S$9.5k with 10% contingency), roles and volunteer-days, the cut list, the schedule against the gates, risks and decisions. Proposal, not decided.
 - `docs/project-brief.md`: full context, label key, research with links, quality checklist, decision log.
 - `floorplan/auditorium-simplified.svg` and `.png`: simplified plan v2 (18 Nov tape measurements, golf zone, not-measured items dashed), generated by `tools/make_floorplan.py` (`python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png`).
 - `floorplan/auditorium-dimensions.json`: geometry v2 in metres, every value labelled measured, derived or not measured, plus the list of what's still to measure.
