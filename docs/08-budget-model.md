@@ -182,3 +182,61 @@ Lighting is assumed borrowed from production. If not, 6 LED strips and 4 floods 
 > **For a 10-hole, movable, one-night course that looks like your references: plan around S$35–45k (the split route).** It could be done for about S$20k if the church crew has capacity in December, and S$9k gets a basic floor-laid version. Professional end to end, plan on S$60k+.
 
 These are estimates to frame Gate 0. They're not quotes.
+
+## 8. Materials only for the New York design, built by the team (added 18 Nov, later)
+
+**Question from the team:** what do the materials cost if we build and set up ourselves, with no paid labour, and could we buy them from China?
+
+This prices the ten New York holes as specified in `10-new-york-concept.md` and layout v3: 75 mm plywood decks, timber rails, two layers of LED, ten neon-style signs, the props, skyline flats and the Tee Booth. Quantities come from the layout (about 89 m² of deck, about 140 m of rail). Every figure is an **estimate**, not a quote. "China" means item prices on Taobao or 1688, then shipping and 9% import GST. Free or borrowed items are not counted: bike wheels, the Christmas tree, power tools, queue posts.
+
+### Bill of materials
+
+| Line | Buy in Singapore (S$) | Buy from China, item price only (S$) | Where to buy, recommended |
+|---|---|---|---|
+| Plywood 18 mm, about 56 sheets (decks, props, rail caps, hub desk) | 2,520–4,200 | 950–1,560 | Singapore (heavy; needed first) |
+| Thin plywood or hardboard, about 32 sheets (skyline flats, backdrops, sign boards) | 640–1,280 | 240–470 | Singapore |
+| Battens 45 × 45 mm, about 280 m (deck frames) | 900–1,400 | 450–800 | Singapore |
+| Rail timber 45 × 95 mm, about 115 m, plus bendable ply for curved rails | 770–1,270 | 400–700 | Singapore |
+| Rubber levelling pads, about 350 | 80–200 | 40–100 | Singapore |
+| Green turf, about 65 m² | 455–1,755 | 600–1,100 | China (putting turf is far cheaper there) |
+| Grey carpet (Gridlock, Subway) and white rink surface | 120–320 | 80–200 | Singapore |
+| Cups ×11, including the ball-return cup | 170–260 | 50–100 | China |
+| Putters ×40 (including juniors) and balls ×120 | 400–900 | 260–510 | China |
+| LED strip, about 300 m in ten colours, 24 V supplies, wiring, RCD boards | 1,200–2,500 | 570–1,300 | China (RCD boards in Singapore) |
+| LED neon flex, about 40 m, and controllers (ten pun signs, hub sign) | 430–750 | 110–260 | China |
+| Printing, about 45 m² (totems, clock face, tile wall, billboards, subway car, Grand Central backdrop, brownstone) | 700–1,800 | 120–350 | China (artwork must be ready first) |
+| Paint and primer, about 70 L, rollers | 600–1,200 | — | Singapore (paint can't ship easily) |
+| Fixings, glue, bolts, dowels, sandbags, tape | 800–1,500 | — | Singapore |
+| Prop specials: umbrella, plastic drum, glitter ball, turntable bearing and motor, microswitches and sound module, foam, tubes, acrylic guards, cones, string lights | 600–1,400 | 300–700 | China, except foam, drum, acrylic and batteries |
+| Floor graphics (crossings, route arrows) | 150–400 | 60–150 | China |
+| Tools and consumables (blades, sandpaper, brushes, clamps) | 200–600 | — | Singapore |
+| Lorry to the venue and back | 400–900 | — | Singapore |
+| Disposal after the event | 200–600 | — | Singapore |
+
+### Three ways to buy (totals include 9% GST on China goods and shipping, plus 15% contingency)
+
+| Option | What comes from China | Shipping from China | **Total, materials only** |
+|---|---|---|---|
+| A. Everything in Singapore | Nothing | — | **≈ S$13,000–26,700** |
+| **B. Mix (recommended)** | Turf, LED, neon flex, printing, putters, balls, cups, effects parts, floor graphics | ≈ S$300–700 (about 1–1.5 m³, consolidated sea freight) | **≈ S$11,300–22,000** |
+| C. Everything possible from China | All of B, plus plywood and timber | ≈ S$1,100–2,200 (about 6 m³ and 2.3 t) | **≈ S$9,200–18,700** |
+
+**Why B, not C.** Plywood and timber weigh about 2.3 tonnes. Shipping them roughly doubles their cost, they are the first thing the build needs, and a late or damaged shipment stops everything. The light items are where China wins: LED, neon and printing cost a third to a half of Singapore prices.
+
+**Where the range comes from.** The low end assumes basic plywood, carpet-grass turf and budget LED; the high end assumes better plywood, putting turf and trade-grade LED. Real quotes will narrow it.
+
+**Timing (today is 18 Nov).** Consolidated sea freight from China takes about 2–4 weeks door to door. To land by about 7–12 Dec, order this week. The printing can only be ordered once the artwork is ready. Buy the prototype hole's materials in Singapore, so G2 (4 Dec) doesn't wait on a ship. Anything late can go by air at about S$8–15/kg.
+
+**Buying from China: checks.**
+- Ship lithium batteries and solvent paint from Singapore instead; consolidators restrict both.
+- Order about 10% extra LED and neon; budget strips vary.
+- Pick turf sellers with many reviews; there's no time for a swatch round trip.
+- Get a written door-to-door quote from a forwarder, by volume, before ordering bulky items.
+
+**Ways to cut it further.**
+- Fewer skyline flats: they use about 18 thin sheets plus paint.
+- One LED layer instead of two: about S$300–700 less.
+- Carpet grass instead of putting turf: up to about S$1,000 less.
+- Borrow putters.
+
+Prices checked 18 Nov: Singapore plywood has no public list price (a Malaysian listing shows RM118 per 18 mm sheet); Chinese factory plywood is listed at US$8–15 per sheet FOB with 200-sheet minimums ([Made-in-China](https://www.made-in-china.com/Construction-Decoration-Catalog/Plywood.html)); Singapore neon flex about S$8.70/m on promotion ([SA LED](https://sa-led.com/?p=3476)); Taobao consolidated sea freight about S$3–6/kg ([ShopBack](https://www.shopback.sg/blog/finance/taobao-shipping-costs-singapore)); China-to-Singapore LCL roughly US$5–150 per m³ before handling, depending on the forwarder ([FreightAmigo](https://www.freightamigo.com/en/routes/shipping-from-china-to-singapore/)). Confirm all of them before ordering.

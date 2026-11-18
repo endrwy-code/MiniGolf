@@ -53,6 +53,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Throughput | Ceiling ≈ 100–120 players/hour at 2–2.5 min per hole; realistic ≈ 75–90/h for the full 10 holes over a 3 h session (≈ 230–270 players); ≈ 2.3× that if each group plays one 5-hole district | Simulated (`tools/flow_sim.py`); time it at the dry run |
 | Build scale | ≈ 70 plywood sheets, ≈ 3 t, 1–2 lorry loads, ≈ 120 person-days | Estimate (`docs/08-budget-model.md`) |
 | Budget bands | Rent carnival lanes + dressing ≈ S$3–6k · DIY floor-laid ≈ S$1.7k bare / S$4–6.5k best value · carpenter + volunteers ≈ S$6–10k · church crew (raised decks) ≈ S$14–31k · split ≈ S$30–56k · outsourced ≈ S$50–91k | Estimate, not quotes; low-budget lines from Singapore listing prices 18 Nov (`docs/08-budget-model.md` §6) |
+| Materials only, New York design, team builds | ≈ S$13–27k all bought in Singapore · ≈ S$11–22k buying the light items (turf, LED, neon, printing, putters) from China · ≈ S$9–19k with plywood and timber from China too (not recommended: heavy and on the critical path). Includes 15% contingency and 9% import GST | Estimate, not quotes (`docs/08-budget-model.md` §8) |
 | Deck height | ≈ 75 mm (revised from 120 mm) | Design target |
 | Players on course at once | ≈ 40 (one group of 4 per hole) | Estimate |
 
