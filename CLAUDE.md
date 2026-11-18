@@ -141,6 +141,7 @@ Done 18 Nov: runway confirmed; Bright City concept (`docs/09-city-concept.md`); 
 - `reference/user-refs/`, `reference/video-frames/`: the team's inspiration photos and stills from the Walker Art Center video.
 - `reference/supplier-evidence/`: what suppliers actually show (e.g. Huadong's product images).
 - `status/countdown-golf-status.html`: visual status page (18 Nov snapshot), published as a private Artifact at https://claude.ai/artifact/EUmyNjaUzF9bkhidKNNRUn. Republish from this file after decisions change. Fragment HTML (no doctype); the Artifact wraps it.
+- `status/countdown-golf-3d.html`: interactive 3D model of the v2 plaza (three.js 0.186.1 from jsDelivr, pinned; vetted 18 Nov: no OSV advisories), published as a private Artifact at https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf. Hole data is copied from `tools/make_zone_options.py`; update both if positions change. Stage, runway and booth heights in it are placeholders.
 - `docs/project-brief.md`: full context, label key, research with links, quality checklist, decision log.
 - `floorplan/auditorium-simplified.svg` and `.png`: simplified plan with dimensions.
 - `floorplan/auditorium-dimensions.json`: zones, measurements, cable runs and power flags in metres.
