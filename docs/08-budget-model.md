@@ -104,7 +104,7 @@ A carpenter in Singapore earns about **S$150–250 a day** ([pricing guide via s
 | **1. Church crew builds everything** | Volunteers or production team; buy tools | **≈ 14k–31k** | ≈ 20k | Needs about **1,200+ volunteer hours in December**, the busiest month for church production |
 | **2. Split (recommended to explore)** | A prop shop builds the 4 hero props; a paid lead carpenter (about 20 days) leads volunteers on the platforms | **≈ 30k–56k** | ≈ 40k | Balanced: the showpieces are done by professionals; volunteers do repetitive work under a lead |
 | **3. Fully outsourced** | A set builder does everything, including install and removal | **≈ 50k–91k** | ≈ 65k | Lowest effort for the team; depends on one supplier's December capacity |
-| **4. Floor-laid, minimal props** | Volunteers | **≈ 6k–12k** | ≈ 9k | Cheapest. Looks and plays like a carnival game, not your references |
+| **4. Floor-laid, minimal props** | Volunteers | **≈ 6k–12k** (revised 18 Nov with retail prices: ≈ S$2–7k, see section 6) | ≈ 9k | Cheapest. Looks and plays like a carnival game, not your references |
 
 **For reference:** renting 10 plain putting modules locally costs about S$2k–5.5k plus delivery ([Propz](https://www.thepropzcompany.com/mini-golf-putt-putt): S$200–550 per module before GST; showing out of stock online).
 
@@ -135,7 +135,49 @@ At about 110 players an hour over 3 hours, about **330 people play**. (Correctio
 | Factory putters and balls by air express | S$0.5–1k against retail | None |
 | Donate or sell the holes afterwards | Disposal cost, plus a little back | None |
 
-## 6. Ballpark to set the ceiling
+## 6. Low budget: what S$5k and S$10k actually buy (added 18 Nov)
+
+Prices come from search-engine extracts of Singapore listings, collected 18 Nov. The pages couldn't be opened from this session, so **confirm every price before relying on it**. GST is 9%. Supplier details: `04-sourcing.md`, "Budget routes".
+
+### Why the main estimate is S$35–45k
+- **What the split-route midpoint (about S$40k) is made of:** materials about 46% (S$12–26k), paid skilled labour about 41% (a prop shop for the hero props, a lead carpenter for about 20 days), and 15% contingency.
+- **The raised deck drives the materials.** About half the plywood, all 360 m of battens and much of the carpentry exist only so the cups can be sunk and the surface levelled.
+- **The 4 hero props are about a third of the labour.** In total the build is about 120 person-days.
+- **Some lines were generous.** Turf was priced at S$20–50/m²; Singapore listings today show S$7–27/m².
+- **In short:** it's priced as a small stage set, because that's what the reference look is. Drop the deck and most of the props, and use unpaid labour, and the cost falls by a factor of 5–10.
+
+### Four low-budget routes
+
+| Route | Cash (estimate) | Team effort | Looks | Plays | Main risk |
+|---|---|---|---|---|---|
+| **A. Rent carnival putting lanes, dressed with printed props** | **≈ S$3–6k** (10 lanes at about S$120–300 each including delivery, plus S$1–2k of printed dressing) | Low: book and dress on the night | A row of carnival games with a theme added | Short, plain lanes (0.6–1.5 × 2–3.6 m), quick to play | Each firm has 1–3 golf units, so you need 3–4 vendors; December demand; late-night collection fees |
+| **B. Buy a 9-hole foam-tile kit** (e.g. Putterfingers, UK) | **≈ S$6–7.6k landed** | Low to medium: lay the tiles | Tidy, generic | Decent | Stock and shipping must land by early December |
+| **C. Pay a carpenter; volunteers paint and dress** | **≈ S$6–10k** (best-value materials ≈ S$4.2k, plus 10–15 carpenter-days at S$150–400 a day) | Medium: one person leads, volunteers paint | Custom: can carry the city concept | Good, if the rails and surface are done right | Finding a carpenter free in December |
+| **D. DIY, floor-laid, volunteers** | **≈ S$1.7k** bare minimum; **≈ S$4.2–6.5k** best value with city dressing; ≈ S$7k with putting turf | High: about 40–60 volunteer-days plus one lead | Custom | Good, if the rails and surface are done right | December volunteer hours; needs a prototype hole by 4 Dec |
+
+Nobody in Singapore or Malaysia rents a whole themed course, and none of these routes looks like Pixar Putt. **C and D can carry the city idea**, because its coherence comes from cheap things: one rail colour, one sign design, painted skyline cut-outs, tape "streets" and lighting from the rig.
+
+### DIY bill of materials (floor-laid, 10 holes, about 70 m² of playing surface)
+
+| Line | Bare minimum (S$) | Best value (S$) | Notes |
+|---|---|---|---|
+| Surface (≈ 80 m² with waste) | 294: needle-punch event carpet, 2 rolls of 2 × 30 m | 650: 10 mm carpet grass at S$7–9/m² | Putting turf (15 mm) at about S$27/m² is about S$2,160. Short pile rolls truer; avoid 25 mm or more |
+| Rails (≈ 140 m) | 522: 58 × 2"×2"×8 ft timber at S$9 | 522–1,410: the same, or kapur 3"×2" on edge with feet | **The one line not to cheapen.** Solid timber held still; foam, pool noodles and PVC pipe kill the rebound |
+| Sheets for obstacles | 93: 3 sheets of common plywood plus free pallets | 320: 8 sheets of 12 mm plywood plus corrugated plastic | |
+| Cups ×10 | 0: DIY bevelled plywood rings | 169: Decathlon putting cups at S$16.90 | On a bare floor the ball must climb a lip: keep it ≤ 10 mm and bevelled |
+| Putters ×40 | 200: borrow about 20, buy 20 used | 200–700: the same, or factory putters by air | Include 8–10 junior putters |
+| Balls ×100 | 107 | 179 | Decathlon packs. Check they're real golf balls, not foam |
+| Paint | 120 | 290 | |
+| Tape (floor-safe) | 59 | 353 | Test on the venue floor for 24 hours first |
+| Hole signs ×10 | 45: hand-made on foam board | 250: printed A1 foam board | |
+| Lorry, there and back | 114 | 300–450 | 10 ft lorries can't take 10 ft rails |
+| City dressing (skyline cut-outs, tape streets) | 0 | 500–1,000 | |
+| **Subtotal** | **≈ 1,550** | **≈ 3,730–5,770** | |
+| **With 12% for fixings and contingency** | **≈ 1,740** | **≈ 4,180–6,460** | |
+
+Lighting is assumed borrowed from production. If not, 6 LED strips and 4 floods cost about S$290, plus power supplies.
+
+## 7. Ballpark to set the ceiling
 
 > **For a 10-hole, movable, one-night course that looks like your references: plan around S$35–45k (the split route).** It could be done for about S$20k if the church crew has capacity in December, and S$9k gets a basic floor-laid version. Professional end to end, plan on S$60k+.
 

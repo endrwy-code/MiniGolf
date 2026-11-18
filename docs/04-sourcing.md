@@ -92,6 +92,27 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 
 **What this tells us:** rental modules are small and plain, a long way from your references. They're useful as **extra kids' holes**, as a **backup** if one built hole fails, or as a **floor price**, not as the course itself.
 
+### 1b. Budget routes: carnival lane rental and kits (researched 18 Nov)
+
+**All prices come from search-engine extracts; the pages couldn't be opened.** Confirm each one in writing. GST is 9%. Nothing was contacted.
+
+| Company | What they offer | Public price (unverified) | Contact (as published) |
+|---|---|---|---|
+| **Carnival People** (SG) | Golf game 0.8 × 2 m, zig-zag 0.7 × 3.6 m, large golf 1.5 × 3.5 m | From about S$100–120 per stall per day, minimum 3; delivery, set-up and collection included | [carnivalpeople.com.sg](https://www.carnivalpeople.com.sg/) |
+| **Gaming Lab** (SG) | Large golf 1.5 × 3.5 m; premium golf 0.75 × 3 m; zig-zag | S$300 / S$150 / S$150 for the first day; pages are 2–5 years old | [gaminglab.sg](https://gaminglab.sg/large-golf-game-rental-in-singapore/) |
+| **The Propz Company** (SG) | Rectangle, zig-zag and "putt putt" modules | S$195–550 before GST, delivery extra; out of stock online | sales@thepropzcompany.com · 6481 5900 |
+| **JNR Entertainment** (SG) | Zig-zag golf | S$200, staff extra | [jnrentertainment.com.sg](https://www.jnrentertainment.com.sg/carnival-stall) |
+| **eventcompany.sg / Mega Events** (SG) | Premium golf 0.7 × 3 m / putting game 2 × 2 m | S$165 / S$100, staff extra | [eventcompany.sg](https://eventcompany.sg/Event-Rental/games-rental) · [megaevent.sg](https://www.megaevent.sg/rentals-for-events-singapore/traditional-carnival-games-rental-singapore) |
+| **Big Top** (SG) | Golf, zig-zag, large zig-zag; delivers and collects | "From S$100/day" for carnival games in general | hello@bigtop.com.sg |
+| **Alangkaar** (SG) | Sets of 3, 6 and 9 portable holes with putters | S$128–228 per set; probably toy-grade; asks for 45 days' notice (already passed) | [alangkaar.com.sg](https://alangkaar.com.sg/hire/arcade-game-rental-singapore/) |
+| Carnival World, Party People, CarnivalGuru (SG) | Putting alleys; CarnivalGuru claims "customisable portable mini golf" | Quote only | websites |
+| **Putterfingers** (UK, to buy) | "Funsize" 9-hole kit of foam turf tiles, bumpers, obstacles, 12 putters | £2,499 ex VAT plus shipping (capped at £1,500); Singapore is on the delivery list; some courses sold out. About S$6–7.6k landed | [putterfingers.com](https://www.putterfingers.com/products/funsize-mini-golf-course) |
+| Die-cut foam-board printing (Carousell seller) | Standees and arches to dress rented lanes | 60 × 60 cm S$32 up to 1 × 1.8 m S$120 | [Carousell](https://www.carousell.sg/foamboard-backdrop/q/) |
+
+**What we didn't find:** no Singapore or Malaysian operator brings a whole course and runs it, no inflatable mini golf for rent in Singapore, and nothing second-hand beyond putting mats. Singapore's fixed venues (Kulnari, Dino Putt, UltraGolf) don't advertise renting holes. Holey Moley closed in 2022. Malaysian renters (e.g. Gigsmore, RM650 per unit) deliver in the Klang Valley only.
+
+**What this means:** each firm holds 1–3 golf units, so 10 lanes means booking 3–4 vendors early. The units are plain and short. Use them as a hands-off fallback (route A in `08-budget-model.md` section 6), as extra kids' holes, or as a price floor.
+
 ### 2. Chinese manufacturers (Alibaba listings only, so treat with caution)
 
 | Supplier | Offer | Listed price | Notes |
