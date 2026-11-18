@@ -32,7 +32,7 @@ The screenshots come from an event cable and power planning tool, not an archite
 | Rivale 5–8 | Ayrton Rivale moving-head lights, which suggests the left end is the stage | Medium |
 | "…e Blind 3–6" | Probably blinder lights (text is cut off on the left) | Medium |
 | Hamond FL | Unknown | Unknown |
-| White central strip | Possibly a runway off the stage; striped end may be steps; a dotted outline may be a proposed extension | Low |
+| White central strip | **A raised runway, part of the stage, joined to it in a cross shape (confirmed by the team 18 Nov).** Striped end probably steps or the joint with the stage; a dotted outline may be a proposed extension of about 8.6 m (estimated, unconfirmed) | High (purpose) |
 | Boxed structure at the right | Probably the control booth | Low |
 
 ### Measurements
@@ -114,3 +114,5 @@ Add a dated row whenever something is decided, and update the "Decided" section 
 | 2026-11-16 | Event is the countdown party on 31 Dec 2026 | Team |
 | 2026-11-16 | 10 holes | Team |
 | 2026-11-17 | One night only: temporary, movable set-up; no permanent install; no reuse planned | Team |
+| 2026-11-18 | Fact confirmed: the central strip is a raised runway, part of the stage, joined in a cross shape. Players can't cross it. Cross-arm position and runway height still to confirm | Team |
+| 2026-11-18 | Design brief: holes read together as one coherent "city", not a straight line; each hole interesting to play; a story that works in any order. Look like the Pixar Putt references (method, not characters). Neon optional. Claude's response, not yet decided: `docs/09-city-concept.md` | Team |

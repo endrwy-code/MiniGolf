@@ -51,7 +51,7 @@ Footprint = length along the lane × width. Turf = net playing-surface area.
 
 ## Things to decide before the design freeze (target: Mon 23 Nov)
 
-1. Art direction: Neon Countdown or Bright Carnival (see `02-reference-decoder.md`). This sets the turf colour.
+1. Art direction: Bright City (recommended since 18 Nov, `09-city-concept.md`), Neon Countdown or Bright Carnival (see `02-reference-decoder.md`). This sets the turf colour. Bright City keeps every mechanic below and only changes the skins (e.g. windmill → Ferris wheel, barn → station).
 2. Do the hole names and themes stay generic, or tie into the church's year, a scripture theme or the event theme? The team decides the content.
 3. A moving windmill (battery motor) or static glow sails?
 4. Which hole is the photo moment: the clock (2), the 2027 arch (1), or both?

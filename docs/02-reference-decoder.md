@@ -23,6 +23,28 @@ For each reference, this doc asks: what is it really, what makes it look good, a
 
 ---
 
+## Photos 4 and 5: the same touring course, by day and under festoon lights (added 18 Nov)
+`reference/user-refs/04-outdoor-popup-daytime-plaza.webp` · `reference/user-refs/05-outdoor-popup-festoon-dock-hole.webp`
+
+**What they are.** More shots of the Pixar Putt tour, the same course as photo 1. Photo 4 shows a "WALL-E" sign and a guitar-shaped hole; photo 5 shows a boardwalk hole with seagulls and a Disney+ banner. Facts checked 18 Nov: it's a licensed Disney and Pixar touring pop-up with **18 holes**, one per film, played **in a fixed numbered order** by groups of up to 4. Busy stops sell **timed tee times** (Anaheim releases them every 30 minutes). One visitor took about an hour for 18 holes on a quiet day. It has toured US cities and Singapore, and it runs for weeks or months at each stop. ([Laughing Place](https://www.laughingplace.com/w/articles/2021/10/22/pixar-putt-new-york-city-mini-golf-overview/), [Mickey Visit](https://mickeyvisit.com/disneyland-pixar-putt/), [Secret Singapore](https://secretsingapore.co/pixar-putt-mini-golf-pop-up/))
+
+**Why it reads as one place, not 18 separate holes**
+- **The frame repeats; the content varies.** Every hole sits on the same kind of raised platform (timber fascia on a dark plinth), with the same totem (timber post, white 3D number, dark sign board) and the same umbrellas. Only the inside of each platform changes. That consistency is what makes it look coherent.
+- **Heights are layered.** Paving, then platforms (about 0.2–0.3 m), props (0.5–2 m), totems (about 2 m), umbrellas (about 3 m) and lighting towers (about 5 m). The upper layers make the skyline.
+- **The holes are clustered and turned at different angles,** and the walkways wander between them, so you see each hole from several sides and several holes at once.
+- **The ground joins everything up:** paving in photos 1 and 4, turf in photo 5.
+- **At night, light defines the space:** floods from the towers in photo 1, festoon strings in photo 5. Neither photo uses neon.
+- **Each hole is a self-contained story** (one film). The course works in any order as a story, even though it is played in a fixed order.
+
+**Something to know about the photos:** all of them are taken from above. The "city" effect is strongest from a raised viewpoint. At eye level in a crowd, what draws people in is the tall layer (landmarks above head height), movement and light.
+
+**What to copy:** the repeated frame, the layered heights, the clustered and angled layout, the joined-up ground, lighting from above, and one self-contained idea per hole.
+**What not to copy:** the characters and film IP; the 18-hole scale; umbrellas (indoors they block the overhead lighting, so use painted "skyline" flats for height instead); and the touring-grade build, which is made to last months.
+
+What this means for our course: [`09-city-concept.md`](09-city-concept.md).
+
+---
+
 ## Photo 2: "PUNK BALL" hero hole (indoor)
 `reference/user-refs/02-indoor-punk-ball-hero-hole.webp`
 
@@ -101,3 +123,5 @@ For each reference, this doc asks: what is it really, what makes it look good, a
 | Best if | The room is dark during the party | The room is fully lit |
 
 **The question that decides it:** how will the auditorium be lit while golf is running? Ask production.
+
+> **Update 18 Nov:** the team's reference is now the Pixar Putt pop-up (photos 1, 4, 5), which is bright colour lit from above, not neon. The recommendation moves to a third option, **"Bright City"**: the Carnival palette and materials, laid out as a clustered city, lit by the room's rig, with LED kept to safety edges and a few signature glows. It works in a dark room or a lit one, provided production puts some light on the course area. So the question to production becomes "can you light the golf zone?" rather than "how dark is the room?" See [`09-city-concept.md`](09-city-concept.md).

@@ -15,6 +15,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on 31 December 20
 - Use: one-off event.
 - Size: 10 holes.
 - Format: one night only; temporary and movable (flat-pack style); no permanent install; no reuse planned (17 Nov).
+- Design brief (18 Nov): the holes read together as one coherent "city", not a straight line; each hole is interesting to play; the story works in any order. Look like the Pixar Putt references (method, not characters). Neon optional.
+- Fact (18 Nov): the central strip is a raised runway, part of the stage, joined in a cross shape. Players can't cross it.
 
 ## Recommended, not yet decided
 
@@ -37,7 +39,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Top wall features to strip | 11.62 m | Measured |
 | Strip to bottom wall | 11.58 m | Measured |
 | Each open floor half | ≈ 46 × 11.6 m (≈ 533 m²) | Derived |
-| Central strip | ≈ 23.7 × 2.4 m | Estimated |
+| Runway (raised, part of stage) | ≈ 25.2 × 2.4 m incl. connector; possible extension ≈ 8.6 m toward the booth | Purpose confirmed; size estimated |
 | Stage zone depth | ≈ 6 m | Estimated |
 | Floor area for 10 holes | ≈ 200–270 m² | Rule of thumb |
 | Turf for 10 holes | ≈ 72 m² net; order ≈ 85 m² | From spec sheet v1 (design target) |
@@ -76,7 +78,10 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json`. Picture: `f
 - Expected crowd size, and whether to run a queue or timed slots.
 - Budget.
 - The venue's fire-rating requirements for turf and foam.
-- Confirm the guesses on the plan: left end is the stage, central strip is a runway, right-hand box is the control booth.
+- Confirm the remaining guess on the plan: the right-hand box is the control booth. (Stage at the left end and the runway were confirmed 18 Nov.)
+- Runway: its height; where the cross-arm sits and how big it is; whether the dotted extension (≈ 8.6 m toward the booth) will be built.
+- Can production light the golf zone from the rig? (decides whether Bright City works in a dark room)
+- Where do guests enter the auditorium? Where will the countdown crowd stand? Does the booth need a clear sightline down the middle of the room?
 
 ## Safety flags
 

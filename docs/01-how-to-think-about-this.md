@@ -37,7 +37,9 @@ The five references are five different things:
 
 Mixing all five gives visual noise. Choose **one art direction** and borrow only *methods* from the rest. See `02-reference-decoder.md`.
 
-**Recommendation (for the team to decide): a "Neon Countdown" look.** Use dark turf, glowing LED edges, UV-reactive paint and big numbers 10 to 1, with the windmill, barn and ramp turned into neon-style hero props. Four reasons:
+> **Update 18 Nov:** the team now points to the Pixar Putt pop-up (bright colour, lit from above) and wants the holes to read as one "city". The recommendation has moved to **"Bright City"**: see [`09-city-concept.md`](09-city-concept.md). The Neon reasoning below is kept for the record.
+
+**Earlier recommendation (16 Nov): a "Neon Countdown" look.** Use dark turf, glowing LED edges, UV-reactive paint and big numbers 10 to 1, with the windmill, barn and ramp turned into neon-style hero props. Four reasons:
 1. The room will be dark with show lighting at a night party. The backyard daylight look will read flat there, and glow is made for it.
 2. Glow is cheap. LED strip under a lip and UV paint cost little compared with fibreglass sculpture.
 3. Darkness forgives imperfect carpentry. Daylight shows every seam.
@@ -112,7 +114,7 @@ Decide in this order. Each step narrows the next.
 1. **Budget ceiling and crowd estimate.** This week.
 2. **Reuse or one-off?** This decides buy versus build.
 3. **Install window confirmed** with the venue and production. This decides how plug-and-play the modules must be.
-4. **Art direction:** one look, signed off. Recommended: Neon Countdown.
+4. **Art direction:** one look, signed off. Recommended since 18 Nov: Bright City (`09-city-concept.md`).
 5. **Build route,** chosen by date and quotes (see `04-sourcing.md`):
    - (a) Hybrid local build, recommended
    - (b) Rent a portable course, as a price ceiling and fallback
