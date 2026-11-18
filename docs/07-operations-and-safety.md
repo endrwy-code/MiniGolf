@@ -4,9 +4,9 @@ A great course with a bad flow feels worse than a simple course that moves. This
 
 ## Throughput
 
-**Formula:** players per hour ≈ (holes × group size × 60) ÷ (minutes per hole × number of holes). With one group per hole, that simplifies to **players per hour ≈ (group size × 60) ÷ minutes per hole**.
+**Formula:** players per hour ≈ (holes × group size × 60) ÷ (minutes per hole × number of holes). With one group per hole, that simplifies to **players per hour ≈ (group size × 60) ÷ minutes per hole**. This is a **ceiling**: the course never reaches it, because it takes about 25 minutes to fill at opening and groups vary in speed (see "Simulated" below).
 
-| Minutes per hole (group of 4) | Round time | Players on course | **Players per hour** |
+| Minutes per hole (group of 4) | Round time | Players on course | **Ceiling, players per hour** |
 |---|---|---|---|
 | 3.0 (casual, no rules) | 30 min | 40 | ≈ 80 |
 | 2.5 | 25 min | 40 | ≈ 96 |
@@ -15,12 +15,25 @@ A great course with a bad flow feels worse than a simple course that moves. This
 
 The slowest hole sets the pace for everyone, so a 4-minute hero hole caps the whole course. **Time every hole at the dry run.**
 
-| If golf runs for… | at about 110 players/hour | you serve about |
+### Simulated (18 Nov, `tools/flow_sim.py`)
+
+A model of a real session (queue never empties, groups vary about ±35% in speed, walking time included, 300 runs) gives what to plan on. Assumes balanced holes at 2.0–2.25 min each, run as a loop you can start anywhere (`09-city-concept.md`, section 4):
+
+| If golf runs for… | Full 10-hole round | One 5-hole district per group |
 |---|---|---|
-| 2 hours | | 220 |
-| 3 hours | | 330 |
+| 2 hours | ≈ 140–165 players | ≈ 340–380 players |
+| 3 hours | ≈ 230–270 players | ≈ 540–600 players |
+
+What the model says moves the number:
+- **Free-order play doesn't help.** It serves 5–15% fewer players than an ordered course, because groups spend time finding free holes.
+- **The slowest hole matters most.** Four hero holes a minute slower than the rest cut capacity by about a quarter.
+- **Playing 5 holes instead of 10 more than doubles the people served.**
+- **Capping the course at about 12 groups** keeps rounds short at little cost; the waiting moves to the queue.
+
+Run `python3 tools/flow_sim.py --help` to test other assumptions.
 
 **Compare this with the expected crowd.** If far more people want to play than the course can take:
+- Switch to one 5-hole district per group (the biggest lever)
 - Timed slots (free tickets for e.g. 20-minute waves) instead of an open queue
 - A 5-stroke cap per hole (pick up after 5)
 - Groups of 2–4; singles join a group
@@ -33,7 +46,7 @@ The slowest hole sets the pace for everyone, so a 4-minute hero hole caps the wh
 2. Maximum 5 strokes, then pick up.
 3. Let faster groups play through.
 4. A ball off the course goes back to where it left, plus 1 stroke.
-5. **Hole 1 keeps your ball.** That's the end of your round.
+5. **Hole 1 keeps your ball.** That's the end of your round. (If the course runs as a start-anywhere loop, hand balls back at the hub instead: see `09-city-concept.md`.)
 
 ## Staffing (per shift; suggest 2 shifts)
 

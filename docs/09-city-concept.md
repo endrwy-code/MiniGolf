@@ -20,7 +20,7 @@ The team also corrected a fact: the central strip is a **raised runway that is p
 | Look like Pixar Putt | **Copy the method, not the scale** | It's an 18-hole licensed touring attraction built to run for months. Its look comes from a few cheap principles we can copy. Its characters we can't. |
 | Neon or not | **Not neon** | The references are bright colour lit from above. Neon and UV only pay off in a properly dark room, and a dark room full of people with putters and platform edges is harder to make safe. |
 | A story that works in any order | **Right** | That's how the reference works: one film per hole. It also lets groups start on any hole. |
-| Free order raises capacity | **Partly right, for a different reason** | No order can beat the slowest hole. Free order gains by filling every hole at once and letting groups take whichever hole is free. A loop you can start anywhere gets most of that, without people wandering. See section 4. |
+| Free order raises capacity | **No, but the idea behind it is useful** | No order can beat the slowest hole, and roaming wastes time finding free holes: the simulation serves 5–15% fewer players. What raises capacity is balanced hole times and letting people play 5 holes instead of 10, and a story that works in any order is what makes the 5-hole option work. See section 4. |
 | Holes that take "enough" time | **Careful** | Every extra minute per hole means fewer players an hour. Aim for every stroke to be interesting, not for more strokes. |
 
 ## 1. What makes the reference look like a city
@@ -62,7 +62,30 @@ _Layout options and a to-scale draft are being added (zone areas, fit check)._
 
 ## 4. Play order and capacity
 
-_Capacity simulation results are being added (fixed route vs start-anywhere loop vs free order)._
+**The rule:** if every group plays every hole, the course can never serve more than *group size × 60 ÷ the slowest hole's minutes* per hour. Play order only decides how much of that ceiling you waste. (The proof is in the docstring of `tools/flow_sim.py`.)
+
+**Simulated** with `tools/flow_sim.py`: 3-hour session, a queue that never empties, groups of 4, hole times varying about ±35%, 0.25 min to walk to the next hole and 0.6 min to find and walk to a free hole elsewhere, 300 runs per case. These are estimates from a model; time the real holes at the dry run.
+
+| How groups play | Balanced holes (all 2.25 min): players/h | Round (min) | Uneven (heroes 3.25 min, others 2.0): players/h | Round (min) |
+|---|---|---|---|---|
+| Fixed route 10 → 1 (v1 plan) | 77 | 42 | 56 | 65 |
+| Fixed route, at most 12 groups on the course | 72 | 33 | 56 | 42 |
+| **Loop, start anywhere** (a host sends each group to an open hole), at most 12 groups | **79** | **32** | **63** | **41** |
+| Free order, at most 12 groups | 73 | 36 | 56 | 44 |
+| **Two 5-hole districts** (each group plays 5 holes) | **179** | 24 | **132** | 48* |
+| Ceiling (everyone plays all 10) | 107 | | 74 | |
+
+\*No cap on groups in that run. A starter holding groups in the queue would cut the round time at little cost.
+
+**What this says**
+1. **Free order doesn't add capacity.** Once finding and walking to a free hole takes time, it serves 5–15% fewer players than an ordered course. Real crowding at the hero holes, and groups losing track of which holes they've played, would push it lower still. Free order is only harmless when the course is quiet.
+2. **The slowest hole is the biggest lever.** Four hero holes one minute slower than the rest cut capacity by about a quarter (77 → 56 an hour). Balance the hole times, enforce the 5-stroke cap hardest on the hero holes, and use a timing gimmick on one hole only.
+3. **Fewer holes per player is the only lever that multiplies capacity.** Two 5-hole districts serve about 2.3 times as many people, and the total amount of golf played stays about the same. This is where "a story that works in any order" pays off: each district has to stand on its own.
+4. **A loop you can start anywhere is the best way to run all 10 holes.** It serves slightly more players than the fixed route (+2 to +7 an hour) and cuts rounds by 10–25 minutes. It needs a host at a hub, and a layout where the last hole ends next to the first.
+5. **Capping the course at about 12 groups costs little and shortens rounds a lot.** People wait in the queue, where a sign can show the wait, instead of standing inside the course.
+6. **Our earlier throughput figures were ceilings.** Over a real 3-hour session, expect about **75–90 players an hour for the full 10 holes** (the first fill and the variation between groups eat the rest). That's about 230–270 players, not 330. `07-operations-and-safety.md` is updated to match.
+
+**Recommendation:** lay the course out as **two districts of 5 holes, each looping back to one hub** (queue, putters, ball return). Groups start at any open hole and play in order until they're back where they started. When the queue is short, groups play both districts. When it's long, the course lead switches to one district per group, and capacity roughly doubles. Since rounds no longer all end at hole 1, balls are handed back at the hub instead of "hole 1 keeps the ball".
 
 ## 5. The story: ten places, one moment
 

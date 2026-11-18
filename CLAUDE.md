@@ -44,7 +44,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Floor area for 10 holes | ≈ 200–270 m² | Rule of thumb |
 | Turf for 10 holes | ≈ 72 m² net; order ≈ 85 m² | From spec sheet v1 (design target) |
 | Course footprint incl. walkway and queue | ≈ 46 × 11.4 m (Zone A) | Draft layout v1 |
-| Throughput | ≈ 100–120 players/hour at 2–2.5 min per hole | Estimate; time it at the dry run |
+| Throughput | Ceiling ≈ 100–120 players/hour at 2–2.5 min per hole; realistic ≈ 75–90/h for the full 10 holes over a 3 h session (≈ 230–270 players); ≈ 2.3× that if each group plays one 5-hole district | Simulated (`tools/flow_sim.py`); time it at the dry run |
 | Build scale | ≈ 70 plywood sheets, ≈ 3 t, 1–2 lorry loads, ≈ 120 person-days | Estimate (`docs/08-budget-model.md`) |
 | Budget bands | Floor-laid ≈ S$6–12k · church crew ≈ S$14–31k · split ≈ S$30–56k · outsourced ≈ S$50–91k | Estimate, not quotes |
 | Deck height | ≈ 75 mm (revised from 120 mm) | Design target |

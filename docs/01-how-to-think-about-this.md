@@ -99,7 +99,7 @@ Things you **can't** cheaply copy, and shouldn't try to: ball-tracking tech and 
 Rough maths, to replace with your crowd number:
 - A group of 4 takes about 2–2.5 minutes per hole, so a round of 10 holes takes about 20–25 minutes.
 - With one group per hole, about 40 people play at once.
-- That gives **about 100–120 players per hour.** Over a 2.5-hour window, that's about 250–300 players.
+- That gives **about 100–120 players per hour** as a ceiling. Over a 2.5-hour window, that's about 250–300 players. (Correction 18 Nov: a simulation of a real session puts it at about 75–90 an hour for the full round, so about 190–225 players over 2.5 hours. Playing 5 holes per group more than doubles that. See `07-operations-and-safety.md`.)
 
 If the party has 1,500 people, most of them won't play unless you design for it. The levers are: a **5-stroke cap** per hole, shorter holes, simple tee-off rules, timed slots or a queue app, and a final hole that keeps the ball. See `07-operations-and-safety.md`.
 

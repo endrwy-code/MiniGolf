@@ -112,7 +112,7 @@ A carpenter in Singapore earns about **S$150–250 a day** ([pricing guide via s
 Two unknowns drive most of the range: **who builds** and **how ambitious the 4 hero props are**. Settle those two and the estimate should narrow to about ±20%. The quotes from Props Factory and one set builder will settle both.
 
 ### Cost per player
-At about 110 players an hour over 3 hours, about **330 people play**:
+At about 110 players an hour over 3 hours, about **330 people play**. (Correction 18 Nov: 110 an hour is a ceiling. The simulation in `07-operations-and-safety.md` puts a full 10-hole round at about 230–270 players over 3 hours, so cost per player is about a third higher than below. One 5-hole district per group roughly halves it.)
 
 | Total | Cost per player |
 |---|---|
