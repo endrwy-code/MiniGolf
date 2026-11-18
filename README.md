@@ -23,6 +23,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Scale and budget](docs/08-budget-model.md) | Movable formats, quantities, person-days, four cost scenarios, levers |
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies and factories |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
+| [Status page](status/countdown-golf-status.html) | 18 Nov: one visual page with the gates, what's decided, today's changes, the plaza layout, capacity and cost. Published privately as an Artifact |
 | [Project brief](docs/project-brief.md) | Original context, floorplan decode, earlier research and the **decision log** |
 | [`CLAUDE.md`](CLAUDE.md) | Project memory for Claude Code sessions |
 

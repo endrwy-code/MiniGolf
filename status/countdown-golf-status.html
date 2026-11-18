@@ -1,0 +1,1068 @@
+<title>Countdown Golf Status</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&family=Overpass:wght@600;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a planning sheet. A night-blue "street sign" band carries the countdown; below it, stacked sections on pale plan-paper, with the to-scale floor plan as the centrepiece. */
+:root{
+  --bg:#F1F4F0; --surface:#FFFFFF; --surface-2:#E7ECE6; --ink:#142036; --ink-2:#4A5668; --ink-3:#778293; --rule:#D3D9D4;
+  --band:#17284A; --band-ink:#F3F5F1; --band-ink-2:#B7C3D6; --band-rule:#34466B;
+  --accent:#0B7A74; --accent-soft:#D3ECE8;
+  --now:#E9A817; --now-ink:#7A5200; --now-soft:#FBEFC9;
+  --risk:#B23A2A; --risk-soft:#F7DDD6;
+  --ok:#2C7A47; --ok-soft:#D9EEDD;
+  --plate:#17284A; --plate-ink:#FFFFFF;
+  --floor:#FAFBF8; --wall:#DDE0D8; --stage:#E6E3DA; --runway:#CCC8BB; --runway-edge:#6B6A63;
+  --turf:#A3DBB5; --turf-hero:#58B57C; --turf-edge:#1E5E3B; --water:#93C1EA; --brick:#C0533A;
+  --distA:#B07307; --distB:#5246BE; --distA-tint:rgba(233,168,23,.10); --distB-tint:rgba(82,70,190,.07);
+  --cable:#D5463B; --hub:#FBE5DC; --hub-edge:#9A3B22; --flats:#3D4560;
+  --font-display:"Overpass","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"Overpass Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1420; --surface:#151D2C; --surface-2:#1C2639; --ink:#E6EBF2; --ink-2:#A9B3C2; --ink-3:#7A8598; --rule:#2A3549;
+    --band:#0A1222; --band-ink:#E6EBF2; --band-ink-2:#9FB0C9; --band-rule:#26324A;
+    --accent:#45C3B8; --accent-soft:#163C3A;
+    --now:#F4C04C; --now-ink:#F4C04C; --now-soft:#3A2F12;
+    --risk:#F07A65; --risk-soft:#3E201B;
+    --ok:#6CCB8D; --ok-soft:#173523;
+    --plate:#E6EBF2; --plate-ink:#121A2A;
+    --floor:#121A28; --wall:#232D40; --stage:#1D2637; --runway:#3A4253; --runway-edge:#8C95A8;
+    --turf:#2E7A4F; --turf-hero:#47A96F; --turf-edge:#A9E5C0; --water:#2D5F8E; --brick:#D46A4F;
+    --distA:#EBAE42; --distB:#A99EF6; --distA-tint:rgba(235,174,66,.08); --distB-tint:rgba(169,158,246,.08);
+    --cable:#F06A5D; --hub:#3A2520; --hub-edge:#F0957C; --flats:#8B94B3;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --surface:#151D2C; --surface-2:#1C2639; --ink:#E6EBF2; --ink-2:#A9B3C2; --ink-3:#7A8598; --rule:#2A3549;
+  --band:#0A1222; --band-ink:#E6EBF2; --band-ink-2:#9FB0C9; --band-rule:#26324A;
+  --accent:#45C3B8; --accent-soft:#163C3A;
+  --now:#F4C04C; --now-ink:#F4C04C; --now-soft:#3A2F12;
+  --risk:#F07A65; --risk-soft:#3E201B;
+  --ok:#6CCB8D; --ok-soft:#173523;
+  --plate:#E6EBF2; --plate-ink:#121A2A;
+  --floor:#121A28; --wall:#232D40; --stage:#1D2637; --runway:#3A4253; --runway-edge:#8C95A8;
+  --turf:#2E7A4F; --turf-hero:#47A96F; --turf-edge:#A9E5C0; --water:#2D5F8E; --brick:#D46A4F;
+  --distA:#EBAE42; --distB:#A99EF6; --distA-tint:rgba(235,174,66,.08); --distB-tint:rgba(169,158,246,.08);
+  --cable:#F06A5D; --hub:#3A2520; --hub-edge:#F0957C; --flats:#8B94B3;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1;color:var(--ink)}
+h2{font-size:clamp(1.35rem,1.1rem + 1vw,1.8rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.02rem;font-weight:800}
+p{margin:0}
+ul,ol{margin:0;padding:0}
+strong{font-weight:650}
+code{font-family:var(--font-mono);font-size:.86em;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-2)}
+section{padding-block:44px 4px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 32px;margin-bottom:18px}
+.sec-head p{color:var(--ink-2);max-width:64ch;font-size:.94rem}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px}
+.scroll-x{overflow-x:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap;line-height:1.4}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.prop{background:var(--accent-soft);color:var(--accent)}
+.chip.due{background:var(--now-soft);color:var(--now-ink)}
+.chip.risk{background:var(--risk-soft);color:var(--risk)}
+.chip.est{background:var(--surface-2);color:var(--ink-2)}
+
+/* header band */
+.band{background:var(--band);color:var(--band-ink)}
+.band-in{padding-block:34px 30px;display:grid;gap:26px}
+.band-top{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:flex-end;justify-content:space-between}
+.band-top > div{min-width:0;max-width:720px}
+.band .eyebrow{color:var(--band-ink-2)}
+.band h1{color:var(--band-ink);font-size:clamp(2.4rem,1.6rem + 3.4vw,4.2rem);font-weight:900;letter-spacing:-.02em;margin:6px 0 10px}
+.band .lede{color:var(--band-ink-2);font-size:1.02rem;max-width:62ch}
+.band .lede strong{color:var(--band-ink)}
+.status-pill{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--now);color:var(--now);padding:6px 12px;border-radius:6px;white-space:nowrap}
+.plates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.plate{border:2px solid var(--band-rule);border-radius:10px;padding:12px 14px 12px;display:flex;align-items:baseline;gap:12px;min-width:0}
+.plate b{font-family:var(--font-display);font-weight:900;font-size:clamp(1.9rem,1.4rem + 1.6vw,2.7rem);line-height:1;color:var(--band-ink)}
+.plate span{font-size:.86rem;color:var(--band-ink-2);line-height:1.3}
+.plate.hot{border-color:var(--now)}
+.plate.hot b{color:var(--now)}
+@media (max-width:820px){.plates{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* timeline */
+#timeline{display:block;width:100%;min-width:760px;height:auto}
+.tl-card{padding:14px 16px 8px}
+#timeline text{font-family:var(--font-body);font-size:11.5px;fill:var(--ink-2)}
+#timeline .tb{font-weight:700;fill:var(--ink);font-family:var(--font-display);font-size:12.5px}
+#timeline .tband{fill:var(--ink);font-weight:600;font-size:12px}
+#timeline .ax{font-family:var(--font-mono);font-size:10.5px;fill:var(--ink-3)}
+#timeline .ph{stroke:var(--surface);stroke-width:2}
+#timeline .p-dec{fill:var(--accent-soft)}
+#timeline .p-mid{fill:var(--surface-2)}
+#timeline .p-xmas{fill:url(#tl-hatch)}
+#timeline .p-inst{fill:var(--now-soft)}
+#timeline .p-party{fill:var(--now)}
+#timeline .past{fill:var(--accent);opacity:.32}
+#timeline .gate{fill:var(--ink)}
+#timeline .lead{stroke:var(--rule);stroke-width:1}
+#timeline .today{stroke:var(--now);stroke-width:2.5}
+#timeline .today-t{fill:var(--now-ink);font-weight:700}
+#timeline .turf-m{fill:var(--turf-hero)}
+#timeline .tick{stroke:var(--rule)}
+#timeline .hatch-l{stroke:var(--ink-3);stroke-width:1.2;opacity:.45}
+#timeline .xmas-bg{fill:var(--surface-2)}
+
+/* where things stand */
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.cols3{grid-template-columns:minmax(0,1fr)}}
+.col{padding:16px 18px 18px;min-width:0}
+.col > header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.col .count{font-family:var(--font-display);font-weight:900;font-size:1.5rem;line-height:1}
+.col li{list-style:none;position:relative;padding:7px 0 7px 22px;border-bottom:1px dashed var(--rule);font-size:.93rem}
+.col li:last-child{border-bottom:0}
+.col li::before{content:"";position:absolute;left:2px;top:13px;width:9px;height:9px;border-radius:2px}
+.col.decided li::before{background:var(--ok)}
+.col.proposed li::before{background:var(--accent);border-radius:50%}
+.col.due li::before{border:1.5px solid var(--now-ink);background:transparent}
+.col.due li.done::before{background:var(--ok);border-color:var(--ok)}
+.col.due li.done{color:var(--ink-2)}
+.col li small{display:block;color:var(--ink-3);font-size:.8rem;margin-top:1px}
+.col .foot{margin-top:12px;font-size:.84rem;color:var(--ink-2)}
+
+/* changes */
+.changes{display:grid}
+.chg{display:grid;grid-template-columns:150px minmax(0,1fr) 22px minmax(0,1.35fr) 104px;gap:6px 14px;align-items:baseline;padding:13px 18px;border-bottom:1px solid var(--rule)}
+.chg:last-child{border-bottom:0}
+.chg-head{padding-block:10px 8px}
+.chg-head > *{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.chg-topic{font-family:var(--font-display);font-weight:800;font-size:.98rem}
+.chg-was{color:var(--ink-3);font-size:.92rem;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink-3) 55%,transparent)}
+.chg-arrow{color:var(--ink-3);text-align:center}
+.chg-now{font-size:.94rem}
+.chg .chip{justify-self:start}
+@media (max-width:820px){
+  .chg{grid-template-columns:minmax(0,1fr) auto}
+  .chg-head{display:none}
+  .chg-topic{grid-column:1}
+  .chg .chip{grid-column:2;grid-row:1;justify-self:end}
+  .chg-was,.chg-now{grid-column:1 / -1}
+  .chg-was::before{content:"Before: ";text-decoration:none;display:inline-block;margin-right:4px}
+  .chg-arrow{display:none}
+}
+
+/* map */
+.map-card{padding:14px 14px 16px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center}
+.seg{display:inline-flex;flex-wrap:wrap;background:var(--surface-2);border-radius:8px;padding:3px;gap:3px}
+.seg button{font:600 .86rem/1.2 var(--font-body);color:var(--ink-2);background:transparent;border:0;border-radius:6px;padding:7px 12px;cursor:pointer}
+.seg button small{font-weight:500;color:var(--ink-3);margin-left:4px;font-size:.76rem}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.seg button[disabled]{opacity:.45;cursor:default}
+.layers{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.layers button{font:500 .8rem/1.2 var(--font-body);color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:5px 11px 5px 9px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.layers button::before{content:"";width:10px;height:10px;border-radius:3px;border:1.5px solid var(--ink-3)}
+.layers button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink-3)}
+.layers button[aria-pressed="true"]::before{background:var(--sw,var(--ink-2));border-color:var(--sw,var(--ink-2))}
+.map-host{margin-top:12px;overflow-x:auto;border-radius:6px;background:var(--floor);border:1px solid var(--rule)}
+#map{display:block}
+#map text{font-family:var(--font-body)}
+#map .floor{fill:var(--floor);stroke:var(--ink-3);stroke-width:1.4}
+#map .wall{fill:var(--wall)}
+#map .stage{fill:var(--stage);stroke:var(--rule);stroke-width:1}
+#map .runway{fill:var(--runway);stroke:var(--runway-edge);stroke-width:1}
+#map .ext{fill:none;stroke:var(--runway-edge);stroke-width:1.3;stroke-dasharray:6 4}
+#map .booth{fill:var(--wall);stroke:var(--ink-3);stroke-width:1}
+#map .crowd{stroke:none}
+#map .sight{fill:var(--risk);fill-opacity:.09;stroke:var(--risk);stroke-opacity:.55;stroke-width:1;stroke-dasharray:4 3}
+#map .cable{fill:none;stroke:var(--cable);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+#map .flag{fill:var(--risk-soft);stroke:var(--risk);stroke-width:1.4}
+#map .flag-ring{fill:none;stroke:var(--risk);stroke-width:1;stroke-dasharray:3 3}
+#map .distA{fill:var(--distA-tint)}
+#map .distB{fill:var(--distB-tint)}
+#map .blvd{fill:var(--surface-2);fill-opacity:.55;stroke:var(--ink-3);stroke-width:1;stroke-dasharray:6 4}
+#map .plaza{fill:none;stroke:var(--distA);stroke-width:1.3;stroke-dasharray:9 5}
+#map .flats{fill:var(--flats)}
+#map .hub{fill:var(--hub);stroke:var(--hub-edge);stroke-width:1.5}
+#map .hub-line{stroke:var(--hub-edge);stroke-width:1;stroke-dasharray:2 2}
+#map .route{fill:none;stroke-width:2;stroke-dasharray:6 4;stroke-linecap:round;stroke-linejoin:round}
+#map .route.a{stroke:var(--distA)}
+#map .route.b{stroke:var(--distB)}
+#map .route.v1{stroke:var(--ink-2)}
+#map .mk-a{fill:var(--distA)} #map .mk-b{fill:var(--distB)} #map .mk-v1{fill:var(--ink-2)}
+#map .turf{fill:var(--turf);stroke:var(--turf-edge);stroke-width:1.1}
+#map .hero .turf{fill:var(--turf-hero)}
+#map .hump{fill:var(--turf-edge);opacity:.18}
+#map .zebra{fill:var(--floor)}
+#map .ramp{fill:var(--turf-edge);opacity:.28}
+#map .raised{fill:var(--turf-edge);opacity:.1}
+#map .tunnel{fill:var(--ink);opacity:.18}
+#map .water{fill:var(--water);stroke:var(--turf-edge);stroke-width:.8}
+#map .wallk{stroke:var(--ink);stroke-width:3;stroke-linecap:round}
+#map .twall{stroke:var(--ink);stroke-width:3.2;stroke-linecap:butt}
+#map .blade{stroke:var(--ink);stroke-width:2.6;stroke-linecap:round}
+#map .bladehub{fill:var(--ink)}
+#map .barn{fill:var(--brick);stroke:var(--ink);stroke-width:.8}
+#map .arch{stroke:var(--brick);stroke-width:4.5;stroke-linecap:round}
+#map .ret{fill:var(--ink);opacity:.14}
+#map .pin{fill:var(--ink)}
+#map .bump{fill:var(--brick)}
+#map .tick{fill:var(--turf-edge)}
+#map .hand{stroke:var(--ink);stroke-linecap:round}
+#map .tee{fill:var(--surface);stroke:var(--ink);stroke-width:1}
+#map .cup{fill:var(--surface);stroke:var(--ink);stroke-width:1.3}
+#map .plate{fill:var(--plate)}
+#map .plate-in{fill:none;stroke:var(--plate-ink);stroke-width:.8;opacity:.75}
+#map .plate-t{fill:var(--plate-ink);font-family:var(--font-display);font-weight:800}
+#map .hole{cursor:pointer;outline:none}
+#map .hole.hl .turf,#map .hole:focus-visible .turf{stroke:var(--accent);stroke-width:3}
+#map .hole.sel .turf{stroke:var(--now);stroke-width:3.4}
+#map .lbl{fill:var(--ink-2);paint-order:stroke;stroke:var(--floor);stroke-linejoin:round}
+#map .lbl.b{fill:var(--ink);font-weight:700}
+#map .lbl.risk{fill:var(--risk);font-weight:600}
+#map .lbl.a{fill:var(--distA);font-weight:800;font-family:var(--font-display);letter-spacing:.04em}
+#map .lbl.bb{fill:var(--distB);font-weight:800;font-family:var(--font-display);letter-spacing:.04em}
+#map .lbl.hubt{fill:var(--hub-edge);font-weight:800;font-family:var(--font-display)}
+#map .lbl.sel{fill:var(--ink);font-weight:700;font-family:var(--font-display)}
+#map .zone{stroke-width:2.2;fill-opacity:.08}
+#map .zA{stroke:var(--accent);fill:var(--accent)}
+#map .zB{stroke:var(--distA);fill:var(--distA)}
+#map .zC{stroke:var(--distB);fill:var(--distB);stroke-dasharray:8 4}
+#map .lbl.zA{fill:var(--accent);font-weight:800;font-family:var(--font-display)}
+#map .lbl.zB{fill:var(--distA);font-weight:800;font-family:var(--font-display)}
+#map .lbl.zC{fill:var(--distB);font-weight:800;font-family:var(--font-display)}
+#map .zoneA-v1{fill:var(--accent);fill-opacity:.06;stroke:var(--accent);stroke-width:1.4;stroke-dasharray:8 5}
+#map .scale{fill:var(--ink)}
+.spin{animation:spin 16s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:.8rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:14px;height:10px;border-radius:2px}
+.caption{margin-top:12px;padding-top:12px;border-top:1px solid var(--rule);font-size:.92rem;color:var(--ink-2);display:grid;gap:8px}
+.caption strong{color:var(--ink)}
+.caption ul{display:grid;gap:4px;padding-left:18px}
+.ztable{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
+.ztable th,.ztable td{text-align:left;padding:7px 10px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.ztable th{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.ztable td:first-child{font-family:var(--font-display);font-weight:800;color:var(--ink);white-space:nowrap}
+
+/* hole cards */
+.districts{display:grid;gap:18px;margin-top:22px}
+.district h3{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:10px}
+.district h3 span{font-family:var(--font-body);font-weight:500;font-size:.86rem;color:var(--ink-2)}
+.district h3 .dot{width:10px;height:10px;border-radius:50%;display:inline-block;align-self:center}
+.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+@media (max-width:1050px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:680px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.cards{grid-template-columns:minmax(0,1fr)}}
+.hcard{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px 12px 12px;text-align:left;font:inherit;color:inherit;cursor:pointer;display:grid;gap:7px;align-content:start;min-width:0}
+.hcard:hover,.hcard.hl{border-color:var(--accent)}
+.hcard.sel{border-color:var(--now);box-shadow:0 0 0 2px var(--now) inset}
+.hcard-top{display:flex;gap:10px;align-items:center}
+.sign{flex:none;display:grid;place-items:center;min-width:34px;height:28px;padding:0 6px;border-radius:5px;background:var(--plate);color:var(--plate-ink);font-family:var(--font-display);font-weight:900;font-size:1rem;box-shadow:inset 0 0 0 1.5px var(--plate),inset 0 0 0 2.5px var(--plate-ink)}
+.hcard-name{font-family:var(--font-display);font-weight:800;font-size:1rem;line-height:1.15}
+.hcard-was{font-size:.78rem;color:var(--ink-3)}
+.hcard-play{font-size:.84rem;color:var(--ink-2);line-height:1.45}
+.hcard-meta{display:flex;flex-wrap:wrap;gap:4px 10px;font-family:var(--font-mono);font-size:.7rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em}
+.cls{font-weight:600}
+.cls.Hero{color:var(--turf-edge)}
+
+/* bar charts */
+.two{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
+.chart{padding:16px 18px 14px}
+.chart-legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--ink-2);margin-bottom:12px}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px}
+.chart-legend i{width:14px;height:10px;border-radius:2px;display:inline-block}
+.rows{display:grid;gap:2px}
+.brow{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:4px 14px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--rule)}
+.brow:last-child{border-bottom:0}
+.brow.rec .blabel b::after{content:"proposed";margin-left:8px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:1px 6px;border-radius:999px;vertical-align:2px;font-weight:600}
+.blabel{font-size:.86rem;line-height:1.3;min-width:0}
+.blabel b{font-weight:650;color:var(--ink)}
+.blabel small{display:block;color:var(--ink-3);font-size:.76rem;margin-top:2px}
+.track{position:relative;display:grid;gap:4px;padding:2px 0;background-image:linear-gradient(to right,var(--rule) 1px,transparent 1px);background-size:25% 100%;border-right:1px solid var(--rule)}
+.bar{height:15px;border-radius:0 3px 3px 0;width:var(--w);position:relative;min-width:2px}
+.bar span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:.74rem;color:var(--ink);white-space:nowrap}
+.bar.bal{background:var(--accent)}
+.bar.une{background:color-mix(in srgb,var(--accent) 38%,var(--surface))}
+.brow.ceil .bar.bal{background:transparent;border:1.5px dashed var(--accent);border-left:0}
+.brow.ceil .bar.une{background:transparent;border:1.5px dashed color-mix(in srgb,var(--accent) 50%,var(--surface));border-left:0}
+.axis{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:14px;margin-top:4px}
+.axis-scale{position:relative;height:16px;font-family:var(--font-mono);font-size:.68rem;color:var(--ink-3)}
+.axis-scale span{position:absolute;transform:translateX(-50%)}
+.axis-scale span:first-child{transform:none}
+.axis-scale span:last-child{transform:translateX(-100%)}
+.axis-title{font-size:.76rem;color:var(--ink-3);text-align:right;margin-top:2px}
+@media (max-width:560px){
+  .brow,.axis{grid-template-columns:minmax(0,1fr)}
+  .axis > div:first-child{display:none}
+}
+.rtrack{position:relative;height:20px;background-image:linear-gradient(to right,var(--rule) 1px,transparent 1px);background-size:25% 100%;border-right:1px solid var(--rule)}
+.rbar{position:absolute;top:3px;height:14px;border-radius:3px;background:var(--ink-3)}
+.rbar.city{background:var(--accent)}
+.rbar .core{position:absolute;top:0;bottom:0;background:var(--ink);opacity:.35;border-radius:3px}
+.rbar span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:.74rem;color:var(--ink);white-space:nowrap}
+.rbar.flip span{left:auto;right:calc(100% + 6px)}
+.notes{padding:16px 18px;display:grid;gap:12px;align-content:start}
+.notes h3{font-size:.95rem}
+.notes ul{display:grid;gap:10px}
+.notes li{list-style:none;font-size:.9rem;padding-left:14px;position:relative}
+.notes li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.big-callout{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.big-callout b{font-family:var(--font-display);font-weight:900;font-size:2rem;line-height:1;color:var(--ink)}
+.big-callout span{font-size:.86rem;color:var(--ink-2)}
+.ceiling-note{border:1.5px dashed var(--now-ink);border-radius:8px;padding:10px 12px;font-size:.88rem;background:var(--now-soft);color:var(--ink)}
+
+/* questions */
+.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.qgrid{grid-template-columns:minmax(0,1fr)}}
+.qcol{padding:16px 18px 18px;min-width:0}
+.qcol h3{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.qcol li{list-style:none;padding:8px 0;border-bottom:1px dashed var(--rule);font-size:.91rem}
+.qcol li:last-child{border-bottom:0}
+.qcol li small{display:block;color:var(--ink-3);font-size:.8rem;margin-top:2px}
+.qcol.safety{border-color:color-mix(in srgb,var(--risk) 45%,var(--rule));background:linear-gradient(var(--risk-soft),var(--risk-soft)) top/100% 4px no-repeat,var(--surface)}
+
+/* next */
+.steps{display:grid;gap:0}
+.step{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 18px;padding:13px 18px;border-bottom:1px solid var(--rule);align-items:baseline}
+.step:last-child{border-bottom:0}
+.step time{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-2);font-weight:600}
+.step.hot time{color:var(--now-ink)}
+.step p{font-size:.95rem}
+.step p small{display:block;color:var(--ink-3);font-size:.82rem;margin-top:2px}
+@media (max-width:560px){.step{grid-template-columns:minmax(0,1fr)}}
+
+footer{padding-block:40px 48px;color:var(--ink-3);font-size:.82rem}
+footer .wrap{display:grid;gap:8px;max-width:1200px}
+footer p{max-width:90ch}
+</style>
+
+<header class="band">
+  <div class="wrap band-in">
+    <div class="band-top">
+      <div>
+        <p class="eyebrow">HOGC countdown party · Auditorium · Thu 31 Dec 2026</p>
+        <h1>Countdown Golf</h1>
+        <p class="lede">Where the 10-hole course stands on <strong>Wed 18 Nov 2026</strong>, after today's update. Six things are decided by the team. Everything else on this page is Claude's proposal for the team to confirm by Gate 1 on Wed 25 Nov.</p>
+      </div>
+      <span class="status-pill">Planning · before Gate 0</span>
+    </div>
+    <div class="plates">
+      <div class="plate"><b class="num">43</b><span>days to the party</span></div>
+      <div class="plate hot"><b class="num">2</b><span>days to Gate 0<br>Fri 20 Nov</span></div>
+      <div class="plate"><b class="num">1/5</b><span>Gate 0 answers in</span></div>
+      <div class="plate"><b class="num">0</b><span>builder or turf quotes logged so far</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="wrap" id="when" aria-labelledby="when-h">
+  <div class="sec-head">
+    <h2 id="when-h">Where we are in the calendar</h2>
+    <p>Gates from the timeline doc. If weekend services use the auditorium on 26–27 Dec, install shrinks to Mon 28 to Wed 30 Dec, so every hole must arrive finished and tested.</p>
+  </div>
+  <div class="card tl-card scroll-x">
+    <svg id="timeline" viewBox="0 0 1000 200" role="img" aria-label="Timeline from 16 November to 1 January with gates G0 on 20 Nov, G1 on 25 Nov, G2 on 4 Dec, G3 on 18 Dec, G4 on 23 Dec, G5 on 30 Dec and the party on 31 Dec. Today, 18 November, is in the decide-and-quote phase."></svg>
+  </div>
+</section>
+
+<section class="wrap" id="stand" aria-labelledby="stand-h">
+  <div class="sec-head">
+    <h2 id="stand-h">Where things stand</h2>
+    <p>Recommendations are not decisions until the team confirms them. When one is confirmed, it moves to the decision log in <code>docs/project-brief.md</code>.</p>
+  </div>
+  <div class="cols3">
+    <article class="card col decided">
+      <header><span class="chip ok">Decided by the team</span><span class="count num">6</span></header>
+      <ul>
+        <li>The countdown party, Thu 31 Dec 2026<small>16 Nov</small></li>
+        <li>A one-off event<small>16 Nov</small></li>
+        <li>10 holes<small>16 Nov</small></li>
+        <li>One night only: temporary, movable, flat-pack; no permanent install, no reuse<small>17 Nov</small></li>
+        <li>The central strip is a raised runway, part of the stage. Nobody can cross it<small>18 Nov · fact confirmed</small></li>
+        <li>Design brief: one coherent "city", not a line; every hole fun to play; a story that works in any order; look like the Pixar Putt photos (the method, not the characters)<small>18 Nov</small></li>
+      </ul>
+    </article>
+    <article class="card col proposed">
+      <header><span class="chip prop">Proposed · confirm by 25 Nov</span><span class="count num">6</span></header>
+      <ul>
+        <li>Hybrid build: buy only the turf; a local builder makes bases, rails and props<small>docs/04-sourcing.md</small></li>
+        <li>"Bright City" look: bright colour, one repeated frame, painted skyline flats, lit by the room's rig<small>Replaces Neon Countdown · needs production to light the zone</small></li>
+        <li>A city plaza at the runway tip: two districts of 5 holes, each looping back to one hub<small>Replaces the v1 line in Zone A</small></li>
+        <li>Hole mix 4 hero · 4 mid · 2 simple, re-skinned as city places (windmill → Ferris wheel, barn → station)<small>Mechanics and build unchanged</small></li>
+        <li>Story: "ten places, one moment", the city at 11:59 pm, so it works in any order</li>
+        <li>Ops: 5-stroke cap; start at any open hole; at most about 12 groups on the course; 7–9 volunteers per shift</li>
+      </ul>
+    </article>
+    <article class="card col due">
+      <header><span class="chip due">Gate 0 · due Fri 20 Nov</span><span class="count num">1/5</span></header>
+      <ul>
+        <li>Budget ceiling<small>The biggest gap. Suggested anchor S$35–45k for the split route</small></li>
+        <li>Expected crowd, and the hours golf runs<small>Sets queue vs timed slots and the district switch</small></li>
+        <li>Who builds: church crew, split, or outsourced?<small>Is there December volunteer capacity next to Christmas production?</small></li>
+        <li>Install window confirmed<small>Are 26–27 Dec used for services?</small></li>
+        <li class="done">Reuse: no<small>Decided 17 Nov</small></li>
+      </ul>
+      <p class="foot">If Gate 0 slips, everything after it slips day for day.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" id="changed" aria-labelledby="changed-h">
+  <div class="sec-head">
+    <h2 id="changed-h">What today's update changed</h2>
+    <p>Five commits on 18 Nov, after the team confirmed the runway and set the city brief. The full reasoning is in <code>docs/09-city-concept.md</code>.</p>
+  </div>
+  <div class="card changes">
+    <div class="chg chg-head" aria-hidden="true"><span>Topic</span><span>Before (16–17 Nov)</span><span></span><span>Now (18 Nov)</span><span>Status</span></div>
+    <div class="chg"><div class="chg-topic">Central strip</div><div class="chg-was">A guess: maybe a runway</div><div class="chg-arrow">→</div><div class="chg-now">A raised runway, part of the stage. The two floor halves only join beyond its tip.</div><span class="chip ok">Fact</span></div>
+    <div class="chg"><div class="chg-topic">Design brief</div><div class="chg-was">Backyard look, holes in a line</div><div class="chg-arrow">→</div><div class="chg-now">One coherent city; fun holes; a story that works in any order</div><span class="chip ok">Decided</span></div>
+    <div class="chg"><div class="chg-topic">Look</div><div class="chg-was">Neon Countdown: dark room, UV, LED</div><div class="chg-arrow">→</div><div class="chg-now">Bright City: bright colour lit from above; LED only on safety edges and a few glows</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">Where</div><div class="chg-was">A 46 × 11.6 m strip beside the runway</div><div class="chg-arrow">→</div><div class="chg-now">A ≈ 19.7 × 25.6 m plaza between the runway tip and the booth, away from the countdown crowd</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">How it plays</div><div class="chg-was">Fixed route 10 → 1; hole 1 keeps the ball</div><div class="chg-arrow">→</div><div class="chg-now">Two 5-hole loops from one hub; start at any open hole; balls handed back at the hub</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">Throughput</div><div class="chg-was">100–120 players an hour</div><div class="chg-arrow">→</div><div class="chg-now">That was a ceiling. Realistic: 75–90 an hour for 10 holes; about 2.3× that if each group plays one district</div><span class="chip est">Simulated</span></div>
+    <div class="chg"><div class="chg-topic">Hole skins</div><div class="chg-was">Windmill, Barn, generic names</div><div class="chg-arrow">→</div><div class="chg-now">Ferris Wheel, Station and eight more city places; same builds and costs</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">Budget</div><div class="chg-was">Four build routes, S$6k to S$91k</div><div class="chg-arrow">→</div><div class="chg-now">Low-budget routes added, from about S$1.7k (DIY, floor-laid). The city look adds about S$0.9–2.1k</div><span class="chip est">Estimate</span></div>
+  </div>
+</section>
+
+<section class="wrap" id="plan" aria-labelledby="plan-h">
+  <div class="sec-head">
+    <h2 id="plan-h">The plan on the floor</h2>
+    <p>Drawn to scale in metres, from the team's planning-tool measurements. Tap a hole or a card to see it. Cable, drop and hole positions are estimates (±1 m).</p>
+  </div>
+  <div class="card map-card">
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Layout">
+        <button type="button" id="lay-v2" data-layout="v2" aria-pressed="true">v2 Plaza <small>proposed</small></button>
+        <button type="button" id="lay-v1" data-layout="v1" aria-pressed="false">v1 Strip <small>superseded</small></button>
+        <button type="button" id="lay-zones" data-layout="zones" aria-pressed="false">Zone options</button>
+      </div>
+      <div class="seg" role="group" aria-label="View">
+        <button type="button" id="zoom-room" data-zoom="room" aria-pressed="true">Whole room</button>
+        <button type="button" id="zoom-close" data-zoom="close" aria-pressed="false">Course close-up</button>
+      </div>
+    </div>
+    <div class="layers" role="group" aria-label="Map layers">
+      <button type="button" id="ly-cables" data-layer="cables" aria-pressed="true" style="--sw:var(--cable)">Cables and drops (est.)</button>
+      <button type="button" id="ly-routes" data-layer="routes" aria-pressed="true" style="--sw:var(--distA)">Walk routes</button>
+      <button type="button" id="ly-sight" data-layer="sight" aria-pressed="true" style="--sw:var(--risk)">Booth sightline</button>
+      <button type="button" id="ly-ext" data-layer="ext" aria-pressed="true" style="--sw:var(--runway-edge)">Runway extension (unconfirmed)</button>
+      <button type="button" id="ly-crowd" data-layer="crowd" aria-pressed="true" style="--sw:var(--ink-3)">Countdown crowd (assumed)</button>
+    </div>
+    <div class="map-host" id="map-host">
+      <svg id="map" role="img" aria-label="To-scale plan of the auditorium showing the stage, runway, booth, estimated cables and the proposed golf layout"></svg>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i style="background:var(--turf-hero);border:1px solid var(--turf-edge)"></i>Hero hole</span>
+      <span><i style="background:var(--turf);border:1px solid var(--turf-edge)"></i>Mid or simple hole</span>
+      <span><i style="background:var(--surface);border:1px solid var(--ink);width:9px;height:9px"></i>Tee</span>
+      <span><i style="background:var(--surface);border:1.5px solid var(--ink);width:10px;height:10px;border-radius:50%"></i>Cup</span>
+      <span><i style="background:var(--hub);border:1px solid var(--hub-edge)"></i>Hub: queue, putters, balls</span>
+      <span><i style="background:var(--flats);height:5px"></i>Skyline flats</span>
+      <span><i style="background:var(--cable);height:3px"></i>Power cable or drop (est.)</span>
+      <span><i style="background:var(--runway)"></i>Runway</span>
+    </div>
+    <div class="caption" id="map-caption" aria-live="polite"></div>
+  </div>
+  <div class="districts" id="districts"></div>
+</section>
+
+<section class="wrap" id="capacity" aria-labelledby="cap-h">
+  <div class="sec-head">
+    <h2 id="cap-h">How many people get to play</h2>
+    <p>Simulated with <code>tools/flow_sim.py</code>: a 3-hour session, a queue that never empties, groups of 4, hole times varying about ±35%, 300 runs per case. A model, not a measurement: time the real holes at the dry run.</p>
+  </div>
+  <div class="two">
+    <div class="card chart">
+      <div class="chart-legend">
+        <span><i style="background:var(--accent)"></i>Balanced holes (all 2.25 min)</span>
+        <span><i style="background:color-mix(in srgb,var(--accent) 38%,var(--surface))"></i>Uneven (hero holes 3.25 min, others 2.0)</span>
+      </div>
+      <div class="rows" id="cap-rows"></div>
+      <div class="axis"><div></div><div><div class="axis-scale" id="cap-axis"></div><div class="axis-title">players per hour</div></div></div>
+    </div>
+    <aside class="card notes">
+      <div class="big-callout"><b class="num">75–90</b><span>players an hour to plan on for all 10 holes: about 230–270 people over 3 hours</span></div>
+      <div class="big-callout"><b class="num">≈ 2.3×</b><span>as many if each group plays one 5-hole district when the queue is long: about 540–600 people</span></div>
+      <ul>
+        <li><strong>The slowest hole sets the pace.</strong> Four hero holes a minute slower than the rest cut capacity by about a quarter (77 → 56 an hour). Keep every hole within about 30 seconds of the others.</li>
+        <li><strong>Free order doesn't help.</strong> It serves 5–15% fewer players, because groups lose time finding free holes.</li>
+        <li><strong>Capping the course at about 12 groups</strong> costs little and cuts rounds by 10–25 minutes. The waiting moves to the queue.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap" id="cost" aria-labelledby="cost-h">
+  <div class="sec-head">
+    <h2 id="cost-h">What it could cost</h2>
+    <p>Estimates from <code>docs/08-budget-model.md</code>, not quotes. Low-budget lines come from Singapore listing prices seen on 18 Nov that still need confirming in writing. GST is 9%.</p>
+  </div>
+  <div class="two">
+    <div class="card chart">
+      <div class="chart-legend">
+        <span><i style="background:var(--accent)"></i>Can carry the city look</span>
+        <span><i style="background:var(--ink-3)"></i>Plain or generic look</span>
+        <span><i style="background:color-mix(in srgb,var(--ink) 35%,var(--accent))"></i>Best-value or suggested range</span>
+      </div>
+      <div class="rows" id="cost-rows"></div>
+      <div class="axis"><div></div><div><div class="axis-scale" id="cost-axis"></div><div class="axis-title">S$ thousands, cash</div></div></div>
+    </div>
+    <aside class="card notes">
+      <div class="ceiling-note"><strong>Budget ceiling: not set yet.</strong> It's the biggest gap, and it's due at Gate 0 on Fri 20 Nov. It decides which of these rows we're on.</div>
+      <ul>
+        <li><strong>Why the main estimate is S$35–45k:</strong> it's priced like a small stage set. The raised deck drives the materials, and the four hero props are about a third of the labour (≈ 120 person-days in all).</li>
+        <li><strong>The city look comes from cheap things:</strong> one rail colour, one sign design, painted skyline flats, tape "streets" and the room's lights. A carpenter-led or DIY build can still carry it.</li>
+        <li><strong>Rented carnival lanes and the foam kit</strong> are plain and short. Use them as a fallback, extra kids' holes, or a price floor.</li>
+        <li><strong>Don't cheapen the rails.</strong> Solid timber held still; foam, pool noodles and PVC pipe kill the rebound.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap" id="questions" aria-labelledby="q-h">
+  <div class="sec-head">
+    <h2 id="q-h">Waiting on answers</h2>
+    <p>The plaza layout can't be fixed until production confirms which floor cables and drops stay on the night. A 1 m shift in drop D42 could break District B.</p>
+  </div>
+  <div class="qgrid">
+    <div class="card qcol">
+      <h3>Production <span class="chip due">this week</span></h3>
+      <ul>
+        <li>Can you light the golf zone from the rig?<small>Decides whether Bright City works</small></li>
+        <li>Is the ≈ 8.6 m runway extension being built? How high is the runway?</li>
+        <li>Does the booth need a clear sightline down the middle of the room?<small>If yes, props on the boulevard stay ≤ 1.5 m</small></li>
+        <li>Which floor cables and drops stay on the night, especially ND31 and D42? Can any move?</li>
+        <li>Where do guests come in, and where does the countdown crowd stand?</li>
+        <li>Must the floor be cleared before midnight?<small>If yes, holes become roll-in units (+10–15%)</small></li>
+      </ul>
+    </div>
+    <div class="card qcol">
+      <h3>Venue <span class="chip est">before G1</span></h3>
+      <ul>
+        <li>Install window around Christmas services<small>Part of Gate 0</small></li>
+        <li>Fire-rating requirements for turf, paint, vinyl and foam</li>
+        <li>Are the dark blocks along the top wall doors or exits?<small>If so, the north skyline flats move</small></li>
+        <li>Door and load-in widths, ceiling height, floor finish and tape rules</li>
+        <li>Is there a workshop or spare hall for the mid-December dry run?</li>
+      </ul>
+    </div>
+    <div class="card qcol safety">
+      <h3>Safety flags <span class="chip risk">raise now</span></h3>
+      <ul>
+        <li><strong>Two circuits are over 100% on the cable plan:</strong> ND18 (LX4.2) at 101% and ND21 (LX6) at 106%. Breakers can trip mid-event. Raise it with whoever owns power, golf or not.</li>
+        <li><strong>Trip hazards:</strong> cable runs cross both floor halves. Holes and queues must not add trip points. The walk from the hub to hole 5 runs along drop D42 for about 6 m and needs a continuous cable cover.</li>
+        <li><strong>No slack yet:</strong> several plaza clearances sit exactly at the 1.2 m and 1.5 m limits.</li>
+        <li><strong>Course power:</strong> 12/24 V only, from a dedicated RCD-protected circuit, never ND18 or ND21.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="next" aria-labelledby="next-h">
+  <div class="sec-head">
+    <h2 id="next-h">Next steps</h2>
+    <p>In date order. The builder's December capacity and the turf delivery are the critical path.</p>
+  </div>
+  <div class="card steps">
+    <div class="step hot"><time datetime="2026-11-20">by Fri 20 Nov</time><p>Team answers Gate 0: budget ceiling, crowd and hours, who builds, install window.<small>Record each answer in the decision log and in CLAUDE.md.</small></p></div>
+    <div class="step hot"><time>this week</time><p>Take the production questions to production.<small>Lighting the golf zone, the runway extension, the booth sightline, which drops stay, where guests enter.</small></p></div>
+    <div class="step hot"><time>this week</time><p>Send the quote requests to 3–4 builders, 2 turf suppliers and 1 rental company.<small>Templates in docs/06-rfq-templates.md; log replies in docs/04-sourcing.md. Prefer turf in stock in Singapore.</small></p></div>
+    <div class="step"><time datetime="2026-11-25">Wed 25 Nov · G1</time><p>Decide the look, where the course goes, the play format and the story. Choose a builder from at least 2 quotes. Order turf.<small>Then redraw the layout with the confirmed drops and exits, rename the holes, and redo the concept renders.</small></p></div>
+    <div class="step"><time datetime="2026-12-04">Fri 4 Dec · G2</time><p>Build and play one prototype hole.<small>Turf must be in hand by about 7 Dec.</small></p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Built on 18 Nov 2026 from the project repo: <code>CLAUDE.md</code>, <code>docs/03</code>, <code>05</code>, <code>07</code>, <code>08</code>, <code>09</code>, <code>floorplan/auditorium-dimensions.json</code>, <code>tools/make_zone_options.py</code> and <code>tools/flow_sim.py</code>. Values marked measured come from the planning tool; everything else is an estimate. Prices are estimates, not quotes.</p>
+    <p>Internal. AI-drafted: a team member must read, edit and own it before it's used. Questions go to the AI Governance &amp; Security Team.</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  function S(tag, attrs, parent, keepScale) {
+    const e = document.createElementNS(NS, tag);
+    if (attrs) for (const k in attrs) if (attrs[k] != null) e.setAttribute(k, attrs[k]);
+    if (tag !== 'text' && !keepScale) e.setAttribute('vector-effect', 'non-scaling-stroke');
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  const r2 = v => Math.round(v * 1000) / 1000;
+
+  /* ---------------- data: geometry from floorplan/auditorium-dimensions.json and tools/make_zone_options.py */
+  const ROOM = { w: 54.7, d: 27.1 };
+  const RW = { x0: 6.0, x1: 31.22, z0: 12.82, z1: 15.22 };
+  const EXT = { x0: 31.22, x1: 39.8 };
+  const BOOTH = { x0: 51.95, x1: 54.7, z0: 11.8, z1: 16.4 };
+  const PLAZA = [31.22, 1.2, 50.95, 26.8];
+  const BLVD = [31.22, 11.6, 50.95, 16.45];
+  const HUB = [44.0, 11.9, 49.45, 16.2];
+  const FLATS = [[31.8, 37.6], [38.6, 44.4], [45.4, 50.6]];
+  const CABLES = [
+    [[10, 2.6], [38, 2.6]], [[10, 24.5], [38, 24.5]], [[0.5, 26.0], [51.5, 26.0]],
+    [[30.4, 1.2], [30.4, 26.8]], [[38, 2.6], [39.4, 2.6], [39.4, 7.6]],
+    [[34.1, 10.4], [34.1, 24.5]], [[43.3, 10.5], [43.3, 26.0]],
+  ];
+  const HOLES = [
+    { n: 10, was: 'Warm-Up', city: 'Speed Bump', cls: 'Simple', par: 2, turf: 5.0, L: 5.0, W: 1.2, d: 'A', c: [42.6, 8.6], th: 210, play: 'Straight lane with a gentle hump and a zebra crossing. Teaches the speed of the turf.' },
+    { n: 9, was: 'Bank Shot', city: 'The Bank', cls: 'Simple', par: 2, turf: 6.4, L: 5.0, W: 2.4, d: 'A', c: [36.0, 7.2], th: 180, play: "L-shape: bounce off the bank's 45° front wall to turn the corner." },
+    { n: 8, was: 'Windmill', city: 'The Ferris Wheel', cls: 'Hero', par: 3, turf: 6.0, L: 6.0, W: 1.2, d: 'A', c: [35.3, 3.75], th: 0, play: 'Time the putt under the turning wheel. Same build as the windmill; still playable if the motor stops.' },
+    { n: 7, was: 'Pinball', city: 'Rush Hour', cls: 'Mid', par: 3, turf: 9.0, L: 5.0, W: 1.8, d: 'A', c: [43.0, 3.75], th: 0, play: 'About 30 pins and 2 bumper blocks become traffic. Chaos evens out skill.' },
+    { n: 6, was: 'Split Decision', city: 'The Subway', cls: 'Mid', par: 3, turf: 9.0, L: 5.5, W: 2.4, d: 'A', c: [48.55, 7.35], th: 90, play: 'Three tunnels, three train lines. One is the express to the cup.' },
+    { n: 5, was: 'The Ramp', city: 'The Rooftop', cls: 'Mid', par: 3, turf: 7.0, L: 6.0, W: 1.2, d: 'B', c: [39.75, 23.0], th: 180, play: 'A 1:6 ramp up to a rooftop green 200 mm higher. Needs side guards.' },
+    { n: 4, was: 'The Barn', city: 'The Station', cls: 'Hero', par: 3, turf: 8.0, L: 5.0, W: 2.0, d: 'B', c: [32.4, 19.7], th: -90, play: 'Dogleg through the station tunnel onto a back green. Same build as the barn.' },
+    { n: 3, was: 'Island Green', city: 'The Harbour', cls: 'Mid', par: 3, turf: 6.0, L: 5.0, W: 2.4, d: 'B', c: [39.6, 18.8], th: -30, play: 'A 0.6 m bridge over painted water to an island green. A missed ball rolls back.' },
+    { n: 2, was: 'The Clock', city: 'Clock Tower Square', cls: 'Hero', par: 3, turf: 9.0, L: 5.0, W: 3.0, d: 'B', c: [45.5, 20.5], th: 90, play: 'A clock-face green; the hands, stopped at 11:59, are bumpers. The landmark and photo spot.' },
+    { n: 1, was: 'Midnight', city: 'Midnight', cls: 'Hero', par: 2, turf: 6.5, L: 6.0, W: 1.2, d: 'B', c: [49.15, 21.0], th: -90, play: 'Under the 2027 arch into a ball-return cup. The finale gate.' },
+  ];
+  const H = Object.fromEntries(HOLES.map(h => [h.n, h]));
+  const posV2 = n => ({ c: H[n].c, th: H[n].th });
+  const posV1 = n => { const i = 10 - n; const cx = 47 - i * 3.9 - 1.95; return { c: [cx, 4.35 + H[n].L / 2], th: 90 }; };
+
+  function l2w(pos, u, v) {
+    const t = pos.th * Math.PI / 180;
+    return [pos.c[0] + u * Math.cos(t) - v * Math.sin(t), pos.c[1] + u * Math.sin(t) + v * Math.cos(t)];
+  }
+  const ACC = 0.6;
+  const TEE = n => l2w(posV2(n), -(H[n].L / 2 + ACC), 0);
+  const CUP = n => l2w(posV2(n), (H[n].L / 2 + ACC), 0);
+  const ROUTE_A = [[[45.285, 11.9], TEE(10)], [CUP(10), TEE(9)], [CUP(9), [31.7, 7.2], TEE(8)], [CUP(8), TEE(7)], [CUP(7), TEE(6)], [CUP(6), [48.55, 11.9]]];
+  const ROUTE_B = [[[44.3, 16.2], [43.4, 16.9], TEE(5)], [CUP(5), TEE(4)], [CUP(4), [34.0, 16.6], TEE(3)], [CUP(3), TEE(2)], [CUP(2), [48.0, 24.65], TEE(1)], [CUP(1), [49.15, 16.2]]];
+
+  /* ---------------- state */
+  const state = {
+    layout: 'v2',
+    zoom: (window.innerWidth < 640) ? 'close' : 'room',
+    layers: { cables: true, routes: true, sight: true, ext: true, crowd: true },
+    sel: 2,
+  };
+
+  const VB = {
+    room: [-0.7, -0.9, 56.1, 30.0],
+    v2: [28.7, -0.9, 27.1, 30.0],
+    v1: [5.0, -0.9, 48.6, 15.4],
+    zones: [4.6, -0.9, 51.1, 30.0],
+  };
+  const viewBox = () => state.zoom === 'room' ? VB.room : VB[state.layout];
+
+  const svg = document.getElementById('map');
+  const host = document.getElementById('map-host');
+
+  function render() {
+    const [vx, vz, vw, vh] = viewBox();
+    const minW = state.zoom === 'room' ? 680 : 360;
+    const cw = Math.max(host.clientWidth || 800, minW);
+    const ppm = cw / vw;
+    const u = 1 / ppm;                         // metres per screen pixel
+    svg.setAttribute('viewBox', `${vx} ${vz} ${vw} ${vh}`);
+    svg.style.width = cw + 'px';
+    svg.style.height = (cw * vh / vw) + 'px';
+    svg.replaceChildren();
+
+    const defs = S('defs', null, svg);
+    const pat = S('pattern', { id: 'crowd-hatch', patternUnits: 'userSpaceOnUse', width: r2(7 * u), height: r2(7 * u), patternTransform: 'rotate(45)' }, defs, true);
+    S('line', { x1: 0, y1: 0, x2: 0, y2: r2(7 * u), style: `stroke:var(--ink-3);stroke-width:${r2(1 * u)};opacity:.45` }, pat, true);
+    for (const k of ['a', 'b', 'v1']) {
+      const m = S('marker', { id: 'mk-' + k, viewBox: '0 0 10 10', refX: 7, refY: 5, markerUnits: 'userSpaceOnUse', markerWidth: r2(9 * u), markerHeight: r2(9 * u), orient: 'auto' }, defs, true);
+      S('path', { d: 'M0,0 L10,5 L0,10 z', class: 'mk-' + k }, m, true);
+    }
+
+    const rect = (x0, z0, x1, z1, cls, p = svg, extra = {}) => S('rect', Object.assign({ x: x0, y: z0, width: r2(x1 - x0), height: r2(z1 - z0), class: cls }, extra), p);
+    const line = (pts, cls, p = svg, extra = {}) => S('polyline', Object.assign({ points: pts.map(q => q.map(r2).join(',')).join(' '), class: cls }, extra), p);
+    const label = (x, z, txt, opt = {}) => {
+      const px = opt.px || 11;
+      const t = S('text', {
+        x: r2(x), y: r2(z), 'font-size': r2(px * u), 'text-anchor': opt.anchor || 'middle', 'dominant-baseline': 'middle',
+        class: 'lbl ' + (opt.cls || ''), 'stroke-width': r2(3.2 * u),
+        transform: opt.rot ? `rotate(${opt.rot} ${r2(x)} ${r2(z)})` : null,
+      }, opt.p || svg);
+      t.textContent = txt;
+      return t;
+    };
+
+    // room shell
+    rect(0, 0, ROOM.w, ROOM.d, 'floor');
+    rect(0, 0, ROOM.w, 1.2, 'wall');
+    rect(0, 0, 6.0, ROOM.d, 'stage');
+    label(3.0, 13.55, 'STAGE', { px: 12, cls: 'b', rot: -90 });
+    label(state.layout === 'v2' ? 16 : 27.35, 0.62, 'Top-wall blocks: doors or exits? (to confirm)', { px: 9.5 });
+
+    if (state.layers.crowd) {
+      rect(6, 1.2, 24, 12.82, 'crowd', svg, { fill: 'url(#crowd-hatch)' });
+      rect(6, 15.22, 24, 26.8, 'crowd', svg, { fill: 'url(#crowd-hatch)' });
+      label(15, 9.6, 'Assumed countdown crowd', { px: 10 });
+      label(15, 18.4, 'Assumed countdown crowd', { px: 10 });
+    }
+
+    // layout underlays
+    if (state.layout === 'v2') {
+      rect(PLAZA[0], PLAZA[1], PLAZA[2], BLVD[1], 'distA');
+      rect(PLAZA[0], BLVD[3], PLAZA[2], PLAZA[3], 'distB');
+      rect(...BLVD, 'blvd');
+    }
+    if (state.layout === 'v1') {
+      rect(6, 1.2, 51.95, 12.82, 'zoneA-v1');
+    }
+
+    if (state.layers.sight) {
+      S('polygon', { points: [[RW.x1, RW.z0], [BOOTH.x0, BOOTH.z0], [BOOTH.x0, BOOTH.z1], [RW.x1, RW.z1]].map(q => q.join(',')).join(' '), class: 'sight' }, svg);
+    }
+
+    // runway and booth
+    rect(RW.x0, RW.z0, RW.x1, RW.z1, 'runway');
+    label((RW.x0 + RW.x1) / 2, (RW.z0 + RW.z1) / 2, 'RUNWAY · raised, part of the stage', { px: 10.5, cls: 'b' });
+    if (state.layers.ext) {
+      rect(EXT.x0, RW.z0, EXT.x1, RW.z1, 'ext');
+      label((EXT.x0 + EXT.x1) / 2, (RW.z0 + RW.z1) / 2, 'extension?', { px: 9.5 });
+    }
+    rect(BOOTH.x0, BOOTH.z0, BOOTH.x1, BOOTH.z1, 'booth');
+    label((BOOTH.x0 + BOOTH.x1) / 2, (BOOTH.z0 + BOOTH.z1) / 2, 'BOOTH?', { px: 10, cls: 'b', rot: -90 });
+
+    if (state.layout === 'v2') {
+      label(37.4, 12.2, 'BOULEVARD · walkway, no holes', { px: 9.5 });
+      if (state.layers.sight) label(43.4, 15.75, 'booth sightline: props ≤ 1.5 m', { px: 9.5, anchor: 'end', cls: 'risk' });
+      rect(...PLAZA, 'plaza');
+      for (const [x0, x1] of FLATS) { rect(x0, 1.2, x1, 1.6, 'flats'); rect(x0, 25.3, x1, 25.7, 'flats'); }
+      label(41.2, 0.62, 'painted skyline flats, 2.4–3.6 m tall', { px: 9.5 });
+      // hub
+      rect(...HUB, 'hub', svg, { rx: 0.2 });
+      for (let k = 0; k < 3; k++) { const zq = HUB[1] + 1.0 + k * 1.05; line([[HUB[0] + 0.5, zq], [HUB[0] + 3.2, zq]], 'hub-line'); }
+      label((HUB[0] + HUB[2]) / 2, HUB[1] + 0.55, 'HUB', { px: 11.5, cls: 'hubt' });
+      label((HUB[0] + HUB[2]) / 2, HUB[3] - 0.5, 'queue · putters · balls', { px: 9 });
+    } else if (state.layout === 'v1') {
+      rect(47.6, 4.35, 51.4, 11.9, 'hub', svg, { rx: 0.2 });
+      label(49.5, 8.1, 'QUEUE', { px: 11, cls: 'hubt', rot: -90 });
+    } else if (state.layers.sight) {
+      label(43.4, 15.75, 'booth sightline', { px: 9.5, anchor: 'end', cls: 'risk' });
+    }
+
+    if (state.layers.cables) {
+      for (const pts of CABLES) line(pts, 'cable');
+      label(34.4, 11.0, 'ND31', { px: 9, anchor: 'start', cls: 'risk' });
+      label(43.6, 11.0, 'D42', { px: 9, anchor: 'start', cls: 'risk' });
+      label(39.7, 7.2, 'D53', { px: 9, anchor: 'start', cls: 'risk' });
+      for (const [x, z, t] of [[18.6, 11.1, 'ND18 · 101% load'], [19.0, 22.9, 'ND21 · 106% load']]) {
+        S('circle', { cx: x, cy: z, r: 1.0, class: 'flag-ring' }, svg);
+        S('circle', { cx: x, cy: z, r: 0.3, class: 'flag' }, svg);
+        label(x + 1.3, z, t, { px: 9.5, anchor: 'start', cls: 'risk' });
+      }
+    }
+
+    // zones
+    if (state.layout === 'zones') {
+      rect(6.0, 1.2, 51.95, 12.82, 'zone zA');
+      rect(31.52, 1.5, 50.65, 26.5, 'zone zB');
+      S('polygon', { points: [[24.6, 1.8], [50.35, 1.8], [50.35, 26.2], [24.6, 26.2], [24.6, 15.82], [31.82, 15.82], [31.82, 12.22], [24.6, 12.22]].map(q => q.join(',')).join(' '), class: 'zone zC' }, svg);
+      label(8.0, 11.9, 'A · Strip ≈ 534 m²', { px: 12, anchor: 'start', cls: 'zA' });
+      label(41.1, 20.6, 'B · Plaza ≈ 505 m²', { px: 12, cls: 'zB' });
+      label(27.9, 21.6, 'C · U ≈ 673 m²', { px: 12, cls: 'zC', rot: -90 });
+    }
+
+    // routes
+    if (state.layers.routes && state.layout === 'v2') {
+      for (const hop of ROUTE_A) line(hop, 'route a', svg, { 'marker-end': 'url(#mk-a)' });
+      for (const hop of ROUTE_B) line(hop, 'route b', svg, { 'marker-end': 'url(#mk-b)' });
+    }
+    if (state.layers.routes && state.layout === 'v1') {
+      line([[49.5, 3.3], [7.6, 3.3]], 'route v1', svg, { 'marker-end': 'url(#mk-v1)' });
+      label(28.5, 11.7, 'v1: one-way line, 10 → 1, ending near the stage', { px: 10, cls: 'b' });
+    }
+
+    // holes
+    if (state.layout !== 'zones') {
+      const pos = state.layout === 'v2' ? posV2 : posV1;
+      for (const h of HOLES) drawHole(h, pos(h.n), u, label);
+      if (state.layout === 'v2') {
+        label(37.6, 9.95, 'DISTRICT A · holes 10 → 6', { px: 10.5, cls: 'a' });
+        label(40.3, 24.85, 'DISTRICT B · holes 5 → 1', { px: 10.5, cls: 'bb' });
+      }
+    }
+
+    // scale bar and room size
+    const sx = state.zoom === 'room' ? 0.4 : vx + 0.6;
+    S('rect', { x: sx, y: 27.75, width: 5, height: r2(4 * u), class: 'scale' }, svg);
+    label(sx + 5.4, 27.75 + 2 * u, '5 m', { px: 10, anchor: 'start', cls: 'b' });
+    if (state.zoom === 'room') label(54.7, 27.85, 'Room 54.7 × 27.1 m (measured) · runway tip → booth 20.73 m (measured)', { px: 9.5, anchor: 'end' });
+  }
+
+  function drawHole(h, pos, u, label) {
+    const g = S('g', { class: `hole ${h.cls === 'Hero' ? 'hero' : ''} ${state.sel === h.n ? 'sel' : ''}`, 'data-n': h.n, tabindex: 0, role: 'button', 'aria-label': `Hole ${h.n}: ${h.city}` }, svg);
+    const lg = S('g', { transform: `translate(${pos.c[0]} ${pos.c[1]}) rotate(${pos.th})` }, g);
+    const L = h.L, W = h.W, a = -L / 2, b = L / 2;
+    const R = (x0, y0, x1, y1, cls) => S('rect', { x: r2(x0), y: r2(y0), width: r2(x1 - x0), height: r2(y1 - y0), class: cls }, lg);
+    const P = (pts, cls) => S('polygon', { points: pts.map(q => q.map(r2).join(',')).join(' '), class: cls }, lg);
+    const C = (cx, cy, r, cls) => S('circle', { cx: r2(cx), cy: r2(cy), r: r2(r), class: cls }, lg);
+    const Ln = (x0, y0, x1, y1, cls) => S('line', { x1: r2(x0), y1: r2(y0), x2: r2(x1), y2: r2(y1), class: cls }, lg);
+    let tee = [a + 0.3, 0], cup = [b - 0.45, 0], plate = [a + 1.25, 0];
+    switch (h.n) {
+      case 10:
+        R(a, -W / 2, b, W / 2, 'turf'); R(-0.6, -W / 2, 0.0, W / 2, 'hump');
+        for (let i = 0; i < 4; i++) R(0.45, -0.42 + i * 0.24, 1.15, -0.42 + i * 0.24 + 0.12, 'zebra');
+        break;
+      case 9:
+        P([[a, -1.2], [1.9, -1.2], [2.5, -0.6], [2.5, 1.2], [1.3, 1.2], [1.3, 0], [a, 0]], 'turf');
+        Ln(1.9, -1.2, 2.5, -0.6, 'wallk');
+        tee = [a + 0.3, -0.6]; cup = [1.9, 0.75]; plate = [a + 1.25, -0.6];
+        break;
+      case 8:
+        R(a, -W / 2, b, W / 2, 'turf'); R(-0.3, -W / 2, 0.3, W / 2, 'tunnel');
+        break;
+      case 7: {
+        R(a, -W / 2, b, W / 2, 'turf');
+        for (let r = 0; r < 5; r++) for (let k = 0; k < (r % 2 ? 4 : 5); k++) C(-0.5 + r * 0.42, -0.6 + k * 0.3 + (r % 2 ? 0.15 : 0), 0.045, 'pin');
+        R(1.75, -0.85, 1.95, -0.4, 'bump'); R(1.75, 0.4, 1.95, 0.85, 'bump');
+        cup = [b - 0.3, 0];
+        break;
+      }
+      case 6:
+        P([[a, -0.5], [-0.95, -0.5], [-0.95, -1.2], [b, -1.2], [b, 1.2], [-0.95, 1.2], [-0.95, 0.5], [a, 0.5]], 'turf');
+        for (const [v0, v1] of [[-1.2, -0.82], [-0.48, -0.17], [0.17, 0.48], [0.82, 1.2]]) Ln(-0.35, v0, -0.35, v1, 'twall');
+        cup = [2.2, 0.55];
+        break;
+      case 5:
+        R(a, -W / 2, b, W / 2, 'turf'); R(-0.4, -W / 2, 0.9, W / 2, 'ramp'); R(0.9, -W / 2, b, W / 2, 'raised');
+        break;
+      case 4:
+        P([[a, -1], [b, -1], [b, 1], [0.5, 1], [0.5, 0], [a, 0]], 'turf');
+        R(-0.35, -1, 0.5, 0, 'barn');
+        tee = [a + 0.3, -0.5]; cup = [1.95, 0.45]; plate = [a + 1.25, -0.5];
+        break;
+      case 3:
+        C(1.3, 0, 1.2, 'water'); R(a, -0.3, 0.45, 0.3, 'turf'); C(1.3, 0, 0.95, 'turf');
+        cup = [1.55, 0.15];
+        break;
+      case 2:
+        R(a, -0.5, -0.3, 0.5, 'turf'); C(1.0, 0, 1.5, 'turf');
+        cup = [1.6, 0.75];
+        break;
+      case 1:
+        R(a, -W / 2, b, W / 2, 'turf'); R(b - 0.9, -W / 2, b, W / 2, 'ret');
+        Ln(-0.9, -W / 2 - 0.25, -0.9, W / 2 + 0.25, 'arch');
+        break;
+    }
+    S('rect', { x: r2(tee[0] - 0.15), y: r2(tee[1] - 0.15), width: 0.3, height: 0.3, class: 'tee' }, lg);
+    S('circle', { cx: r2(cup[0]), cy: r2(cup[1]), r: 0.14, class: 'cup' }, lg);
+
+    // world-space extras
+    if (h.n === 8) {
+      const [wx, wz] = l2w(pos, 0, 0);
+      const outer = S('g', { transform: `translate(${r2(wx)} ${r2(wz)})` }, g);
+      const sp = S('g', { class: 'spin' }, outer);
+      S('line', { x1: -0.85, y1: -0.85, x2: 0.85, y2: 0.85, class: 'blade' }, sp);
+      S('line', { x1: -0.85, y1: 0.85, x2: 0.85, y2: -0.85, class: 'blade' }, sp);
+      S('circle', { cx: 0, cy: 0, r: 0.16, class: 'bladehub' }, sp);
+    }
+    if (h.n === 2) {
+      const [wx, wz] = l2w(pos, 1.0, 0);
+      for (let i = 0; i < 12; i++) { const t = i * Math.PI / 6; S('circle', { cx: r2(wx + 1.27 * Math.sin(t)), cy: r2(wz - 1.27 * Math.cos(t)), r: i % 3 ? 0.04 : 0.07, class: 'tick' }, g); }
+      const hand = (deg, len, w) => { const t = deg * Math.PI / 180; S('line', { x1: r2(wx), y1: r2(wz), x2: r2(wx + len * Math.sin(t)), y2: r2(wz - len * Math.cos(t)), class: 'hand', style: `stroke-width:${w}px` }, g); };
+      hand(-6, 1.1, 2); hand(-1, 0.7, 3.2);
+    }
+    // street-sign number plate
+    const [px, pz] = l2w(pos, plate[0], plate[1]);
+    const fs = Math.max(0.6, 10.5 * u);
+    const pw = fs * (h.n === 10 ? 1.95 : 1.4), ph = fs * 1.28;
+    S('rect', { x: r2(px - pw / 2), y: r2(pz - ph / 2), width: r2(pw), height: r2(ph), rx: r2(ph * 0.2), class: 'plate' }, g);
+    S('rect', { x: r2(px - pw / 2 + 2 * u), y: r2(pz - ph / 2 + 2 * u), width: r2(pw - 4 * u), height: r2(ph - 4 * u), rx: r2(ph * 0.15), class: 'plate-in' }, g);
+    const t = S('text', { x: r2(px), y: r2(pz + fs * 0.06), 'font-size': r2(fs), 'text-anchor': 'middle', 'dominant-baseline': 'middle', class: 'plate-t' }, g);
+    t.textContent = h.n;
+
+    if (state.sel === h.n) {
+      const t2 = pos.th * Math.PI / 180, ex = Math.abs(h.L / 2 * Math.sin(t2)) + Math.abs(h.W / 2 * Math.cos(t2));
+      const zTop = pos.c[1] - ex - 0.5;
+      label(pos.c[0], zTop, h.city, { px: 11.5, cls: 'sel', p: g });
+    }
+
+    g.addEventListener('pointerenter', () => setHover(h.n, true));
+    g.addEventListener('pointerleave', () => setHover(h.n, false));
+    g.addEventListener('click', () => select(h.n));
+    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(h.n); } });
+  }
+
+  /* ---------------- captions */
+  const CAPTIONS = {
+    v2: `<p><strong>Draft layout v2 (proposal).</strong> Two districts of 5 holes, each a loop that leaves the hub and comes back to it. A group can start at any open hole and play on until it's back where it started. When the queue is long, each group plays one district. The 10 holes take about 99 m² of a 505 m² plaza; every walkway is at least 1.2 m.</p>
+         <ul><li>It still fits if the runway extension is built, with no hole moving.</li>
+         <li>Before fixing any position: confirm drops ND31 and D42, whether the top-wall blocks are exits, and where the booth door is. A 75 mm deck can't sit on a cable.</li></ul>`,
+    v1: `<p><strong>Draft layout v1 (superseded on 18 Nov).</strong> Ten holes in a line across the top half, played 10 → 1 toward the stage. It was set aside because the strip forces a straight line, and its stage end shares the floor with the countdown crowd.</p>`,
+    zones: `<p><strong>Three places the course could go</strong>, now that the runway is confirmed. The two floor halves only join beyond the runway tip. Choosing one is a Gate 1 decision and needs production's answers on the crowd zone, booth sightline and runway extension.</p>
+         <div class="scroll-x"><table class="ztable"><thead><tr><th>Option</th><th>Size</th><th>For</th><th>Against</th></tr></thead><tbody>
+         <tr><td>A · Strip</td><td>≈ 534 m², 46 × 11.6 m</td><td>Already drawn; uses one side only</td><td>Forces a line; shares the floor with the countdown crowd near the stage</td></tr>
+         <tr><td>B · Plaza (proposed)</td><td>≈ 505 m², 19.7 × 25.6 m</td><td>Room for a real cluster; both halves meet here; away from the crowd</td><td>Booth sightline crosses it; two cable drops cut the south half; tight clearances</td></tr>
+         <tr><td>C · U around the runway</td><td>≈ 673 m²</td><td>The most room</td><td>Takes the most party floor; the runway splits it; runs up to the crowd area</td></tr>
+         </tbody></table></div>`,
+  };
+
+  /* ---------------- hole cards */
+  const districts = document.getElementById('districts');
+  const cardEls = {};
+  for (const [d, title, sub, col] of [['A', 'District A', 'holes 10 → 6 · leaves the hub and loops back', 'var(--distA)'], ['B', 'District B', 'holes 5 → 1 · leaves the hub and loops back', 'var(--distB)']]) {
+    const wrap = document.createElement('div');
+    wrap.className = 'district';
+    wrap.innerHTML = `<h3><i class="dot" style="background:${col}"></i>${title}<span>${sub}</span></h3><div class="cards"></div>`;
+    const grid = wrap.querySelector('.cards');
+    for (const h of HOLES.filter(x => x.d === d)) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'hcard';
+      b.id = 'card-' + h.n;
+      b.innerHTML = `<div class="hcard-top"><span class="sign">${h.n}</span><div><div class="hcard-name">${h.city}</div><div class="hcard-was">was "${h.was}"</div></div></div>
+        <p class="hcard-play">${h.play}</p>
+        <div class="hcard-meta"><span class="cls ${h.cls}">${h.cls}</span><span>Par ${h.par}</span><span>${h.L.toFixed(1)} × ${h.W.toFixed(1)} m</span><span>${h.turf.toFixed(1)} m² turf</span></div>`;
+      b.addEventListener('click', () => select(h.n));
+      b.addEventListener('pointerenter', () => setHover(h.n, true));
+      b.addEventListener('pointerleave', () => setHover(h.n, false));
+      cardEls[h.n] = b;
+      grid.appendChild(b);
+    }
+    districts.appendChild(wrap);
+  }
+
+  function setHover(n, on) {
+    const g = svg.querySelector(`.hole[data-n="${n}"]`);
+    if (g) g.classList.toggle('hl', on);
+    if (cardEls[n]) cardEls[n].classList.toggle('hl', on);
+  }
+  function select(n) {
+    state.sel = n;
+    for (const k in cardEls) cardEls[k].classList.toggle('sel', +k === n);
+    if (state.layout === 'zones') setLayout('v2'); else render();
+  }
+
+  /* ---------------- controls */
+  function syncControls() {
+    document.querySelectorAll('[data-layout]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout)));
+    document.querySelectorAll('[data-zoom]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.zoom === state.zoom)));
+    document.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-pressed', String(state.layers[b.dataset.layer])));
+    document.getElementById('ly-routes').disabled = state.layout === 'zones';
+    document.getElementById('map-caption').innerHTML = CAPTIONS[state.layout];
+  }
+  function setLayout(l) { state.layout = l; syncControls(); render(); }
+  document.querySelectorAll('[data-layout]').forEach(b => b.addEventListener('click', () => setLayout(b.dataset.layout)));
+  document.querySelectorAll('[data-zoom]').forEach(b => b.addEventListener('click', () => { state.zoom = b.dataset.zoom; syncControls(); render(); }));
+  document.querySelectorAll('[data-layer]').forEach(b => b.addEventListener('click', () => { const k = b.dataset.layer; state.layers[k] = !state.layers[k]; syncControls(); render(); }));
+
+  let rt;
+  if ('ResizeObserver' in window) new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(render, 60); }).observe(host);
+  else window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(render, 60); });
+
+  for (const k in cardEls) cardEls[k].classList.toggle('sel', +k === state.sel);
+  syncControls();
+  render();
+
+  /* ---------------- timeline */
+  (function timeline() {
+    const t = document.getElementById('timeline');
+    const X = d => 30 + d * 18.9;
+    const defs = S('defs', null, t, true);
+    const pat = S('pattern', { id: 'tl-hatch', patternUnits: 'userSpaceOnUse', width: 6, height: 6, patternTransform: 'rotate(45)' }, defs, true);
+    S('rect', { x: 0, y: 0, width: 6, height: 6, class: 'xmas-bg' }, pat, true);
+    S('line', { x1: 0, y1: 0, x2: 0, y2: 6, class: 'hatch-l' }, pat, true);
+    const txt = (x, y, s, cls, anchor = 'start') => { const e = S('text', { x, y, class: cls || '', 'text-anchor': anchor }, t); e.textContent = s; return e; };
+    const BY = 100, BH = 30;
+    const phases = [[0, 9, 'Decide + quotes', 'p-dec'], [9, 18, 'Prototype', 'p-mid'], [18, 32, 'Build all 10 holes', 'p-mid'], [32, 37, 'Fix + prep', 'p-mid'], [37, 42, 'Christmas', 'p-xmas'], [42, 45, 'Install', 'p-inst'], [45, 46, '', 'p-party']];
+    for (const [d0, d1, lbl, cls] of phases) {
+      S('rect', { x: X(d0), y: BY, width: X(d1) - X(d0), height: BH, class: 'ph ' + cls }, t, true);
+      if (lbl) txt((X(d0) + X(d1)) / 2, BY + BH / 2 + 4, lbl, 'tband', 'middle');
+    }
+    S('rect', { x: X(0), y: BY, width: X(2) - X(0), height: BH, class: 'past' }, t, true);
+    // party star
+    const sx = (X(45) + X(46)) / 2, sy = BY + BH / 2;
+    const star = []; for (let i = 0; i < 10; i++) { const r = i % 2 ? 4 : 9, a = -Math.PI / 2 + i * Math.PI / 5; star.push([sx + r * Math.cos(a), sy + r * Math.sin(a)]); }
+    S('polygon', { points: star.map(p => p.map(v => v.toFixed(1)).join(',')).join(' '), class: 'gate' }, t, true);
+    txt(X(46) + 8, BY + 12, 'Party', 'tb');
+    txt(X(46) + 8, BY + 27, 'Thu 31 Dec', '');
+    // gates
+    const gates = [[4, 'G0 · Fri 20 Nov', 'Frame: budget, crowd', 1, 'start'], [9, 'G1 · Wed 25 Nov', 'Commit: look, builder, turf', 2, 'start'], [18, 'G2 · Fri 4 Dec', 'Prototype hole played', 1, 'start'], [32, 'G3 · Fri 18 Dec', 'All 10 built, dry run', 2, 'end'], [37, 'G4 · Wed 23 Dec', 'Ready to move', 2, 'start'], [44, 'G5 · Wed 30 Dec', 'Installed, safety walk', 1, 'end']];
+    for (const [d, l1, l2, row, anchor] of gates) {
+      const x = X(d), y1 = row === 1 ? 18 : 52;
+      S('line', { x1: x, y1: y1 + 20, x2: x, y2: BY - 6, class: 'lead' }, t, true);
+      S('rect', { x: x - 5, y: BY - 11, width: 10, height: 10, transform: `rotate(45 ${x} ${BY - 6})`, class: 'gate' }, t, true);
+      const dx = anchor === 'start' ? -2 : 2;
+      txt(x + dx, y1, l1, 'tb', anchor);
+      txt(x + dx, y1 + 15, l2, '', anchor);
+    }
+    // turf milestone
+    S('polygon', { points: `${X(21)},${BY + BH + 4} ${X(21) - 5},${BY + BH + 12} ${X(21) + 5},${BY + BH + 12}`, class: 'turf-m' }, t, true);
+    txt(X(21), BY + BH + 26, 'Turf in hand ≈ 7 Dec', '', 'middle');
+    txt((X(37) + X(42)) / 2, BY + BH + 26, 'services 26–27 Dec?', '', 'middle');
+    // today
+    S('line', { x1: X(2), y1: BY - 16, x2: X(2), y2: BY + BH + 12, class: 'today' }, t, true);
+    S('circle', { cx: X(2), cy: BY - 16, r: 4, style: 'fill:var(--now)' }, t, true);
+    txt(X(2) + 6, BY + BH + 26, '18 Nov · we are here', 'today-t');
+    // axis
+    const mondays = [[0, 'Mon 16 Nov'], [7, '23 Nov'], [14, '30 Nov'], [21, '7 Dec'], [28, '14 Dec'], [35, '21 Dec'], [42, '28 Dec']];
+    for (const [d, l] of mondays) {
+      S('line', { x1: X(d), y1: 172, x2: X(d), y2: 178, class: 'tick' }, t, true);
+      txt(X(d), 192, l, 'ax', d === 0 ? 'start' : 'middle');
+    }
+    S('line', { x1: X(0), y1: 172, x2: X(46), y2: 172, class: 'tick' }, t, true);
+  })();
+
+  /* ---------------- capacity bars */
+  (function capacity() {
+    const rows = [
+      ['Fixed route 10 → 1', 'the v1 plan', 77, 56, 42, 65],
+      ['Fixed route, ≤ 12 groups', 'a starter holds the rest in the queue', 72, 56, 33, 42],
+      ['Free order, ≤ 12 groups', 'groups roam to any free hole', 73, 56, 36, 44],
+      ['Loop, start anywhere', 'host sends groups to open holes · ≤ 12 groups', 79, 63, 32, 41, 'rec'],
+      ['Two 5-hole districts', 'each group plays 5 holes', 179, 132, 24, 48, 'rec'],
+      ['Ceiling', 'everyone plays all 10, no waste', 107, 74, null, null, 'ceil'],
+    ];
+    const max = 200;
+    const host = document.getElementById('cap-rows');
+    for (const [name, sub, bal, une, rb, ru, flag] of rows) {
+      const r = document.createElement('div');
+      r.className = 'brow' + (flag ? ' ' + flag : '');
+      const round = rb != null ? ` · round ${rb} / ${ru} min` : '';
+      r.innerHTML = `<div class="blabel"><b>${name}</b><small>${sub}${round}</small></div>
+        <div class="track"><div class="bar bal" style="--w:${bal / max * 100}%"><span>${bal}</span></div><div class="bar une" style="--w:${une / max * 100}%"><span>${une}</span></div></div>`;
+      host.appendChild(r);
+    }
+    const ax = document.getElementById('cap-axis');
+    for (const v of [0, 50, 100, 150, 200]) { const s = document.createElement('span'); s.style.left = (v / max * 100) + '%'; s.textContent = v; ax.appendChild(s); }
+  })();
+
+  /* ---------------- cost ranges */
+  (function cost() {
+    const max = 100;
+    const rows = [
+      ['DIY, floor-laid, volunteers', '40–60 volunteer-days plus one lead', 1.7, 6.5, [4.2, 6.5], true, 'S$1.7–6.5k'],
+      ['Rent carnival lanes + printed dressing', '3–4 vendors for 10 plain lanes', 3, 6, null, false, 'S$3–6k'],
+      ['Buy a 9-hole foam-tile kit (UK)', 'must land by early December', 6, 7.6, null, false, 'S$6–7.6k'],
+      ['Carpenter + volunteers paint and dress', '10–15 carpenter-days', 6, 10, null, true, 'S$6–10k'],
+      ['Church crew, raised decks', 'needs December crew capacity', 14, 31, null, true, 'S$14–31k'],
+      ['Split: prop shop + lead carpenter + crew', 'suggested anchor S$35–45k', 30, 56, [35, 45], true, 'S$30–56k'],
+      ['Fully outsourced', 'professional end to end', 50, 91, null, true, 'S$50–91k', true],
+    ];
+    const host = document.getElementById('cost-rows');
+    for (const [name, sub, lo, hi, core, city, txt, flip] of rows) {
+      const r = document.createElement('div');
+      r.className = 'brow';
+      const coreHtml = core ? `<i class="core" style="left:${(core[0] - lo) / (hi - lo) * 100}%;width:${(core[1] - core[0]) / (hi - lo) * 100}%"></i>` : '';
+      r.innerHTML = `<div class="blabel"><b>${name}</b><small>${sub}</small></div>
+        <div class="rtrack"><div class="rbar ${city ? 'city' : ''} ${flip ? 'flip' : ''}" style="left:${lo / max * 100}%;width:${(hi - lo) / max * 100}%">${coreHtml}<span>${txt}</span></div></div>`;
+      host.appendChild(r);
+    }
+    const ax = document.getElementById('cost-axis');
+    for (const v of [0, 25, 50, 75, 100]) { const s = document.createElement('span'); s.style.left = v + '%'; s.textContent = v; ax.appendChild(s); }
+  })();
+})();
+</script>
