@@ -37,19 +37,21 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Item | Value | Confidence |
 |---|---|---|
 | Auditorium width | 25.6 m (11.65 + 2.4 + 10.25 + 1.3) | Measured 18 Nov, rough |
-| Auditorium length | 54.7 m | Not re-measured: from the old cable plan; team says unchanged. The 18 Nov sketch draws the room shorter beyond the golf limit, so check it |
-| Runway (raised, part of stage) | 22.54 × 2.4 m, stage front to tip; 11.65 m from the top wall | Measured 18 Nov; height unknown |
+| Auditorium length | ≈ 43 m used: the 6 m stage placeholder + back wall ≈ 37 m from the stage front (range 34–40 m), i.e. ≈ 10 m past the golf limit (7–13 m) | Estimated from photos and the sketch 19 Nov (`docs/13-auditorium-from-photos.md`), not measured. The old cable plan's 54.7 m disagrees; tape golf limit → back wall |
+| Other activities floor (golf limit to back wall, less the console) | ≈ 220 m² (was assumed ≈ 555 m²) | Estimated from photos 19 Nov |
+| Heights in the room | Ceiling structure ≈ 7.5–8.5 m · side lighting trusses ≈ 5.8 m along both side walls · delay screen over the runway, underside ≈ 3.5 m · surround speakers ≈ 3.7 m · stage and runway decks ≈ 0.9 m | Estimated from photos 19 Nov, not measured |
+| Runway (raised, part of stage) | 22.54 × 2.4 m, stage front to tip; 11.65 m from the top wall | Measured 18 Nov. Height ≈ 0.9 m (photos). Photos suggest the white top is ≈ 2.0 m wide: check whether 2.4 m includes the skirt or stairs |
 | Runway to the bottom wall | 11.55 m (10.25 to the LF platform + its 1.3 m depth) | Derived from measured values |
 | LF platform | 1.3 m deep, against the bottom wall, 10.25 m from the runway | Depth measured; length and position along the wall not measured |
 | Speaker stands beside the runway | Stick out 51.5 cm (two per side, stairs nearest the stage) | Measured; positions not measured |
 | Golf limit | 27 m from the stage front = 4.46 m past the runway tip | 27 m measured; 4.46 m derived |
 | Golf zone | 27 × 25.6 m; ≈ 637 m² after the runway (≈ 263 + 260 m² beside it, ≈ 114 m² past the tip), before the stairs, stands and stage curves come off | Derived |
-| Stage depth; golf limit to sound console | Unknown | Not measured |
+| Stage depth; golf limit to sound console | Stage depth unknown (photos hint more than 6 m); console front ≈ 6 m past the golf limit (sketch), console ≈ 9 × 4 m | Not measured |
 | Floor area for 10 holes | ≈ 200–270 m² | Rule of thumb |
 | Turf for 10 holes | ≈ 72 m² net; order ≈ 85 m² | From spec sheet v1 (design target) |
 | Playing surface, New York holes | ≈ 83 m²: ≈ 55 m² green turf, ≈ 20 m² charcoal or grey carpet (Gridlock, Subway), ≈ 8 m² white rink | Design target (`docs/10-new-york-concept.md`) |
 | LED strip, New York look | ≈ 300 m (two layers: deck base and rail cap) | Estimate; the budget model allows 150 m |
-| Tallest props | 3–3.6 m (Christmas tree, Grand Central backdrop, ball-drop tower) | Design target; check the rig clearance |
+| Tallest props | 3–3.6 m (Christmas tree, Grand Central backdrop, ball-drop tower) | Design target; clears the side trusses (≈ 5.8 m) by about 2 m (photo estimate) |
 | Throughput | Ceiling ≈ 100–120 players/hour at 2–2.5 min per hole; realistic ≈ 75–90/h for the full 10 holes over a 3 h session (≈ 230–270 players); ≈ 2.3× that if each group plays one 5-hole district | Simulated (`tools/flow_sim.py`); time it at the dry run |
 | Build scale | ≈ 70 plywood sheets, ≈ 3 t, 1–2 lorry loads, ≈ 120 person-days | Estimate (`docs/08-budget-model.md`) |
 | Budget bands | Rent carnival lanes + dressing ≈ S$3–6k · DIY floor-laid ≈ S$1.7k bare / S$4–6.5k best value · carpenter + volunteers ≈ S$6–10k (New York cut down: plan ≈ S$10.9k with the carpenter's-pack quantities, ≈ S$9.8k with four cuts; `docs/11-route-c-carpenter-build.md`) · church crew (raised decks) ≈ S$14–31k · split ≈ S$30–56k · outsourced ≈ S$50–91k | Estimate, not quotes; low-budget lines from Singapore listing prices 18 Nov (`docs/08-budget-model.md` §6) |
@@ -57,7 +59,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Deck height | ≈ 75 mm (revised from 120 mm) | Design target |
 | Players on course at once | ≈ 40 (one group of 4 per hole) | Estimate |
 
-Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov tape measurements; each value is labelled measured, derived or not measured). Picture: `floorplan/auditorium-simplified.png`. The old cable-plan measurements (54.7 × 27.1 m, 45.95, 20.73, 11.62 and 11.58 m) are superseded and kept in `floorplan/auditorium-dimensions-v1-cable-plan.json`. The zone options, both draft layouts, the 3D model and the status page still use them.
+Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov tape measurements plus 19 Nov photo estimates; each value is labelled measured, derived, not measured or estimated from photos). Picture: `floorplan/auditorium-simplified.png`. The old cable-plan measurements (54.7 × 27.1 m, 45.95, 20.73, 11.62 and 11.58 m) are superseded and kept in `floorplan/auditorium-dimensions-v1-cable-plan.json`. The zone options, both draft layouts and the status page still use them; layout v3 and the 3D model use v2.
 
 ## Timeline (gates; full detail in `docs/05-timeline-and-critical-path.md`)
 
@@ -73,14 +75,15 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov 
 
 - Budget ceiling? (biggest gap; suggested anchor about S$35–45k for the split route)
 - Who builds: church crew, split, or outsourced? Is there December volunteer capacity alongside Christmas production?
-- Does "movable" also mean the floor must be cleared before midnight? (If yes, use roll-in units.)
+- Does "movable" also mean the floor must be cleared before midnight? (If yes, use roll-in units.) The photos suggest only ≈ 10 m of floor past the golf limit, so the countdown crowd will probably need the golf zone: likely yes for some holes.
 - How lit is the auditorium while golf runs? (decides the art direction)
 - Hours golf runs, and when it closes before midnight?
-- Are the dark blocks along the top wall doors or exits? (the draft walkway runs there)
+- Are the dark blocks along the top wall doors or exits? (the draft walkway runs there) The photos show two exit doors in the 11.65 m wall; where guessed (x ≈ 16–18 and 23–25 m), the totems of holes 7 and 6 stand ≈ 1.7 m in front of them. Measure the doors, then move the totems if needed.
 - Is there a workshop or spare hall for a dry-run assembly in mid-December?
 - Load-in window around Christmas services?
 - Where will floor cables run on the night: along the walls, or under raised hole bases?
-- Ceiling height, door and load-in route widths, floor finish.
+- Ceiling height (photos: ≈ 7.5–8.5 m), door and load-in route widths. Floor finish (photos: light grey, smooth, slightly glossy): may vinyl floor graphics go on it?
+- What is behind the glazed band on the LF-platform side wall (foyer, overflow room)? Is it used on the night?
 - Atrium dimensions. The team is building a to-scale 3D model of the auditorium and atrium.
 - Expected crowd size, and whether to run a queue or timed slots.
 - Budget.
@@ -104,12 +107,14 @@ Done 18 Nov: runway confirmed; Bright City concept (`docs/09-city-concept.md`); 
 
 Done later on 18 Nov: the New York direction recorded; ten New York holes, robustness rules and lighting spec (`docs/10-new-york-concept.md`); layout v3 on the v2 geometry with checked clearances (`tools/make_layout_nyc.py`, `floorplan/layout-v3-nyc.png`); 3D model rebuilt on it; reference photos 06–08 saved.
 
+Done 19 Nov: the room worked out from the team's photos (`docs/13-auditorium-from-photos.md`): back wall ≈ 10 m past the golf limit, heights, wall finishes, exits; geometry, plan v2 and layout v3 updated (hole 1 moved 0.15 m); the 3D room rebuilt to match the photos, scale figures removed, party glow brighter.
+
 Done later on 18 Nov: route C (carpenter + volunteers, S$6–10k) broken down for the New York design (`docs/11-route-c-carpenter-build.md`), and a carpenter quote template (`docs/06-rfq-templates.md` E). Then the carpenter's pack (`carpenter-pack/`, `docs/12-carpenter-pack.md`), which raised the route C plan to ≈ S$10.9k.
 
 1. Team answers the G0 questions; record the answers in the decision log.
 2. Send the quote requests (`docs/06-rfq-templates.md`) and log the replies in `docs/04-sourcing.md`.
 3. Fill in `docs/08-budget-model.md` with real quotes.
-4. Team measures what's missing from the v2 plan (see open questions), then update `floorplan/auditorium-dimensions.json` and run `python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png`.
+4. Team measures what's missing from the v2 plan (see open questions; the five quick measurements are listed in `docs/13-auditorium-from-photos.md`: golf limit → back wall, the side-wall exits, runway width and height, rig heights, stage depth), then update `floorplan/auditorium-dimensions.json` and run `python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png`.
 5. Re-place the cable runs and drops from the cable plan on the v2 geometry, then re-run `python3 tools/make_layout_nyc.py floorplan/auditorium-dimensions.json floorplan --png --inject status/countdown-golf-3d.html` and adjust hole positions if a run cuts a district. Update the status page, which still shows the 18 Nov plaza and Bright City.
 6. Take the production questions in `docs/09-city-concept.md` section 8 to production this week (light the golf zone? runway extension? console sightline? which floor cables and drops stay? where guests enter?).
 7. Team decides by G1 (25 Nov): New York Countdown, the ten holes (or swaps from the bench), layout v3, district format, story. Then update the spec sheet's hole list and redo the concept renders.
@@ -158,11 +163,12 @@ Done later on 18 Nov: route C (carpenter + volunteers, S$6–10k) broken down fo
 - `reference/user-refs/`, `reference/video-frames/`: the team's inspiration photos and stills from the Walker Art Center video. 06 (Electric Greens LED glow), 07 (hot dog hole) and 08 (bicycle-wheel hole) are the New York direction's references (18 Nov, later).
 - `reference/supplier-evidence/`: what suppliers actually show (e.g. Huadong's product images).
 - `status/countdown-golf-status.html`: visual status page (18 Nov snapshot), published as a private Artifact at https://claude.ai/artifact/EUmyNjaUzF9bkhidKNNRUn. Republish from this file after decisions change. Fragment HTML (no doctype); the Artifact wraps it.
-- `status/countdown-golf-3d.html`: interactive 3D model of layout v3, the New York holes on the v2 geometry (three.js 0.186.1 from jsDelivr, pinned; vetted 18 Nov: no OSV advisories), published as a private Artifact at https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf. Three lighting set-ups (party glow, house lights, fully dark), a tee view and info card for every hole, and a walk mode at human scale (child 1.28 m, average adult 1.66 m, tall adult 1.88 m: typical eye heights, shoulder widths and walking speeds; your eyes or behind you; keys or touch pad, drag to look, a map, collisions with the holes, stage, runway and walls). Full-screen button and a field-of-view slider; all settings sit in a drawer behind the Settings button, so the view itself only shows three icon buttons. Its hole data block is injected by `tools/make_layout_nyc.py`: edit the script, not the block. Stage, runway, speaker-stand and console heights in it are placeholders.
+- `status/countdown-golf-3d.html`: interactive 3D model of layout v3, the New York holes on the v2 geometry, inside the auditorium as the team's photos show it (19 Nov): black walls and ceiling with ducts and downlights, light glossy floor, side trusses with LED batons and moving heads, the stage's blue LED wall and portrait screens, the delay screen, confidence monitors, exits, the console, the quilted wall and glazed band. Walls and ceiling hide themselves when the camera is outside them. three.js 0.186.1 from jsDelivr, pinned; vetted 18 Nov: no OSV advisories. Published as a private Artifact at https://claude.ai/artifact/C2jsJzR6ZqgchnAyumSqBJ (19 Nov; republish from this file). The 18 Nov version, https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf, belongs to another of the user's organizations and can't be updated from this account. Three lighting set-ups (party glow, house lights, fully dark; party glow brightened 19 Nov), a tee view and info card for every hole, camera views including "From the console" and "Back corner", and a walk mode at human scale (child 1.28 m, average adult 1.66 m, tall adult 1.88 m: typical eye heights, shoulder widths and walking speeds; your eyes or behind you; keys or touch pad, drag to look, a map, collisions with the holes, stage, runway, stairs and walls). No scale figures (removed 19 Nov so nothing blocks walking). Full-screen button and a field-of-view slider; all settings sit in a drawer behind the Settings button. Its hole data block is injected by `tools/make_layout_nyc.py`: edit the script, not the block. The room's photo estimates are constants near the top of the script (`ROOM_L`, `CEIL`, `TRUSS_Y`, `DELAY`, `SIDE_DOORS`, `GLASS`, `QUILT`).
 - `status/standalone/`: full HTML copies of both pages that open straight from disk in Chrome (the 3D one embeds three.js, so it works offline). Rebuild after editing either page: `python3 tools/make_standalone.py`.
 - `docs/11-route-c-carpenter-build.md`: route C (one paid carpenter, volunteers paint and dress, S$6–10k) applied to the New York design: what changes (floor-laid holes with a raised green at each cup end, one LED layer, flat cut-out props), hole by hole with carpenter days, a costed plan (≈ S$10.9k with 10% contingency, ≈ S$9.8k with four cuts), roles and volunteer-days, the cut list, the schedule against the gates, risks and decisions. Proposal, not decided.
 - `docs/12-carpenter-pack.md`: what a carpenter needs and why, how to read the drawings, materials and tools explained, what we still have to find out, how to use the pack, what it changed in the budget, glossary.
 - `carpenter-pack/countdown-golf-carpenter-pack.pdf` (and `carpenter-pack.html`, `quantities.json`): the carpenter's drawing pack for route C, 16 A3 sheets (cover and notes, site plan, standard details D1–D9, one sheet per hole, Tee Booth and skyline flats, materials). Generated by `tools/make_carpenter_pack.py` (`python3 tools/make_carpenter_pack.py --pdf`), which holds the hole geometry in mm and fails if any gap breaks the 250 mm rule. Design intent for quoting, not engineered.
+- `docs/13-auditorium-from-photos.md`: the auditorium worked out from the team's photos (19 Nov): method (runway, people and doors as rulers; camera heights), the back-wall estimate, heights, wall-by-wall finishes, what it makes more and less possible, and five quick measurements to settle it. The photos aren't stored: they show identifiable people.
 - `docs/project-brief.md`: full context, label key, research with links, quality checklist, decision log.
 - `floorplan/auditorium-simplified.svg` and `.png`: simplified plan v2 (18 Nov tape measurements, golf zone, not-measured items dashed), generated by `tools/make_floorplan.py` (`python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png`).
 - `floorplan/auditorium-dimensions.json`: geometry v2 in metres, every value labelled measured, derived or not measured, plus the list of what's still to measure.

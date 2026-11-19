@@ -19,6 +19,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | **[New York Countdown](docs/10-new-york-concept.md)** | **18 Nov (later): the ten New York holes, how each is built and why it holds up, the LED glow, layout v3 and decisions for G1** |
 | **[Layout v3](floorplan/layout-v3-nyc.png)** | **The ten holes inside the golf zone, two districts and one hub, with every clearance checked** |
 | [The city concept](docs/09-city-concept.md) | 18 Nov: the city brief, logic-checked. Its look is superseded by New York Countdown; play order and capacity still apply |
+| **[The auditorium from photos](docs/13-auditorium-from-photos.md)** | **19 Nov: what the team's photos show. The back wall looks ≈ 10 m past the golf limit (not 21.7 m), heights of the ceiling, trusses and screens, wall finishes, exits, and what that makes more and less possible. Five quick measurements to settle it** |
 | **[Auditorium plan v2](floorplan/auditorium-simplified.png)** | **18 Nov: the team's tape measurements and the golf zone (stage side of a line 27 m from the stage front). Not-measured items are dashed** |
 | [Zone options](floorplan/zone-options.png) · [Plaza layout v2](floorplan/layout-draft-plaza.png) | Superseded by the golf zone (18 Nov), and drawn on the old cable-plan geometry: 10 holes as two districts at the runway tip |
 | [Draft layout v1](floorplan/layout-draft-zone-a.png) | Superseded: 10 holes in a line in Zone A |
@@ -29,7 +30,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies, factories and a freelance carpenter |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
 | [Status page](status/countdown-golf-status.html) | 18 Nov: one visual page with the gates, what's decided, today's changes, the plaza layout, capacity and cost. Published privately as an Artifact |
-| [3D view](status/countdown-golf-3d.html) | 18 Nov (later): the New York holes on layout v3, to scale, with three lighting set-ups, a tee view of each hole, full screen, and a walk mode at human scale (child, average adult or tall adult). Published privately as an Artifact |
+| [3D view](status/countdown-golf-3d.html) | The New York holes on layout v3, to scale, inside the auditorium as the photos show it (19 Nov: black walls and ceiling, stage screens, trusses, exits, console), with three lighting set-ups, a tee view of each hole, full screen, and a walk mode at human scale (child, average adult or tall adult). Published privately as an Artifact |
 | [Project brief](docs/project-brief.md) | Original context, floorplan decode, earlier research and the **decision log** |
 | [`CLAUDE.md`](CLAUDE.md) | Project memory for Claude Code sessions |
 
@@ -44,6 +45,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 - [ ] Install window confirmed (are 26–27 Dec used for services?)
 
 **Team input 18 Nov:** the central strip is a raised runway (part of the stage). Design brief: one coherent "city", not a line; fun holes; a story that works in any order. New tape measurements (width 25.6 m, runway 22.54 × 2.4 m) and the golf zone: golf stays on the stage side of a line 27 m from the stage front. Later: a New York direction (Times Square on countdown night), holes like the hot dog and bicycle-wheel photos, lighting like the Electric Greens photo.
+
+**From the team's photos (19 Nov, estimates):** the room looks shorter past the golf limit than the old plan said (≈ 10 m, not 21.7 m), so the party side is small and the countdown crowd will probably need the golf zone; two exits in the 11.65 m wall must stay clear; the side trusses over the golf districts can light the course. See [the auditorium from photos](docs/13-auditorium-from-photos.md).
 
 **Recommended, not decided:** hybrid local build · New York Countdown look and ten New York holes · layout v3: two 5-hole districts beside the runway sharing one hub at the tip · 4 hero holes (8, 6, 2, 1) · see [New York Countdown](docs/10-new-york-concept.md).
 

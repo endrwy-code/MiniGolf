@@ -8,7 +8,8 @@ file works offline and on networks that block jsDelivr.
 
 Usage:
     python3 tools/make_standalone.py            # writes status/standalone/*.html
-The three.js files are downloaded once with curl into .cache/three-0.186.1/ (not committed).
+The three.js files are downloaded once with curl into .cache/three-0.186.1/ (not committed). If jsDelivr is
+unreachable, they are recovered from the committed standalone page instead.
 """
 import os
 import re
@@ -45,6 +46,25 @@ LOADER_NEW = """  const blobUrl = (txt) => URL.createObjectURL(new Blob([txt], {
   ({ OrbitControls } = await import(orbitUrl));"""
 
 
+def recover_from_standalone(key):
+    """Fallback when jsDelivr is unreachable (e.g. a cloud session that blocks it): take the same pinned files back out
+    of the committed standalone page, undoing the import rewrites. npm's three@0.186.1 has no .min builds to fetch instead."""
+    page = os.path.join(OUT, "countdown-golf-3d.html")
+    ids = {"core": "src-three-core", "three": "src-three", "orbit": "src-orbit"}
+    if not os.path.exists(page):
+        return None
+    with open(page, encoding="utf-8") as f:
+        m = re.search(r'<script type="text/plain" id="%s">(.*?)</script>' % ids[key], f.read(), re.S)
+    if not m:
+        return None
+    txt = m.group(1)
+    if key == "three":
+        txt = txt.replace('from"__THREE_CORE__"', 'from"./three.core.js"')
+    if key == "orbit":
+        txt = txt.replace("from '__THREE__'", "from 'three'")
+    return txt
+
+
 def fetch_three():
     os.makedirs(CACHE, exist_ok=True)
     out = {}
@@ -52,7 +72,13 @@ def fetch_three():
         path = os.path.join(CACHE, rel.replace("/", "_"))
         if not os.path.exists(path):
             url = f"https://cdn.jsdelivr.net/npm/three@{THREE_VER}/{rel}"
-            subprocess.run(["curl", "-sSfL", "-o", path, url], check=True)
+            if subprocess.run(["curl", "-sSfL", "-o", path, url]).returncode != 0:
+                txt = recover_from_standalone(key)
+                if txt is None:
+                    sys.exit(f"couldn't download {url} and no standalone copy to recover it from")
+                print(f"jsDelivr unreachable: recovered {rel} from the committed standalone page")
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(txt)
         with open(path, encoding="utf-8") as f:
             txt = f.read()
         if "</script" in txt.lower():

@@ -69,6 +69,10 @@ All four were taken by the team in the planning tool. Geometry and coordinates f
 
 Derived from these: the strip is about 23.7 m long (45.95 − 20.73, minus about 1.5 m from the stage edge) and about 2.4 m wide, and the two open floor halves are about 46 × 11.6 m each (roughly 533 m² each). The depth adds up to about 26.8 m against the 27.1 m room, with the difference sitting in the dark blocks along the top wall and the bottom wall margin.
 
+### From photos (19 Nov 2026)
+
+The team's photos of the room in use put the back wall about 37 m from the stage front (about 10 m past the golf limit), not the 48.7 m the old cable plan implied, and show the heights (ceiling structure about 7.5–8.5 m, side trusses about 5.8 m), the wall finishes, the stage set and two exits in the 11.65 m wall. These are estimates, not measurements: method and implications in `13-auditorium-from-photos.md`.
+
 ### What the space means for golf
 
 There is roughly 1,200 m² of open floor across the two halves. One adventure golf builder recommends 185–240 m² for an indoor 9-hole course, so 10 holes need roughly 200–270 m². That fits comfortably in one half with room for queues, leaving the other half free for the party.

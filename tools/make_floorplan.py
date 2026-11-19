@@ -46,7 +46,7 @@ RX0, RX1 = RW["x"]
 RZ0, RZ1 = RW["z"]
 GX = GL["x"]
 
-W = int(OX + L * S + 90)
+W = max(int(OX + L * S + 90), 1010)   # keep the page wide enough for the notes when the room is short
 H = 800
 
 
@@ -103,7 +103,7 @@ def dim_v(x, y0, y1, label, side="right", measured=True):
 # ------------------------------------------------------------ header
 t(40, 36, "Auditorium, simplified plan · v2", 18, INK, weight="600")
 t(40, 58, "From the team's tape measurements on the hand sketch, 18 Nov 2026. Stage on the left, as in the cable-planning tool.", 12, GREY)
-t(40, 76, "Black numbers are measured. Grey dashed items and grey numbers are not measured: drawn where the sketch shows them. Don't build to them.", 12, GREY)
+t(40, 76, "Black numbers are measured. Grey dashed items and grey numbers are not measured: drawn where the sketch shows them, or estimated from photos (19 Nov). Don't build to them.", 12, GREY)
 
 # ------------------------------------------------------------ zones
 rect(GZ["x"][0], GZ["z"][0], GZ["x"][1], GZ["z"][1], GOLF_FILL, "none", 0)
@@ -177,9 +177,9 @@ t(gx_mid, Z(3.6) + 18, f"≈ {ar['beside_runway_top']:.0f} m² beside the runway
 t(gx_mid, Z(20.4), "Mini golf zone", 16, GOLF_TEXT, "middle", "600")
 t(gx_mid, Z(20.4) + 18, f"≈ {ar['beside_runway_bottom']:.0f} m² beside the runway", 12, GOLF_LINE, "middle")
 t((X(RX1) + X(GX)) / 2 + 4, Z(5.8), f"≈ {ar['beyond_runway_tip']:.0f} m² past the tip", 12, GOLF_LINE, "middle", rotate=-90)
-ox_mid = (X(GX) + X(cx0)) / 2 + 20
-t(ox_mid, Z(6.0), "Other activities", 16, OTHER_TEXT, "middle", "600")
-t(ox_mid, Z(6.0) + 18, "beyond the golf limit", 12, OTHER_TEXT, "middle")
+ox_mid = (X(GX) + X(cx0)) / 2 - 4
+t(ox_mid, Z(1.9), "Other activities", 16, OTHER_TEXT, "middle", "600")
+t(ox_mid, Z(1.9) + 18, "beyond the golf limit", 12, OTHER_TEXT, "middle")
 
 # golf limit line (decided 18 Nov)
 line(X(GX), Z(0) - 14, X(GX), Z(D), GOLF_LINE, 2.5, 'stroke-dasharray="8 4"')
@@ -188,13 +188,26 @@ t(X(GX), Z(0) - 20, "Golf limit · decided 18 Nov", 12, GOLF_TEXT, "middle", "60
 # room outline and back-wall doors (not measured)
 els.append(f'<rect x="{X(0):.1f}" y="{Z(0):.1f}" width="{L * S:.1f}" height="{D * S:.1f}" fill="none" stroke="{INK}" stroke-width="2"/>')
 for d in dims["doors"]:
-    z0, z1 = d["z"]
-    line(X(L), Z(z0), X(L), Z(z1), "#FFFFFF", 4)
-    w = (z1 - z0) * S
-    els.append(f'<path d="M{X(L):.1f} {Z(z0):.1f}L{X(L) - w:.1f} {Z(z0):.1f}A{w:.1f} {w:.1f} 0 0 1 {X(L):.1f} {Z(z1):.1f}" '
-               f'fill="none" stroke="{LIGHT}" stroke-width="1" {DASH}/>')
-    t(X(L) + 6, Z((z0 + z1) / 2) - 2, "Door /", 11, MID)
-    t(X(L) + 6, Z((z0 + z1) / 2) + 11, "exit", 11, MID)
+    wall = d.get("wall", "back")
+    if wall == "back":
+        z0, z1 = d["z"]
+        line(X(L), Z(z0), X(L), Z(z1), "#FFFFFF", 4)
+        w = (z1 - z0) * S
+        els.append(f'<path d="M{X(L):.1f} {Z(z0):.1f}L{X(L) - w:.1f} {Z(z0):.1f}A{w:.1f} {w:.1f} 0 0 1 {X(L):.1f} {Z(z1):.1f}" '
+                   f'fill="none" stroke="{LIGHT}" stroke-width="1" {DASH}/>')
+        t(X(L) + 6, Z((z0 + z1) / 2) - 2, "Door /", 11, MID)
+        t(X(L) + 6, Z((z0 + z1) / 2) + 11, "exit", 11, MID)
+    else:   # side-wall doors: positions guessed from photos (19 Nov)
+        x0, x1 = d["x"]
+        zw, s = (0.0, 1) if wall == "top" else (D, -1)
+        line(X(x0), Z(zw), X(x1), Z(zw), "#FFFFFF", 4)
+        w = (x1 - x0) * S
+        els.append(f'<path d="M{X(x0):.1f} {Z(zw):.1f}L{X(x0):.1f} {Z(zw) + s * w:.1f}A{w:.1f} {w:.1f} 0 0 {0 if s > 0 else 1} {X(x1):.1f} {Z(zw):.1f}" '
+                   f'fill="none" stroke="{LIGHT}" stroke-width="1" {DASH}/>')
+        if s > 0:
+            t((X(x0) + X(x1)) / 2, Z(zw) - 6, "exit? (photo)", 10, LIGHT, "middle", italic=True)
+        else:
+            t(X(x1) + 3, Z(zw) - 4, "exit?", 10, LIGHT, italic=True)
 
 # ------------------------------------------------------------ dimensions
 # across (Z), on the golf limit, as on the sketch: all measured
@@ -216,7 +229,7 @@ t(bx - 6, Z((RZ1 + D) / 2) + 12, f"= {fmt(round(lz0 - RZ1, 2))} + {fmt(LF['depth
 dim_v(OX - 22, Z(0), Z(D), "", "left")
 t(OX - 30, Z(D / 2) - 2, f"{fmt(D)} m", 12, INK, "end")
 t(OX - 30, Z(D / 2) + 12, "(rough)", 11, GREY, "end")
-dim_h(X(0), X(L), 108, f"{fmt(L)} m · from the old cable plan, not re-measured (team: unchanged)", measured=False)
+dim_h(X(0), X(L), 108, f"≈ {fmt(L)} m · estimated from photos and the sketch (old cable plan: 54.7 m); not measured", measured=False)
 
 # along (X), below the room
 y1, y2 = Z(D) + 30, Z(D) + 62
@@ -225,7 +238,7 @@ for xv in (0, FRONT, RX1, GX, L):
 dim_h(X(0), X(FRONT), y1, "not measured", measured=False)
 dim_h(X(FRONT), X(RX1), y1, f"{fmt(RW['length'])} m · stage front → runway tip")
 dim_h(X(RX1), X(GX), y1, f"{fmt(GL['past_runway_tip'])} m*")
-dim_h(X(GX), X(L), y1, "golf limit → back wall: not measured", measured=False)
+dim_h(X(GX), X(L), y1, f"≈ {fmt(round(L - GX, 1))} m (photos)", measured=False)
 dim_h(X(FRONT), X(GX), y2, f"{fmt(GL['from_stage_front'])} m · stage front → golf limit")
 
 # ------------------------------------------------------------ legend and notes
