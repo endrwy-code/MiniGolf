@@ -75,7 +75,8 @@ body.lock{overflow:hidden}
 .lightbar{position:absolute;top:calc(10px + var(--inset-t));left:calc(10px + var(--inset-l));z-index:5;display:flex;gap:2px;padding:3px;border-radius:11px;background:var(--label-bg);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(4px)}
 .lightbar button{font:600 .8rem/1 var(--font-body);color:rgba(255,255,255,.78);background:transparent;border:0;border-radius:8px;padding:0 11px;height:32px;cursor:pointer;white-space:nowrap}
 .lightbar button[aria-checked="true"]{background:var(--now);color:#1b1404}
-@media (max-width:420px){.lightbar button{padding:0 8px;font-size:.76rem}}
+.lightbar .sh{display:none}
+@media (max-width:560px){.lightbar .lg{display:none}.lightbar .sh{display:inline}.lightbar button{padding:0 9px}}
 .icon-btn{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.22);background:var(--label-bg);color:var(--label-ink);cursor:pointer;backdrop-filter:blur(4px);padding:0}
 .icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .icon-btn[aria-pressed="true"],.icon-btn[aria-expanded="true"]{background:var(--now);color:#1b1404;border-color:var(--now)}
@@ -196,9 +197,9 @@ code{font-family:var(--font-mono);font-size:.9em}
     <div class="viewer" id="viewer" tabindex="0" aria-label="3D view of the course. Settings, full screen and walking are in the buttons at the top right.">
       <div class="labels" id="labels"></div>
       <div class="lightbar" role="radiogroup" aria-label="Room lighting">
-        <button type="button" role="radio" data-light="glow" aria-checked="true">Party glow</button>
-        <button type="button" role="radio" data-light="house" aria-checked="false">House lights</button>
-        <button type="button" role="radio" data-light="dark" aria-checked="false">Dark</button>
+        <button type="button" role="radio" data-light="glow" aria-checked="true" aria-label="Party glow"><span class="lg">Party glow</span><span class="sh" aria-hidden="true">Glow</span></button>
+        <button type="button" role="radio" data-light="house" aria-checked="false" aria-label="House lights"><span class="lg">House lights</span><span class="sh" aria-hidden="true">House</span></button>
+        <button type="button" role="radio" data-light="dark" aria-checked="false" aria-label="Room dark">Dark</button>
       </div>
       <div class="corner" role="group" aria-label="Viewer buttons">
         <button type="button" class="icon-btn" id="b-walk" aria-pressed="false" aria-label="Walk around" title="Walk around">
@@ -386,7 +387,7 @@ try {
 }
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 renderer.toneMapping = THREE.NeutralToneMapping;   // keeps the LED and sign colours true (ACES shifted them)
 viewer.insertBefore(renderer.domElement, viewer.firstChild);
 renderer.domElement.setAttribute('aria-label', '3D model of the proposed New York mini golf course in the auditorium');
@@ -1377,7 +1378,7 @@ for (const [side, z, face, s0] of [['top', 0.25, 1, 11], ['bottom', ROOM_W - 0.2
   const mat = glow(new THREE.MeshStandardMaterial({ map, emissive: '#FFFFFF', emissiveMap: em, emissiveIntensity: 1, alphaTest: 0.5, roughness: 0.85 }), { glow: 0.55, house: 0.06, dark: 0.85 });
   const pl = mesh(new THREE.PlaneGeometry(w, 3.6), mat, flats, (x0 + x1) / 2, 1.8, z); if (face < 0) pl.rotation.y = Math.PI;
   // the back is plain painted ply, so the doll's-house views don't show mirrored windows
-  const bk = mesh(new THREE.PlaneGeometry(w, 3.6), new THREE.MeshStandardMaterial({ color: '#3A3430', map: back, alphaTest: 0.5, roughness: 0.95, side: THREE.BackSide }), flats, (x0 + x1) / 2, 1.8, z, false); bk.rotation.y = pl.rotation.y;
+  const bk = mesh(new THREE.PlaneGeometry(w, 3.6), new THREE.MeshStandardMaterial({ color: '#6E6255', map: back, alphaTest: 0.5, roughness: 0.95, side: THREE.BackSide }), flats, (x0 + x1) / 2, 1.8, z, false); bk.rotation.y = pl.rotation.y;
   for (const fx of [x0 + 0.8, (x0 + x1) / 2, x1 - 0.8]) box(0.5, 0.16, 0.3, mats.base, flats, fx, 0.08, z + face * 0.12);
 });
 
@@ -1503,12 +1504,19 @@ function updateLabels() {
     if (!on) { L.el.hidden = true; continue; }
     v3.copy(L.pos).project(camera);
     if (v3.z > 1 || v3.z < -1 || Math.abs(v3.x) > 1.1 || Math.abs(v3.y) > 1.1) { L.el.hidden = true; continue; }
-    const x = (v3.x + 1) / 2 * w, y = (1 - v3.y) / 2 * h;
+    const x = (v3.x + 1) / 2 * w, y0 = (1 - v3.y) / 2 * h;
     if (L.el.hidden) L.el.hidden = false;
     if (!L.w) { L.w = L.el.offsetWidth; L.h = L.el.offsetHeight; }
-    const r = [x - L.w / 2 - 3, y - L.h / 2 - 2, x + L.w / 2 + 3, y + L.h / 2 + 2];
-    // keep the corner buttons and the lighting switch clear, and never stack one label on another
-    if (r[1] < 52 || placed.some(q => r[0] < q[2] && r[2] > q[0] && r[1] < q[3] && r[3] > q[1])) { L.el.hidden = true; continue; }
+    // keep the corner buttons and the lighting switch clear, stay inside the view, and never put one label on another:
+    // a hole number that would collide moves up or down one step; anything else that collides is left out
+    let r = null, y = y0;
+    for (const dy of L.layer === 'tags' ? [0, -(L.h + 4), L.h + 4] : [0]) {
+      const c = [x - L.w / 2 - 3, y0 + dy - L.h / 2 - 2, x + L.w / 2 + 3, y0 + dy + L.h / 2 + 2];
+      if (c[0] < 2 || c[2] > w - 2 || c[1] < 52 || c[3] > h - 2) continue;
+      if (placed.some(q => c[0] < q[2] && c[2] > q[0] && c[1] < q[3] && c[3] > q[1])) continue;
+      r = c; y = y0 + dy; break;
+    }
+    if (!r) { L.el.hidden = true; continue; }
     placed.push(r);
     L.el.style.transform = `translate(${(x - L.w / 2).toFixed(1)}px,${(y - L.h / 2).toFixed(1)}px)`;
   }
@@ -1516,8 +1524,8 @@ function updateLabels() {
 
 /* ------------------------------------------------------------------ camera views and fly-to */
 const VIEWS = {
-  golf: { pos: [46.5, 19, 33.5], tgt: [20.5, 0, 12.8] },
-  room: { pos: [70, 33, 46], tgt: [27, 0, 12.8] },
+  golf: { pos: [39.5, 16.5, 30.5], tgt: [19.5, 0, 13.0] },
+  room: { pos: [63, 27, 38.5], tgt: [25, 0, 12.8] },
   downtown: { pos: [31, 9.5, -4.5], tgt: [21.5, 0, 5.4] },
   midtown: { pos: [31, 9.5, 30.5], tgt: [21.5, 0, 20.3] },
   eye: { pos: [29.4, 1.55, 15.5], tgt: [18.5, 1.0, 21.0] },
@@ -1532,9 +1540,21 @@ function setView(name, ms) {
   const v = VIEWS[name]; flyTo(v.pos, v.tgt, ms);
   document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === name)));
 }
+const viewRay = new THREE.Raycaster();
 function holeView(h) {
-  const [px, pz] = l2w(h, -(h.L / 2) - 1.9, 0.35); const [tx, tz] = l2w(h, h.L * 0.2, 0);
-  return { pos: [px, 3.0, pz], tgt: [tx, 0.45, tz] };
+  // behind the tee, a little to the side away from the street-sign totem, so the lane reads end to end;
+  // if another hole's prop would stand between the camera and the tee, try a closer or higher spot
+  const s0 = -(h.tside || -1), [tx, tz] = l2w(h, h.L * 0.2, 0), [ex, ez] = l2w(h, -h.L / 2 + 0.3, 0);
+  const tee = new THREE.Vector3(ex, DECK + 0.1, ez);
+  let first = null;
+  for (const [back, side, y] of [[3.3, 0.9, 3.4], [2.6, 0.5, 3.6], [2.0, 0.3, 3.9], [3.3, 0.9, 5.0], [1.6, 0, 4.4]]) {
+    const [px, pz] = l2w(h, -(h.L / 2) - back, s0 * side), pos = new THREE.Vector3(px, y, pz);
+    const v = { pos: [px, y, pz], tgt: [tx, 0.3, tz] }; if (!first) first = v;
+    const d = tee.clone().sub(pos), dist = d.length(); viewRay.set(pos, d.normalize()); viewRay.far = dist;
+    const hit = viewRay.intersectObjects(pickables, false).find(o => o.object.userData.n !== h.n);
+    if (!hit) return v;
+  }
+  return first;
 }
 
 /* ------------------------------------------------------------------ selection */
