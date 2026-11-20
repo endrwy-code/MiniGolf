@@ -103,7 +103,7 @@ def dim_v(x, y0, y1, label, side="right", measured=True):
 # ------------------------------------------------------------ header
 t(40, 36, "Auditorium, simplified plan · v2", 18, INK, weight="600")
 t(40, 58, "From the team's tape measurements on the hand sketch, 18 Nov 2026. Stage on the left, as in the cable-planning tool.", 12, GREY)
-t(40, 76, "Black numbers are measured. Grey dashed items and grey numbers are not measured: drawn where the sketch shows them, or estimated from photos (19 Nov). Don't build to them.", 12, GREY)
+t(40, 76, "Black numbers are measured. Grey dashed items and grey numbers are not measured: drawn as sketched, or estimated (photos, team). Don't build to them.", 12, GREY)
 
 # ------------------------------------------------------------ zones
 rect(GZ["x"][0], GZ["z"][0], GZ["x"][1], GZ["z"][1], GOLF_FILL, "none", 0)
@@ -229,7 +229,7 @@ t(bx - 6, Z((RZ1 + D) / 2) + 12, f"= {fmt(round(lz0 - RZ1, 2))} + {fmt(LF['depth
 dim_v(OX - 22, Z(0), Z(D), "", "left")
 t(OX - 30, Z(D / 2) - 2, f"{fmt(D)} m", 12, INK, "end")
 t(OX - 30, Z(D / 2) + 12, "(rough)", 11, GREY, "end")
-dim_h(X(0), X(L), 108, f"≈ {fmt(L)} m · estimated from photos and the sketch (old cable plan: 54.7 m); not measured", measured=False)
+dim_h(X(0), X(L), 108, f"≈ {fmt(L)} m · estimated (team's sense of the room and the old cable plan, 20 Nov); not measured", measured=False)
 
 # along (X), below the room
 y1, y2 = Z(D) + 30, Z(D) + 62
@@ -238,7 +238,7 @@ for xv in (0, FRONT, RX1, GX, L):
 dim_h(X(0), X(FRONT), y1, "not measured", measured=False)
 dim_h(X(FRONT), X(RX1), y1, f"{fmt(RW['length'])} m · stage front → runway tip")
 dim_h(X(RX1), X(GX), y1, f"{fmt(GL['past_runway_tip'])} m*")
-dim_h(X(GX), X(L), y1, f"≈ {fmt(round(L - GX, 1))} m (photos)", measured=False)
+dim_h(X(GX), X(L), y1, f"≈ {fmt(round(L - GX, 1))} m (estimated)", measured=False)
 dim_h(X(FRONT), X(GX), y2, f"{fmt(GL['from_stage_front'])} m · stage front → golf limit")
 
 # ------------------------------------------------------------ legend and notes

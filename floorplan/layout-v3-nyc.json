@@ -163,11 +163,11 @@
  },
  "sightline": [
   [
-   39.0,
+   49.0,
    8.35
   ],
   [
-   39.0,
+   49.0,
    17.35
   ],
   [
@@ -188,7 +188,7 @@
   "hole_hub": 2.15,
   "hub_runway_tip": 1.46,
   "route_corridor": 1.75,
-  "tall_sightline": 0.57
+  "tall_sightline": 1.15
  },
  "footprints": {
   "10": [

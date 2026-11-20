@@ -4,6 +4,21 @@ The team shared six photos of the auditorium in use: five from services (a wide 
 
 The photos aren't stored in the repo, because they show identifiable people. If the team wants them kept, crop or blur the people first.
 
+## Revised 20 Nov: the room is longer than this note first said
+
+The team says the floor past the golf limit is much longer than the ≈ 10 m below: "maybe twice as long". My best estimate now is **≈ 20 m past the golf limit (range 17–23 m), so the back wall is ≈ 47 m from the stage front (44–50 m) and the room ≈ 53 m long with the 6 m stage placeholder.** The plan, layout v3 and the 3D model use that.
+
+Why I've moved to it rather than holding the photo estimate:
+
+- **It agrees with the old cable plan.** That plan put the console 20.73 m past the runway tip, which is ≈ 43.3 m from the stage front with the measured 22.54 m runway, and the room at 54.7 m. With a ≈ 4 m console against the back wall, that's ≈ 47 m: the same as the team's sense of the room.
+- **The photo clues all rested on assumed sizes.** The monitor over the console came out at 36–37.5 m only if it is an 85-inch screen; a 110-inch screen puts it at ≈ 48 m. The exit signs came out at 37–39 m only if they hang at 2.3 m. The stage-view photos only reached the back of the crowd, not the back wall. And the sketch isn't drawn to scale past the golf limit, where nobody measured.
+- **What changes:** the floor for other activities is ≈ 470 m² after the console and the LF platform, not ≈ 220 m². The countdown crowd may fit there after all, so clearing the golf zone before midnight is less likely to be needed (it depends on the crowd size: at 1–2 people per m² standing, ≈ 470–940 people). The console is ≈ 16 m past the golf limit, so its sightline over the golf is narrower; every layout check still passes (hole 1's tower is now 1.15 m clear of it).
+- **Still one tape measurement settles it:** golf limit to the back wall.
+
+**The delay screens (team, 20 Nov).** It's two screens, not one double-sided screen: one hung over each edge of the runway, parallel to it and ≈ 2.4 m apart, back to back. The one over the 11.65 m-side edge faces that half of the room; the other faces the LF-platform half. The 3D model shows them that way. Their underside (≈ 3.5 m) is still a photo estimate.
+
+The rest of this note is the 19 Nov reading of the photos, kept as it was.
+
 ## The short version
 
 | What | Estimate | Range | How sure | What it was before |

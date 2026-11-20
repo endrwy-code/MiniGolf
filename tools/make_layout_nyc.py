@@ -40,7 +40,7 @@ OUT = sys.argv[2] if len(sys.argv) > 2 else "floorplan"
 PNG = "--png" in sys.argv
 INJECT = sys.argv[sys.argv.index("--inject") + 1] if "--inject" in sys.argv else None
 
-ROOM_L = dims["auditorium"]["length_x"]          # about 43, estimated from photos (19 Nov)
+ROOM_L = dims["auditorium"]["length_x"]          # about 53, estimated (20 Nov): not measured
 ROOM_W = dims["auditorium"]["width_z"]           # 25.6, measured (rough)
 SX = dims["stage"]["front_x"]                    # 6.0, not measured
 RW_X0, RW_X1 = dims["runway"]["x"]               # 6.0 .. 28.54
@@ -542,8 +542,8 @@ def figure(fps, res):
     # border
     cv.rect(0, 0, x_hi, ROOM_W, "none", "#2C2C2A", 2.2)
     cv.add(f'<line x1="{cv.X(x_hi):.1f}" y1="{cv.Z(0):.1f}" x2="{cv.X(x_hi):.1f}" y2="{cv.Z(ROOM_W):.1f}" stroke="#F7F6F2" stroke-width="5"/>')
-    cv.text(x_hi - 0.2, ROOM_W / 2 + 4.6, "room continues to the", 9, "#77736A", anchor="end")
-    cv.text(x_hi - 0.2, ROOM_W / 2 + 5.1, f"sound console (≈ {ROOM_L:g} m, photos)", 9, "#77736A", anchor="end")
+    cv.text(x_hi - 0.2, ROOM_W / 2 + 4.6, f"room continues ≈ {ROOM_L - GX:g} m to the", 9, "#77736A", anchor="end")
+    cv.text(x_hi - 0.2, ROOM_W / 2 + 5.1, "console and back wall (estimated)", 9, "#77736A", anchor="end")
     # scale bar
     sx0, sz = 0.0, ROOM_W + 1.6
     for k in range(0, 5):

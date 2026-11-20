@@ -24,7 +24,7 @@
 <text x="426.9" y="850.0" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#5D6B60" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Kept clear</text>
 <text x="426.9" y="876.6" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#5D6B60" text-anchor="middle" font-weight="400" dominant-baseline="middle" >(about 6.5 m)</text>
 <clipPath id="room"><rect x="64.0" y="128.0" width="1425.0" height="972.8"/></clipPath>
-<polygon points="1546.0,445.3 1546.0,787.3 292.0,661.9 292.0,570.7" fill="#E0533F" stroke="#C2412E" stroke-width="0.8" fill-opacity="0.07" stroke-dasharray="5 4" clip-path="url(#room)"/>
+<polygon points="1926.0,445.3 1926.0,787.3 292.0,661.9 292.0,570.7" fill="#E0533F" stroke="#C2412E" stroke-width="0.8" fill-opacity="0.07" stroke-dasharray="5 4" clip-path="url(#room)"/>
 <text x="1432.0" y="622.0" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >assumed console sightline:</text>
 <text x="1432.0" y="642.9" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >nothing over 2 m inside</text>
 <polygon points="539.0,129.9 862.0,129.9 862.0,143.2 539.0,143.2" fill="#2E3350" stroke="none" stroke-width="1" />
@@ -182,8 +182,8 @@
 <text x="725.2" y="867.1" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#6A2FA8" text-anchor="middle" font-weight="800" dominant-baseline="middle" letter-spacing="1.5">MIDTOWN · holes 5 → 1</text>
 <polygon points="64.0,128.0 1489.0,128.0 1489.0,1100.8 64.0,1100.8" fill="none" stroke="#2C2C2A" stroke-width="2.2" />
 <line x1="1489.0" y1="128.0" x2="1489.0" y2="1100.8" stroke="#F7F6F2" stroke-width="5"/>
-<text x="1481.4" y="789.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >room continues to the</text>
-<text x="1481.4" y="808.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >sound console (≈ 43 m, photos)</text>
+<text x="1481.4" y="789.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >room continues ≈ 20 m to the</text>
+<text x="1481.4" y="808.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >console and back wall (estimated)</text>
 <polygon points="64.0,1161.6 102.0,1161.6 102.0,1171.1 64.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
 <polygon points="102.0,1161.6 140.0,1161.6 140.0,1171.1 102.0,1171.1" fill="#FFFFFF" stroke="#2C2C2A" stroke-width="0.6" />
 <polygon points="140.0,1161.6 178.0,1161.6 178.0,1171.1 140.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
@@ -200,7 +200,7 @@
 <text x="1515.0" y="239.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to hub: 2.15 m (rule ≥ 1.5)</text>
 <text x="1515.0" y="257.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hub to runway tip: 1.46 m (rule ≥ 1.2)</text>
 <text x="1515.0" y="274.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Walkway width: 1.75 m (rule ≥ 1.2)</text>
-<text x="1515.0" y="292.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Tall props to sightline: 0.57 m (rule ≥ 0.5)</text>
+<text x="1515.0" y="292.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Tall props to sightline: 1.15 m (rule ≥ 0.5)</text>
 <text x="1515.0" y="309.5" font-family="Helvetica, Arial, sans-serif" font-size="6" font-weight="400" fill="#000"></text>
 <text x="1515.0" y="322.5" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A18">Walk routes</text>
 <text x="1515.0" y="342.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9A6A0C">Downtown: hub → 10 → 9 → 8 → 7 → 6 → hub</text>

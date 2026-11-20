@@ -115,6 +115,8 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 
 ### 2. Chinese manufacturers (Alibaba listings only, so treat with caution)
 
+**20 Nov:** a longer contact list of factories that make portable lanes and putting greens cut to size (PGM / Foshan Qingzhou, Shenzhen Grearth, Huizhou Shenger and others), a message to send in English and Chinese, and how to trace a Taobao or Pinduoduo shop to its factory: `14-china-factory-contacts.md` and `14-china-factory-contacts.csv`.
+
 | Supplier | Offer | Listed price | Notes |
 |---|---|---|---|
 | Guangzhou Infinity Technology | 9-hole indoor commercial course | US$10,400–11,990 per set | Alibaba Verified; IAAPA listed; mainly makes VR rides. **The only one worth a "do you have ready stock + air freight?" message**, and only if reuse is real. |
