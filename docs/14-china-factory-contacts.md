@@ -14,6 +14,8 @@ The team's idea: find the factories behind the simple portable mini golf product
 | Best first contact | **Foshan Qingzhou Artificial Grass Co., Ltd. (PGM brand).** They list a 12-hole portable course (GL022), custom-size mini golf greens (GL006, GL007) and modular putting greens, sell from 10 m², and were the turf lead in the 16 Nov research (about 490 staff, about 20 days for up to 1,000 m²). They have a WhatsApp and WeChat number on a mirrored listing. |
 | Taobao and Pinduoduo | I couldn't search either (both refuse automated access). The method for finding a shop's factory yourself, and the search terms, are below. It takes about 15 minutes on a phone. |
 
+**21 Nov:** to search the marketplaces properly (real pages, photos, shop licences), hand `15-sourcing-agent-brief.md` to an agent that can see the screen and use the team's logged-in accounts. Merge its results into the CSV here.
+
 ## What I could reach, and what I couldn't
 
 - **Taobao and Pinduoduo**: both block automated access, for searching and for reading pages. Nothing on this list was found there.
