@@ -1,5 +1,7 @@
 # Brief for a browsing agent: find the factories behind portable mini golf lanes
 
+*Results came back 22 Nov 2026: see `14-china-factory-contacts.md` (merged and checked) and `reference/supplier-evidence/2026-11-22-sourcing-agent/` (the handback as received).*
+
 *Written 21 Nov 2026 for an AI agent that can see the screen and use a web browser (computer use, Claude in Chrome or similar), working in the browser of the person who gives you this file. Everything you need is in this file; you don't need anything else.*
 
 ## 1. What this is for
