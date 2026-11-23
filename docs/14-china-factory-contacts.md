@@ -66,12 +66,13 @@ Benchmarks: LED glow lanes at US$437 per 0.61 × 3.81 m lane (B2); a complete ne
 - **1688 shows prices in S$** (it converts automatically); the yuan figures come from search results.
 - One screenshot showed the team's Taobao account name; it's blacked out in the repo copy.
 
-### Next steps (proposal, for Mon 24 Nov)
+### Next steps (proposal, for Tue 24 Nov)
 
 1. **Send the GL025 message below** to Ryan Wu on Alibaba (for an export quote delivered to Singapore, paid through Trade Assurance) and to Yibang on 1688 through its 旺旺 chat (for the domestic price and the custom options). It's one company through two doors, so compare the answers, not the companies.
 2. **Ask a Singapore forwarder, or a 1688/Taobao consolidator, for air and sea rates** for about 8 m³ and 900 kg from Foshan, with door-to-door times.
 3. **Consider buying one standard 1 × 3 m GL025 set now** (about ¥635–900 plus express freight; it ships in 48 hours) as the surface for the G2 prototype on 4 Dec. It answers the edge, rail-fit and roll questions in hand, and the set can still be used as a hole on the night. Spending money is the team's call.
-4. **Decide by Fri 27 Nov:** GL025 decks plus local rails and props, or route C's local surface as planned. Go with GL025 only with a written delivery date of 10 Dec or earlier, a landed price (goods, freight and GST) the budget can carry, and an answer on the fire rating.
+4. **Run a second, more thorough search** with a new browsing agent: `16-sourcing-agent-brief-round-2.md` (23 Nov). Its first goal is a maker independent of PGM, so the GL025 quote has a competitor; its second is a lane with a real rail. Results due by the end of Tue 24 Nov; merge them into the CSV here.
+5. **Decide by Fri 27 Nov:** GL025 decks plus local rails and props, or route C's local surface as planned. Go with GL025 only with a written delivery date of 10 Dec or earlier, a landed price (goods, freight and GST) the budget can carry, and an answer on the fire rating.
 
 ### Message to send about the GL025 (copy and paste)
 
@@ -232,5 +233,5 @@ Singapore needs an import permit before the goods arrive, and GST (9%) is payabl
 ## How this changes the plan (proposal; updated 22 Nov)
 
 - **Route C keeps its shape** (`11-route-c-carpenter-build.md`): the carpenter still builds the rails and props. The 20 Nov version said a factory lane would take the 140 m of rail off the carpenter; the one product that fits (GL025) doesn't, because its 3 cm lip isn't a rail. What it can take over is the surface and the ten raised greens. Compare its landed price with route C's surface line, as in "What it means for our design" above.
-- **Gate G1 (Wed 25 Nov)** already says "turf ordered". Send the GL025 message (above) to the PGM group on Mon 24 Nov, and get a forwarder's air and sea quote the same day. Decide by Fri 27 Nov: GL025 decks plus local rails, or local turf or carpet grass plus local rails. Keep the local turf quotes (Craftway, GreenTurf) running in parallel as the fallback.
+- **Gate G1 (Wed 25 Nov)** already says "turf ordered". Send the GL025 message (above) to the PGM group on Tue 24 Nov, and get a forwarder's air and sea quote the same day. Decide by Fri 27 Nov: GL025 decks plus local rails, or local turf or carpet grass plus local rails. Keep the local turf quotes (Craftway, GreenTurf) running in parallel as the fallback.
 - **If no factory confirms delivery by 10 Dec in writing, drop this route.** The prototype hole (G2, 4 Dec) can be built with a local turf offcut, or on one standard GL025 set if the team buys one now.
