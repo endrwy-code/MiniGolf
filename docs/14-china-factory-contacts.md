@@ -68,15 +68,15 @@ Benchmarks: LED glow lanes at US$437 per 0.61 × 3.81 m lane (B2); a complete ne
 
 ### Next steps (proposal, for Tue 24 Nov)
 
-1. **Send the GL025 message below** to Ryan Wu on Alibaba (for an export quote delivered to Singapore, paid through Trade Assurance) and to Yibang on 1688 through its 旺旺 chat (for the domestic price and the custom options). It's one company through two doors, so compare the answers, not the companies.
+1. **Send the GL025 message below** through two channels. Send the Chinese version to Yibang on 1688 through its 旺旺 chat, for the domestic price and the custom options; the team's Taobao account signs in to 1688. Send the English version to Ryan Wu by WhatsApp (+86 181 2358 8327) or email (ryan@mypgmgolf.com), for an export quote delivered to Singapore. It's one company through two doors, so compare the answers, not the companies. **Accounts (23 Nov):** the team has a Taobao account only. Alibaba chat and Trade Assurance need a free Alibaba.com account; sign up only if the team wants to pay through Trade Assurance. Otherwise pay through 1688's or Tmall's checkout.
 2. **Ask a Singapore forwarder, or a 1688/Taobao consolidator, for air and sea rates** for about 8 m³ and 900 kg from Foshan, with door-to-door times.
-3. **Consider buying one standard 1 × 3 m GL025 set now** (about ¥635–900 plus express freight; it ships in 48 hours) as the surface for the G2 prototype on 4 Dec. It answers the edge, rail-fit and roll questions in hand, and the set can still be used as a hole on the night. Spending money is the team's call.
+3. **Consider buying one standard 1 × 3 m GL025 set now** on Tmall or 1688 with the Taobao account (about ¥635–900; it ships in 48 hours; the Tmall listing ships within mainland China only, so send it through Taobao's official consolidated shipping to Singapore, 官方集运, and check the transit time in the app first) as the surface for the G2 prototype on 4 Dec. It answers the edge, rail-fit and roll questions in hand, and the set can still be used as a hole on the night. Spending money is the team's call.
 4. **Run a second, more thorough search** with a new browsing agent: `16-sourcing-agent-brief-round-2.md` (23 Nov). Its first goal is a maker independent of PGM, so the GL025 quote has a competitor; its second is a lane with a real rail. Results due by the end of Tue 24 Nov; merge them into the CSV here.
 5. **Decide by Fri 27 Nov:** GL025 decks plus local rails and props, or route C's local surface as planned. Go with GL025 only with a written delivery date of 10 Dec or earlier, a landed price (goods, freight and GST) the budget can carry, and an answer on the fire rating.
 
 ### Message to send about the GL025 (copy and paste)
 
-**English (Alibaba):**
+**English (WhatsApp or email to Ryan Wu):**
 
 > Hello. We are interested in your GL025 modular putting green for a one-night indoor event in Singapore on 31 December 2026. We need 10 lanes, about 83 m² in total (sizes below), delivered to Singapore by 10 December.
 >
