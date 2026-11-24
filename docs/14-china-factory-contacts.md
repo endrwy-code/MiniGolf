@@ -2,6 +2,8 @@
 
 The team's idea: find the factories behind the simple portable mini golf products sold on Taobao and Pinduoduo (a long turf lane with a border, cups and flags), then ask one of them to make a custom set for us. This note checks whether that can work by 31 Dec, lists who to contact, and gives a ready-to-send message in English and Chinese. The contact list is also in `docs/14-china-factory-contacts.csv`.
 
+**How to send (24 Nov):** step-by-step instructions for every channel (1688 chat, WhatsApp, email, WeChat, Alibaba, Taobao), the messages ready to paste and a lane-size sheet to attach are in `17-how-to-contact-suppliers.md`. Use its version of the GL025 message: the one below says "about 83 m²", but its ten lane rectangles add up to 102.5 m² (83 m² is the shaped playing area inside them).
+
 **Status: proposal, nothing contacted.** On 22 Nov a browsing agent checked the leads on the live marketplace pages (next section); the CSV now holds those checked details. Rows the agent didn't reach still come from search-engine extracts. Pay only through a protected method (Alibaba Trade Assurance, or 1688's or Tmall's own checkout).
 
 ## 22 Nov: what the marketplace search found
@@ -75,6 +77,8 @@ Benchmarks: LED glow lanes at US$437 per 0.61 × 3.81 m lane (B2); a complete ne
 5. **Decide by Fri 27 Nov:** GL025 decks plus local rails and props, or route C's local surface as planned. Go with GL025 only with a written delivery date of 10 Dec or earlier, a landed price (goods, freight and GST) the budget can carry, and an answer on the fire rating.
 
 ### Message to send about the GL025 (copy and paste)
+
+*Superseded 24 Nov by Message 1 in `17-how-to-contact-suppliers.md`, which gives the correct total (102.5 m² of lane rectangles), numbers the lanes 1–10 and asks for the company name on the licence. Kept here for reference.*
 
 **English (WhatsApp or email to Ryan Wu):**
 
