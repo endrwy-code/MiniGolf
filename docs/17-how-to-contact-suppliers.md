@@ -66,12 +66,13 @@ Use a computer if you can: pasting Chinese and attaching the image is easier. Th
 
 1. Open Chrome and go to the shop's address, for example `ybgolf8.1688.com` for Yibang. From Singapore, 1688 may open in its English overseas view ("1688 AliTrading", with *SG-English-SGD* at the top), as it did for the browsing agent. Either view works.
 2. **Sign in.** Click the person icon at the top right (or 登录, "log in"). Choose to sign in with Taobao (淘宝账号登录). The quickest way is to scan the QR code with the Taobao app: open Taobao on the phone, tap the scan icon at the top of the home screen, scan the code, then confirm on the phone. If 1688 asks to verify by SMS, the code goes to the phone on the Taobao account.
-3. **Check it's the right shop.** In the shop's menu bar, click **Contact information** (联系方式). For Yibang it should show *Foshan shunde yibang golf supplies co., ltd*, the contact *Zhou tao Mr*, mobile *13077414019*, and an address in Beijiao town, Shunde. If the name or numbers differ from the CSV, stop and check.
+3. **Check it's the right shop.** In the shop's menu bar, click **Contact information** (联系方式). Check the company name, **佛山市顺德区异邦高尔夫用品有限公司** (*Foshan shunde yibang golf supplies co., ltd*), the **超级工厂** badge, and an address in Beijiao town (北滘镇梁场) at the foot of the page. The phone, mobile and contact name may be hidden (暂无, "none", and just 女士 or 先生), as the team saw on 24 Nov; that's fine, because you'll use the chat. If the company name is different, stop and check.
 4. **Open the chat.** Click the blue **在线沟通** ("chat online") button next to the contact's name, or **Customer service** at the top right of the shop banner. A chat window opens. If 1688 offers to install its desktop chat app (阿里旺旺 / 1688 工作台), you can install it, or close the prompt and use the phone app below instead.
-5. **Paste the message.** Copy Message 1 (Chinese) from section 8, replace the two square-bracket placeholders with your name and organisation, paste it into the chat box and press **Enter** or **发送** ("send"). Send it as one message.
-6. **Send the lane sheet.** Click the picture icon (图片) above the text box, choose `17-lane-sizes-for-suppliers.png` and send it.
-7. **Wait for the reply.** An automatic greeting may arrive straight away. A person usually answers within an hour in working hours. Replies appear in the chat window, under the message icon at the top right of 1688, and in the 1688 phone app.
-8. **Read the reply.** In Chrome, right-click the page and choose *Translate to English*, or paste the reply into a translator.
+5. **Check who you're chatting with.** The chat header should show **zhoutao8004145**, and the panel on the right should name 佛山市顺德区异邦高尔夫用品有限公司 with 经营模式 生产厂家 (business type: manufacturer). Ignore the **开启智能找品询盘** (AI inquiry) button: it sends your request to other suppliers too.
+6. **Paste the message in two parts.** The chat box takes at most **500 characters** per message (the counter shows *0 / 500*), so Message 1 (Chinese) in section 8 is split into Part 1 (about 330 characters) and Part 2 (about 390). Replace the two square-bracket placeholders in Part 1 with your organisation and name, paste Part 1 into the chat box and press **Enter** or **send**. Then paste Part 2 and send it. Pasting doesn't send by itself; pressing Enter does.
+7. **Send the lane sheet.** Click the picture icon (the second icon above the text box), choose `17-lane-sizes-for-suppliers.png` and send it.
+8. **Wait for the reply.** An automatic greeting may arrive straight away. A person usually answers within an hour in working hours. Replies appear in the chat window, under the message icon at the top right of 1688, and in the 1688 phone app.
+9. **Read the reply.** In Chrome, right-click the page and choose *Translate to English*, or paste the reply into a translator.
 
 **On a phone (the 1688 app):**
 
@@ -159,14 +160,19 @@ Replace the square-bracket placeholders before sending. The lanes are numbered 1
 >
 > We will decide by 27 November. If 10 December is not realistic, please tell us straight away. Thank you.
 
-**中文（1688 旺旺发给异邦 / 周涛先生；微信同样适用）：**
+**中文（1688 旺旺发给异邦 / 周涛先生；微信同样适用）.** The 1688 chat takes at most 500 characters per message, so send it as two messages.
 
-> 您好！我是新加坡[机构名称]的[姓名]。我们看到贵司的GL025拼接式果岭，想询价：用于新加坡的一场室内活动（2026年12月31日，只用一晚），需要10条球道（尺寸见下方和附图），12月10日前送到新加坡。
+**Part 1 (about 330 characters):**
+
+> 您好！我是新加坡[机构名称]的[姓名]。我们看到贵司的GL025拼接式果岭，想询价：用于新加坡的一场室内活动（2026年12月31日，只用一晚），需要10条球道（尺寸见下条消息和附图），12月10日前送到新加坡。问题分两条发，谢谢！
 >
 > 1. 10条球道能否全部用标准底板和边角件拼成，只把草皮按尺寸裁切？如果底板是60厘米规格，请按最接近的尺寸给建议。能否按标准品48小时内发货？
 > 2. 围边高度3cm是指高出草面3cm吗？能否提供更高的围边（50–75毫米），或者提供不带围边的直边件，方便我们自己安装木质围栏？
 > 3. 第7道能否用炭灰色草皮、第5道用浅灰色草皮？能否在第2道（5.0 × 3.0米）上印钟面图案？
 > 4. 整单的毛重、箱数和体积。
+
+**Part 2 (about 390 characters):**
+
 > 5. 空运和海运拼箱（LCL）到新加坡（DAP）的价格和时效。如果不能直接发新加坡，请报出厂价，并告诉我们是否有合作的货代。
 > 6. 草皮和PP底板是否阻燃？请提供检测报告（例如GB 8624 B1级）。
 > 7. 如果现在先用快递寄一套标准1 × 3米的样品到新加坡，价格和运费是多少？
