@@ -1,6 +1,6 @@
 # New York Countdown, iteration 1: ten holes after Kulnari (draft, 27 Nov)
 
-**Status:** proposal by Claude for the team to react to. It is iteration 1 of the New York holes after the team's Kulnari visit (`13-kulnari-benchmark.md`), built from two submitted designs (A and B) and put through an adversarial review whose must-fix items are folded into the holes below (section 8). Recommended, not decided. Nothing here is measured: every size, speed, time and price is an estimate or design target until the Fri 4 Dec prototype and the Fri 18 Dec dry run.
+**Status:** proposal by Claude for the team to react to. It is iteration 1 of the New York holes after the team's Kulnari visit (`13-kulnari-benchmark.md`), built from two submitted designs (A and B) and put through an adversarial review whose must-fix items are folded into the holes below (section 8). Both designs and the full review are kept in `working-papers/`. Recommended, not decided. Nothing here is measured: every size, speed, time and price is an estimate or design target until the Fri 4 Dec prototype and the Fri 18 Dec dry run.
 
 ## In one minute
 

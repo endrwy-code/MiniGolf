@@ -19,6 +19,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on 31 December 20
 - Fact (18 Nov): the central strip is a raised runway, part of the stage; stage plus runway form the cross (no extra cross-arm). Players can't cross it.
 - Golf zone (18 Nov): the mini golf stays on the stage side of a line 27 m from the stage front (4.46 m past the runway tip). The floor beyond that line is left for other activities. See `floorplan/auditorium-simplified.png`.
 - Design direction (18 Nov, later): New York on countdown night, with a Times Square feel (New York buildings and culture). Holes in the style of `reference/user-refs/07` (hot dog: oversized everyday objects and a pun sign) and `08` (bicycle wheels: found objects). Lighting like `06` (Electric Greens): coloured LED glow, but the room stays light enough to see. Every hole interesting to play and to look at, well thought out and robust.
+- Design input (26 Nov, after the team played Kulnari Mystery Golf on Tue 24 Nov): keep New York (Statue of Liberty, pizza); take Kulnari's gimmicks as inspiration (curves that guide the ball, cups built into props, curling, plinko, changes of direction, a rally hill, terraces of different heights, trick tubes); holes should blend into each other visually. Several of the team's assumptions were logic-checked and some corrected (raised cups, plastic slabs): see `docs/13-kulnari-benchmark.md` section 5. Claude's response, not yet decided: `docs/14-new-york-iteration-1.md`.
 - Fact (18 Nov, the team's tape measurements on a hand sketch): these replace the cable-plan geometry. Width 25.6 m (rough), made up of 11.65 m (top wall to runway) + 2.4 m runway + 10.25 m (runway to LF platform) + 1.3 m LF platform depth. Runway 22.54 m from the stage front to its tip. The box at the back is the sound console. On each side of the runway there are stairs nearest the stage, then two speaker stands that stick out 51.5 cm. The stage's front corners curve round to the side walls. There are doors or exits in the back wall on either side of the sound console. Positions and sizes the team did not measure are listed under open questions.
 
 ## Recommended, not yet decided
@@ -109,14 +110,24 @@ Done later on 18 Nov: route C (carpenter + volunteers, S$6–10k) broken down fo
 
 Done 26 Nov (local session, not cloud): Kulnari benchmark (`docs/13-kulnari-benchmark.md`, `reference/kulnari/`). Findings that change the plan: cups must be flush and sleeved, 60–68 mm deep with a soft bottom (not raised); no hole may take more than about 2.5–3 min per group (Kulnari's top review complaint is congestion); the totem's round numbered "subway bullet" is close to the transit authority's licensed symbols, so change its shape before printing.
 
+Done 27 Nov (local session): New York iteration 1 (`docs/14-new-york-iteration-1.md`), from two independent designs, a synthesis and an adversarial review. Raw agent outputs, including both designs and the full review, are in `docs/working-papers/`; the footage index and overview sheets are in `reference/kulnari/`. Nothing from these two days is decided yet.
+
+Most urgent, from doc 14 (its calendar starts now):
+- The team reacts to docs 13 and 14. They answer the four questions in doc 13 section 7 (hole 3's identity, the missing rally-hill, tube and plinko clips, the "1960s office", plinko and the rally game). They approve iteration 1 or pick fallbacks per hole, and accept or reject the cost and labour (≈ S$12–13.5k, ≈ 19 carpenter-days, so a second carpenter and CNC, against route C's ≈ S$10.9k and 12). Record the outcome in the decision log.
+- Hole 3 (The Subway) is the G2 prototype. Doc 14's plan: redraw 27–29 Nov, build Mon 30 Nov–Wed 2 Dec, bench rigs for the five physics-risk holes (3, 2, 6, 7, 1) on Thu 3 Dec, G2 test on Fri 4 Dec with pass criteria, freeze the rest on Sat 5 Dec. If the team hasn't approved by about Sun 29 Nov, say what slips.
+- Once approved: layout v4 (`tools/make_layout_nyc.py`, with the exemptions in doc 14's open question 9), the carpenter's pack (`tools/make_carpenter_pack.py`, with DXF for CNC), the 3D page and the status page, all of which still show doc 10's holes.
+- If new Kulnari clips arrive, process them as `reference/kulnari/README.md` describes.
+
+Earlier list (G0 and G1 have passed without being logged as done; check with the team which items still stand):
+
 1. Team answers the G0 questions; record the answers in the decision log.
 2. Send the quote requests (`docs/06-rfq-templates.md`) and log the replies in `docs/04-sourcing.md`.
 3. Fill in `docs/08-budget-model.md` with real quotes.
 4. Team measures what's missing from the v2 plan (see open questions), then update `floorplan/auditorium-dimensions.json` and run `python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png`.
 5. Re-place the cable runs and drops from the cable plan on the v2 geometry, then re-run `python3 tools/make_layout_nyc.py floorplan/auditorium-dimensions.json floorplan --png --inject status/countdown-golf-3d.html` and adjust hole positions if a run cuts a district. Update the status page, which still shows the 18 Nov plaza and Bright City.
 6. Take the production questions in `docs/09-city-concept.md` section 8 to production this week (light the golf zone? runway extension? console sightline? which floor cables and drops stay? where guests enter?).
-7. Team decides by G1 (25 Nov): New York Countdown, the ten holes (or swaps from the bench), layout v3, district format, story. Then update the spec sheet's hole list and redo the concept renders.
-6. When the team adds the 3D model: place the holes to scale and generate a preview.
+7. Team decides by G1 (25 Nov): New York Countdown, the ten holes (or swaps from the bench, or iteration 1), layout v3, district format, story. Then update the spec sheet's hole list and redo the concept renders.
+8. When the team adds the 3D model: place the holes to scale and generate a preview.
 
 ## Working rules
 
@@ -124,6 +135,13 @@ Done 26 Nov (local session, not cloud): Kulnari benchmark (`docs/13-kulnari-benc
 - Coordinates: metres, origin at the top-left corner of the auditorium as drawn; +X from the stage end toward the sound console, +Z from the top wall (the 11.65 m side) to the bottom wall, Y up. Same X and Z axes as the team's planning tool.
 - After any decision: update "Decided by the team" above, add a dated row to the decision log at the end of `docs/project-brief.md`, then commit and push.
 - Recommendations are not decisions until the team confirms them.
+
+### How the team wants Claude to work
+
+- The team are not mini golf experts, and they say so. Logic-check and fact-check every idea and claim they bring, and never do something only because they said it. Give a verdict (right, partly right or wrong) with the reason, say what's good, and say what they missed. Doc 13 section 5 shows the expected style.
+- First iterations should be ambitious ("don't hold back because it's the first iteration"). The team expects to iterate, so build on the latest doc (iteration 1 is doc 14) rather than starting again.
+- Agents and workflows are welcome when they improve quality, but the team's usage limit matters. On 26 Nov a 15-agent video run used about 2.3M tokens and returned nothing, because images are re-sent every turn and agents that hit the limit lose everything they haven't written to disk. So: about 4 agents rather than 15; give video or image agents overview sheets and cap each at about 30 image reads; have every agent write notes to a file as it goes; and verify with an adversarial reviewer before presenting a design (in iteration 1 the review caught physics errors in six holes).
+- Read images cheaply: start from `reference/kulnari/overview-*.jpg` (each fits one image read), not the 29 single stills.
 
 ### HOGC AI use guidelines
 
@@ -168,7 +186,9 @@ Done 26 Nov (local session, not cloud): Kulnari benchmark (`docs/13-kulnari-benc
 - `carpenter-pack/countdown-golf-carpenter-pack.pdf` (and `carpenter-pack.html`, `quantities.json`): the carpenter's drawing pack for route C, 16 A3 sheets (cover and notes, site plan, standard details D1–D9, one sheet per hole, Tee Booth and skyline flats, materials). Generated by `tools/make_carpenter_pack.py` (`python3 tools/make_carpenter_pack.py --pdf`), which holds the hole geometry in mm and fails if any gap breaks the 250 mm rule. Design intent for quoting, not engineered.
 - `docs/13-kulnari-benchmark.md`: the team's 24 Nov visit to Kulnari Mystery Golf (Boat Quay), the benchmark for "what good looks like": venue facts, a library of 14 of its 18 holes (K01–K14, best-estimate play order) with stills, ten cross-hole lessons, a logic check of the team's observations (cups, materials, small rooms vs a big hall, pace), a gimmick catalogue and questions for the team.
 - `docs/14-new-york-iteration-1.md`: iteration 1 of the ten New York holes after Kulnari (27 Nov, proposal): two independent designs, a synthesis and an adversarial review (9 must-fixes folded in, 12 open items). Hole list, mechanisms with numbers, build, pace, cost (≈ S$12–13.5k, ≈ 19 carpenter-days), prototype hole 3 (The Subway) for G2, fallbacks, decisions. Layout v4 and the carpenter pack are not yet regenerated for it.
-- `reference/kulnari/`: 29 stills from the visit (faces left out), named by library ID. The 19 source videos and 5 photos are kept locally only (too big for the repo), in the team member's `MINIGOLF` folder.
+- `reference/kulnari/`: 29 stills from the visit (faces left out), named by library ID, plus two labelled overview sheets (`overview-*.jpg`, rebuilt by `python3 tools/video_sheets.py --stills reference/kulnari` from `labels.json`). Its `README.md` is the footage index: every clip and photo, its hole, its timestamp, the stills taken from it, how the play order was worked out, the unshared camera-roll numbers, and how to add new footage. The 19 source videos and 5 photos are kept locally only (too big for the repo), in a team member's `MINIGOLF` folder.
+- `docs/working-papers/`: the raw agent outputs behind docs 13 and 14 (the full hole library, the research with sources and the full gimmick menu, designs A and B, and the full review), with a README on what each holds and when to read it. The numbered docs win where they differ.
+- `tools/video_sheets.py`: turns clips into 2 fps frames and labelled overview sheets (1 frame every 2 s) plus an index of lengths and timestamps; `--stills` rebuilds the overview sheets. Needs ffmpeg. Keep its output out of the repo, because frames show faces.
 - `docs/project-brief.md`: full context, label key, research with links, quality checklist, decision log.
 - `floorplan/auditorium-simplified.svg` and `.png`: simplified plan v2 (18 Nov tape measurements, golf zone, not-measured items dashed), generated by `tools/make_floorplan.py` (`python3 tools/make_floorplan.py floorplan/auditorium-dimensions.json floorplan --png`).
 - `floorplan/auditorium-dimensions.json`: geometry v2 in metres, every value labelled measured, derived or not measured, plus the list of what's still to measure.

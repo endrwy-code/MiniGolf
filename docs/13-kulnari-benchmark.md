@@ -277,7 +277,7 @@ We already have the tools:
 **Reported but not filmed:** a hole through a sampan boat; a spinning platform players stand on (avoid it: a liability for one night); a surprise slide at the finish.
 **Remembered by the team but not in the clips:** plinko, the two-person rally hill, multi-tube trick tunnels, a curling-type game (K08 may be it).
 
-### Proven elsewhere (a short menu; full list with build notes in the research behind this doc)
+### Proven elsewhere (a short menu; the full list with build notes is in `working-papers/kulnari-research.md`, part C5)
 
 A turnstile timing gate · a cab you putt under or through, with two exits · random-exit pipes · a plinko billboard · a curling bullseye · a "volcano" or rally hill · a bank-shot-only hole off a backboard · a mirror to see a blind cup · a staff-cranked mechanism (Pixar Putt's flying house; reliable because staff work it, not players) · a ski jump into a net · a two-tier green · a narrow bridge with a drain-back · a revolving door (the windmill's cousin) · chimes the ball rolls over · a light that flashes on an ace · a risky shortcut against a safe long route · players as obstacles ("be the statue") · a true-or-false trivia arch · bowling pins · pinball bumpers · glow tape on rails.
 
@@ -292,7 +292,7 @@ How these become New York holes is in `14-new-york-iteration-1.md`.
 
 ## 8. Sources and method
 
-- **Footage:** 19 clips and 5 photos (local only). Two analysts each took one phone's clips in recording order, working from overview sheets (1 frame every 2 s) and full frames at key moments. A third agent merged the two phones' sequences and checked each match by comparing frames side by side and, for hole 4, by lining up the sound.
+- **Footage:** 19 clips and 5 photos (local only). The footage index (every clip, its hole, timestamp and stills) is `../reference/kulnari/README.md`; the analyst's full notes per hole are `working-papers/kulnari-hole-library-full.md`, and the research with every source is `working-papers/kulnari-research.md`. Two analysts each took one phone's clips in recording order, working from overview sheets (1 frame every 2 s) and full frames at key moments. A third agent merged the two phones' sequences and checked each match by comparing frames side by side and, for hole 4, by lining up the sound.
 - **Venue:** kulnari.com (home, about, the experience, the bar); vulcanpost.com/888420; littledayout.com; girlstyle.com/sg/article/123244; thesmartlocal.com/read/kulnari-mystery-golf; thehoneycombers.com/singapore/mini-golf-singapore; sassymamasg.com; feverup.com/m/427476 (and reviews) and /m/851650; secretsingapore.co; daniaexperiences.com (May 2025 review); singaporeinsiders.com; Lemon8 reviews; sgpgrid.com company record; LinkedIn company page.
 - **Physics and rules:** Holmes (1991), *Am. J. Phys.* 59:129, and Penner (2002), *Can. J. Phys.* 80:83, via physics.sydney.edu.au/~cross/GOLF; paulhurrion.com (1.63 m/s); USGA definition of the hole (108 mm, at least 101.6 mm deep); WMF minigolf rules 2.3 and 2.5.
 - **Build:** hardwarecity.com.sg (marine ply); chihantrading.com.sg (uPVC pipe); APA bending-radius table via Fine Homebuilding; engineerfix.com (plinko peg spacing); access-board.gov chapter 10 (mini golf access).
