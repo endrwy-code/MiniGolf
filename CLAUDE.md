@@ -5,6 +5,34 @@ Claude Code loads this file at the start of every session. Cloud sessions start 
 Full background, floorplan decode, research and sources:
 @docs/project-brief.md
 
+## Start here: where things stand (27 Nov)
+
+- **Decided by the team:** only the basics under "Decided by the team" below. The holes, build route, builder and budget are **not** decided. G0 (20 Nov) and G1 (25 Nov) passed with nothing logged: no budget ceiling, builder, quotes or turf order is recorded, so ask before assuming any of them.
+- **Two hole sets are on the table, and the team hasn't chosen.** Doc 10 is the 18 Nov ten; the layout script, carpenter's pack, 3D page and status page still show it. Iteration 1 (`docs/14-new-york-iteration-1.md`, 27 Nov) came after the Kulnari visit and was adversarially reviewed.
+- **Waiting on the team:** approve iteration 1 or pick fallbacks; accept its cost (about S$2.1–3.7k more than route C like for like) and a second carpenter; answer the questions in doc 13 section 7.
+- **Next dated actions:** "Most urgent" under Next tasks (hole 3 redraw 27–29 Nov, build 30 Nov–2 Dec, rigs 3 Dec, G2 Fri 4 Dec). No hole 3 drawing exists yet.
+- **Which doc wins.**
+  - Holes: doc 14 over doc 10 once it's chosen, and both over doc 03's original list.
+  - Cups: doc 13 section 5.3 (flush, sleeved, 60–68 mm deep, soft bottom) overrides docs 03 and 08.
+  - Build standard: doc 03 (raised decks) or route C's details D1–D9 (docs 11 and 12, which doc 14 assumes). The team hasn't chosen the route.
+  - The numbered docs win over `docs/working-papers/`.
+- **Video and images:** the Kulnari videos exist only on a team member's computer, and clips are slow to get into a cloud session, so heavy video work is better done locally. Start from `reference/kulnari/README.md` and its two overview sheets.
+
+Hole numbers differ between the two sets, and the scripts use doc 10's:
+
+| Slot | Doc 10 (also `make_layout_nyc.py` and the 3D page) | Iteration 1 (doc 14) |
+|---|---|---|
+| 10 | Bike Lane | Brownstone Stoops |
+| 9 | Hot Dog Cart | Brooklyn Pizza |
+| 8 | The Big Apple | Hot Dog Cart |
+| 7 | Gridlock | Brooklyn Bridge |
+| 6 | Liberty Island | Liberty Island (banked wave) |
+| 5 | The Subway | Central Park Loop |
+| 4 | Rooftop (Broadway in route C and `make_carpenter_pack.py`) | Gridlock |
+| 3 | The Rink | The Subway |
+| 2 | Grand Central | Grand Central Whispering Gallery |
+| 1 | Times Square | Times Square (covered plinko) |
+
 ## Goal
 
 A 10-hole indoor mini golf course for the HOGC countdown party on 31 December 2026, set up in the auditorium. One-off event: best value that still looks custom and plays well on the night. Durability beyond one event is not a priority.
@@ -27,9 +55,9 @@ A 10-hole indoor mini golf course for the HOGC countdown party on 31 December 20
 These came from Claude's research in claude.ai. Treat them as proposals until the team confirms.
 
 - Hybrid build: buy only the turf (prefer local stock; import only if delivery by about 4 Dec is guaranteed in writing); a local set builder makes bases, borders and obstacles from plywood or hard-coated foam. See `docs/04-sourcing.md`.
-- Art direction "New York Countdown" (18 Nov, later; replaces the Bright City recommendation, following the team's New York direction): the same ribbed rail, white cap and New York street-sign totem (green street blades plus a subway-style bullet) on every hole; each hole has its own LED colour at the deck base and under the rail cap; one neon-style pun sign per hole; skyline flats on both side walls; a dim warm wash from the rig, not a blackout. No real logos or trademarks. See `docs/10-new-york-concept.md`. Bright City (`docs/09-city-concept.md`) and the earlier options (`docs/02-reference-decoder.md`) are kept for reference.
+- Art direction "New York Countdown" (18 Nov, later; replaces the Bright City recommendation, following the team's New York direction): the same ribbed rail, white cap and New York street-sign totem (green street blades plus a subway-style bullet; change the bullet's round numbered shape before printing, because it is close to the transit authority's licensed symbols: doc 13 section 5.8) on every hole; each hole has its own LED colour at the deck base and under the rail cap; one neon-style pun sign per hole; skyline flats on both side walls; a dim warm wash from the rig, not a blackout. No real logos or trademarks. See `docs/10-new-york-concept.md`. Bright City (`docs/09-city-concept.md`) and the earlier options (`docs/02-reference-decoder.md`) are kept for reference.
 - Ten New York holes, countdown order: 10 Bike Lane, 9 Hot Dog Cart, 8 The Big Apple, 7 Gridlock, 6 Liberty Island (Downtown); 5 The Subway, 4 Rooftop, 3 The Rink, 2 Grand Central, 1 Times Square (Midtown). Mix 4 hero (8, 6, 2, 1) · 4 mid · 2 simple, two heroes per district, ten different mechanics, one moving part (the rink turntable, optional). Every hole has a fallback for a miss, no loose props, no place a ball can stop out of reach. Story "11:59 in New York", with a "find the 11:59" game on every hole. A bench of eight more ideas. See `docs/10-new-york-concept.md`; `docs/03-hole-spec-sheet.md` still holds the build standard.
-- New York iteration 1 after Kulnari (27 Nov; proposal, supersedes nothing until the team chooses): 10 Brownstone Stoops, 9 Brooklyn Pizza (one-shot curling), 8 Hot Dog Cart (cup in the bun), 7 Brooklyn Bridge (rally hill), 6 Liberty Island (banked wave); 5 Central Park Loop (curved rails), 4 Gridlock, 3 The Subway (left-in, right-out tubes; the G2 prototype), 2 Grand Central Whispering Gallery (elliptical bank), 1 Times Square (covered plinko). About S$12–13.5k and 19 carpenter-days against route C's S$10.9k and 12, so a second carpenter and CNC. See `docs/14-new-york-iteration-1.md`.
+- New York iteration 1 after Kulnari (27 Nov; proposal, supersedes nothing until the team chooses): 10 Brownstone Stoops, 9 Brooklyn Pizza (one-shot curling), 8 Hot Dog Cart (cup in the bun), 7 Brooklyn Bridge (rally hill), 6 Liberty Island (banked wave); 5 Central Park Loop (curved rails), 4 Gridlock, 3 The Subway (left-in, right-out tubes; the G2 prototype), 2 Grand Central Whispering Gallery (elliptical bank), 1 Times Square (covered plinko). About S$13.0–14.5k before cuts, or S$12.0–13.5k after route C's four cuts and loans, against route C's S$10.9k before and S$9.8k after the same cuts: about S$2.1–3.7k more like for like. About 19 carpenter-days against 12, so a second carpenter and CNC. See `docs/14-new-york-iteration-1.md`.
 - Layout v3 (`floorplan/layout-v3-nyc.png`, from `tools/make_layout_nyc.py`): two districts beside the runway, each looping back to one hub (the Tee Booth) in the strip past the runway tip; about 6.5 m kept clear in front of the stage; hole 1 runs along the golf limit with its tower facing the party. The script checks every clearance (holes ≥ 1.2 m apart, ≥ 1.75 m from the runway, walkways ≥ 1.2 m, tall props outside the assumed console sightline). Positions are ±1 m until the stage depth and stair positions are measured. Earlier layouts (v2 plaza, zone options, v1 Zone A) are superseded and kept for reference.
 - Ops: 5-stroke cap; groups start at any open hole and play their district in order; at most about 12 groups on the course; one district per group when the queue is long (≈ 2.3× capacity); balls handed back at the hub; about 7–9 volunteers per shift. See `docs/07-operations-and-safety.md`.
 - Huadong Play: not suitable for this event (outdoor landscape and playground products; no indoor or modular course shown). Revisit only if a reusable course is wanted for 2027.
@@ -49,9 +77,9 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Stage depth; golf limit to sound console | Unknown | Not measured |
 | Floor area for 10 holes | ≈ 200–270 m² | Rule of thumb |
 | Turf for 10 holes | ≈ 72 m² net; order ≈ 85 m² | From spec sheet v1 (design target) |
-| Playing surface, New York holes | ≈ 83 m²: ≈ 55 m² green turf, ≈ 20 m² charcoal or grey carpet (Gridlock, Subway), ≈ 8 m² white rink | Design target (`docs/10-new-york-concept.md`) |
+| Playing surface, New York holes | Iteration 1: ≈ 101 m² of hole footprints (doc 14). Doc 10: ≈ 83 m²: ≈ 55 m² green turf, ≈ 20 m² charcoal or grey carpet (Gridlock, Subway), ≈ 8 m² white rink | Design target (`docs/10-new-york-concept.md`) |
 | LED strip, New York look | ≈ 300 m (two layers: deck base and rail cap) | Estimate; the budget model allows 150 m |
-| Tallest props | 3–3.6 m (Christmas tree, Grand Central backdrop, ball-drop tower) | Design target; check the rig clearance |
+| Tallest props | Iteration 1: tower ≈ 2.8 m, torch ≈ 2.6 m (doc 14). Doc 10: 3–3.6 m (Christmas tree, Grand Central backdrop, ball-drop tower) | Design target; check the rig clearance |
 | Throughput | Ceiling ≈ 100–120 players/hour at 2–2.5 min per hole; realistic ≈ 75–90/h for the full 10 holes over a 3 h session (≈ 230–270 players); ≈ 2.3× that if each group plays one 5-hole district | Simulated (`tools/flow_sim.py`); time it at the dry run |
 | Build scale | ≈ 70 plywood sheets, ≈ 3 t, 1–2 lorry loads, ≈ 120 person-days | Estimate (`docs/08-budget-model.md`) |
 | Budget bands | Rent carnival lanes + dressing ≈ S$3–6k · DIY floor-laid ≈ S$1.7k bare / S$4–6.5k best value · carpenter + volunteers ≈ S$6–10k (New York cut down: plan ≈ S$10.9k with the carpenter's-pack quantities, ≈ S$9.8k with four cuts; `docs/11-route-c-carpenter-build.md`) · church crew (raised decks) ≈ S$14–31k · split ≈ S$30–56k · outsourced ≈ S$50–91k | Estimate, not quotes; low-budget lines from Singapore listing prices 18 Nov (`docs/08-budget-model.md` §6) |
@@ -59,7 +87,7 @@ These came from Claude's research in claude.ai. Treat them as proposals until th
 | Deck height | ≈ 75 mm (revised from 120 mm) | Design target |
 | Players on course at once | ≈ 40 (one group of 4 per hole) | Estimate |
 
-Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov tape measurements; each value is labelled measured, derived or not measured). Picture: `floorplan/auditorium-simplified.png`. The old cable-plan measurements (54.7 × 27.1 m, 45.95, 20.73, 11.62 and 11.58 m) are superseded and kept in `floorplan/auditorium-dimensions-v1-cable-plan.json`. The zone options, both draft layouts, the 3D model and the status page still use them.
+Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov tape measurements; each value is labelled measured, derived or not measured). Picture: `floorplan/auditorium-simplified.png`. The old cable-plan measurements (54.7 × 27.1 m, 45.95, 20.73, 11.62 and 11.58 m) are superseded and kept in `floorplan/auditorium-dimensions-v1-cable-plan.json`. The zone options, both draft layouts and the status page still use them (the 3D model was rebuilt on v2).
 
 ## Timeline (gates; full detail in `docs/05-timeline-and-critical-path.md`)
 
@@ -85,7 +113,6 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov 
 - Ceiling height, door and load-in route widths, floor finish.
 - Atrium dimensions. The team is building a to-scale 3D model of the auditorium and atrium.
 - Expected crowd size, and whether to run a queue or timed slots.
-- Budget.
 - The venue's fire-rating requirements for turf and foam.
 - Runway: its height. Can the dotted extension from the old cable plan (≈ 8.6 m) still happen? It isn't on the 18 Nov sketch. If it is built, it runs past the golf limit and splits the golf zone in two, because players can't cross the runway.
 - Not on the 18 Nov sketch, so still to measure: stage depth (back wall to stage front); room length (54.7 m comes from the old plan, but the sketch draws the room shorter beyond the golf limit); golf limit to the sound console, and the console's size; the size of the two curved stage corners; where the stairs and speaker stands sit along the runway, how long they are, and how deep the stairs are; the LF platform's length, where it starts along the wall, and what it is for; the positions and widths of the back-wall doors. The 22.1 m written beside the runway on the sketch is unexplained; the team gave 22.54 m as the runway length.
@@ -113,9 +140,9 @@ Done 26 Nov (local session, not cloud): Kulnari benchmark (`docs/13-kulnari-benc
 Done 27 Nov (local session): New York iteration 1 (`docs/14-new-york-iteration-1.md`), from two independent designs, a synthesis and an adversarial review. Raw agent outputs, including both designs and the full review, are in `docs/working-papers/`; the footage index and overview sheets are in `reference/kulnari/`. Nothing from these two days is decided yet.
 
 Most urgent, from doc 14 (its calendar starts now):
-- The team reacts to docs 13 and 14. They answer the four questions in doc 13 section 7 (hole 3's identity, the missing rally-hill, tube and plinko clips, the "1960s office", plinko and the rally game). They approve iteration 1 or pick fallbacks per hole, and accept or reject the cost and labour (≈ S$12–13.5k, ≈ 19 carpenter-days, so a second carpenter and CNC, against route C's ≈ S$10.9k and 12). Record the outcome in the decision log.
-- Hole 3 (The Subway) is the G2 prototype. Doc 14's plan: redraw 27–29 Nov, build Mon 30 Nov–Wed 2 Dec, bench rigs for the five physics-risk holes (3, 2, 6, 7, 1) on Thu 3 Dec, G2 test on Fri 4 Dec with pass criteria, freeze the rest on Sat 5 Dec. If the team hasn't approved by about Sun 29 Nov, say what slips.
-- Once approved: layout v4 (`tools/make_layout_nyc.py`, with the exemptions in doc 14's open question 9), the carpenter's pack (`tools/make_carpenter_pack.py`, with DXF for CNC), the 3D page and the status page, all of which still show doc 10's holes.
+- The team reacts to docs 13 and 14. They answer the four questions in doc 13 section 7 (which Kulnari hole was their hole 3, the missing rally-hill, tube and plinko clips, the "1960s office", plinko and the rally game). They approve iteration 1 or pick fallbacks per hole, and accept or reject the cost and labour (≈ S$12.0–13.5k after cuts against route C's ≈ S$9.8k after the same cuts, so ≈ S$2.1–3.7k more; ≈ 19 carpenter-days against 12, so a second carpenter and CNC). Record the outcome in the decision log.
+- Hole 3 (The Subway) is the G2 prototype. Doc 14's plan: redraw 27–29 Nov, build Mon 30 Nov–Wed 2 Dec, full-size rigs on Thu 3 Dec for the other physics-risk holes (2, 6, 7, 1) plus a hole 5 corner and a pizza speed strip, G2 test on Fri 4 Dec with pass criteria, freeze the rest on Sat 5 Dec. No hole 3 drawing exists yet: the redraw, from doc 14's hole 3 section and must-fixes M1–M2, is the first job. If the team hasn't approved by about Sun 29 Nov, say what slips.
+- Once approved: layout v4 (`tools/make_layout_nyc.py`, with the exemptions in doc 14's open question 9), the carpenter's pack (`tools/make_carpenter_pack.py`, with DXF for CNC), the 3D page and the status page, all of which still show doc 10's holes. DXF export doesn't exist in the pack script yet. Re-run `tools/flow_sim.py` with the review's per-hole times (doc 14, course checks).
 - If new Kulnari clips arrive, process them as `reference/kulnari/README.md` describes.
 
 Earlier list (G0 and G1 have passed without being logged as done; check with the team which items still stand):

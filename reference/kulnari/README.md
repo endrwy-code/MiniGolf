@@ -77,7 +77,7 @@ The **rally hill, the trick tubes (in on the left, out on the right) and plinko*
 
 ## Adding new footage
 
-1. Copy the clips to a local folder, never into the repo.
+1. Copy the clips to a local folder, never into the repo. Video work is best done in a local session: clips are slow to get into a cloud session, and a cloud sandbox may not have ffmpeg (check `ffmpeg -version`).
 2. Run `python3 tools/video_sheets.py <clips folder> <work folder>`. Add `--rotate180 NAME` for an upside-down clip and `--mirror NAME` for a mirrored one. You get 2 fps frames, labelled sheets (1 frame every 2 s) and an index of clip lengths and timestamps.
 3. **Keep the agents cheap.** Give each video agent the sheets first and cap it at about 30 image reads. Have it append notes to a file after every clip, and use about 4 agents, not 15. A 15-agent run on 26 Nov used about 2.3M tokens and returned nothing, because images are re-sent every turn and agents that hit the limit lose everything they haven't written to disk.
 4. Copy only chosen face-free stills here, named `Kxx-name-n.jpg`, at a long side of 960 px. Add any new hole to `labels.json`, rebuild the overview sheets with `python3 tools/video_sheets.py --stills reference/kulnari`, and update docs 13, 14 and this index.

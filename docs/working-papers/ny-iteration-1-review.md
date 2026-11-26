@@ -1,6 +1,6 @@
 # New York iteration 1: the adversarial review (working paper, 27 Nov)
 
-**Status:** the reviewer's full findings on the synthesised design. All must-fix items were folded into `../14-new-york-iteration-1.md` (its section "What the review changed" lists them as M1–M9); the should-fix items are open there as S1–S12. Numbering here follows the review's own order, which may not match doc 14's labels one for one.
+**Status:** the reviewer's full findings on the synthesised design. All must-fix items were folded into `../14-new-york-iteration-1.md` (its section "What the review changed" lists them as M1–M9); the should-fix items are open there as S1–S12. Must-fix 1–9 here are doc 14's M1–M9, and should-fix 1–12 are S1–S12, in the same order. Doc 14's cost comparison was later corrected (route C like for like is S$9.8k after the same cuts).
 
 ## Verdict
 

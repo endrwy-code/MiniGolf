@@ -2,6 +2,8 @@
 
 Today is Mon 16 Nov 2026. The event is Thu 31 Dec. **There are 45 calendar days, and about 25 working days once Christmas is taken out.**
 
+**27 Nov:** the gate dates still stand. The G2 hole suggestion below is out of date: iteration 1 (`14-new-york-iteration-1.md`, a proposal) makes hole 3, The Subway, the prototype, with its own week plan. G0 and G1 aren't logged as passed.
+
 This works backwards from the install window. If anything below turns out to be wrong (especially the install window), redo this page first.
 
 ## The install window decides everything

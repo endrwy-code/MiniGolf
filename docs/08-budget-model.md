@@ -164,7 +164,7 @@ Nobody in Singapore or Malaysia rents a whole themed course, and none of these r
 | Surface (≈ 80 m² with waste) | 294: needle-punch event carpet, 2 rolls of 2 × 30 m | 650: 10 mm carpet grass at S$7–9/m² | Putting turf (15 mm) at about S$27/m² is about S$2,160. Short pile rolls truer; avoid 25 mm or more |
 | Rails (≈ 140 m) | 522: 58 × 2"×2"×8 ft timber at S$9 | 522–1,410: the same, or kapur 3"×2" on edge with feet | **The one line not to cheapen.** Solid timber held still; foam, pool noodles and PVC pipe kill the rebound |
 | Sheets for obstacles | 93: 3 sheets of common plywood plus free pallets | 320: 8 sheets of 12 mm plywood plus corrugated plastic | |
-| Cups ×10 | 0: DIY bevelled plywood rings | 169: Decathlon putting cups at S$16.90 | On a bare floor the ball must climb a lip: keep it ≤ 10 mm and bevelled |
+| Cups ×10 | 0: DIY bevelled plywood rings | 169: Decathlon putting cups at S$16.90 | On a bare floor the ball must climb a lip: keep it ≤ 10 mm and bevelled. **27 Nov:** a raised lip rejects the slow putts most likely to drop (doc 13 section 5.3). Prefer a raised green at the cup end with a flush, sleeved cup, as route C does |
 | Putters ×40 | 200: borrow about 20, buy 20 used | 200–700: the same, or factory putters by air | Include 8–10 junior putters |
 | Balls ×100 | 107 | 179 | Decathlon packs. Check they're real golf balls, not foam |
 | Paint | 120 | 290 | |

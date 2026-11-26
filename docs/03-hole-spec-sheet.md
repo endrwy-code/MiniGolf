@@ -4,6 +4,8 @@
 
 **18 Nov (later):** the New York proposal in [`10-new-york-concept.md`](10-new-york-concept.md) would replace the ten holes below (names, props and some mechanics). The build standard below still applies to it. Nothing is decided until the team confirms.
 
+**27 Nov:** for cups, follow `13-kulnari-benchmark.md` section 5.3: flush with the surface (1–3 mm below), sleeved, 60–68 mm deep, soft bottom. Any light ring or collar must be flush, never raised. Route C's details D1–D9 (`12-carpenter-pack.md`) are the floor-laid alternative to this deck standard, and iteration 1 (`14-new-york-iteration-1.md`) assumes them.
+
 Play order runs **10 down to 1** (the countdown). Hole 1 is the finale, nearest the stage. Layout: `floorplan/layout-draft-zone-a.svg`.
 
 ## Build standard (applies to every hole)

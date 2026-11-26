@@ -210,7 +210,7 @@ The team asked to be fact-checked rather than followed. Each point gets a verdic
 - **Terraces of mismatched heights:** this is K12, and it is one of the best holes in the library for us: quick, readable, all skill, cheap (framed ply boxes stepping down 50–80 mm, lips chamfered).
 - **Rally hill (not in the clips we have):**
   - Keep the hill 120–180 mm high, with slopes of 10–15° and rounded transitions at the foot and crest.
-  - A flat top 350–450 mm across, with the cup in the middle.
+  - A flat top 350–450 mm across, with the cup in the middle. (Iteration 1 widened it to 0.60 m after the review found balls crossed a 0.45 m plateau too easily: doc 14, hole 7, M5.)
   - A miss rolls back to the player, so it returns itself, which is good for pace.
   - Steeper than about 20° turns it into a power lottery.
   - With two players at once from opposite sides, alternate turns so two balls don't collide.

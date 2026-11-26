@@ -6,6 +6,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 
 ## Start here
 
+**Latest (27 Nov):** [Kulnari benchmark](docs/13-kulnari-benchmark.md) and [New York iteration 1](docs/14-new-york-iteration-1.md); `CLAUDE.md` opens with where things stand.
+
 1. **[How to think about this](docs/01-how-to-think-about-this.md)**: the constraints, seven truths to align on, and the decision order.
 2. **[Sourcing: Huadong Play and the alternatives](docs/04-sourcing.md)**: who to buy, rent or build from, and why.
 3. **[Timeline and critical path](docs/05-timeline-and-critical-path.md)**: gates from now to install.
@@ -16,8 +18,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 |---|---|
 | [Reference decoder](docs/02-reference-decoder.md) | What each inspiration photo really is, and what to copy |
 | [10-hole spec sheet](docs/03-hole-spec-sheet.md) | Build standard plus the 10 holes, for the builder and turf supplier |
-| **[Kulnari benchmark](docs/13-kulnari-benchmark.md)** | **26 Nov: the team's visit to Kulnari Mystery Golf. A library of 14 of its 18 holes with stills and a footage index ([`reference/kulnari/`](reference/kulnari/README.md)), ten lessons, a logic check of the team's observations, and a gimmick catalogue** |
-| **[New York iteration 1](docs/14-new-york-iteration-1.md)** | **27 Nov: ten redesigned New York holes after Kulnari (terraces, curling, a cup in a bun, a rally-hill bridge, a banked wave, curves, left-in-right-out subway tubes, an elliptical bank, plinko), adversarially reviewed. About S$12–13.5k and 19 carpenter-days. Proposal, not decided** |
+| **[Kulnari benchmark](docs/13-kulnari-benchmark.md)** | **The team's visit to Kulnari Mystery Golf (24 Nov; written 26 Nov). A library of 14 of its 18 holes with stills and a footage index ([`reference/kulnari/`](reference/kulnari/README.md)), ten lessons, a logic check of the team's observations, and a gimmick catalogue** |
+| **[New York iteration 1](docs/14-new-york-iteration-1.md)** | **27 Nov: ten redesigned New York holes after Kulnari (terraces, curling, a cup in a bun, a rally-hill bridge, a banked wave, curves, left-in-right-out subway tubes, an elliptical bank, plinko), adversarially reviewed. About S$12–13.5k after cuts, S$2.1–3.7k more than route C like for like, and 19 carpenter-days. Proposal, not decided** |
 | [Working papers](docs/working-papers/README.md) | 26–27 Nov: the raw agent outputs behind docs 13 and 14 (full hole library, research with sources, designs A and B, the full review). The docs win where they differ |
 | **[New York Countdown](docs/10-new-york-concept.md)** | **18 Nov (later): the ten New York holes, how each is built and why it holds up, the LED glow, layout v3 and decisions for G1** |
 | **[Layout v3](floorplan/layout-v3-nyc.png)** | **The ten holes inside the golf zone, two districts and one hub, with every clearance checked** |

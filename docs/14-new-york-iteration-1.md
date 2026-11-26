@@ -8,9 +8,9 @@
 - **Against the current ten (doc 10):** 3 holes upgraded in place (6, 2, 1), Gridlock kept and moved to 4, Hot Dog and Subway upgraded and moved (8, 3), 4 new holes (10, 9, 7, 5). Big Apple, Rink and Broadway/Rooftop retire. Every slot keeps its LED colour; 7 of 10 signs survive.
 - **The team's wishes are in:** mismatched terraces, curling, cups built into props, the rally hill, a Kulnari-style wave, guiding curves, "left tube in, right tube out", plinko.
 - **Pace:** with the review's pessimistic times, most holes run 2.0–2.5 min per group of 4; hole 5 is borderline at up to 2.7. About 75–80 players an hour in practice, the bottom of the 77–90 target. Plan one-district rounds at peak from the start.
-- **Cost and labour:** about S$12.0–13.5k after route C's cuts and loans (current plan about S$10.9k). About 19 carpenter-days against route C's 12, so a second carpenter for 6–8 days plus CNC cutting, not a 3-day mate.
+- **Cost and labour:** about S$12.0–13.5k after route C's four cuts and the loans, against about S$9.8k for route C with the same cuts (S$10.9k before them): about S$2.1–3.7k more. About 19 carpenter-days against route C's 12, so a second carpenter for 6–8 days plus CNC cutting, not a 3-day mate.
 - **Prototype:** hole 3, The Subway, built Mon 30 Nov – Wed 2 Dec, test-played Fri 4 Dec (G2). Its loop floor was redrawn after the review; the drawing must be finished this weekend.
-- **Risk, and how it is contained:** five holes (3, 2, 6, 7, 1) rest on physics that only a test can prove. Each has a full-size rig on Thu 3 Dec and a named fallback that keeps its footprint, and they are frozen on Sat 5 Dec. The other five (10, 9, 8, 5, 4) are lower-risk box, rail and arc carpentry that can be released as soon as the set is approved.
+- **Risk, and how it is contained:** five holes (3, 2, 6, 7, 1) rest on physics that only a test can prove. Hole 3 is built in full as the prototype; 2, 6, 7 and 1 get full-size rigs on Thu 3 Dec (with a hole 5 corner and a pizza speed strip). Each has a named fallback that keeps its footprint, and they are frozen on Sat 5 Dec. The other five (10, 9, 8, 5, 4) are lower-risk box, rail and arc carpentry that can be released as soon as the set is approved.
 - **Decisions needed:** approve the set (or pick fallback rungs); accept about S$12–13.5k and book the second carpenter and CNC now; approve the format changes; release hole 3's drawing and materials for Mon 30 Nov.
 
 ## What changed from the current ten
@@ -110,7 +110,7 @@ Speeds assume about 0.6 m/s² drag on carpet grass (the prototype's Stimp readin
 
 **Plays.** One pair at each end of a narrow bridge with a hump and the cup on top. On "3-2-1" both putt at once. Too soft rolls back; too hard crosses to the other borough. Then the second pair. Groups with small kids take turns from the ends.
 
-**Mechanism (M5).** Lane 5.0 m with D-shaped end rails. A **0.60 m** plateau at +150 mm with the cup in the middle (was 0.45), 12° ramps with R 600 transitions (about 0.95 m each), approaches about 1.25 m. Rails **converge from 0.9 to 0.50 m over each ramp** ("the roadway narrows between the towers"), so the 10 mm rubber catch ring (Ø190) covers about 40% of the line. Ramps cross-fall **3°** toward the centre (was 2°). With slope drag a ball needs about 1.80 m/s at the foot to crest and stops on top up to about 1.99 m/s, about 2.2–2.35 m/s from the tee; over about 0.85 m/s at the crest it runs over. **Rule:** a ball that crosses is played by its owner from the end it reached, after the other player. Junior tees 0.6 m nearer.
+**Mechanism (M5).** Lane 5.0 m with D-shaped end rails. A **0.60 m** plateau at +150 mm with the cup in the middle (was 0.45), 12° ramps with R 600 transitions (about 0.95 m each), approaches about 1.25 m. Rails **converge from 0.9 to 0.50 m over each ramp** ("the roadway narrows between the towers"), so the 10 mm rubber catch ring (Ø190, about 40 mm outside the cup edge; the cup lip itself stays flush) covers about 40% of the line. Ramps cross-fall **3°** toward the centre (was 2°). With slope drag a ball needs about 1.80 m/s at the foot to crest and stops on top up to about 1.99 m/s, about 2.2–2.35 m/s from the tee; over about 0.85 m/s at the crest it runs over. **Rule:** a ball that crosses is played by its owner from the end it reached, after the other player. Junior tees 0.6 m nearer.
 
 **Build.** Five graded ribs, a 2 × 6 mm flexi skin, an 18 mm plateau for the cup sleeve, tapered rails; two tower flats on posts outside the rails, sandbagged, festoon "cables" at least 2.4 m up. Carpenter 1.0 day (0.75). Volunteers about 1.5 days.
 
@@ -236,11 +236,11 @@ Route C's prop days were 8.0. Add rails and greens 2.5, Tee Booth 0.5, jigs 0.25
 | Materials: about 8 extra sheets of 18 mm ply, about 5 of flexi-ply (not 3), about 1.9 m² polycarbonate, dowels, PVC angle, flats, festoons, ten floods; less rink, apple, Broadway and hot-dog wall | +S$1.3–2.0k |
 | CNC routing (recommended) | +S$0.4–0.8k |
 | **Before cuts** | **about S$13.0–14.5k** |
-| **After route C's four cuts and the loans** | **about S$12.0–13.5k** (S$1–2.5k over today's plan; the designer said S$11.1–12.5k) |
+| **After route C's four cuts and the loans** | **about S$12.0–13.5k** (about S$2.2–3.7k over route C with the same cuts, about S$9.8k; the designer said S$11.1–12.5k. Corrected 27 Nov: an earlier version compared this with route C's uncut S$10.9k) |
 
 The S$10k ceiling has never been set; that is the project lead's call. **Fallback ladder** (each keeps ten mechanics): (1) Liberty as a flat chamfer bank with a painted wave, about −1.0 day against the banked corner and −S$150; (2) no hub portals or sound, −S$150; (3) three stoop boxes, −0.25 day; (4) a 0.70 m plinko board, −0.1 day. The review warns the ladder alone won't close the gap. **Volunteers:** about +5 days, so 50–55 in all. New sign art for 10, 9 and 7 only.
 
-**Labour (M9).** About 14.5 days of work must fit in about 10 build days, 7–18 Dec. A 3-day mate leaves 1.5–2 holes out of the dry run. Book now: a second carpenter for about 6–8 days (box work on 10, 9, 4, 8, rails and greens), and a local router shop cutting DXFs exported by `tools/make_carpenter_pack.py` (arcs for 3 and 5, hill, wave and ramp ribs, the ellipse deck and blocks, the plinko board and peg jig). CNC saves about 2–3 carpenter-days and holds the ±1 mm the subway and plinko need.
+**Labour (M9).** About 14.5 days of work must fit in about 10 build days, 7–18 Dec. A 3-day mate leaves 1.5–2 holes out of the dry run. Book now: a second carpenter for about 6–8 days (box work on 10, 9, 4, 8, rails and greens), and a local router shop cutting DXFs exported by `tools/make_carpenter_pack.py` (the export still has to be added: open question 12) (arcs for 3 and 5, hill, wave and ramp ribs, the ellipse deck and blocks, the plinko board and peg jig). CNC saves about 2–3 carpenter-days and holds the ±1 mm the subway and plinko need.
 
 | When | What |
 |---|---|
