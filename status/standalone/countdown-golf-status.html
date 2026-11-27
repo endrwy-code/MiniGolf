@@ -13,16 +13,17 @@
 /* Layout: a planning sheet. A night-blue "street sign" band carries the countdown; below it, stacked sections on pale plan-paper, with the to-scale floor plan as the centrepiece. */
 :root{
   --bg:#F1F4F0; --surface:#FFFFFF; --surface-2:#E7ECE6; --ink:#142036; --ink-2:#4A5668; --ink-3:#778293; --rule:#D3D9D4;
-  --band:#17284A; --band-ink:#F3F5F1; --band-ink-2:#B7C3D6; --band-rule:#34466B;
+  --band:#17284A; --band-ink:#F3F5F1; --band-ink-2:#B7C3D6; --band-rule:#34466B; --band-risk:#FF9C86;
   --accent:#0B7A74; --accent-soft:#D3ECE8;
   --now:#E9A817; --now-ink:#7A5200; --now-soft:#FBEFC9;
   --risk:#B23A2A; --risk-soft:#F7DDD6;
   --ok:#2C7A47; --ok-soft:#D9EEDD;
-  --plate:#17284A; --plate-ink:#FFFFFF;
   --floor:#FAFBF8; --wall:#DDE0D8; --stage:#E6E3DA; --runway:#CCC8BB; --runway-edge:#6B6A63;
-  --turf:#A3DBB5; --turf-hero:#58B57C; --turf-edge:#1E5E3B; --water:#93C1EA; --brick:#C0533A;
-  --distA:#B07307; --distB:#5246BE; --distA-tint:rgba(233,168,23,.10); --distB-tint:rgba(82,70,190,.07);
-  --cable:#D5463B; --hub:#FBE5DC; --hub-edge:#9A3B22; --flats:#3D4560;
+  --turf:#7DC796; --turf-edge:#1E5E3B; --carpet:#9AA0AA; --ice:#EEF5FA; --totem:#1B5E3B; --prop:#DCD5C3; --prop-edge:#8A8472;
+  --stand:#F2C36B; --other:#EDEBE3; --zone-tint:rgba(11,122,116,.045);
+  --distA:#B07307; --distB:#5246BE;
+  --cable:#D5463B; --hub:#FBE0EE; --hub-edge:#9A2A68;
+  --bullet-ink:#10131A;
   --font-display:"Overpass","Arial Narrow",system-ui,sans-serif;
   --font-body:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --font-mono:"Overpass Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -30,31 +31,31 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0E1420; --surface:#151D2C; --surface-2:#1C2639; --ink:#E6EBF2; --ink-2:#A9B3C2; --ink-3:#7A8598; --rule:#2A3549;
-    --band:#0A1222; --band-ink:#E6EBF2; --band-ink-2:#9FB0C9; --band-rule:#26324A;
+    --band:#0A1222; --band-ink:#E6EBF2; --band-ink-2:#9FB0C9; --band-rule:#26324A; --band-risk:#FF9C86;
     --accent:#45C3B8; --accent-soft:#163C3A;
     --now:#F4C04C; --now-ink:#F4C04C; --now-soft:#3A2F12;
     --risk:#F07A65; --risk-soft:#3E201B;
     --ok:#6CCB8D; --ok-soft:#173523;
-    --plate:#E6EBF2; --plate-ink:#121A2A;
     --floor:#121A28; --wall:#232D40; --stage:#1D2637; --runway:#3A4253; --runway-edge:#8C95A8;
-    --turf:#2E7A4F; --turf-hero:#47A96F; --turf-edge:#A9E5C0; --water:#2D5F8E; --brick:#D46A4F;
-    --distA:#EBAE42; --distB:#A99EF6; --distA-tint:rgba(235,174,66,.08); --distB-tint:rgba(169,158,246,.08);
-    --cable:#F06A5D; --hub:#3A2520; --hub-edge:#F0957C; --flats:#8B94B3;
+    --turf:#2E7A4F; --turf-edge:#A9E5C0; --carpet:#4A5262; --ice:#B9CCD9; --totem:#5FBF8A; --prop:#3A3F4C; --prop-edge:#9AA2B4;
+    --stand:#8A6A2A; --other:#161F2E; --zone-tint:rgba(69,195,184,.05);
+    --distA:#EBAE42; --distB:#A99EF6;
+    --cable:#F06A5D; --hub:#3A1F31; --hub-edge:#F08BC4;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0E1420; --surface:#151D2C; --surface-2:#1C2639; --ink:#E6EBF2; --ink-2:#A9B3C2; --ink-3:#7A8598; --rule:#2A3549;
-  --band:#0A1222; --band-ink:#E6EBF2; --band-ink-2:#9FB0C9; --band-rule:#26324A;
+  --band:#0A1222; --band-ink:#E6EBF2; --band-ink-2:#9FB0C9; --band-rule:#26324A; --band-risk:#FF9C86;
   --accent:#45C3B8; --accent-soft:#163C3A;
   --now:#F4C04C; --now-ink:#F4C04C; --now-soft:#3A2F12;
   --risk:#F07A65; --risk-soft:#3E201B;
   --ok:#6CCB8D; --ok-soft:#173523;
-  --plate:#E6EBF2; --plate-ink:#121A2A;
   --floor:#121A28; --wall:#232D40; --stage:#1D2637; --runway:#3A4253; --runway-edge:#8C95A8;
-  --turf:#2E7A4F; --turf-hero:#47A96F; --turf-edge:#A9E5C0; --water:#2D5F8E; --brick:#D46A4F;
-  --distA:#EBAE42; --distB:#A99EF6; --distA-tint:rgba(235,174,66,.08); --distB-tint:rgba(169,158,246,.08);
-  --cable:#F06A5D; --hub:#3A2520; --hub-edge:#F0957C; --flats:#8B94B3;
+  --turf:#2E7A4F; --turf-edge:#A9E5C0; --carpet:#4A5262; --ice:#B9CCD9; --totem:#5FBF8A; --prop:#3A3F4C; --prop-edge:#9AA2B4;
+  --stand:#8A6A2A; --other:#161F2E; --zone-tint:rgba(69,195,184,.05);
+  --distA:#EBAE42; --distB:#A99EF6;
+  --cable:#F06A5D; --hub:#3A1F31; --hub-edge:#F08BC4;
   color-scheme:dark;
 }
 
@@ -67,12 +68,14 @@ h3{font-size:1.02rem;font-weight:800}
 p{margin:0}
 ul,ol{margin:0;padding:0}
 strong{font-weight:650}
-code{font-family:var(--font-mono);font-size:.86em;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+a{color:var(--accent);font-weight:600}
+code{font-family:var(--font-mono);font-size:.86em;background:var(--surface-2);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
 .eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
 .num{font-variant-numeric:tabular-nums}
 .muted{color:var(--ink-2)}
 section{padding-block:44px 4px}
 .sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 32px;margin-bottom:18px}
+.sec-head > *{min-width:0}
 .sec-head p{color:var(--ink-2);max-width:64ch;font-size:.94rem}
 .card{background:var(--surface);border:1px solid var(--rule);border-radius:10px}
 .scroll-x{overflow-x:auto}
@@ -90,19 +93,22 @@ section{padding-block:44px 4px}
 .band{background:var(--band);color:var(--band-ink)}
 .band-in{padding-block:34px 30px;display:grid;gap:26px}
 .band-top{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:flex-end;justify-content:space-between}
-.band-top > div{min-width:0;max-width:720px}
+.band-top > div{min-width:0;max-width:740px}
 .band .eyebrow{color:var(--band-ink-2)}
 .band h1{color:var(--band-ink);font-size:clamp(2.4rem,1.6rem + 3.4vw,4.2rem);font-weight:900;letter-spacing:-.02em;margin:6px 0 10px}
-.band .lede{color:var(--band-ink-2);font-size:1.02rem;max-width:62ch}
+.band .lede{color:var(--band-ink-2);font-size:1.02rem;max-width:64ch}
 .band .lede strong{color:var(--band-ink)}
-.status-pill{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--now);color:var(--now);padding:6px 12px;border-radius:6px;white-space:nowrap}
+.status-pill{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--band-risk);color:var(--band-risk);padding:6px 12px;border-radius:6px;max-width:100%}
 .plates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.plate{border:2px solid var(--band-rule);border-radius:10px;padding:12px 14px 12px;display:flex;align-items:baseline;gap:12px;min-width:0}
-.plate b{font-family:var(--font-display);font-weight:900;font-size:clamp(1.9rem,1.4rem + 1.6vw,2.7rem);line-height:1;color:var(--band-ink)}
-.plate span{font-size:.86rem;color:var(--band-ink-2);line-height:1.3}
+.plate{border:2px solid var(--band-rule);border-radius:10px;padding:12px 14px;display:flex;align-items:baseline;gap:12px;min-width:0}
+.plate b{font-family:var(--font-display);font-weight:900;font-size:clamp(1.9rem,1.4rem + 1.6vw,2.7rem);line-height:1;color:var(--band-ink);white-space:nowrap}
+.plate span{font-size:.86rem;color:var(--band-ink-2);line-height:1.3;min-width:0}
 .plate.hot{border-color:var(--now)}
 .plate.hot b{color:var(--now)}
+.plate.late{border-color:var(--band-risk);border-style:dashed}
+.plate.late b{color:var(--band-risk)}
 @media (max-width:820px){.plates{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.plate{flex-direction:column;gap:6px}}
 
 /* timeline */
 #timeline{display:block;width:100%;min-width:760px;height:auto}
@@ -117,28 +123,49 @@ section{padding-block:44px 4px}
 #timeline .p-xmas{fill:url(#tl-hatch)}
 #timeline .p-inst{fill:var(--now-soft)}
 #timeline .p-party{fill:var(--now)}
-#timeline .past{fill:var(--accent);opacity:.32}
+#timeline .past{fill:var(--ink-3);opacity:.22}
 #timeline .gate{fill:var(--ink)}
+#timeline .gate-miss{fill:var(--surface);stroke:var(--risk);stroke-width:2}
+#timeline .miss-t{fill:var(--risk);font-weight:600}
 #timeline .lead{stroke:var(--rule);stroke-width:1}
 #timeline .today{stroke:var(--now);stroke-width:2.5}
 #timeline .today-t{fill:var(--now-ink);font-weight:700}
-#timeline .turf-m{fill:var(--turf-hero)}
+#timeline .brk-risk{fill:none;stroke:var(--risk);stroke-width:1.6}
+#timeline .brk-now{fill:none;stroke:var(--now-ink);stroke-width:1.6}
+#timeline .now-t{fill:var(--ink);font-weight:600}
+#timeline .now-dot{fill:var(--now-ink)}
 #timeline .tick{stroke:var(--rule)}
 #timeline .hatch-l{stroke:var(--ink-3);stroke-width:1.2;opacity:.45}
 #timeline .xmas-bg{fill:var(--surface-2)}
+.meaning{margin-top:14px;padding:16px 18px;display:grid;gap:10px;border-color:color-mix(in srgb,var(--risk) 40%,var(--rule))}
+.meaning > *{min-width:0}
+.meaning header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.meaning header .chip{white-space:normal}
+.meaning ul{display:grid;gap:8px}
+.meaning li{list-style:none;position:relative;padding-left:16px;font-size:.93rem;max-width:96ch}
+.meaning li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--risk)}
+.dates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:4px}
+@media (max-width:820px){.dates{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.dates{grid-template-columns:minmax(0,1fr)}}
+.date{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;display:grid;gap:4px;min-width:0;background:var(--bg)}
+.date time{font-family:var(--font-mono);font-size:.74rem;font-weight:600;color:var(--now-ink);letter-spacing:.04em;text-transform:uppercase}
+.date p{font-size:.88rem;line-height:1.4}
+.date.gate time{color:var(--ink-2)}
 
 /* where things stand */
 .cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-@media (max-width:900px){.cols3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:980px){.cols3{grid-template-columns:minmax(0,1fr)}}
 .col{padding:16px 18px 18px;min-width:0}
 .col > header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
 .col .count{font-family:var(--font-display);font-weight:900;font-size:1.5rem;line-height:1}
+.col h4{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin:14px 0 2px}
+.col h4:first-of-type{margin-top:0}
 .col li{list-style:none;position:relative;padding:7px 0 7px 22px;border-bottom:1px dashed var(--rule);font-size:.93rem}
 .col li:last-child{border-bottom:0}
 .col li::before{content:"";position:absolute;left:2px;top:13px;width:9px;height:9px;border-radius:2px}
 .col.decided li::before{background:var(--ok)}
 .col.proposed li::before{background:var(--accent);border-radius:50%}
-.col.due li::before{border:1.5px solid var(--now-ink);background:transparent}
+.col.due li::before{border:2px solid var(--risk);background:transparent}
 .col.due li.done::before{background:var(--ok);border-color:var(--ok)}
 .col.due li.done{color:var(--ink-2)}
 .col li small{display:block;color:var(--ink-3);font-size:.8rem;margin-top:1px}
@@ -146,12 +173,13 @@ section{padding-block:44px 4px}
 
 /* changes */
 .changes{display:grid}
-.chg{display:grid;grid-template-columns:150px minmax(0,1fr) 22px minmax(0,1.35fr) 104px;gap:6px 14px;align-items:baseline;padding:13px 18px;border-bottom:1px solid var(--rule)}
+.chg{display:grid;grid-template-columns:150px minmax(0,1fr) 22px minmax(0,1.5fr) 104px;gap:6px 14px;align-items:baseline;padding:13px 18px;border-bottom:1px solid var(--rule)}
 .chg:last-child{border-bottom:0}
 .chg-head{padding-block:10px 8px}
 .chg-head > *{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .chg-topic{font-family:var(--font-display);font-weight:800;font-size:.98rem}
-.chg-was{color:var(--ink-3);font-size:.92rem;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink-3) 55%,transparent)}
+.chg-topic small{display:block;font-family:var(--font-mono);font-weight:400;font-size:.7rem;color:var(--ink-3);letter-spacing:.04em;margin-top:2px}
+.chg-was{color:var(--ink-3);font-size:.92rem}
 .chg-arrow{color:var(--ink-3);text-align:center}
 .chg-now{font-size:.94rem}
 .chg .chip{justify-self:start}
@@ -161,7 +189,7 @@ section{padding-block:44px 4px}
   .chg-topic{grid-column:1}
   .chg .chip{grid-column:2;grid-row:1;justify-self:end}
   .chg-was,.chg-now{grid-column:1 / -1}
-  .chg-was::before{content:"Before: ";text-decoration:none;display:inline-block;margin-right:4px}
+  .chg-was::before{content:"Before: ";display:inline-block;margin-right:4px}
   .chg-arrow{display:none}
 }
 
@@ -170,96 +198,94 @@ section{padding-block:44px 4px}
 .toolbar{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center}
 .seg{display:inline-flex;flex-wrap:wrap;background:var(--surface-2);border-radius:8px;padding:3px;gap:3px}
 .seg button{font:600 .86rem/1.2 var(--font-body);color:var(--ink-2);background:transparent;border:0;border-radius:6px;padding:7px 12px;cursor:pointer}
-.seg button small{font-weight:500;color:var(--ink-3);margin-left:4px;font-size:.76rem}
 .seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
-.seg button[disabled]{opacity:.45;cursor:default}
-.layers{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.layers{display:flex;flex-wrap:wrap;gap:6px}
 .layers button{font:500 .8rem/1.2 var(--font-body);color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:5px 11px 5px 9px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
 .layers button::before{content:"";width:10px;height:10px;border-radius:3px;border:1.5px solid var(--ink-3)}
 .layers button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink-3)}
 .layers button[aria-pressed="true"]::before{background:var(--sw,var(--ink-2));border-color:var(--sw,var(--ink-2))}
+.layers button[disabled]{opacity:.55;cursor:default}
 .map-host{margin-top:12px;overflow-x:auto;border-radius:6px;background:var(--floor);border:1px solid var(--rule)}
+.map-missing{padding:24px;color:var(--risk);font-weight:600}
 #map{display:block}
 #map text{font-family:var(--font-body)}
-#map .floor{fill:var(--floor);stroke:var(--ink-3);stroke-width:1.4}
-#map .wall{fill:var(--wall)}
-#map .stage{fill:var(--stage);stroke:var(--rule);stroke-width:1}
+#map .floor{fill:var(--floor)}
+#map .other{fill:var(--other)}
+#map .golfzone{fill:var(--zone-tint)}
+#map .apron{stroke:none}
+#map .wall{stroke:var(--ink-2);stroke-width:2.2;fill:none}
+#map .wall.nm{stroke-dasharray:7 5;stroke-width:1.6}
+#map .stage{fill:var(--stage)}
+#map .stage-front{stroke:var(--ink-3);stroke-width:1.2}
+#map .nm{stroke-dasharray:5 4}
+#map .curve{fill:var(--stage);stroke:var(--ink-3);stroke-width:1}
 #map .runway{fill:var(--runway);stroke:var(--runway-edge);stroke-width:1}
-#map .ext{fill:none;stroke:var(--runway-edge);stroke-width:1.3;stroke-dasharray:6 4}
-#map .booth{fill:var(--wall);stroke:var(--ink-3);stroke-width:1}
-#map .crowd{stroke:none}
-#map .sight{fill:var(--risk);fill-opacity:.09;stroke:var(--risk);stroke-opacity:.55;stroke-width:1;stroke-dasharray:4 3}
-#map .cable{fill:none;stroke:var(--cable);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+#map .stand{fill:var(--stand);stroke:var(--runway-edge);stroke-width:1}
+#map .stairs{fill:var(--stage);stroke:var(--runway-edge);stroke-width:1}
+#map .extra{fill:none;stroke:var(--ink-3);stroke-width:1.2;stroke-dasharray:3 3}
+#map .console,#map .lf{fill:var(--wall);stroke:var(--ink-3);stroke-width:1}
+#map .door{stroke:var(--accent);stroke-width:5;stroke-linecap:butt}
+#map .dim{stroke:var(--ink-3);stroke-width:1}
+#map .glimit{stroke:var(--accent);stroke-width:2.4;stroke-dasharray:9 5}
+#map .sight{fill:var(--risk);fill-opacity:.07;stroke:var(--risk);stroke-opacity:.5;stroke-width:1;stroke-dasharray:4 3}
+#map .cable{fill:none;stroke:var(--cable);stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:7 4;opacity:.9}
+#map .cable.trunk{stroke-width:2.8}
+#map .cable.run{stroke-width:2}
+#map .cable.drop{stroke-width:1.4;stroke-dasharray:4 3}
 #map .flag{fill:var(--risk-soft);stroke:var(--risk);stroke-width:1.4}
 #map .flag-ring{fill:none;stroke:var(--risk);stroke-width:1;stroke-dasharray:3 3}
-#map .distA{fill:var(--distA-tint)}
-#map .distB{fill:var(--distB-tint)}
-#map .blvd{fill:var(--surface-2);fill-opacity:.55;stroke:var(--ink-3);stroke-width:1;stroke-dasharray:6 4}
-#map .plaza{fill:none;stroke:var(--distA);stroke-width:1.3;stroke-dasharray:9 5}
-#map .flats{fill:var(--flats)}
 #map .hub{fill:var(--hub);stroke:var(--hub-edge);stroke-width:1.5}
-#map .hub-line{stroke:var(--hub-edge);stroke-width:1;stroke-dasharray:2 2}
 #map .route{fill:none;stroke-width:2;stroke-dasharray:6 4;stroke-linecap:round;stroke-linejoin:round}
-#map .route.a{stroke:var(--distA)}
-#map .route.b{stroke:var(--distB)}
-#map .route.v1{stroke:var(--ink-2)}
-#map .mk-a{fill:var(--distA)} #map .mk-b{fill:var(--distB)} #map .mk-v1{fill:var(--ink-2)}
-#map .turf{fill:var(--turf);stroke:var(--turf-edge);stroke-width:1.1}
-#map .hero .turf{fill:var(--turf-hero)}
-#map .hump{fill:var(--turf-edge);opacity:.18}
-#map .zebra{fill:var(--floor)}
-#map .ramp{fill:var(--turf-edge);opacity:.28}
-#map .raised{fill:var(--turf-edge);opacity:.1}
-#map .tunnel{fill:var(--ink);opacity:.18}
-#map .water{fill:var(--water);stroke:var(--turf-edge);stroke-width:.8}
-#map .wallk{stroke:var(--ink);stroke-width:3;stroke-linecap:round}
-#map .twall{stroke:var(--ink);stroke-width:3.2;stroke-linecap:butt}
-#map .blade{stroke:var(--ink);stroke-width:2.6;stroke-linecap:round}
-#map .bladehub{fill:var(--ink)}
-#map .barn{fill:var(--brick);stroke:var(--ink);stroke-width:.8}
-#map .arch{stroke:var(--brick);stroke-width:4.5;stroke-linecap:round}
-#map .ret{fill:var(--ink);opacity:.14}
-#map .pin{fill:var(--ink)}
-#map .bump{fill:var(--brick)}
-#map .tick{fill:var(--turf-edge)}
-#map .hand{stroke:var(--ink);stroke-linecap:round}
+#map .route.A{stroke:var(--distA)}
+#map .route.B{stroke:var(--distB)}
+#map .route.X{stroke:var(--ink-2)}
+#map .mk-A{fill:var(--distA)} #map .mk-B{fill:var(--distB)} #map .mk-X{fill:var(--ink-2)}
+#map .deck{fill:var(--turf);stroke-width:2.2;stroke-linejoin:round}
+#map .deck.carpet{fill:var(--carpet)}
+#map .deck.ice{fill:var(--ice)}
+#map .totem{fill:var(--totem)}
+#map .prop{fill:var(--prop);stroke:var(--prop-edge);stroke-width:.8}
 #map .tee{fill:var(--surface);stroke:var(--ink);stroke-width:1}
-#map .cup{fill:var(--surface);stroke:var(--ink);stroke-width:1.3}
-#map .plate{fill:var(--plate)}
-#map .plate-in{fill:none;stroke:var(--plate-ink);stroke-width:.8;opacity:.75}
-#map .plate-t{fill:var(--plate-ink);font-family:var(--font-display);font-weight:800}
+#map .bullet{stroke:var(--bullet-ink);stroke-width:1.2}
+#map .bullet-t{fill:var(--bullet-ink);font-family:var(--font-display);font-weight:900}
 #map .hole{cursor:pointer;outline:none}
-#map .hole.hl .turf,#map .hole:focus-visible .turf{stroke:var(--accent);stroke-width:3}
-#map .hole.sel .turf{stroke:var(--now);stroke-width:3.4}
+#map .hole.hl .deck,#map .hole:focus-visible .deck{stroke-width:4}
+#map .hole.sel .deck{stroke-width:4.4}
+#map .hole.sel .bullet{stroke-width:2.6}
 #map .lbl{fill:var(--ink-2);paint-order:stroke;stroke:var(--floor);stroke-linejoin:round}
 #map .lbl.b{fill:var(--ink);font-weight:700}
 #map .lbl.risk{fill:var(--risk);font-weight:600}
-#map .lbl.a{fill:var(--distA);font-weight:800;font-family:var(--font-display);letter-spacing:.04em}
-#map .lbl.bb{fill:var(--distB);font-weight:800;font-family:var(--font-display);letter-spacing:.04em}
-#map .lbl.hubt{fill:var(--hub-edge);font-weight:800;font-family:var(--font-display)}
-#map .lbl.sel{fill:var(--ink);font-weight:700;font-family:var(--font-display)}
-#map .zone{stroke-width:2.2;fill-opacity:.08}
-#map .zA{stroke:var(--accent);fill:var(--accent)}
-#map .zB{stroke:var(--distA);fill:var(--distA)}
-#map .zC{stroke:var(--distB);fill:var(--distB);stroke-dasharray:8 4}
-#map .lbl.zA{fill:var(--accent);font-weight:800;font-family:var(--font-display)}
-#map .lbl.zB{fill:var(--distA);font-weight:800;font-family:var(--font-display)}
-#map .lbl.zC{fill:var(--distB);font-weight:800;font-family:var(--font-display)}
-#map .zoneA-v1{fill:var(--accent);fill-opacity:.06;stroke:var(--accent);stroke-width:1.4;stroke-dasharray:8 5}
+#map .lbl.acc{fill:var(--accent);font-weight:700}
+#map .lbl.A{fill:var(--distA);font-weight:800;font-family:var(--font-display);letter-spacing:.05em}
+#map .lbl.B{fill:var(--distB);font-weight:800;font-family:var(--font-display);letter-spacing:.05em}
+#map .lbl.X{fill:var(--ink-2);font-weight:800;font-family:var(--font-display);letter-spacing:.05em}
+#map .lbl.hubt{fill:var(--hub-edge);font-weight:800;font-family:var(--font-display);letter-spacing:.04em}
+#map .lbl.sel{fill:var(--ink);font-weight:800;font-family:var(--font-display)}
 #map .scale{fill:var(--ink)}
-.spin{animation:spin 16s linear infinite;transform-box:fill-box;transform-origin:center}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.spin{animation:none}}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:.8rem;color:var(--ink-2)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
-.legend i{display:inline-block;width:14px;height:10px;border-radius:2px}
-.caption{margin-top:12px;padding-top:12px;border-top:1px solid var(--rule);font-size:.92rem;color:var(--ink-2);display:grid;gap:8px}
+.legend i{display:inline-block;width:14px;height:10px;border-radius:2px;flex:none}
+.legend i.dash{background:transparent;border:1.5px dashed var(--ink-3)}
+.legend i.line{height:0;border-top:2.5px dashed var(--ink-2);border-radius:0;width:16px}
+.detail{margin-top:14px;padding:14px 16px;border:1px solid var(--rule);border-radius:8px;display:grid;gap:10px;background:var(--bg)}
+.detail-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.detail-top > div{min-width:0;flex:1 1 12rem}
+.detail h3{font-size:1.15rem}
+.detail .sign-line{color:var(--ink-2);font-size:.9rem;font-style:italic}
+.detail p{font-size:.93rem;max-width:90ch}
+.detail dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;margin:0;font-size:.88rem}
+.detail dt{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding-top:3px}
+.detail dd{margin:0;color:var(--ink-2)}
+@media (max-width:480px){.detail dl{grid-template-columns:minmax(0,1fr)}.detail dt{padding-top:6px}}
+.bullet{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--g,var(--accent));color:var(--bullet-ink);font-family:var(--font-display);font-weight:900;font-size:1rem;box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.35)}
+.caption{margin-top:12px;padding-top:12px;border-top:1px solid var(--rule);font-size:.92rem;color:var(--ink-2);display:grid;gap:10px}
 .caption strong{color:var(--ink)}
-.caption ul{display:grid;gap:4px;padding-left:18px}
-.ztable{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
-.ztable th,.ztable td{text-align:left;padding:7px 10px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top}
-.ztable th{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.ztable td:first-child{font-family:var(--font-display);font-weight:800;color:var(--ink);white-space:nowrap}
+.caption > p{max-width:96ch}
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:6px 18px;font-size:.85rem}
+.checks div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--rule);padding:4px 0;min-width:0}
+.checks b{font-family:var(--font-mono);font-weight:600;color:var(--ink);white-space:nowrap}
+.checks b small{font-weight:400;color:var(--ink-3)}
+.checks .tight b{color:var(--now-ink)}
 
 /* hole cards */
 .districts{display:grid;gap:18px;margin-top:22px}
@@ -269,15 +295,16 @@ section{padding-block:44px 4px}
 .cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
 @media (max-width:1050px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:680px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:420px){.cards{grid-template-columns:minmax(0,1fr)}}
-.hcard{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px 12px 12px;text-align:left;font:inherit;color:inherit;cursor:pointer;display:grid;gap:7px;align-content:start;min-width:0}
+@media (max-width:440px){.cards{grid-template-columns:minmax(0,1fr)}}
+.hcard{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px;text-align:left;font:inherit;color:inherit;cursor:pointer;display:grid;gap:7px;align-content:start;min-width:0}
 .hcard:hover,.hcard.hl{border-color:var(--accent)}
 .hcard.sel{border-color:var(--now);box-shadow:0 0 0 2px var(--now) inset}
 .hcard-top{display:flex;gap:10px;align-items:center}
-.sign{flex:none;display:grid;place-items:center;min-width:34px;height:28px;padding:0 6px;border-radius:5px;background:var(--plate);color:var(--plate-ink);font-family:var(--font-display);font-weight:900;font-size:1rem;box-shadow:inset 0 0 0 1.5px var(--plate),inset 0 0 0 2.5px var(--plate-ink)}
+.hcard-top > div{min-width:0}
+.hcard .bullet{width:30px;height:30px;font-size:.95rem}
 .hcard-name{font-family:var(--font-display);font-weight:800;font-size:1rem;line-height:1.15}
-.hcard-was{font-size:.78rem;color:var(--ink-3)}
-.hcard-play{font-size:.84rem;color:var(--ink-2);line-height:1.45}
+.hcard-sign{font-size:.8rem;color:var(--ink-3);font-style:italic}
+.hcard-play{font-size:.84rem;color:var(--ink-2);line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .hcard-meta{display:flex;flex-wrap:wrap;gap:4px 10px;font-family:var(--font-mono);font-size:.7rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em}
 .cls{font-weight:600}
 .cls.Hero{color:var(--turf-edge)}
@@ -285,11 +312,13 @@ section{padding-block:44px 4px}
 /* bar charts */
 .two{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:14px;align-items:start}
 @media (max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
-.chart{padding:16px 18px 14px}
+.chart{padding:16px 18px 14px;min-width:0}
 .chart-legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--ink-2);margin-bottom:12px}
 .chart-legend span{display:inline-flex;align-items:center;gap:6px}
 .chart-legend i{width:14px;height:10px;border-radius:2px;display:inline-block}
 .rows{display:grid;gap:2px}
+.rgroup{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:12px 0 2px;border-bottom:1px solid var(--rule)}
+.rgroup:first-child{padding-top:0}
 .brow{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:4px 14px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--rule)}
 .brow:last-child{border-bottom:0}
 .brow.rec .blabel b::after{content:"proposed";margin-left:8px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:1px 6px;border-radius:999px;vertical-align:2px;font-weight:600}
@@ -316,41 +345,45 @@ section{padding-block:44px 4px}
 .rtrack{position:relative;height:20px;background-image:linear-gradient(to right,var(--rule) 1px,transparent 1px);background-size:25% 100%;border-right:1px solid var(--rule)}
 .rbar{position:absolute;top:3px;height:14px;border-radius:3px;background:var(--ink-3)}
 .rbar.city{background:var(--accent)}
+.rbar.mat{background:color-mix(in srgb,var(--accent) 45%,var(--surface))}
 .rbar .core{position:absolute;top:0;bottom:0;background:var(--ink);opacity:.35;border-radius:3px}
+.rbar .pt{position:absolute;top:-4px;bottom:-4px;width:3px;margin-left:-1.5px;background:var(--ink);border-radius:1px}
 .rbar span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:.74rem;color:var(--ink);white-space:nowrap}
 .rbar.flip span{left:auto;right:calc(100% + 6px)}
-.notes{padding:16px 18px;display:grid;gap:12px;align-content:start}
-.notes h3{font-size:.95rem}
+.notes{padding:16px 18px;display:grid;gap:12px;align-content:start;min-width:0}
 .notes ul{display:grid;gap:10px}
 .notes li{list-style:none;font-size:.9rem;padding-left:14px;position:relative}
 .notes li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .big-callout{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .big-callout b{font-family:var(--font-display);font-weight:900;font-size:2rem;line-height:1;color:var(--ink)}
 .big-callout span{font-size:.86rem;color:var(--ink-2)}
-.ceiling-note{border:1.5px dashed var(--now-ink);border-radius:8px;padding:10px 12px;font-size:.88rem;background:var(--now-soft);color:var(--ink)}
+.ceiling-note{border:1.5px dashed var(--risk);border-radius:8px;padding:10px 12px;font-size:.88rem;background:var(--risk-soft);color:var(--ink)}
 
 /* questions */
-.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-@media (max-width:900px){.qgrid{grid-template-columns:minmax(0,1fr)}}
+.qgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:820px){.qgrid{grid-template-columns:minmax(0,1fr)}}
 .qcol{padding:16px 18px 18px;min-width:0}
-.qcol h3{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.qcol h3{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.qcol > p{font-size:.9rem;color:var(--ink-2);margin-bottom:6px}
 .qcol li{list-style:none;padding:8px 0;border-bottom:1px dashed var(--rule);font-size:.91rem}
 .qcol li:last-child{border-bottom:0}
 .qcol li small{display:block;color:var(--ink-3);font-size:.8rem;margin-top:2px}
+.qcol.team{border-color:color-mix(in srgb,var(--risk) 45%,var(--rule))}
 .qcol.safety{border-color:color-mix(in srgb,var(--risk) 45%,var(--rule));background:linear-gradient(var(--risk-soft),var(--risk-soft)) top/100% 4px no-repeat,var(--surface)}
 
 /* next */
-.steps{display:grid;gap:0}
-.step{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 18px;padding:13px 18px;border-bottom:1px solid var(--rule);align-items:baseline}
+.steps{display:grid}
+.step{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 18px;padding:13px 18px;border-bottom:1px solid var(--rule);align-items:baseline}
 .step:last-child{border-bottom:0}
 .step time{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-2);font-weight:600}
 .step.hot time{color:var(--now-ink)}
-.step p{font-size:.95rem}
+.step.prog time{color:var(--accent)}
+.step p{font-size:.95rem;min-width:0}
 .step p small{display:block;color:var(--ink-3);font-size:.82rem;margin-top:2px}
 @media (max-width:560px){.step{grid-template-columns:minmax(0,1fr)}}
 
 footer{padding-block:40px 48px;color:var(--ink-3);font-size:.82rem}
-footer .wrap{display:grid;gap:8px;max-width:1200px}
+footer .wrap{display:grid;gap:8px}
 footer p{max-width:90ch}
 </style>
 </head>
@@ -361,15 +394,15 @@ footer p{max-width:90ch}
       <div>
         <p class="eyebrow">HOGC countdown party · Auditorium · Thu 31 Dec 2026</p>
         <h1>Countdown Golf</h1>
-        <p class="lede">Where the 10-hole course stands on <strong>Wed 18 Nov 2026</strong>, after today's update. Six things are decided by the team. Everything else on this page is Claude's proposal for the team to confirm by Gate 1 on Wed 25 Nov.</p>
+        <p class="lede">Where the 10-hole course stands on <strong>Fri 27 Nov 2026</strong>. Gate 0 (Fri 20 Nov) and Gate 1 (Wed 25 Nov) have passed, and the repo records <strong>no team decision after 18 Nov</strong>. Nine things are decided. Everything else on this page is Claude's proposal for the team to confirm.</p>
       </div>
-      <span class="status-pill">Planning · before Gate 0</span>
+      <span class="status-pill">G0 + G1 passed · decisions not recorded</span>
     </div>
     <div class="plates">
-      <div class="plate"><b class="num">43</b><span>days to the party</span></div>
-      <div class="plate hot"><b class="num">2</b><span>days to Gate 0<br>Fri 20 Nov</span></div>
-      <div class="plate"><b class="num">1/5</b><span>Gate 0 answers in</span></div>
-      <div class="plate"><b class="num">0</b><span>builder or turf quotes logged so far</span></div>
+      <div class="plate"><b class="num">34</b><span>days to the party</span></div>
+      <div class="plate hot"><b class="num">7</b><span>days to Gate 2<br>prototype played, Fri 4 Dec</span></div>
+      <div class="plate late"><b class="num">1/5</b><span>Gate 0 answers recorded<br>due Fri 20 Nov</span></div>
+      <div class="plate late"><b class="num">0/5</b><span>Gate 1 items recorded<br>due Wed 25 Nov</span></div>
     </div>
   </div>
 </header>
@@ -378,111 +411,143 @@ footer p{max-width:90ch}
 <section class="wrap" id="when" aria-labelledby="when-h">
   <div class="sec-head">
     <h2 id="when-h">Where we are in the calendar</h2>
-    <p>Gates from the timeline doc. If weekend services use the auditorium on 26–27 Dec, install shrinks to Mon 28 to Wed 30 Dec, so every hole must arrive finished and tested.</p>
+    <p>Gates from <code>docs/05-timeline-and-critical-path.md</code>. The gates after G1 keep their dates; the slack in front of them has gone.</p>
   </div>
   <div class="card tl-card scroll-x">
-    <svg id="timeline" viewBox="0 0 1000 200" role="img" aria-label="Timeline from 16 November to 1 January with gates G0 on 20 Nov, G1 on 25 Nov, G2 on 4 Dec, G3 on 18 Dec, G4 on 23 Dec, G5 on 30 Dec and the party on 31 Dec. Today, 18 November, is in the decide-and-quote phase."></svg>
+    <svg id="timeline" viewBox="0 0 1000 242" role="img" aria-label="Timeline from 16 November to 1 January. Gates G0 on 20 Nov and G1 on 25 Nov have passed without recorded decisions. Today is Friday 27 November. Recommended dates: decide and book the carpenter by Monday 30 November, buy the surface and LED by Tuesday 1 December, carpenter starts Wednesday 2 December. G2 prototype on 4 Dec, G3 on 18 Dec, G4 on 23 Dec, G5 on 30 Dec, party on 31 Dec."></svg>
+  </div>
+  <div class="card meaning">
+    <header><h3>What the missed gates mean</h3><span class="chip est">Claude's reading of the dates · not a team decision</span></header>
+    <ul>
+      <li><strong>The decisions G1 was meant to freeze are now the critical path.</strong> No budget ceiling, build route, builder or carpenter, surface order or install window is recorded. Until they are, nothing can be bought or built, and every day comes off the build.</li>
+      <li><strong>Imported turf now lands too late.</strong> About 20 days of production plus freight puts it after Christmas, so the playing surface has to come from Singapore stock to be in hand for the build.</li>
+      <li><strong>If the carpenter can't start until Mon 7 Dec,</strong> the prototype and the other nine holes need about 10 carpenter-days before the dry run on Fri 18 Dec, and there are exactly 10 working days. No slack. Any later and ten holes don't fit without cuts (route C's cut list).</li>
+      <li><strong>G1's fallback is weaker than it reads.</strong> "If missed, switch to the rental fallback" now means a row of carnival putting lanes: nobody in Singapore or Malaysia rents a themed course (<code>docs/19-rental-options.md</code>). That's a plain course, not the city the team asked for.</li>
+    </ul>
+    <div class="dates">
+      <div class="date"><time datetime="2026-11-30">by Mon 30 Nov</time><p>One decision meeting: budget, route, look and holes, install window. Book the carpenter in writing.</p></div>
+      <div class="date"><time datetime="2026-12-01">by Tue 1 Dec</time><p>Buy turf or carpet grass from Singapore stock; test a roll on the venue floor. Buy the LED locally or by express.</p></div>
+      <div class="date"><time datetime="2026-12-02">Wed 2 Dec</time><p>Carpenter starts: the latest start that still makes G2.</p></div>
+      <div class="date gate"><time datetime="2026-12-04">Fri 4 Dec · G2</time><p>Prototype hole built and test-played. Dates after this are unchanged.</p></div>
+    </div>
   </div>
 </section>
 
 <section class="wrap" id="stand" aria-labelledby="stand-h">
   <div class="sec-head">
     <h2 id="stand-h">Where things stand</h2>
-    <p>Recommendations are not decisions until the team confirms them. When one is confirmed, it moves to the decision log in <code>docs/project-brief.md</code>.</p>
+    <p>Decided and proposed are kept apart. A recommendation becomes a decision only when the team confirms it and it goes into the decision log in <code>docs/project-brief.md</code>.</p>
   </div>
   <div class="cols3">
     <article class="card col decided">
-      <header><span class="chip ok">Decided by the team</span><span class="count num">6</span></header>
+      <header><span class="chip ok">Decided by the team</span><span class="count num">9</span></header>
       <ul>
         <li>The countdown party, Thu 31 Dec 2026<small>16 Nov</small></li>
         <li>A one-off event<small>16 Nov</small></li>
         <li>10 holes<small>16 Nov</small></li>
         <li>One night only: temporary, movable, flat-pack; no permanent install, no reuse<small>17 Nov</small></li>
-        <li>The central strip is a raised runway, part of the stage. Nobody can cross it<small>18 Nov · fact confirmed</small></li>
-        <li>Design brief: one coherent "city", not a line; every hole fun to play; a story that works in any order; look like the Pixar Putt photos (the method, not the characters)<small>18 Nov</small></li>
+        <li>The central strip is a raised runway, part of the stage. Players can't cross it<small>18 Nov · fact</small></li>
+        <li>Design brief: one coherent "city", not a line; every hole interesting to play; a story that works in any order<small>18 Nov</small></li>
+        <li>The team's tape measurements replace the cable-plan geometry: 25.6 m wide, runway 22.54 m from the stage front<small>18 Nov · fact</small></li>
+        <li>Golf zone: the stage side of a line 27 m from the stage front; the floor beyond is for other activities<small>18 Nov</small></li>
+        <li>Design direction: New York on countdown night, Times Square feel; holes like the hot dog and bike-wheel photos; a glow you can still see in<small>18 Nov</small></li>
       </ul>
+      <p class="foot">Nothing decided after 18 Nov is recorded in the repo.</p>
     </article>
     <article class="card col proposed">
-      <header><span class="chip prop">Proposed · confirm by 25 Nov</span><span class="count num">6</span></header>
+      <header><span class="chip prop">Proposed · not decided</span><span class="count num">8</span></header>
       <ul>
-        <li>Hybrid build: buy only the turf; a local builder makes bases, rails and props<small>docs/04-sourcing.md</small></li>
-        <li>"Bright City" look: bright colour, one repeated frame, painted skyline flats, lit by the room's rig<small>Replaces Neon Countdown · needs production to light the zone</small></li>
-        <li>A city plaza at the runway tip: two districts of 5 holes, each looping back to one hub<small>Replaces the v1 line in Zone A</small></li>
-        <li>Hole mix 4 hero · 4 mid · 2 simple, re-skinned as city places (windmill → Ferris wheel, barn → station)<small>Mechanics and build unchanged</small></li>
-        <li>Story: "ten places, one moment", the city at 11:59 pm, so it works in any order</li>
-        <li>Ops: 5-stroke cap; start at any open hole; at most about 12 groups on the course; 7–9 volunteers per shift</li>
+        <li>"New York Countdown" look: one ribbed rail with a white cap, a street-sign totem and a neon-style pun sign on every hole, each hole its own LED colour, skyline flats, a dim warm wash<small>docs/10-new-york-concept.md</small></li>
+        <li>The ten holes: <span data-fill="hole-list">10 down to 1</span><small>4 hero · 4 mid · 2 simple; ten mechanics; one optional moving part; "find the 11:59" on every hole</small></li>
+        <li><span data-fill="layout-name">The current layout</span>: <span data-fill="districts">two districts</span> beside the runway, each looping back to the Tee Booth at the runway tip<small>Positions ±1 m until the stage depth is measured</small></li>
+        <li>Build route C: one paid carpenter plus volunteers. Plan ≈ S$10.9k, ≈ S$9.8k with four cuts. The carpenter's pack (16 A3 sheets) is ready for quotes<small>docs/11 and 12 · carpenter-pack/</small></li>
+        <li>Playing surface from Singapore stock (carpet grass in route C), unless China's GL025 modular green can land by 10 Dec in writing<small>docs/05 (27 Nov update)</small></li>
+        <li>27 Nov dates: decide and book the carpenter by Mon 30 Nov; surface and LED bought by Tue 1 Dec<small>docs/05 (27 Nov update)</small></li>
+        <li>Don't rent the course. Ask every builder for a hire-basis price; use 2–4 rented carnival lanes at most, as extras<small>docs/19-rental-options.md</small></li>
+        <li>Ops: 5-stroke cap; start at any open hole and play your district in order; at most about 12 groups; one district each when the queue is long; 7–9 volunteers per shift<small>docs/07-operations-and-safety.md</small></li>
       </ul>
     </article>
     <article class="card col due">
-      <header><span class="chip due">Gate 0 · due Fri 20 Nov</span><span class="count num">1/5</span></header>
+      <header><span class="chip risk">Overdue · not recorded</span><span class="count num">9</span></header>
+      <h4>Gate 0 · passed Fri 20 Nov</h4>
       <ul>
-        <li>Budget ceiling<small>The biggest gap. Suggested anchor S$35–45k for the split route</small></li>
-        <li>Expected crowd, and the hours golf runs<small>Sets queue vs timed slots and the district switch</small></li>
-        <li>Who builds: church crew, split, or outsourced?<small>Is there December volunteer capacity next to Christmas production?</small></li>
-        <li>Install window confirmed<small>Are 26–27 Dec used for services?</small></li>
+        <li>Budget ceiling<small>The biggest gap. It decides which route is possible</small></li>
+        <li>Expected crowd, and the hours golf runs<small>Sets queue or timed slots, and the one-district switch</small></li>
+        <li>Who builds: route C, church crew, split or outsourced?<small>Is there December volunteer capacity next to Christmas production?</small></li>
+        <li>Install window<small>Are 26–27 Dec used for services?</small></li>
         <li class="done">Reuse: no<small>Decided 17 Nov</small></li>
       </ul>
-      <p class="foot">If Gate 0 slips, everything after it slips day for day.</p>
+      <h4>Gate 1 · passed Wed 25 Nov</h4>
+      <ul>
+        <li>Art direction signed off, hole list frozen<small>Route C also asks: Rooftop or Broadway for hole 4?</small></li>
+        <li>Builder or carpenter chosen from at least 2 quotes</li>
+        <li>Playing surface ordered<small>Now from Singapore stock, or GL025 with a written delivery date</small></li>
+        <li>One rental quote in hand<small>Carnival lanes only: a price floor, not a like-for-like fallback</small></li>
+        <li>Layout, district format and story confirmed</li>
+      </ul>
+      <p class="foot">If the team decided any of these outside the repo, record them in the decision log and most of this list falls away.</p>
     </article>
   </div>
 </section>
 
 <section class="wrap" id="changed" aria-labelledby="changed-h">
   <div class="sec-head">
-    <h2 id="changed-h">What today's update changed</h2>
-    <p>Five commits on 18 Nov, after the team confirmed the runway and set the city brief. The full reasoning is in <code>docs/09-city-concept.md</code>.</p>
+    <h2 id="changed-h">What changed since the 18 Nov snapshot</h2>
+    <p>From the repo's history, 18–27 Nov. Most of it is Claude's work for the team to review. Only the rows marked Decided or Measured come from the team.</p>
   </div>
   <div class="card changes">
-    <div class="chg chg-head" aria-hidden="true"><span>Topic</span><span>Before (16–17 Nov)</span><span></span><span>Now (18 Nov)</span><span>Status</span></div>
-    <div class="chg"><div class="chg-topic">Central strip</div><div class="chg-was">A guess: maybe a runway</div><div class="chg-arrow">→</div><div class="chg-now">A raised runway, part of the stage. The two floor halves only join beyond its tip.</div><span class="chip ok">Fact</span></div>
-    <div class="chg"><div class="chg-topic">Design brief</div><div class="chg-was">Backyard look, holes in a line</div><div class="chg-arrow">→</div><div class="chg-now">One coherent city; fun holes; a story that works in any order</div><span class="chip ok">Decided</span></div>
-    <div class="chg"><div class="chg-topic">Look</div><div class="chg-was">Neon Countdown: dark room, UV, LED</div><div class="chg-arrow">→</div><div class="chg-now">Bright City: bright colour lit from above; LED only on safety edges and a few glows</div><span class="chip prop">Proposed</span></div>
-    <div class="chg"><div class="chg-topic">Where</div><div class="chg-was">A 46 × 11.6 m strip beside the runway</div><div class="chg-arrow">→</div><div class="chg-now">A ≈ 19.7 × 25.6 m plaza between the runway tip and the booth, away from the countdown crowd</div><span class="chip prop">Proposed</span></div>
-    <div class="chg"><div class="chg-topic">How it plays</div><div class="chg-was">Fixed route 10 → 1; hole 1 keeps the ball</div><div class="chg-arrow">→</div><div class="chg-now">Two 5-hole loops from one hub; start at any open hole; balls handed back at the hub</div><span class="chip prop">Proposed</span></div>
-    <div class="chg"><div class="chg-topic">Throughput</div><div class="chg-was">100–120 players an hour</div><div class="chg-arrow">→</div><div class="chg-now">That was a ceiling. Realistic: 75–90 an hour for 10 holes; about 2.3× that if each group plays one district</div><span class="chip est">Simulated</span></div>
-    <div class="chg"><div class="chg-topic">Hole skins</div><div class="chg-was">Windmill, Barn, generic names</div><div class="chg-arrow">→</div><div class="chg-now">Ferris Wheel, Station and eight more city places; same builds and costs</div><span class="chip prop">Proposed</span></div>
-    <div class="chg"><div class="chg-topic">Budget</div><div class="chg-was">Four build routes, S$6k to S$91k</div><div class="chg-arrow">→</div><div class="chg-now">Low-budget routes added, from about S$1.7k (DIY, floor-laid). The city look adds about S$0.9–2.1k</div><span class="chip est">Estimate</span></div>
+    <div class="chg chg-head" aria-hidden="true"><span>Topic</span><span>On 18 Nov</span><span></span><span>Now (27 Nov)</span><span>Status</span></div>
+    <div class="chg"><div class="chg-topic">The room<small>18 Nov</small></div><div class="chg-was">Read off the cable-planning tool: 54.7 × 27.1 m</div><div class="chg-arrow">→</div><div class="chg-now">The team's tape: 25.6 m wide; runway 22.54 × 2.4 m from the stage front. Stage depth and room length still not measured</div><span class="chip ok">Measured</span></div>
+    <div class="chg"><div class="chg-topic">Golf zone<small>18 Nov</small></div><div class="chg-was">A plaza past the runway tip</div><div class="chg-arrow">→</div><div class="chg-now">Stage side of a line 27 m from the stage front (4.46 m past the runway tip). The old plaza sat beyond it</div><span class="chip ok">Decided</span></div>
+    <div class="chg"><div class="chg-topic">Look<small>18 Nov</small></div><div class="chg-was">Bright City: bright colour lit from the rig</div><div class="chg-arrow">→</div><div class="chg-now">The team chose New York with a Times Square feel. Claude's answer, New York Countdown: one rail and totem everywhere, a glow colour and a pun sign per hole, a dim warm wash</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">Holes<small>18 Nov</small></div><div class="chg-was">Ten city skins on the old builds (Ferris Wheel, Station…)</div><div class="chg-arrow">→</div><div class="chg-now">Ten New York holes, each with a fallback for a miss, no loose props and nowhere a ball can stop out of reach. A bench of eight more ideas</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">Where on the floor<small>18 Nov</small></div><div class="chg-was">Plaza layout on the old geometry</div><div class="chg-arrow">→</div><div class="chg-now">Two districts beside the runway, one hub at the tip, on the tape measurements. A script checks every clearance</div><span class="chip prop">Proposed</span></div>
+    <div class="chg"><div class="chg-topic">3D model<small>18 Nov</small></div><div class="chg-was">The plaza in 3D</div><div class="chg-arrow">→</div><div class="chg-now">Rebuilt on the New York holes: three lighting set-ups and a walk mode at child, adult and tall-adult eye height. <a href="https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf" target="_blank" rel="noopener">Open it</a>. A further iteration rebuilding all ten holes is in progress, not yet merged</div><span class="chip due">In progress</span></div>
+    <div class="chg"><div class="chg-topic">Materials only<small>18 Nov</small></div><div class="chg-was">Not priced</div><div class="chg-arrow">→</div><div class="chg-now">Full New York design, team builds: ≈ S$13–27k all in Singapore; ≈ S$11–22k buying the light items from China; ≈ S$9–19k with timber from China too (not recommended)</div><span class="chip est">Estimate</span></div>
+    <div class="chg"><div class="chg-topic">Route C<small>18 Nov</small></div><div class="chg-was">A band: carpenter + volunteers, S$6–10k</div><div class="chg-arrow">→</div><div class="chg-now">Costed for the New York design, built lower and flatter: ≈ S$10.9k plan with 10% contingency; ≈ S$9.8k with four cuts</div><span class="chip est">Estimate</span></div>
+    <div class="chg"><div class="chg-topic">Carpenter's pack<small>18 Nov</small></div><div class="chg-was">Quote templates only</div><div class="chg-arrow">→</div><div class="chg-now">16 A3 sheets: site plan, standard details, one sheet per hole, Tee Booth and flats, materials. Design intent for quoting, not engineered. It raised the route C plan from S$9.5k to S$10.9k</div><span class="chip prop">Draft</span></div>
+    <div class="chg"><div class="chg-topic">China factory lanes<small>20–25 Nov</small></div><div class="chg-was">Turf only, from a factory listing</div><div class="chg-arrow">→</div><div class="chg-now">One product fits: PGM's GL025 modular tile green. Yibang (PGM's factory store) replied 24–25 Nov; price and delivery are not answered yet. To decide: GL025 decks, or route C's local surface</div><span class="chip due">Open</span></div>
+    <div class="chg"><div class="chg-topic">Benchmark visits<small>22 Nov</small></div><div class="chg-was">None planned</div><div class="chg-arrow">→</div><div class="chg-now">Three real courses are open in Singapore. Kulnari Mystery Golf (indoor, dim, a story with clues) is the must-visit; a scorecard is ready. No visit recorded yet</div><span class="chip est">Research</span></div>
+    <div class="chg"><div class="chg-topic">Renting<small>merged 27 Nov</small></div><div class="chg-was">Carnival lanes + dressing, S$3–6k, as a fallback</div><div class="chg-arrow">→</div><div class="chg-now">Nobody in Singapore or Malaysia rents a themed course. Only single carnival lanes, ≈ S$100–550 each per day. Ask builders for a hire-basis price instead</div><span class="chip est">Research</span></div>
+    <div class="chg"><div class="chg-topic">Cables<small>in progress</small></div><div class="chg-was">Drawn on the old cable-plan geometry</div><div class="chg-arrow">→</div><div class="chg-now">Being re-placed on the tape-measured plan. The map below shows them once they're in the geometry file</div><span class="chip due">In progress</span></div>
   </div>
 </section>
 
 <section class="wrap" id="plan" aria-labelledby="plan-h">
   <div class="sec-head">
     <h2 id="plan-h">The plan on the floor</h2>
-    <p>Drawn to scale in metres, from the team's planning-tool measurements. Tap a hole or a card to see it. Cable, drop and hole positions are estimates (±1 m). <a href="https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Open the 3D view</a></p>
+    <p>Drawn to scale in metres from <code>floorplan/</code> by <code>tools/make_status_page.py</code>. Dashed outlines are not measured. Tap a hole or a card to see it. <a href="https://claude.ai/artifact/V6KWW5KgTbNyyRVLupEtxf" target="_blank" rel="noopener">Walk it in 3D</a></p>
   </div>
   <div class="card map-card">
     <div class="toolbar">
-      <div class="seg" role="group" aria-label="Layout">
-        <button type="button" id="lay-v2" data-layout="v2" aria-pressed="true">v2 Plaza <small>proposed</small></button>
-        <button type="button" id="lay-v1" data-layout="v1" aria-pressed="false">v1 Strip <small>superseded</small></button>
-        <button type="button" id="lay-zones" data-layout="zones" aria-pressed="false">Zone options</button>
-      </div>
       <div class="seg" role="group" aria-label="View">
-        <button type="button" id="zoom-room" data-zoom="room" aria-pressed="true">Whole room</button>
-        <button type="button" id="zoom-close" data-zoom="close" aria-pressed="false">Course close-up</button>
+        <button type="button" id="zoom-zone" data-zoom="zone" aria-pressed="true">Golf zone</button>
+        <button type="button" id="zoom-room" data-zoom="room" aria-pressed="false">Whole room</button>
       </div>
-    </div>
-    <div class="layers" role="group" aria-label="Map layers">
-      <button type="button" id="ly-cables" data-layer="cables" aria-pressed="true" style="--sw:var(--cable)">Cables and drops (est.)</button>
-      <button type="button" id="ly-routes" data-layer="routes" aria-pressed="true" style="--sw:var(--distA)">Walk routes</button>
-      <button type="button" id="ly-sight" data-layer="sight" aria-pressed="true" style="--sw:var(--risk)">Booth sightline</button>
-      <button type="button" id="ly-ext" data-layer="ext" aria-pressed="true" style="--sw:var(--runway-edge)">Runway extension (unconfirmed)</button>
-      <button type="button" id="ly-crowd" data-layer="crowd" aria-pressed="true" style="--sw:var(--ink-3)">Countdown crowd (assumed)</button>
+      <div class="layers" role="group" aria-label="Map layers">
+        <button type="button" id="ly-routes" data-layer="routes" aria-pressed="true" style="--sw:var(--distA)">Walk routes</button>
+        <button type="button" id="ly-sight" data-layer="sight" aria-pressed="true" style="--sw:var(--risk)">Console sightline (assumed)</button>
+        <button type="button" id="ly-cables" data-layer="cables" aria-pressed="true" style="--sw:var(--cable)">Cables (approximate)</button>
+      </div>
     </div>
     <div class="map-host" id="map-host">
-      <svg id="map" role="img" aria-label="To-scale plan of the auditorium showing the stage, runway, booth, estimated cables and the proposed golf layout"></svg>
+      <svg id="map" role="img" aria-label="To-scale plan of the auditorium: stage, runway, golf limit, sound console and the proposed holes in two districts around the Tee Booth"></svg>
     </div>
-    <div class="legend" aria-hidden="true">
-      <span><i style="background:var(--turf-hero);border:1px solid var(--turf-edge)"></i>Hero hole</span>
-      <span><i style="background:var(--turf);border:1px solid var(--turf-edge)"></i>Mid or simple hole</span>
+    <div class="legend" id="legend" aria-hidden="true">
+      <span><i style="background:var(--turf);border:2px solid var(--accent)"></i>Hole deck, outlined in its glow colour</span>
+      <span><i style="background:var(--carpet)"></i>Carpet</span>
+      <span><i style="background:var(--ice);border:1px solid var(--ink-3)"></i>Rink</span>
+      <span><i style="background:var(--prop);border:1px solid var(--prop-edge)"></i>Prop beside the deck</span>
+      <span><i style="background:var(--totem);width:9px;height:9px"></i>Street-sign totem</span>
       <span><i style="background:var(--surface);border:1px solid var(--ink);width:9px;height:9px"></i>Tee</span>
-      <span><i style="background:var(--surface);border:1.5px solid var(--ink);width:10px;height:10px;border-radius:50%"></i>Cup</span>
-      <span><i style="background:var(--hub);border:1px solid var(--hub-edge)"></i>Hub: queue, putters, balls</span>
-      <span><i style="background:var(--flats);height:5px"></i>Skyline flats</span>
-      <span><i style="background:var(--cable);height:3px"></i>Power cable or drop (est.)</span>
+      <span><i style="background:var(--hub);border:1px solid var(--hub-edge)"></i>Tee Booth: queue, putters, balls</span>
       <span><i style="background:var(--runway)"></i>Runway</span>
+      <span><i style="background:var(--stand)"></i>Speaker stand</span>
+      <span><i class="dash"></i>Not measured</span>
+      <span><i class="line" style="border-color:var(--accent)"></i>Golf limit</span>
     </div>
-    <div class="caption" id="map-caption" aria-live="polite"></div>
+    <div class="detail" id="detail" aria-live="polite"></div>
+    <div class="caption" id="map-caption"></div>
   </div>
   <div class="districts" id="districts"></div>
 </section>
@@ -503,10 +568,11 @@ footer p{max-width:90ch}
     </div>
     <aside class="card notes">
       <div class="big-callout"><b class="num">75–90</b><span>players an hour to plan on for all 10 holes: about 230–270 people over 3 hours</span></div>
-      <div class="big-callout"><b class="num">≈ 2.3×</b><span>as many if each group plays one 5-hole district when the queue is long: about 540–600 people</span></div>
+      <div class="big-callout"><b class="num">≈ 2.3×</b><span>as many if each group plays one 5-hole district when the queue is long</span></div>
       <ul>
-        <li><strong>The slowest hole sets the pace.</strong> Four hero holes a minute slower than the rest cut capacity by about a quarter (77 → 56 an hour). Keep every hole within about 30 seconds of the others.</li>
-        <li><strong>Free order doesn't help.</strong> It serves 5–15% fewer players, because groups lose time finding free holes.</li>
+        <li><strong>The ceiling is 100–120 an hour</strong> at 2–2.5 minutes a hole. The course never reaches it: it takes time to fill, and groups vary.</li>
+        <li><strong>The slowest hole sets the pace.</strong> Four hero holes a minute slower than the rest cut capacity by about a quarter. Keep every hole within about 30 seconds of the others.</li>
+        <li><strong>Story slows play.</strong> Kulnari, the indoor course with clues, runs about 3–7 minutes a hole by its listing. Keep "find the 11:59" something families do while they wait, and time it on the visit.</li>
         <li><strong>Capping the course at about 12 groups</strong> costs little and cuts rounds by 10–25 minutes. The waiting moves to the queue.</li>
       </ul>
     </aside>
@@ -516,24 +582,26 @@ footer p{max-width:90ch}
 <section class="wrap" id="cost" aria-labelledby="cost-h">
   <div class="sec-head">
     <h2 id="cost-h">What it could cost</h2>
-    <p>Estimates from <code>docs/08-budget-model.md</code>, not quotes. Low-budget lines come from Singapore listing prices seen on 18 Nov that still need confirming in writing. GST is 9%.</p>
+    <p>Estimates from <code>docs/08</code>, <code>11</code> and <code>14</code>, not quotes. No quote has been logged yet. Singapore prices include 9% GST; China prices add shipping and 9% import GST.</p>
   </div>
   <div class="two">
     <div class="card chart">
       <div class="chart-legend">
-        <span><i style="background:var(--accent)"></i>Can carry the city look</span>
-        <span><i style="background:var(--ink-3)"></i>Plain or generic look</span>
+        <span><i style="background:var(--accent)"></i>Can carry the New York look</span>
+        <span><i style="background:var(--ink-3)"></i>Plain look</span>
         <span><i style="background:color-mix(in srgb,var(--ink) 35%,var(--accent))"></i>Best-value or suggested range</span>
+        <span><i style="background:var(--ink);width:3px;height:14px"></i>Costed plan</span>
       </div>
       <div class="rows" id="cost-rows"></div>
-      <div class="axis"><div></div><div><div class="axis-scale" id="cost-axis"></div><div class="axis-title">S$ thousands, cash</div></div></div>
+      <div class="axis"><div></div><div><div class="axis-scale" id="cost-axis"></div><div class="axis-title">S$ thousands</div></div></div>
     </div>
     <aside class="card notes">
-      <div class="ceiling-note"><strong>Budget ceiling: not set yet.</strong> It's the biggest gap, and it's due at Gate 0 on Fri 20 Nov. It decides which of these rows we're on.</div>
+      <div class="ceiling-note"><strong>Budget ceiling: still not set.</strong> It was due at Gate 0 on Fri 20 Nov. It decides which of these rows is possible, so it's the first item for the decision meeting.</div>
       <ul>
-        <li><strong>Why the main estimate is S$35–45k:</strong> it's priced like a small stage set. The raised deck drives the materials, and the four hero props are about a third of the labour (≈ 120 person-days in all).</li>
-        <li><strong>The city look comes from cheap things:</strong> one rail colour, one sign design, painted skyline flats, tape "streets" and the room's lights. A carpenter-led or DIY build can still carry it.</li>
-        <li><strong>Rented carnival lanes and the foam kit</strong> are plain and short. Use them as a fallback, extra kids' holes, or a price floor.</li>
+        <li><strong>Route C is the cheapest route that keeps the New York look.</strong> About a quarter goes on the carpenter and over a third on rails, timber and surface. It needs a carpenter free for about 12 days, a workshop, a flat venue floor, a dim wash from production, and 45–50 volunteer-days.</li>
+        <li><strong>The full New York design costs more in materials alone</strong> (≈ S$11–22k with the recommended China mix) than route C's whole plan. That's why route C lays the holes on the floor and uses flat cut-out props.</li>
+        <li><strong>Renting can't stand in.</strong> Ten carnival lanes cost about S$1–5.5k a day before GST and delivery, but they are short, flat and unthemed.</li>
+        <li><strong>GL025 tiles</strong> would add very roughly S$3–4k before freight inside route C (≈ S$4.5–5k for the tiles), and save some plywood and a carpenter-day. Only with a written delivery date of 10 Dec or earlier.</li>
         <li><strong>Don't cheapen the rails.</strong> Solid timber held still; foam, pool noodles and PVC pipe kill the rebound.</li>
       </ul>
     </aside>
@@ -543,37 +611,53 @@ footer p{max-width:90ch}
 <section class="wrap" id="questions" aria-labelledby="q-h">
   <div class="sec-head">
     <h2 id="q-h">Waiting on answers</h2>
-    <p>The plaza layout can't be fixed until production confirms which floor cables and drops stay on the night. A 1 m shift in drop D42 could break District B.</p>
+    <p>The overdue team decisions come first. Production's and the venue's answers decide whether the hole positions hold.</p>
   </div>
   <div class="qgrid">
-    <div class="card qcol">
-      <h3>Production <span class="chip due">this week</span></h3>
+    <div class="card qcol team">
+      <h3>The team <span class="chip risk">overdue</span></h3>
+      <p>Recommended: one short catch-up decision meeting by Mon 30 Nov to make these calls, then record each in the decision log and <code>CLAUDE.md</code>.</p>
       <ul>
-        <li>Can you light the golf zone from the rig?<small>Decides whether Bright City works</small></li>
-        <li>Is the ≈ 8.6 m runway extension being built? How high is the runway?</li>
-        <li>Does the booth need a clear sightline down the middle of the room?<small>If yes, props on the boulevard stay ≤ 1.5 m</small></li>
-        <li>Which floor cables and drops stay on the night, especially ND31 and D42? Can any move?</li>
-        <li>Where do guests come in, and where does the countdown crowd stand?</li>
-        <li>Must the floor be cleared before midnight?<small>If yes, holes become roll-in units (+10–15%)</small></li>
+        <li>Budget ceiling<small>Due at G0, 20 Nov</small></li>
+        <li>Build route: route C, or another? Who is the project lead, and who is the art lead?<small>Route C needs both named</small></li>
+        <li>The look, the ten holes, the layout, the district format and the story<small>Due at G1, 25 Nov. Rooftop or Broadway for hole 4?</small></li>
+        <li>Surface: GL025 modular decks, or route C's carpet grass from Singapore stock? Putting turf if the budget allows?<small>GL025 only with a written delivery date of 10 Dec or earlier and a landed price</small></li>
+        <li>Install window around Christmas services</li>
+        <li>Expected crowd, the hours golf runs, and whether golf closes before midnight</li>
       </ul>
     </div>
     <div class="card qcol">
-      <h3>Venue <span class="chip est">before G1</span></h3>
+      <h3>Production <span class="chip due">still open</span></h3>
       <ul>
-        <li>Install window around Christmas services<small>Part of Gate 0</small></li>
-        <li>Fire-rating requirements for turf, paint, vinyl and foam</li>
-        <li>Are the dark blocks along the top wall doors or exits?<small>If so, the north skyline flats move</small></li>
-        <li>Door and load-in widths, ceiling height, floor finish and tape rules</li>
-        <li>Is there a workshop or spare hall for the mid-December dry run?</li>
+        <li>Can you give a dim warm wash over both districts while golf runs?<small>The New York look needs glow you can still see the ball in</small></li>
+        <li>Which floor cables and drops stay on the night?<small>Being re-placed on the tape-measured plan now. Floor-laid holes can't sit on a cable</small></li>
+        <li>Is the ≈ 8.6 m runway extension being built? How high is the runway?<small>An extension would run through the Tee Booth</small></li>
+        <li>Does the sound console need a clear sightline down the room?</li>
+        <li>Where do guests come in, and where does the countdown crowd stand?</li>
+        <li>Clearance under the rig for 3–3.6 m props</li>
+        <li>Can you lend lights, RCD power boards, a truss, a mirror ball or old set flats?<small>Route C's first cut: up to S$650</small></li>
+      </ul>
+    </div>
+    <div class="card qcol">
+      <h3>Venue and measuring <span class="chip est">before positions are fixed</span></h3>
+      <ul>
+        <li>Stage depth: back wall to stage front<small>Every hole position moves with it</small></li>
+        <li>Room length, and the golf limit to the sound console<small>54.7 m is from the old cable plan; the sketch draws the room shorter</small></li>
+        <li>Where the stairs and speaker stands sit along the runway</li>
+        <li>The LF platform's length and purpose; the back-wall doors; the dark blocks along the top wall</li>
+        <li>Is the floor flat, and what is it?<small>Route C lays holes on the floor: check with a 2 m level and a rolled ball</small></li>
+        <li>Fire rating for turf, carpet, foam and paint; ceiling height; door and load-in widths</li>
+        <li>A workshop or spare hall for the build and the mid-December dry run</li>
       </ul>
     </div>
     <div class="card qcol safety">
       <h3>Safety flags <span class="chip risk">raise now</span></h3>
       <ul>
         <li><strong>Two circuits are over 100% on the cable plan:</strong> ND18 (LX4.2) at 101% and ND21 (LX6) at 106%. Breakers can trip mid-event. Raise it with whoever owns power, golf or not.</li>
-        <li><strong>Trip hazards:</strong> cable runs cross both floor halves. Holes and queues must not add trip points. The walk from the hub to hole 5 runs along drop D42 for about 6 m and needs a continuous cable cover.</li>
-        <li><strong>No slack yet:</strong> several plaza clearances sit exactly at the 1.2 m and 1.5 m limits.</li>
-        <li><strong>Course power:</strong> 12/24 V only, from a dedicated RCD-protected circuit, never ND18 or ND21.</li>
+        <li><strong>Trip hazards:</strong> cable runs cross both floor halves. Holes and queues must not add trip points; cable covers wherever a walkway crosses a run.</li>
+        <li><strong>Course power:</strong> 12/24 V only, from a dedicated RCD-protected circuit, never ND18 or ND21. Production's electrician does anything at mains voltage.</li>
+        <li><strong>Little slack:</strong> <span data-fill="tight">some clearances sit close to their rule (see the map)</span>, and every position is ±1 m until the stage depth is measured.</li>
+        <li><strong>Exits:</strong> keep every door and its sign clear of holes, flats and queues.</li>
       </ul>
     </div>
   </div>
@@ -582,25 +666,35 @@ footer p{max-width:90ch}
 <section class="wrap" id="next" aria-labelledby="next-h">
   <div class="sec-head">
     <h2 id="next-h">Next steps</h2>
-    <p>In date order. The builder's December capacity and the turf delivery are the critical path.</p>
+    <p>In date order. The dates to 2 Dec are Claude's recommendation for route C (<code>docs/05</code>, 27 Nov update), not a team decision.</p>
   </div>
   <div class="card steps">
-    <div class="step hot"><time datetime="2026-11-20">by Fri 20 Nov</time><p>Team answers Gate 0: budget ceiling, crowd and hours, who builds, install window.<small>Record each answer in the decision log and in CLAUDE.md.</small></p></div>
-    <div class="step hot"><time>this week</time><p>Take the production questions to production.<small>Lighting the golf zone, the runway extension, the booth sightline, which drops stay, where guests enter.</small></p></div>
-    <div class="step hot"><time>this week</time><p>Send the quote requests to 3–4 builders, 2 turf suppliers and 1 rental company.<small>Templates in docs/06-rfq-templates.md; log replies in docs/04-sourcing.md. Prefer turf in stock in Singapore.</small></p></div>
-    <div class="step"><time datetime="2026-11-25">Wed 25 Nov · G1</time><p>Decide the look, where the course goes, the play format and the story. Choose a builder from at least 2 quotes. Order turf.<small>Then redraw the layout with the confirmed drops and exits, rename the holes, and redo the concept renders.</small></p></div>
-    <div class="step"><time datetime="2026-12-04">Fri 4 Dec · G2</time><p>Build and play one prototype hole.<small>Turf must be in hand by about 7 Dec.</small></p></div>
+    <div class="step hot"><time datetime="2026-11-30">by Mon 30 Nov</time><p>Hold one short catch-up decision meeting for the overdue G0 and G1 calls: budget ceiling, route, the look and holes, install window, GL025 or local surface.<small>Record each answer in the decision log and in CLAUDE.md.</small></p></div>
+    <div class="step hot"><time datetime="2026-11-30">by Mon 30 Nov</time><p>Book the carpenter in writing, and keep a second name.<small>Template E in docs/06-rfq-templates.md, with the carpenter's pack. Ask every builder for a hire-basis price too. The carpenter must start by Wed 2 Dec.</small></p></div>
+    <div class="step hot"><time datetime="2026-12-01">by Tue 1 Dec</time><p>Buy the turf or carpet grass from Singapore stock and test a roll on the venue floor. Buy the LED strip locally, or order from China by express.<small>Imported turf now lands after Christmas; standard China shipping lands about 13–18 Dec.</small></p></div>
+    <div class="step hot"><time>this week</time><p>Take the production questions to production.<small>The dim wash, which cables stay, the runway extension, the console sightline, the crowd, rig clearance, lending lights.</small></p></div>
+    <div class="step"><time>before Fri 4 Dec</time><p>Visit Kulnari Mystery Golf, Boat Quay, with the scorecard in docs/18.<small>Time minutes per hole, take light-meter readings, study the spinning hole and the set dressing. About S$35–39 an adult (listed price, not a quote).</small></p></div>
+    <div class="step prog"><time>in progress</time><p>Cables are being re-placed on the tape-measured plan. Then re-run the layout and this page, and move any hole a run cuts through.<small>python3 tools/make_status_page.py</small></p></div>
+    <div class="step"><time>when measured</time><p>Measure what's missing, stage depth first. Update floorplan/auditorium-dimensions.json, then re-run the floorplan, layout and status-page scripts.</p></div>
+    <div class="step"><time datetime="2026-12-04">Fri 4 Dec · G2</time><p>Prototype built and test-played: hole 7 or 10, one raised green and a run of rail.<small>Check the rail stays put when hit hard, the ball stays in the cup, the surface speed is right. Then buy the bulk timber.</small></p></div>
+    <div class="step"><time datetime="2026-12-18">Fri 18 Dec · G3</time><p>All ten holes built; full dry-run assembly; timed play-test.<small>Aim for 2.5 minutes or less per hole for a group of 4.</small></p></div>
+    <div class="step"><time datetime="2026-12-30">23 Dec · 30 Dec</time><p>G4 ready to move; G5 installed, test-played and through the venue safety walk by 6 pm on Wed 30 Dec.</p></div>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Built on 18 Nov 2026 from the project repo: <code>CLAUDE.md</code>, <code>docs/03</code>, <code>05</code>, <code>07</code>, <code>08</code>, <code>09</code>, <code>floorplan/auditorium-dimensions.json</code>, <code>tools/make_zone_options.py</code> and <code>tools/flow_sim.py</code>. Values marked measured come from the planning tool; everything else is an estimate. Prices are estimates, not quotes.</p>
+    <p>Built on Fri 27 Nov 2026 from the project repo: <code>CLAUDE.md</code>; <code>docs/05</code>, <code>07</code>, <code>08</code>, <code>10</code>–<code>14</code>; <code>tools/flow_sim.py</code>. The map data is injected by <code>tools/make_status_page.py</code> from <span id="src-files"><code>floorplan/</code></span>. Measured values are the team's 18 Nov tape measurements; everything else is an estimate or a proposal. Prices are estimates, not quotes.</p>
     <p>Internal. AI-drafted: a team member must read, edit and own it before it's used. Questions go to the AI Governance &amp; Security Team.</p>
   </div>
 </footer>
 
+<script>
+/* STATUS:BEGIN (generated by tools/make_status_page.py; edit the script, not this block) */
+const STATUS = {"source":{"layout_name":"Layout v3 (New York Countdown)","layout_about":"Layout v3 (New York Countdown), proposal by Claude 18 Nov 2026, not decided. Generated by tools/make_layout_nyc.py on geometry v2. Positions are +-1 m: they sit on values that are not measured yet.","layout_file":"floorplan/layout-v3-nyc.json","geometry":"Geometry v2 (2026-11-20)","geometry_file":"floorplan/auditorium-dimensions.json"},"geo":{"version":2,"date":"2026-11-20","room":{"L":53.0,"W":25.6,"L_measured":false,"W_measured":true},"stage":{"front_x":6.0,"measured":false,"curves":[{"wall_z":0.0,"along":4.0,"out":2.5,"measured":false},{"wall_z":25.6,"along":2.5,"out":2.5,"measured":false}]},"runway":{"x":[6.0,28.54],"z":[11.65,14.05],"length":22.54,"width":2.4,"height":0.9,"measured":true},"golf_limit":{"x":33.0,"from_stage_front":27.0,"past_tip":4.46,"measured":true},"zones":[{"id":"golf_zone","label":"Mini golf zone","x":[6.0,33.0],"z":[0.0,25.6]},{"id":"other_activities","label":"Other activities","x":[33.0,53.0],"z":[0.0,25.6]}],"side_items":[{"type":"speaker_stand","side":"top","x":[24.44,26.04],"z":[11.135,11.65],"measured":false},{"type":"speaker_stand","side":"top","x":[16.04,17.84],"z":[11.135,11.65],"measured":false},{"type":"stairs","side":"top","x":[9.74,12.34],"z":[11.135,11.65],"measured":false},{"type":"speaker_stand","side":"bottom","x":[24.44,26.04],"z":[14.05,14.565],"measured":false},{"type":"speaker_stand","side":"bottom","x":[16.04,17.84],"z":[14.05,14.565],"measured":false},{"type":"stairs","side":"bottom","x":[9.74,12.34],"z":[14.05,14.565],"measured":false}],"doors":[{"id":"door_back_top","wall":"back","seg":[[53.0,2.7],[53.0,4.9]],"note":"Door or exit (team 18 Nov)","measured":false},{"id":"door_back_bottom","wall":"back","seg":[[53.0,19.3],[53.0,22.0]],"note":"Door or exit (team 18 Nov)","measured":false},{"id":"door_top_1","wall":"top","seg":[[16.0,0.0],[17.8,0.0]],"note":"Fire exit: keep the route to it clear and its sign visible","measured":false},{"id":"door_top_2","wall":"top","seg":[[23.0,0.0],[24.8,0.0]],"note":"Fire exit: keep the route to it clear and its sign visible","measured":false},{"id":"door_bottom_back","wall":"bottom","seg":[[48.6,25.6],[50.4,25.6]],"note":"Door / exit","measured":false}],"extras":[{"id":"delay_screen","label":"delay screen","x":[8.0,24.0],"z":[11.65,14.05],"overhead":true,"measured":false}],"lf_platform":{"label":"LF platform","x":[33.0,36.4],"z":[24.3,25.6],"measured":false},"console":{"x":[49.0,53.0],"z":[8.35,17.35],"measured":false},"measurements":{"top_wall_to_runway":{"value":11.65,"measured":true},"runway_width":{"value":2.4,"measured":true},"runway_to_lf_platform":{"value":10.25,"measured":true},"lf_platform_depth":{"value":1.3,"measured":true},"runway_to_bottom_wall":{"value":11.55,"measured":true},"top_wall_to_lf_platform":{"value":24.3,"measured":true},"room_width":{"value":25.6,"measured":true},"runway_length_stage_front_to_tip":{"value":22.54,"measured":true},"stage_front_to_golf_limit":{"value":27.0,"measured":true},"speaker_stand_out_from_runway":{"value":0.515,"measured":true}},"not_measured":["Room length: back wall estimated at about 47 m from the stage front (44-50 m; team's sense of the room and the old cable plan, 20 Nov). The 19 Nov photo estimate was 37 m; the old cable plan said a 54.7 m room","Stage depth: back wall to stage front (photos hint it may be more than 6 m)","Golf limit to sound console, and the console's size","Size of the two curved stage corners","Stairs and speaker stands: positions along the runway, lengths, and the stairs' depth","LF platform: length and where it starts along the wall; what it is for","Doors: positions and widths on all walls (side-wall doors are guesses from photos)","Runway height (photos: about 0.9 m) and whether the 2.4 m width includes the skirt","Ceiling height (photos: about 7.5-8.5 m), door and load-in route widths"]},"layout":{"hubs":[[30.0,11.0,32.6,14.7]],"apron_x":12.5,"routes":{"A":[[[30.1,10.8],[29.3,9.9],[29.6,8.3]],[[23.5,9.7],[21.95,8.2]],[[17.35,9.5],[14.0,8.35]],[[15.4,2.75],[16.4,3.2]],[[21.5,4.7],[23.2,3.6]],[[28.3,5.4],[31.4,6.2],[31.4,10.8]]],"B":[[[30.1,14.9],[29.1,15.8],[28.55,17.5]],[[22.95,19.3],[21.45,19.15],[21.4,17.3]],[[15.3,18.5],[20.3,19.2],[19.7,21.2]],[[14.6,23.1],[20.2,23.95],[20.8,22.2]],[[25.9,24.3],[29.2,24.25],[31.3,24.15]],[[30.0,18.05],[31.0,14.9]]]},"sightline":[[49.0,8.35],[49.0,17.35],[6.0,14.05],[6.0,11.65]],"checks":{"hole_hole":1.25,"hole_wall":1.67,"hole_runway":2.12,"hole_stage_front":6.57,"hole_golf_limit":0.8,"hole_hub":2.15,"hub_runway_tip":1.46,"route_corridor":1.75,"tall_sightline":1.15}},"holes":[{"n":10,"d":"A","name":"Bike Lane","sign":"Wheel See You Next Year","cls":"Simple","par":2,"L":6.0,"W":1.6,"th":180,"glow":"#3BE36B","surface":"Green turf, bike-lane stencils","play":"Five real bicycle wheels stand upright across a green bike lane in a zigzag. Thread the gaps or bank off the rail; spokes give a different bounce every time. A bike-rack hoop frames the cup.","prop":"Five old bike wheels (free from bike shops), bolted into timber cradles. A real bike bell on the totem: ring it when you hole out.","robust":"Wheels are cable-tied to their cradles so they can't turn or fall. Each wheel either touches the rail or leaves at least 0.4 m (9 balls wide), so a ball can't wedge. No power.","clock":"A bike computer on the first wheel reads 11:59.","tside":1,"c":[26.0,8.3],"district":"Downtown","deck":[[29.0,9.1],[23.0,9.1],[23.0,7.5],[29.0,7.5]],"tee":[28.7,8.3],"beside":[{"kind":"totem","poly":[[28.88,7.23],[28.52,7.23],[28.52,6.87],[28.88,6.87]]},{"kind":"prop","poly":[[22.95,9.1],[22.65,9.1],[22.65,7.5],[22.95,7.5]]}]},{"n":9,"d":"A","name":"Hot Dog Cart","sign":"Relish the Moment","cls":"Simple","par":2,"L":4.5,"W":1.4,"th":180,"glow":"#FF6A2B","surface":"Green turf","play":"Short and punchy, like the reference. Putt under a New York hot dog cart (the ball runs between its wheels), then round a giant hot dog that lies across the green as a bank wall and a heap of giant fries. Mustard and ketchup bottles stand either side of the cup.","prop":"Stainless-look cart with a striped umbrella (2.2 m), a 1 m hot dog, fries, two 0.6 m squeeze bottles.","robust":"The cart is screwed to the deck and the umbrella pole is clamped to the cart. Food props are foam on plywood bases screwed down. The gap under the cart is 0.2 m high and the full lane wide, so nothing jams.","clock":"The cart's menu board says \"Open till 11:59\".","tside":-1,"c":[19.1,8.2],"district":"Downtown","deck":[[21.35,8.9],[16.85,8.9],[16.85,7.5],[21.35,7.5]],"tee":[21.05,8.2],"beside":[{"kind":"totem","poly":[[21.23,9.53],[20.87,9.53],[20.87,9.17],[21.23,9.17]]},{"kind":"prop","poly":[[20.15,9.1],[19.25,9.1],[19.25,7.3],[20.15,7.3]]},{"kind":"prop","poly":[[16.55,8.9],[16.25,8.9],[16.25,7.5],[16.55,7.5]]}]},{"n":8,"d":"A","name":"The Big Apple","sign":"Take a Bite","cls":"Hero","par":3,"L":5.5,"W":1.6,"th":-90,"glow":"#FF2E4D","surface":"Green turf","play":"A 1.7 m apple stands across the lane. The only way through is the worm hole at its base, and two angled leaf boards funnel a good putt toward it. A miss comes back off the leaves for another go. The worm pokes out on the far side.","prop":"Thick cut-out apple: two plywood profiles 0.45 m apart, skinned and painted gloss red, with a boxed tunnel. Cartoon worm on the far side.","robust":"The tunnel is 0.32 m wide (7 balls) with a sloped floor, so a ball never stops inside; its top lifts off. The apple bolts to the deck through an L-frame. No moving parts.","clock":"The worm wears a watch at 11:59.","tside":-1,"c":[14.0,5.0],"district":"Downtown","deck":[[13.2,7.75],[13.2,2.25],[14.8,2.25],[14.8,7.75]],"tee":[14.0,7.45],"beside":[{"kind":"totem","poly":[[12.57,7.63],[12.57,7.27],[12.93,7.27],[12.93,7.63]]},{"kind":"prop","poly":[[13.15,6.0],[13.15,3.6],[14.85,3.6],[14.85,6.0]]},{"kind":"prop","poly":[[13.25,2.15],[13.25,1.9],[14.75,1.9],[14.75,2.15]]}]},{"n":7,"d":"A","name":"Gridlock","sign":"Don't Honk. Just Putt.","cls":"Mid","par":3,"L":5.0,"W":1.8,"th":0,"glow":"#FFE21A","surface":"Charcoal \"asphalt\" carpet, yellow lines, zebra crossing","play":"A traffic jam: eight chunky yellow cabs parked at angles across an asphalt lane, with traffic cones. The ball pinballs between them, so luck evens out skill and kids can beat adults. The cup sits past a zebra crossing, and a cab roof light flashes when you sink.","prop":"Cabs are painted timber blocks (360 × 170 × 140 mm) with a checker band and roof light. Cones and a New York street sign.","robust":"Cabs are screwed from below, so nothing gets knocked loose. Every gap is either closed or at least 0.25 m (6 balls wide), and inside corners are filled, so there's nowhere for a ball to get trapped. The light is battery-powered; the hole plays the same without it.","clock":"A cab's meter reads 11:59.","tside":-1,"c":[19.5,3.2],"district":"Downtown","deck":[[17.0,2.3],[22.0,2.3],[22.0,4.1],[17.0,4.1]],"tee":[17.3,3.2],"beside":[{"kind":"totem","poly":[[17.12,1.67],[17.48,1.67],[17.48,2.03],[17.12,2.03]]},{"kind":"prop","poly":[[22.05,3.55],[22.25,3.55],[22.25,4.15],[22.05,4.15]]}]},{"n":6,"d":"A","name":"Liberty Island","sign":"Lift Your Lamp","cls":"Hero","par":3,"L":5.0,"W":2.4,"th":0,"glow":"#2EE6B8","surface":"Green turf island, blue painted harbour","play":"Tee off from the pier and cross a 0.6 m ferry gangway over the harbour to a round island green. Miss the gangway and the ball drops into the harbour, which slopes back to the tee: no lost balls, just a retake. Liberty's torch arm rises 2.6 m over the island.","prop":"Verdigris torch arm (box-section plywood) leaning over the island, with a glowing flame. A small orange ferry in the harbour.","robust":"The harbour is a sloped channel 40 mm below the deck that returns every miss to the tee. The arm stands on its own weighted base behind the island, outside the play area, so nobody can lean on it. The flame LED is battery-powered.","clock":"The tablet at her base reads XI:LIX.","tside":-1,"c":[26.3,3.6],"district":"Downtown","deck":[[23.8,2.4],[28.8,2.4],[28.8,4.8],[23.8,4.8]],"tee":[24.1,3.6],"beside":[{"kind":"totem","poly":[[23.92,1.77],[24.28,1.77],[24.28,2.13],[23.92,2.13]]},{"kind":"prop","poly":[[28.8,3.2],[29.4,3.2],[29.4,4.0],[28.8,4.0]]}]},{"n":5,"d":"B","name":"The Subway","sign":"Stand Clear of the Closing Doors","cls":"Mid","par":3,"L":5.5,"W":2.4,"th":180,"glow":"#2F80FF","surface":"Grey platform carpet with a yellow edge strip","play":"A white-tiled subway wall with three tunnels, each marked as a train line. The express drops you near the cup; the two locals come out further away. Choose your line. A subway car stands at the end of the platform with its destination sign lit.","prop":"Subway-tile wall with three arched tunnels and coloured line circles. A painted subway-car front (2.4 m) as the backdrop.","robust":"Tunnels are open boxes with lift-off lids and sloped exits, so no ball can stall inside. The wall and car front bolt to the deck frame.","clock":"The platform clock shows 11:59.","tside":-1,"c":[25.2,17.5],"district":"Midtown","deck":[[27.95,18.7],[22.45,18.7],[22.45,16.3],[27.95,16.3]],"tee":[27.65,17.5],"beside":[{"kind":"totem","poly":[[27.83,19.33],[27.47,19.33],[27.47,18.97],[27.83,18.97]]},{"kind":"prop","poly":[[22.35,18.7],[22.05,18.7],[22.05,16.3],[22.35,16.3]]}]},{"n":4,"d":"B","name":"Rooftop","sign":"Raise the Roof","cls":"Mid","par":3,"L":6.0,"W":1.2,"th":180,"glow":"#9B5CFF","surface":"Green turf, raised rooftop green","play":"Putt up the fire-escape ramp (1:6) to a rooftop green 200 mm up, where the cup sits right under a wooden water tower. Too soft and it rolls back to you; too hard and it bounces off the clear back guard.","prop":"A New York water tower (barrel on steel legs, 2.4 m) over the cup, and a brownstone façade with a zigzag fire escape and lit windows.","robust":"Clear guards on both sides and the back of the rooftop. The tower's legs stand outside the rails on their own base, and the barrel's underside is 1.4 m up, out of a putter's swing.","clock":"A rooftop party clock reads 11:59.","tside":-1,"c":[17.8,17.3],"district":"Midtown","deck":[[20.8,17.9],[14.8,17.9],[14.8,16.7],[20.8,16.7]],"tee":[20.5,17.3],"beside":[{"kind":"totem","poly":[[20.68,18.53],[20.32,18.53],[20.32,18.17],[20.68,18.17]]},{"kind":"prop","poly":[[16.5,18.1],[15.3,18.1],[15.3,16.5],[16.5,16.5]]},{"kind":"prop","poly":[[14.75,18.2],[14.45,18.2],[14.45,16.4],[14.75,16.4]]}]},{"n":3,"d":"B","name":"The Rink","sign":"Break the Ice","cls":"Mid","par":3,"L":5.0,"W":2.6,"th":180,"glow":"#79DCFF","surface":"Short approach in turf, then a white \"ice\" rink (smooth white felt or laminate)","play":"A short approach onto a white rink that runs faster than turf, with rink boards to bank off. Three skaters glide slowly round on a turntable in the middle. Time it or go round. A soft touch wins.","prop":"A 3 m Christmas tree behind the rink (borrowed from the church's Christmas decorations), with a lit star. Skater cut-outs on the turntable.","robust":"The only moving part on the course, and it's optional: if the turntable stops, the skaters become fixed bumpers and the hole plays fine. The turntable sits flush with a 2 mm gap. Test the surface on the prototype; if laminate is too fast, use white felt.","clock":"The rink clock reads 11:59.","tside":-1,"c":[16.6,21.2],"district":"Midtown","deck":[[19.1,22.5],[14.1,22.5],[14.1,19.9],[19.1,19.9]],"tee":[18.8,21.2],"beside":[{"kind":"totem","poly":[[18.98,23.13],[18.62,23.13],[18.62,22.77],[18.98,22.77]]},{"kind":"prop","poly":[[14.0,21.95],[12.6,21.95],[12.6,20.45],[14.0,20.45]]}]},{"n":2,"d":"B","name":"Grand Central","sign":"Meet Me Under the Clock","cls":"Hero","par":3,"L":5.0,"W":3.0,"th":0,"glow":"#E8A33A","surface":"Clock-face green (printed or inlaid turf)","play":"Putt onto a giant clock-face green. The hands, stopped at 11:59, are fixed bumpers that split the green; the cup sits just past 12. The gold four-faced clock stands on its information booth at the edge of the green.","prop":"Four-faced brass clock with glowing faces on a round booth (1.9 m). Backdrop: a teal ceiling with gold constellations and arched windows.","robust":"The hands are 50 mm solid timber with rounded ends, screwed down. The clock and backdrop stand on their own bases outside the rails.","clock":"The whole hole is 11:59.","tside":-1,"c":[23.9,22.2],"district":"Midtown","deck":[[21.4,20.7],[26.4,20.7],[26.4,23.7],[21.4,23.7]],"tee":[21.7,22.2],"beside":[{"kind":"totem","poly":[[21.52,20.07],[21.88,20.07],[21.88,20.43],[21.52,20.43]]},{"kind":"prop","poly":[[26.35,21.75],[27.15,21.75],[27.15,22.65],[26.35,22.65]]},{"kind":"prop","poly":[[27.25,20.6],[27.5,20.6],[27.5,23.8],[27.25,23.8]]}]},{"n":1,"d":"B","name":"Times Square","sign":"Drop the Ball","cls":"Hero","par":2,"L":6.0,"W":1.4,"th":-90,"glow":"#FF3DCB","surface":"Green turf, red-step hump","play":"The finale. Putt up and over the red steps, between glowing billboards, into the cup under the ball-drop tower. The cup keeps your ball (that's the end of the round), and the tower's ball lights up with a cheer.","prop":"A 3.6 m ball-drop tower with a glitter ball and lit 2027 numbers. Billboard flats either side of the lane. A neon-style \"See you in 2027\" sign.","robust":"The light and cheer are a bonus on a battery and microswitch: if they fail, the hole still plays and still collects the balls. The tower is a truss on a weighted, guyed base outside the rails.","clock":"The billboard clock shows 11:59. Optional: at midnight a volunteer lowers the glitter ball on a pulley in time with the stage countdown.","tside":-1,"c":[31.3,20.55],"district":"Midtown","deck":[[30.6,23.55],[30.6,17.55],[32.0,17.55],[32.0,23.55]],"tee":[31.3,23.25],"beside":[{"kind":"totem","poly":[[29.97,23.43],[29.97,23.07],[30.33,23.07],[30.33,23.43]]},{"kind":"prop","poly":[[30.4,22.05],[30.4,19.05],[32.2,19.05],[32.2,22.05]]},{"kind":"prop","poly":[[31.0,17.45],[31.0,16.85],[31.6,16.85],[31.6,17.45]]}]}],"cables":{"placed":false,"note":"Not in v2. The cable runs, drops and the two circuits over 100% (ND18 at 101%, ND21 at 106%) are in the v1 file and the cable-plan screenshots, drawn in the v1 geometry. They still apply, but they need re-placing on these measurements."}};
+/* STATUS:END */
+</script>
 <script>
 (() => {
   const NS = 'http://www.w3.org/2000/svg';
@@ -612,372 +706,14 @@ footer p{max-width:90ch}
     return e;
   }
   const r2 = v => Math.round(v * 1000) / 1000;
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = v => (Math.round(v * 100) / 100).toString();
 
-  /* ---------------- data: geometry from floorplan/auditorium-dimensions.json and tools/make_zone_options.py */
-  const ROOM = { w: 54.7, d: 27.1 };
-  const RW = { x0: 6.0, x1: 31.22, z0: 12.82, z1: 15.22 };
-  const EXT = { x0: 31.22, x1: 39.8 };
-  const BOOTH = { x0: 51.95, x1: 54.7, z0: 11.8, z1: 16.4 };
-  const PLAZA = [31.22, 1.2, 50.95, 26.8];
-  const BLVD = [31.22, 11.6, 50.95, 16.45];
-  const HUB = [44.0, 11.9, 49.45, 16.2];
-  const FLATS = [[31.8, 37.6], [38.6, 44.4], [45.4, 50.6]];
-  const CABLES = [
-    [[10, 2.6], [38, 2.6]], [[10, 24.5], [38, 24.5]], [[0.5, 26.0], [51.5, 26.0]],
-    [[30.4, 1.2], [30.4, 26.8]], [[38, 2.6], [39.4, 2.6], [39.4, 7.6]],
-    [[34.1, 10.4], [34.1, 24.5]], [[43.3, 10.5], [43.3, 26.0]],
-  ];
-  const HOLES = [
-    { n: 10, was: 'Warm-Up', city: 'Speed Bump', cls: 'Simple', par: 2, turf: 5.0, L: 5.0, W: 1.2, d: 'A', c: [42.6, 8.6], th: 210, play: 'Straight lane with a gentle hump and a zebra crossing. Teaches the speed of the turf.' },
-    { n: 9, was: 'Bank Shot', city: 'The Bank', cls: 'Simple', par: 2, turf: 6.4, L: 5.0, W: 2.4, d: 'A', c: [36.0, 7.2], th: 180, play: "L-shape: bounce off the bank's 45° front wall to turn the corner." },
-    { n: 8, was: 'Windmill', city: 'The Ferris Wheel', cls: 'Hero', par: 3, turf: 6.0, L: 6.0, W: 1.2, d: 'A', c: [35.3, 3.75], th: 0, play: 'Time the putt under the turning wheel. Same build as the windmill; still playable if the motor stops.' },
-    { n: 7, was: 'Pinball', city: 'Rush Hour', cls: 'Mid', par: 3, turf: 9.0, L: 5.0, W: 1.8, d: 'A', c: [43.0, 3.75], th: 0, play: 'About 30 pins and 2 bumper blocks become traffic. Chaos evens out skill.' },
-    { n: 6, was: 'Split Decision', city: 'The Subway', cls: 'Mid', par: 3, turf: 9.0, L: 5.5, W: 2.4, d: 'A', c: [48.55, 7.35], th: 90, play: 'Three tunnels, three train lines. One is the express to the cup.' },
-    { n: 5, was: 'The Ramp', city: 'The Rooftop', cls: 'Mid', par: 3, turf: 7.0, L: 6.0, W: 1.2, d: 'B', c: [39.75, 23.0], th: 180, play: 'A 1:6 ramp up to a rooftop green 200 mm higher. Needs side guards.' },
-    { n: 4, was: 'The Barn', city: 'The Station', cls: 'Hero', par: 3, turf: 8.0, L: 5.0, W: 2.0, d: 'B', c: [32.4, 19.7], th: -90, play: 'Dogleg through the station tunnel onto a back green. Same build as the barn.' },
-    { n: 3, was: 'Island Green', city: 'The Harbour', cls: 'Mid', par: 3, turf: 6.0, L: 5.0, W: 2.4, d: 'B', c: [39.6, 18.8], th: -30, play: 'A 0.6 m bridge over painted water to an island green. A missed ball rolls back.' },
-    { n: 2, was: 'The Clock', city: 'Clock Tower Square', cls: 'Hero', par: 3, turf: 9.0, L: 5.0, W: 3.0, d: 'B', c: [45.5, 20.5], th: 90, play: 'A clock-face green; the hands, stopped at 11:59, are bumpers. The landmark and photo spot.' },
-    { n: 1, was: 'Midnight', city: 'Midnight', cls: 'Hero', par: 2, turf: 6.5, L: 6.0, W: 1.2, d: 'B', c: [49.15, 21.0], th: -90, play: 'Under the 2027 arch into a ball-return cup. The finale gate.' },
-  ];
-  const H = Object.fromEntries(HOLES.map(h => [h.n, h]));
-  const posV2 = n => ({ c: H[n].c, th: H[n].th });
-  const posV1 = n => { const i = 10 - n; const cx = 47 - i * 3.9 - 1.95; return { c: [cx, 4.35 + H[n].L / 2], th: 90 }; };
-
-  function l2w(pos, u, v) {
-    const t = pos.th * Math.PI / 180;
-    return [pos.c[0] + u * Math.cos(t) - v * Math.sin(t), pos.c[1] + u * Math.sin(t) + v * Math.cos(t)];
-  }
-  const ACC = 0.6;
-  const TEE = n => l2w(posV2(n), -(H[n].L / 2 + ACC), 0);
-  const CUP = n => l2w(posV2(n), (H[n].L / 2 + ACC), 0);
-  const ROUTE_A = [[[45.285, 11.9], TEE(10)], [CUP(10), TEE(9)], [CUP(9), [31.7, 7.2], TEE(8)], [CUP(8), TEE(7)], [CUP(7), TEE(6)], [CUP(6), [48.55, 11.9]]];
-  const ROUTE_B = [[[44.3, 16.2], [43.4, 16.9], TEE(5)], [CUP(5), TEE(4)], [CUP(4), [34.0, 16.6], TEE(3)], [CUP(3), TEE(2)], [CUP(2), [48.0, 24.65], TEE(1)], [CUP(1), [49.15, 16.2]]];
-
-  /* ---------------- state */
-  const state = {
-    layout: 'v2',
-    zoom: (window.innerWidth < 640) ? 'close' : 'room',
-    layers: { cables: true, routes: true, sight: true, ext: true, crowd: true },
-    sel: 2,
-  };
-
-  const VB = {
-    room: [-0.7, -0.9, 56.1, 30.0],
-    v2: [28.7, -0.9, 27.1, 30.0],
-    v1: [5.0, -0.9, 48.6, 15.4],
-    zones: [4.6, -0.9, 51.1, 30.0],
-  };
-  const viewBox = () => state.zoom === 'room' ? VB.room : VB[state.layout];
-
-  const svg = document.getElementById('map');
-  const host = document.getElementById('map-host');
-
-  function render() {
-    const [vx, vz, vw, vh] = viewBox();
-    const minW = state.zoom === 'room' ? 680 : 360;
-    const cw = Math.max(host.clientWidth || 800, minW);
-    const ppm = cw / vw;
-    const u = 1 / ppm;                         // metres per screen pixel
-    svg.setAttribute('viewBox', `${vx} ${vz} ${vw} ${vh}`);
-    svg.style.width = cw + 'px';
-    svg.style.height = (cw * vh / vw) + 'px';
-    svg.replaceChildren();
-
-    const defs = S('defs', null, svg);
-    const pat = S('pattern', { id: 'crowd-hatch', patternUnits: 'userSpaceOnUse', width: r2(7 * u), height: r2(7 * u), patternTransform: 'rotate(45)' }, defs, true);
-    S('line', { x1: 0, y1: 0, x2: 0, y2: r2(7 * u), style: `stroke:var(--ink-3);stroke-width:${r2(1 * u)};opacity:.45` }, pat, true);
-    for (const k of ['a', 'b', 'v1']) {
-      const m = S('marker', { id: 'mk-' + k, viewBox: '0 0 10 10', refX: 7, refY: 5, markerUnits: 'userSpaceOnUse', markerWidth: r2(9 * u), markerHeight: r2(9 * u), orient: 'auto' }, defs, true);
-      S('path', { d: 'M0,0 L10,5 L0,10 z', class: 'mk-' + k }, m, true);
-    }
-
-    const rect = (x0, z0, x1, z1, cls, p = svg, extra = {}) => S('rect', Object.assign({ x: x0, y: z0, width: r2(x1 - x0), height: r2(z1 - z0), class: cls }, extra), p);
-    const line = (pts, cls, p = svg, extra = {}) => S('polyline', Object.assign({ points: pts.map(q => q.map(r2).join(',')).join(' '), class: cls }, extra), p);
-    const label = (x, z, txt, opt = {}) => {
-      const px = opt.px || 11;
-      const t = S('text', {
-        x: r2(x), y: r2(z), 'font-size': r2(px * u), 'text-anchor': opt.anchor || 'middle', 'dominant-baseline': 'middle',
-        class: 'lbl ' + (opt.cls || ''), 'stroke-width': r2(3.2 * u),
-        transform: opt.rot ? `rotate(${opt.rot} ${r2(x)} ${r2(z)})` : null,
-      }, opt.p || svg);
-      t.textContent = txt;
-      return t;
-    };
-
-    // room shell
-    rect(0, 0, ROOM.w, ROOM.d, 'floor');
-    rect(0, 0, ROOM.w, 1.2, 'wall');
-    rect(0, 0, 6.0, ROOM.d, 'stage');
-    label(3.0, 13.55, 'STAGE', { px: 12, cls: 'b', rot: -90 });
-    label(state.layout === 'v2' ? 16 : 27.35, 0.62, 'Top-wall blocks: doors or exits? (to confirm)', { px: 9.5 });
-
-    if (state.layers.crowd) {
-      rect(6, 1.2, 24, 12.82, 'crowd', svg, { fill: 'url(#crowd-hatch)' });
-      rect(6, 15.22, 24, 26.8, 'crowd', svg, { fill: 'url(#crowd-hatch)' });
-      label(15, 9.6, 'Assumed countdown crowd', { px: 10 });
-      label(15, 18.4, 'Assumed countdown crowd', { px: 10 });
-    }
-
-    // layout underlays
-    if (state.layout === 'v2') {
-      rect(PLAZA[0], PLAZA[1], PLAZA[2], BLVD[1], 'distA');
-      rect(PLAZA[0], BLVD[3], PLAZA[2], PLAZA[3], 'distB');
-      rect(...BLVD, 'blvd');
-    }
-    if (state.layout === 'v1') {
-      rect(6, 1.2, 51.95, 12.82, 'zoneA-v1');
-    }
-
-    if (state.layers.sight) {
-      S('polygon', { points: [[RW.x1, RW.z0], [BOOTH.x0, BOOTH.z0], [BOOTH.x0, BOOTH.z1], [RW.x1, RW.z1]].map(q => q.join(',')).join(' '), class: 'sight' }, svg);
-    }
-
-    // runway and booth
-    rect(RW.x0, RW.z0, RW.x1, RW.z1, 'runway');
-    label((RW.x0 + RW.x1) / 2, (RW.z0 + RW.z1) / 2, 'RUNWAY · raised, part of the stage', { px: 10.5, cls: 'b' });
-    if (state.layers.ext) {
-      rect(EXT.x0, RW.z0, EXT.x1, RW.z1, 'ext');
-      label((EXT.x0 + EXT.x1) / 2, (RW.z0 + RW.z1) / 2, 'extension?', { px: 9.5 });
-    }
-    rect(BOOTH.x0, BOOTH.z0, BOOTH.x1, BOOTH.z1, 'booth');
-    label((BOOTH.x0 + BOOTH.x1) / 2, (BOOTH.z0 + BOOTH.z1) / 2, 'BOOTH?', { px: 10, cls: 'b', rot: -90 });
-
-    if (state.layout === 'v2') {
-      label(37.4, 12.2, 'BOULEVARD · walkway, no holes', { px: 9.5 });
-      if (state.layers.sight) label(43.4, 15.75, 'booth sightline: props ≤ 1.5 m', { px: 9.5, anchor: 'end', cls: 'risk' });
-      rect(...PLAZA, 'plaza');
-      for (const [x0, x1] of FLATS) { rect(x0, 1.2, x1, 1.6, 'flats'); rect(x0, 25.3, x1, 25.7, 'flats'); }
-      label(41.2, 0.62, 'painted skyline flats, 2.4–3.6 m tall', { px: 9.5 });
-      // hub
-      rect(...HUB, 'hub', svg, { rx: 0.2 });
-      for (let k = 0; k < 3; k++) { const zq = HUB[1] + 1.0 + k * 1.05; line([[HUB[0] + 0.5, zq], [HUB[0] + 3.2, zq]], 'hub-line'); }
-      label((HUB[0] + HUB[2]) / 2, HUB[1] + 0.55, 'HUB', { px: 11.5, cls: 'hubt' });
-      label((HUB[0] + HUB[2]) / 2, HUB[3] - 0.5, 'queue · putters · balls', { px: 9 });
-    } else if (state.layout === 'v1') {
-      rect(47.6, 4.35, 51.4, 11.9, 'hub', svg, { rx: 0.2 });
-      label(49.5, 8.1, 'QUEUE', { px: 11, cls: 'hubt', rot: -90 });
-    } else if (state.layers.sight) {
-      label(43.4, 15.75, 'booth sightline', { px: 9.5, anchor: 'end', cls: 'risk' });
-    }
-
-    if (state.layers.cables) {
-      for (const pts of CABLES) line(pts, 'cable');
-      label(34.4, 11.0, 'ND31', { px: 9, anchor: 'start', cls: 'risk' });
-      label(43.6, 11.0, 'D42', { px: 9, anchor: 'start', cls: 'risk' });
-      label(39.7, 7.2, 'D53', { px: 9, anchor: 'start', cls: 'risk' });
-      for (const [x, z, t] of [[18.6, 11.1, 'ND18 · 101% load'], [19.0, 22.9, 'ND21 · 106% load']]) {
-        S('circle', { cx: x, cy: z, r: 1.0, class: 'flag-ring' }, svg);
-        S('circle', { cx: x, cy: z, r: 0.3, class: 'flag' }, svg);
-        label(x + 1.3, z, t, { px: 9.5, anchor: 'start', cls: 'risk' });
-      }
-    }
-
-    // zones
-    if (state.layout === 'zones') {
-      rect(6.0, 1.2, 51.95, 12.82, 'zone zA');
-      rect(31.52, 1.5, 50.65, 26.5, 'zone zB');
-      S('polygon', { points: [[24.6, 1.8], [50.35, 1.8], [50.35, 26.2], [24.6, 26.2], [24.6, 15.82], [31.82, 15.82], [31.82, 12.22], [24.6, 12.22]].map(q => q.join(',')).join(' '), class: 'zone zC' }, svg);
-      label(8.0, 11.9, 'A · Strip ≈ 534 m²', { px: 12, anchor: 'start', cls: 'zA' });
-      label(41.1, 20.6, 'B · Plaza ≈ 505 m²', { px: 12, cls: 'zB' });
-      label(27.9, 21.6, 'C · U ≈ 673 m²', { px: 12, cls: 'zC', rot: -90 });
-    }
-
-    // routes
-    if (state.layers.routes && state.layout === 'v2') {
-      for (const hop of ROUTE_A) line(hop, 'route a', svg, { 'marker-end': 'url(#mk-a)' });
-      for (const hop of ROUTE_B) line(hop, 'route b', svg, { 'marker-end': 'url(#mk-b)' });
-    }
-    if (state.layers.routes && state.layout === 'v1') {
-      line([[49.5, 3.3], [7.6, 3.3]], 'route v1', svg, { 'marker-end': 'url(#mk-v1)' });
-      label(28.5, 11.7, 'v1: one-way line, 10 → 1, ending near the stage', { px: 10, cls: 'b' });
-    }
-
-    // holes
-    if (state.layout !== 'zones') {
-      const pos = state.layout === 'v2' ? posV2 : posV1;
-      for (const h of HOLES) drawHole(h, pos(h.n), u, label);
-      if (state.layout === 'v2') {
-        label(37.6, 9.95, 'DISTRICT A · holes 10 → 6', { px: 10.5, cls: 'a' });
-        label(40.3, 24.85, 'DISTRICT B · holes 5 → 1', { px: 10.5, cls: 'bb' });
-      }
-    }
-
-    // scale bar and room size
-    const sx = state.zoom === 'room' ? 0.4 : vx + 0.6;
-    S('rect', { x: sx, y: 27.75, width: 5, height: r2(4 * u), class: 'scale' }, svg);
-    label(sx + 5.4, 27.75 + 2 * u, '5 m', { px: 10, anchor: 'start', cls: 'b' });
-    if (state.zoom === 'room') label(54.7, 27.85, 'Room 54.7 × 27.1 m (measured) · runway tip → booth 20.73 m (measured)', { px: 9.5, anchor: 'end' });
-  }
-
-  function drawHole(h, pos, u, label) {
-    const g = S('g', { class: `hole ${h.cls === 'Hero' ? 'hero' : ''} ${state.sel === h.n ? 'sel' : ''}`, 'data-n': h.n, tabindex: 0, role: 'button', 'aria-label': `Hole ${h.n}: ${h.city}` }, svg);
-    const lg = S('g', { transform: `translate(${pos.c[0]} ${pos.c[1]}) rotate(${pos.th})` }, g);
-    const L = h.L, W = h.W, a = -L / 2, b = L / 2;
-    const R = (x0, y0, x1, y1, cls) => S('rect', { x: r2(x0), y: r2(y0), width: r2(x1 - x0), height: r2(y1 - y0), class: cls }, lg);
-    const P = (pts, cls) => S('polygon', { points: pts.map(q => q.map(r2).join(',')).join(' '), class: cls }, lg);
-    const C = (cx, cy, r, cls) => S('circle', { cx: r2(cx), cy: r2(cy), r: r2(r), class: cls }, lg);
-    const Ln = (x0, y0, x1, y1, cls) => S('line', { x1: r2(x0), y1: r2(y0), x2: r2(x1), y2: r2(y1), class: cls }, lg);
-    let tee = [a + 0.3, 0], cup = [b - 0.45, 0], plate = [a + 1.25, 0];
-    switch (h.n) {
-      case 10:
-        R(a, -W / 2, b, W / 2, 'turf'); R(-0.6, -W / 2, 0.0, W / 2, 'hump');
-        for (let i = 0; i < 4; i++) R(0.45, -0.42 + i * 0.24, 1.15, -0.42 + i * 0.24 + 0.12, 'zebra');
-        break;
-      case 9:
-        P([[a, -1.2], [1.9, -1.2], [2.5, -0.6], [2.5, 1.2], [1.3, 1.2], [1.3, 0], [a, 0]], 'turf');
-        Ln(1.9, -1.2, 2.5, -0.6, 'wallk');
-        tee = [a + 0.3, -0.6]; cup = [1.9, 0.75]; plate = [a + 1.25, -0.6];
-        break;
-      case 8:
-        R(a, -W / 2, b, W / 2, 'turf'); R(-0.3, -W / 2, 0.3, W / 2, 'tunnel');
-        break;
-      case 7: {
-        R(a, -W / 2, b, W / 2, 'turf');
-        for (let r = 0; r < 5; r++) for (let k = 0; k < (r % 2 ? 4 : 5); k++) C(-0.5 + r * 0.42, -0.6 + k * 0.3 + (r % 2 ? 0.15 : 0), 0.045, 'pin');
-        R(1.75, -0.85, 1.95, -0.4, 'bump'); R(1.75, 0.4, 1.95, 0.85, 'bump');
-        cup = [b - 0.3, 0];
-        break;
-      }
-      case 6:
-        P([[a, -0.5], [-0.95, -0.5], [-0.95, -1.2], [b, -1.2], [b, 1.2], [-0.95, 1.2], [-0.95, 0.5], [a, 0.5]], 'turf');
-        for (const [v0, v1] of [[-1.2, -0.82], [-0.48, -0.17], [0.17, 0.48], [0.82, 1.2]]) Ln(-0.35, v0, -0.35, v1, 'twall');
-        cup = [2.2, 0.55];
-        break;
-      case 5:
-        R(a, -W / 2, b, W / 2, 'turf'); R(-0.4, -W / 2, 0.9, W / 2, 'ramp'); R(0.9, -W / 2, b, W / 2, 'raised');
-        break;
-      case 4:
-        P([[a, -1], [b, -1], [b, 1], [0.5, 1], [0.5, 0], [a, 0]], 'turf');
-        R(-0.35, -1, 0.5, 0, 'barn');
-        tee = [a + 0.3, -0.5]; cup = [1.95, 0.45]; plate = [a + 1.25, -0.5];
-        break;
-      case 3:
-        C(1.3, 0, 1.2, 'water'); R(a, -0.3, 0.45, 0.3, 'turf'); C(1.3, 0, 0.95, 'turf');
-        cup = [1.55, 0.15];
-        break;
-      case 2:
-        R(a, -0.5, -0.3, 0.5, 'turf'); C(1.0, 0, 1.5, 'turf');
-        cup = [1.6, 0.75];
-        break;
-      case 1:
-        R(a, -W / 2, b, W / 2, 'turf'); R(b - 0.9, -W / 2, b, W / 2, 'ret');
-        Ln(-0.9, -W / 2 - 0.25, -0.9, W / 2 + 0.25, 'arch');
-        break;
-    }
-    S('rect', { x: r2(tee[0] - 0.15), y: r2(tee[1] - 0.15), width: 0.3, height: 0.3, class: 'tee' }, lg);
-    S('circle', { cx: r2(cup[0]), cy: r2(cup[1]), r: 0.14, class: 'cup' }, lg);
-
-    // world-space extras
-    if (h.n === 8) {
-      const [wx, wz] = l2w(pos, 0, 0);
-      const outer = S('g', { transform: `translate(${r2(wx)} ${r2(wz)})` }, g);
-      const sp = S('g', { class: 'spin' }, outer);
-      S('line', { x1: -0.85, y1: -0.85, x2: 0.85, y2: 0.85, class: 'blade' }, sp);
-      S('line', { x1: -0.85, y1: 0.85, x2: 0.85, y2: -0.85, class: 'blade' }, sp);
-      S('circle', { cx: 0, cy: 0, r: 0.16, class: 'bladehub' }, sp);
-    }
-    if (h.n === 2) {
-      const [wx, wz] = l2w(pos, 1.0, 0);
-      for (let i = 0; i < 12; i++) { const t = i * Math.PI / 6; S('circle', { cx: r2(wx + 1.27 * Math.sin(t)), cy: r2(wz - 1.27 * Math.cos(t)), r: i % 3 ? 0.04 : 0.07, class: 'tick' }, g); }
-      const hand = (deg, len, w) => { const t = deg * Math.PI / 180; S('line', { x1: r2(wx), y1: r2(wz), x2: r2(wx + len * Math.sin(t)), y2: r2(wz - len * Math.cos(t)), class: 'hand', style: `stroke-width:${w}px` }, g); };
-      hand(-6, 1.1, 2); hand(-1, 0.7, 3.2);
-    }
-    // street-sign number plate
-    const [px, pz] = l2w(pos, plate[0], plate[1]);
-    const fs = Math.max(0.6, 10.5 * u);
-    const pw = fs * (h.n === 10 ? 1.95 : 1.4), ph = fs * 1.28;
-    S('rect', { x: r2(px - pw / 2), y: r2(pz - ph / 2), width: r2(pw), height: r2(ph), rx: r2(ph * 0.2), class: 'plate' }, g);
-    S('rect', { x: r2(px - pw / 2 + 2 * u), y: r2(pz - ph / 2 + 2 * u), width: r2(pw - 4 * u), height: r2(ph - 4 * u), rx: r2(ph * 0.15), class: 'plate-in' }, g);
-    const t = S('text', { x: r2(px), y: r2(pz + fs * 0.06), 'font-size': r2(fs), 'text-anchor': 'middle', 'dominant-baseline': 'middle', class: 'plate-t' }, g);
-    t.textContent = h.n;
-
-    if (state.sel === h.n) {
-      const t2 = pos.th * Math.PI / 180, ex = Math.abs(h.L / 2 * Math.sin(t2)) + Math.abs(h.W / 2 * Math.cos(t2));
-      const zTop = pos.c[1] - ex - 0.5;
-      label(pos.c[0], zTop, h.city, { px: 11.5, cls: 'sel', p: g });
-    }
-
-    g.addEventListener('pointerenter', () => setHover(h.n, true));
-    g.addEventListener('pointerleave', () => setHover(h.n, false));
-    g.addEventListener('click', () => select(h.n));
-    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(h.n); } });
-  }
-
-  /* ---------------- captions */
-  const CAPTIONS = {
-    v2: `<p><strong>Draft layout v2 (proposal).</strong> Two districts of 5 holes, each a loop that leaves the hub and comes back to it. A group can start at any open hole and play on until it's back where it started. When the queue is long, each group plays one district. The 10 holes take about 99 m² of a 505 m² plaza; every walkway is at least 1.2 m.</p>
-         <ul><li>It still fits if the runway extension is built, with no hole moving.</li>
-         <li>Before fixing any position: confirm drops ND31 and D42, whether the top-wall blocks are exits, and where the booth door is. A 75 mm deck can't sit on a cable.</li></ul>`,
-    v1: `<p><strong>Draft layout v1 (superseded on 18 Nov).</strong> Ten holes in a line across the top half, played 10 → 1 toward the stage. It was set aside because the strip forces a straight line, and its stage end shares the floor with the countdown crowd.</p>`,
-    zones: `<p><strong>Three places the course could go</strong>, now that the runway is confirmed. The two floor halves only join beyond the runway tip. Choosing one is a Gate 1 decision and needs production's answers on the crowd zone, booth sightline and runway extension.</p>
-         <div class="scroll-x"><table class="ztable"><thead><tr><th>Option</th><th>Size</th><th>For</th><th>Against</th></tr></thead><tbody>
-         <tr><td>A · Strip</td><td>≈ 534 m², 46 × 11.6 m</td><td>Already drawn; uses one side only</td><td>Forces a line; shares the floor with the countdown crowd near the stage</td></tr>
-         <tr><td>B · Plaza (proposed)</td><td>≈ 505 m², 19.7 × 25.6 m</td><td>Room for a real cluster; both halves meet here; away from the crowd</td><td>Booth sightline crosses it; two cable drops cut the south half; tight clearances</td></tr>
-         <tr><td>C · U around the runway</td><td>≈ 673 m²</td><td>The most room</td><td>Takes the most party floor; the runway splits it; runs up to the crowd area</td></tr>
-         </tbody></table></div>`,
-  };
-
-  /* ---------------- hole cards */
-  const districts = document.getElementById('districts');
-  const cardEls = {};
-  for (const [d, title, sub, col] of [['A', 'District A', 'holes 10 → 6 · leaves the hub and loops back', 'var(--distA)'], ['B', 'District B', 'holes 5 → 1 · leaves the hub and loops back', 'var(--distB)']]) {
-    const wrap = document.createElement('div');
-    wrap.className = 'district';
-    wrap.innerHTML = `<h3><i class="dot" style="background:${col}"></i>${title}<span>${sub}</span></h3><div class="cards"></div>`;
-    const grid = wrap.querySelector('.cards');
-    for (const h of HOLES.filter(x => x.d === d)) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'hcard';
-      b.id = 'card-' + h.n;
-      b.innerHTML = `<div class="hcard-top"><span class="sign">${h.n}</span><div><div class="hcard-name">${h.city}</div><div class="hcard-was">was "${h.was}"</div></div></div>
-        <p class="hcard-play">${h.play}</p>
-        <div class="hcard-meta"><span class="cls ${h.cls}">${h.cls}</span><span>Par ${h.par}</span><span>${h.L.toFixed(1)} × ${h.W.toFixed(1)} m</span><span>${h.turf.toFixed(1)} m² turf</span></div>`;
-      b.addEventListener('click', () => select(h.n));
-      b.addEventListener('pointerenter', () => setHover(h.n, true));
-      b.addEventListener('pointerleave', () => setHover(h.n, false));
-      cardEls[h.n] = b;
-      grid.appendChild(b);
-    }
-    districts.appendChild(wrap);
-  }
-
-  function setHover(n, on) {
-    const g = svg.querySelector(`.hole[data-n="${n}"]`);
-    if (g) g.classList.toggle('hl', on);
-    if (cardEls[n]) cardEls[n].classList.toggle('hl', on);
-  }
-  function select(n) {
-    state.sel = n;
-    for (const k in cardEls) cardEls[k].classList.toggle('sel', +k === n);
-    if (state.layout === 'zones') setLayout('v2'); else render();
-  }
-
-  /* ---------------- controls */
-  function syncControls() {
-    document.querySelectorAll('[data-layout]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout)));
-    document.querySelectorAll('[data-zoom]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.zoom === state.zoom)));
-    document.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-pressed', String(state.layers[b.dataset.layer])));
-    document.getElementById('ly-routes').disabled = state.layout === 'zones';
-    document.getElementById('map-caption').innerHTML = CAPTIONS[state.layout];
-  }
-  function setLayout(l) { state.layout = l; syncControls(); render(); }
-  document.querySelectorAll('[data-layout]').forEach(b => b.addEventListener('click', () => setLayout(b.dataset.layout)));
-  document.querySelectorAll('[data-zoom]').forEach(b => b.addEventListener('click', () => { state.zoom = b.dataset.zoom; syncControls(); render(); }));
-  document.querySelectorAll('[data-layer]').forEach(b => b.addEventListener('click', () => { const k = b.dataset.layer; state.layers[k] = !state.layers[k]; syncControls(); render(); }));
-
-  let rt;
-  if ('ResizeObserver' in window) new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(render, 60); }).observe(host);
-  else window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(render, 60); });
-
-  for (const k in cardEls) cardEls[k].classList.toggle('sel', +k === state.sel);
-  syncControls();
-  render();
-
-  /* ---------------- timeline */
+  /* ---------------- timeline (static dates) */
   (function timeline() {
     const t = document.getElementById('timeline');
-    const X = d => 30 + d * 18.9;
+    const X = d => 30 + d * 18.9;            // d = days after Mon 16 Nov
+    const TODAY = 11;                         // Fri 27 Nov
     const defs = S('defs', null, t, true);
     const pat = S('pattern', { id: 'tl-hatch', patternUnits: 'userSpaceOnUse', width: 6, height: 6, patternTransform: 'rotate(45)' }, defs, true);
     S('rect', { x: 0, y: 0, width: 6, height: 6, class: 'xmas-bg' }, pat, true);
@@ -989,49 +725,64 @@ footer p{max-width:90ch}
       S('rect', { x: X(d0), y: BY, width: X(d1) - X(d0), height: BH, class: 'ph ' + cls }, t, true);
       if (lbl) txt((X(d0) + X(d1)) / 2, BY + BH / 2 + 4, lbl, 'tband', 'middle');
     }
-    S('rect', { x: X(0), y: BY, width: X(2) - X(0), height: BH, class: 'past' }, t, true);
-    // party star
+    S('rect', { x: X(0), y: BY, width: X(TODAY) - X(0), height: BH, class: 'past' }, t, true);
     const sx = (X(45) + X(46)) / 2, sy = BY + BH / 2;
     const star = []; for (let i = 0; i < 10; i++) { const r = i % 2 ? 4 : 9, a = -Math.PI / 2 + i * Math.PI / 5; star.push([sx + r * Math.cos(a), sy + r * Math.sin(a)]); }
     S('polygon', { points: star.map(p => p.map(v => v.toFixed(1)).join(',')).join(' '), class: 'gate' }, t, true);
     txt(X(46) + 8, BY + 12, 'Party', 'tb');
     txt(X(46) + 8, BY + 27, 'Thu 31 Dec', '');
-    // gates
-    const gates = [[4, 'G0 · Fri 20 Nov', 'Frame: budget, crowd', 1, 'start'], [9, 'G1 · Wed 25 Nov', 'Commit: look, builder, turf', 2, 'start'], [18, 'G2 · Fri 4 Dec', 'Prototype hole played', 1, 'start'], [32, 'G3 · Fri 18 Dec', 'All 10 built, dry run', 2, 'end'], [37, 'G4 · Wed 23 Dec', 'Ready to move', 2, 'start'], [44, 'G5 · Wed 30 Dec', 'Installed, safety walk', 1, 'end']];
-    for (const [d, l1, l2, row, anchor] of gates) {
+    const gates = [
+      [4, 'G0 · Fri 20 Nov', 'passed · not recorded', 1, 'start', true],
+      [9, 'G1 · Wed 25 Nov', 'passed · not recorded', 2, 'start', true],
+      [18, 'G2 · Fri 4 Dec', 'Prototype hole played', 1, 'start'],
+      [32, 'G3 · Fri 18 Dec', 'All 10 built, dry run', 2, 'end'],
+      [37, 'G4 · Wed 23 Dec', 'Ready to move', 2, 'start'],
+      [44, 'G5 · Wed 30 Dec', 'Installed, safety walk', 1, 'end'],
+    ];
+    for (const [d, l1, l2, row, anchor, missed] of gates) {
       const x = X(d), y1 = row === 1 ? 18 : 52;
       S('line', { x1: x, y1: y1 + 20, x2: x, y2: BY - 6, class: 'lead' }, t, true);
-      S('rect', { x: x - 5, y: BY - 11, width: 10, height: 10, transform: `rotate(45 ${x} ${BY - 6})`, class: 'gate' }, t, true);
+      S('rect', { x: x - 5, y: BY - 11, width: 10, height: 10, transform: `rotate(45 ${x} ${BY - 6})`, class: missed ? 'gate-miss' : 'gate' }, t, true);
       const dx = anchor === 'start' ? -2 : 2;
       txt(x + dx, y1, l1, 'tb', anchor);
-      txt(x + dx, y1 + 15, l2, '', anchor);
+      txt(x + dx, y1 + 15, l2, missed ? 'miss-t' : '', anchor);
     }
-    // turf milestone
-    S('polygon', { points: `${X(21)},${BY + BH + 4} ${X(21) - 5},${BY + BH + 12} ${X(21) + 5},${BY + BH + 12}`, class: 'turf-m' }, t, true);
-    txt(X(21), BY + BH + 26, 'Turf in hand ≈ 7 Dec', '', 'middle');
-    txt((X(37) + X(42)) / 2, BY + BH + 26, 'services 26–27 Dec?', '', 'middle');
+    // overdue bracket, G0 to today
+    const yb = BY + BH + 8;
+    S('path', { d: `M${X(4)} ${yb} v6 H${X(TODAY) - 3} v-6`, class: 'brk-risk' }, t, true);
+    txt(X(TODAY) - 10, yb + 22, 'G0 + G1 decisions overdue', 'miss-t', 'end');
+    // the next seven days (recommended dates)
+    S('path', { d: `M${X(TODAY) + 3} ${yb} v6 H${X(18)} v-6`, class: 'brk-now' }, t, true);
+    for (const d of [14, 15, 16]) S('circle', { cx: X(d), cy: yb + 6, r: 3, class: 'now-dot' }, t, true);
+    const nx = X(TODAY) + 4;
+    txt(nx, yb + 22, 'Mon 30 Nov · decide, book the carpenter', 'now-t');
+    txt(nx, yb + 37, 'Tue 1 Dec · buy surface and LED', 'now-t');
+    txt(nx, yb + 52, 'Wed 2 Dec · carpenter starts', 'now-t');
+    txt(nx, yb + 67, 'recommended dates, not decided', '');
+    txt((X(37) + X(42)) / 2, yb + 22, 'services 26–27 Dec?', '', 'middle');
     // today
-    S('line', { x1: X(2), y1: BY - 16, x2: X(2), y2: BY + BH + 12, class: 'today' }, t, true);
-    S('circle', { cx: X(2), cy: BY - 16, r: 4, style: 'fill:var(--now)' }, t, true);
-    txt(X(2) + 6, BY + BH + 26, '18 Nov · we are here', 'today-t');
+    S('line', { x1: X(TODAY), y1: BY - 18, x2: X(TODAY), y2: BY + BH + 2, class: 'today' }, t, true);
+    S('circle', { cx: X(TODAY), cy: BY - 18, r: 4, style: 'fill:var(--now)' }, t, true);
+    txt(X(TODAY) + 7, BY - 14, 'Today, 27 Nov', 'today-t');
     // axis
     const mondays = [[0, 'Mon 16 Nov'], [7, '23 Nov'], [14, '30 Nov'], [21, '7 Dec'], [28, '14 Dec'], [35, '21 Dec'], [42, '28 Dec']];
+    const AY = 214;
     for (const [d, l] of mondays) {
-      S('line', { x1: X(d), y1: 172, x2: X(d), y2: 178, class: 'tick' }, t, true);
-      txt(X(d), 192, l, 'ax', d === 0 ? 'start' : 'middle');
+      S('line', { x1: X(d), y1: AY, x2: X(d), y2: AY + 6, class: 'tick' }, t, true);
+      txt(X(d), AY + 20, l, 'ax', d === 0 ? 'start' : 'middle');
     }
-    S('line', { x1: X(0), y1: 172, x2: X(46), y2: 172, class: 'tick' }, t, true);
+    S('line', { x1: X(0), y1: AY, x2: X(46), y2: AY, class: 'tick' }, t, true);
   })();
 
-  /* ---------------- capacity bars */
+  /* ---------------- capacity bars (tools/flow_sim.py, 18 Nov) */
   (function capacity() {
     const rows = [
-      ['Fixed route 10 → 1', 'the v1 plan', 77, 56, 42, 65],
+      ['Fixed route 10 → 1', 'one queue; every group plays all ten in order', 77, 56, 42, 65],
       ['Fixed route, ≤ 12 groups', 'a starter holds the rest in the queue', 72, 56, 33, 42],
       ['Free order, ≤ 12 groups', 'groups roam to any free hole', 73, 56, 36, 44],
-      ['Loop, start anywhere', 'host sends groups to open holes · ≤ 12 groups', 79, 63, 32, 41, 'rec'],
-      ['Two 5-hole districts', 'each group plays 5 holes', 179, 132, 24, 48, 'rec'],
-      ['Ceiling', 'everyone plays all 10, no waste', 107, 74, null, null, 'ceil'],
+      ['Loop, start anywhere', 'start at any open hole, play your district in order · ≤ 12 groups', 79, 63, 32, 41, 'rec'],
+      ['One 5-hole district each', 'when the queue is long', 179, 132, 24, 48, 'rec'],
+      ['Ceiling', 'everyone plays all 10, no time lost', 107, 74, null, null, 'ceil'],
     ];
     const max = 200;
     const host = document.getElementById('cap-rows');
@@ -1047,30 +798,389 @@ footer p{max-width:90ch}
     for (const v of [0, 50, 100, 150, 200]) { const s = document.createElement('span'); s.style.left = (v / max * 100) + '%'; s.textContent = v; ax.appendChild(s); }
   })();
 
-  /* ---------------- cost ranges */
+  /* ---------------- cost ranges (docs/08, 11, 14; estimates) */
   (function cost() {
     const max = 100;
-    const rows = [
-      ['DIY, floor-laid, volunteers', '40–60 volunteer-days plus one lead', 1.7, 6.5, [4.2, 6.5], true, 'S$1.7–6.5k'],
-      ['Rent carnival lanes + printed dressing', '3–4 vendors for 10 plain lanes', 3, 6, null, false, 'S$3–6k'],
-      ['Buy a 9-hole foam-tile kit (UK)', 'must land by early December', 6, 7.6, null, false, 'S$6–7.6k'],
-      ['Carpenter + volunteers paint and dress', '10–15 carpenter-days', 6, 10, null, true, 'S$6–10k'],
-      ['Church crew, raised decks', 'needs December crew capacity', 14, 31, null, true, 'S$14–31k'],
-      ['Split: prop shop + lead carpenter + crew', 'suggested anchor S$35–45k', 30, 56, [35, 45], true, 'S$30–56k'],
-      ['Fully outsourced', 'professional end to end', 50, 91, null, true, 'S$50–91k', true],
+    const groups = [
+      ['Build routes, cash', [
+        ['DIY, floor-laid, volunteers', '40–60 volunteer-days plus one lead', 1.7, 6.5, { core: [4, 6.5], cls: 'city', txt: 'S$1.7–6.5k' }],
+        ['Rent carnival lanes + dressing', 'plain lanes; no themed course for hire', 3, 6, { txt: 'S$3–6k' }],
+        ['Route C: carpenter + volunteers', 'New York, built lower and flatter · band in doc 08: S$6–10k', 7.5, 16.4, { pts: [9.8, 10.9], cls: 'city', rec: true, txt: 'plan ≈ S$10.9k · 9.8k with cuts' }],
+        ['Church crew, raised decks', 'needs December crew capacity', 14, 31, { cls: 'city', txt: 'S$14–31k' }],
+        ['Split: prop shop + lead carpenter + crew', 'suggested anchor S$35–45k', 30, 56, { core: [35, 45], cls: 'city', txt: 'S$30–56k' }],
+        ['Fully outsourced', 'professional end to end', 50, 91, { cls: 'city', txt: 'S$50–91k', flip: true }],
+      ]],
+      ['Materials only, full New York design, team builds', [
+        ['All bought in Singapore', 'no paid labour; 15% contingency', 13.0, 26.7, { cls: 'mat', txt: 'S$13–27k' }],
+        ['Light items from China', 'turf, LED, neon, printing, putters · recommended mix', 11.3, 22.0, { cls: 'mat', txt: 'S$11–22k' }],
+        ['Timber from China too', 'heavy and on the critical path · not recommended', 9.2, 18.7, { cls: 'mat', txt: 'S$9–19k' }],
+      ]],
     ];
     const host = document.getElementById('cost-rows');
-    for (const [name, sub, lo, hi, core, city, txt, flip] of rows) {
-      const r = document.createElement('div');
-      r.className = 'brow';
-      const coreHtml = core ? `<i class="core" style="left:${(core[0] - lo) / (hi - lo) * 100}%;width:${(core[1] - core[0]) / (hi - lo) * 100}%"></i>` : '';
-      r.innerHTML = `<div class="blabel"><b>${name}</b><small>${sub}</small></div>
-        <div class="rtrack"><div class="rbar ${city ? 'city' : ''} ${flip ? 'flip' : ''}" style="left:${lo / max * 100}%;width:${(hi - lo) / max * 100}%">${coreHtml}<span>${txt}</span></div></div>`;
-      host.appendChild(r);
+    for (const [gname, rows] of groups) {
+      const g = document.createElement('div');
+      g.className = 'rgroup';
+      g.textContent = gname;
+      host.appendChild(g);
+      for (const [name, sub, lo, hi, o] of rows) {
+        const r = document.createElement('div');
+        r.className = 'brow' + (o.rec ? ' rec' : '');
+        const coreHtml = o.core ? `<i class="core" style="left:${(o.core[0] - lo) / (hi - lo) * 100}%;width:${(o.core[1] - o.core[0]) / (hi - lo) * 100}%"></i>` : '';
+        const ptHtml = (o.pts || []).map(p => `<i class="pt" style="left:${(p - lo) / (hi - lo) * 100}%"></i>`).join('');
+        r.innerHTML = `<div class="blabel"><b>${name}</b><small>${sub}</small></div>
+          <div class="rtrack"><div class="rbar ${o.cls || ''} ${o.flip ? 'flip' : ''}" style="left:${lo / max * 100}%;width:${(hi - lo) / max * 100}%">${coreHtml}${ptHtml}<span>${o.txt}</span></div></div>`;
+        host.appendChild(r);
+      }
     }
     const ax = document.getElementById('cost-axis');
     for (const v of [0, 25, 50, 75, 100]) { const s = document.createElement('span'); s.style.left = v + '%'; s.textContent = v; ax.appendChild(s); }
   })();
+
+  /* ---------------- the plan on the floor (data from the STATUS block) */
+  const host = document.getElementById('map-host');
+  const svg = document.getElementById('map');
+  const D = (typeof STATUS !== 'undefined' && STATUS) ? STATUS : null;
+  if (!D) {
+    host.innerHTML = '<p class="map-missing">The map data is missing. Run <code>python3 tools/make_status_page.py</code> to add it.</p>';
+    return;
+  }
+  const G = D.geo, LY = D.layout, CAB = D.cables, HOLES = D.holes;
+  const H = Object.fromEntries(HOLES.map(h => [h.n, h]));
+  const L = G.room.L, W = G.room.W, SF = G.stage.front_x, GX = G.golf_limit.x;
+  const RW = G.runway;
+
+  // district order and names, from the hole data
+  const districts = [];
+  for (const h of HOLES) {
+    let d = districts.find(x => x.key === h.d);
+    if (!d) districts.push(d = { key: h.d, name: h.district || h.d, holes: [] });
+    d.holes.push(h);
+  }
+  const dcls = k => (k === 'A' || k === 'B') ? k : 'X';
+  const dcol = k => k === 'A' ? 'var(--distA)' : k === 'B' ? 'var(--distB)' : 'var(--ink-2)';
+  const rangeTxt = hs => { const ns = hs.map(h => h.n); return `holes ${Math.max(...ns)} → ${Math.min(...ns)}`; };
+
+  // fill the data-driven words elsewhere on the page
+  const fill = (key, text) => document.querySelectorAll(`[data-fill="${key}"]`).forEach(e => { e.textContent = text; });
+  fill('layout-name', D.source.layout_name);
+  fill('hole-list', HOLES.map(h => `${h.n} ${h.name}`).join(', '));
+  const words = ['no', 'one', 'two', 'three', 'four', 'five'];
+  fill('districts', districts.length === 1 ? 'one district' : `${words[districts.length] || districts.length} districts (${districts.map(d => `${d.name} ${rangeTxt(d.holes).replace('holes ', '')}`).join('; ')})`);
+  document.getElementById('src-files').innerHTML = `<code>${esc(D.source.layout_file)}</code> and <code>${esc(D.source.geometry_file)}</code>`;
+
+  const state = { zoom: 'zone', layers: { routes: true, sight: true, cables: true }, sel: HOLES.some(h => h.n === 1) ? 1 : HOLES[0].n };
+
+  function viewBox() {
+    const top = -3.3, h = W + 6.6;
+    if (state.zoom === 'room') return [-1.2, top, L + 2.4, h];
+    const x0 = SF - 1.8, x1 = GX + 2.2;
+    return [x0, top, x1 - x0, h];
+  }
+
+  const surfaceCls = s => /rink|ice/i.test(s || '') ? 'ice' : /carpet|asphalt/i.test(s || '') ? 'carpet' : '';
+
+  function render() {
+    const [vx, vz, vw, vh] = viewBox();
+    const minW = state.zoom === 'room' ? 620 : 300;
+    const cw = Math.max(host.clientWidth || 800, minW);
+    const u = vw / cw;                                   // metres per screen pixel
+    const k = cw >= 900 ? 1.2 : cw >= 600 ? 1.1 : 1;    // labels a little larger on wide screens
+    svg.setAttribute('viewBox', `${r2(vx)} ${r2(vz)} ${r2(vw)} ${r2(vh)}`);
+    svg.style.width = cw + 'px';
+    svg.style.height = Math.round(cw * vh / vw) + 'px';
+    svg.replaceChildren();
+
+    const defs = S('defs', null, svg);
+    const hatch = S('pattern', { id: 'apron-hatch', patternUnits: 'userSpaceOnUse', width: r2(8 * u), height: r2(8 * u), patternTransform: 'rotate(45)' }, defs, true);
+    S('line', { x1: 0, y1: 0, x2: 0, y2: r2(8 * u), style: `stroke:var(--ink-3);stroke-width:${r2(1 * u)};opacity:.35` }, hatch, true);
+    for (const k of ['A', 'B', 'X']) {
+      const m = S('marker', { id: 'mk-' + k, viewBox: '0 0 10 10', refX: 7, refY: 5, markerUnits: 'userSpaceOnUse', markerWidth: r2(9 * u), markerHeight: r2(9 * u), orient: 'auto' }, defs, true);
+      S('path', { d: 'M0,0 L10,5 L0,10 z', class: 'mk-' + k }, m, true);
+    }
+
+    const rect = (x0, z0, x1, z1, cls, p = svg, extra = {}) => S('rect', Object.assign({ x: r2(Math.min(x0, x1)), y: r2(Math.min(z0, z1)), width: r2(Math.abs(x1 - x0)), height: r2(Math.abs(z1 - z0)), class: cls }, extra), p);
+    const poly = (pts, cls, p = svg, extra = {}) => S('polygon', Object.assign({ points: pts.map(q => q.map(r2).join(',')).join(' '), class: cls }, extra), p);
+    const line = (pts, cls, p = svg, extra = {}) => S('polyline', Object.assign({ points: pts.map(q => q.map(r2).join(',')).join(' '), class: cls }, extra), p);
+    const tw = (s, px) => s.length * px * 0.56 * u;     // rough text width in metres
+    const label = (x, z, txt, opt = {}) => {
+      const px = (opt.px || 10) * k;
+      if (opt.clamp) {
+        const half = tw(txt, px) / 2 + 0.2;
+        x = Math.min(Math.max(x, vx + half), vx + vw - half);
+      }
+      const t = S('text', {
+        x: r2(x), y: r2(z), 'font-size': r2(px * u), 'text-anchor': opt.anchor || 'middle', 'dominant-baseline': 'middle',
+        class: 'lbl ' + (opt.cls || ''), 'stroke-width': r2(3.2 * u),
+        transform: opt.rot ? `rotate(${opt.rot} ${r2(x)} ${r2(z)})` : null,
+      }, opt.p || svg);
+      t.textContent = txt;
+      return t;
+    };
+    const pick = (opts, availM, px) => opts.find(s => tw(s, px * k) <= availM) || null;
+    const vis = (x0, x1) => [Math.max(x0, vx), Math.min(x1, vx + vw)];
+
+    // floor and zones
+    rect(0, 0, L, W, 'floor');
+    for (const z of G.zones) {
+      if (z.id === 'other_activities') rect(z.x[0], z.z[0], Math.min(z.x[1], L), z.z[1], 'other');
+      else if (z.id === 'golf_zone') rect(z.x[0], z.z[0], z.x[1], z.z[1], 'golfzone');
+    }
+    if (LY.apron_x) rect(SF, 0, LY.apron_x, W, 'apron', svg, { fill: 'url(#apron-hatch)' });
+
+    // stage, with its corner curves
+    rect(0, 0, SF, W, 'stage');
+    for (const c of G.stage.curves) {
+      const s = c.wall_z < W / 2 ? 1 : -1, P = [[SF, c.wall_z]];
+      for (let k = 0; k <= 16; k++) { const a = k / 16 * Math.PI / 2; P.push([SF + c.out * Math.sin(a), c.wall_z + s * c.along * Math.cos(a)]); }
+      poly(P, 'curve' + (c.measured ? '' : ' nm'));
+    }
+    line([[SF, 0], [SF, W]], 'stage-front' + (G.stage.measured ? '' : ' nm'));
+    {
+      const [a, b] = vis(0, SF);
+      if (b - a > 0.6) label((a + b) / 2, W * 0.72, G.stage.measured ? 'STAGE' : 'STAGE · depth not measured', { px: 9.5, cls: 'b', rot: -90 });
+    }
+
+    // walls: dashed where their position isn't measured
+    line([[0, 0], [L, 0]], 'wall');
+    line([[0, W], [L, W]], 'wall' + (G.room.W_measured ? '' : ' nm'));
+    line([[0, 0], [0, W]], 'wall' + (G.stage.measured ? '' : ' nm'));
+    line([[L, 0], [L, W]], 'wall' + (G.room.L_measured ? '' : ' nm'));
+    for (const d of G.doors) {
+      const e = line(d.seg, 'door' + (d.measured ? '' : ' nm'));
+      S('title', null, e).textContent = (d.note || 'Door') + (d.measured ? '' : ' (position not measured)');
+    }
+
+    // kept-clear apron and measured cross-dimensions
+    if (LY.apron_x) {
+      const ax = (SF + LY.apron_x) / 2 - 0.4;
+      label(ax, RW.z[0] / 2 - 1.2, 'Kept clear', { px: 9.5, cls: 'b' });
+      label(ax, RW.z[0] / 2 - 0.2, 'stairs, performers', { px: 8.5 });
+      const dx = LY.apron_x - 0.8;
+      const dim = (z0, z1, txt) => {
+        line([[dx, z0], [dx, z1]], 'dim');
+        line([[dx - 0.25, z0], [dx + 0.25, z0]], 'dim'); line([[dx - 0.25, z1], [dx + 0.25, z1]], 'dim');
+        label(dx, (z0 + z1) / 2 + 2.4, txt, { px: 9, rot: -90 });
+      };
+      dim(0, RW.z[0], `${fmt(RW.z[0])} m`);
+      dim(RW.z[1], W, `${fmt(W - RW.z[1])} m`);
+    }
+
+    // console sightline (assumed)
+    if (state.layers.sight && LY.sightline.length > 2) poly(LY.sightline, 'sight');
+
+    // runway and the items beside it
+    rect(RW.x[0], RW.z[0], RW.x[1], RW.z[1], 'runway' + (RW.measured ? '' : ' nm'));
+    {
+      const [a, b] = vis(RW.x[0], RW.x[1]);
+      const txt = pick([`RUNWAY · raised, part of the stage · ${fmt(RW.length)} × ${fmt(RW.width)} m · players can't cross`, `RUNWAY · ${fmt(RW.length)} × ${fmt(RW.width)} m · players can't cross`, `RUNWAY · ${fmt(RW.length)} × ${fmt(RW.width)} m`, 'RUNWAY'], (b - a) * 0.92, 9.5);
+      if (txt) label((a + b) / 2, (RW.z[0] + RW.z[1]) / 2, txt, { px: 9.5, cls: 'b' });
+    }
+    for (const it of G.side_items) rect(it.x[0], it.z[0], it.x[1], it.z[1], (it.type === 'speaker_stand' ? 'stand' : 'stairs') + (it.measured ? '' : ' nm'));
+    for (const e of G.extras) {
+      const r = rect(e.x[0], e.z[0], e.x[1], e.z[1], 'extra');
+      S('title', null, r).textContent = e.label + (e.overhead ? ' (overhead)' : '') + (e.measured ? '' : ', estimated');
+    }
+
+    // beyond the golf limit
+    if (G.lf_platform) {
+      const p = G.lf_platform;
+      rect(p.x[0], p.z[0], p.x[1], p.z[1], 'lf' + (p.measured ? '' : ' nm'));
+      if (state.zoom === 'room') label((p.x[0] + p.x[1]) / 2, p.z[0] - 0.7, p.label, { px: 9 });
+    }
+    if (G.console) {
+      const c = G.console;
+      rect(c.x[0], c.z[0], c.x[1], c.z[1], 'console' + (c.measured ? '' : ' nm'));
+      if (state.zoom === 'room') label((c.x[0] + c.x[1]) / 2, (c.z[0] + c.z[1]) / 2, c.measured ? 'Sound console' : 'Sound console · not measured', { px: 9.5, cls: 'b', rot: -90 });
+    }
+    if (state.zoom === 'room') {
+      const ox = (GX + (G.console ? G.console.x[0] : L)) / 2;
+      label(ox, 3.6, 'Other activities', { px: 11, cls: 'b' });
+      label(ox, 4.7, 'not golf (decided 18 Nov)', { px: 9 });
+      if (state.layers.sight) label(ox, (RW.z[0] + RW.z[1]) / 2 + 3.2, 'assumed console sightline: no tall props', { px: 9, cls: 'risk' });
+    }
+
+    // golf limit and the stage-front dimension (measured)
+    line([[GX, -0.4], [GX, W + 0.4]], 'glimit');
+    label(GX + 1.6, -2.45, `Golf limit${G.golf_limit.measured ? '' : ' (not measured)'}`, { px: 10.5, cls: 'acc', anchor: 'end' });
+    {
+      const zd = -1.05;
+      line([[SF, zd], [GX, zd]], 'dim');
+      line([[SF, zd - 0.3], [SF, zd + 0.3]], 'dim'); line([[GX, zd - 0.3], [GX, zd + 0.3]], 'dim');
+      const txt = pick([`${fmt(G.golf_limit.from_stage_front)} m, stage front to golf limit (measured)`, `${fmt(G.golf_limit.from_stage_front)} m (measured)`], (GX - SF) * 0.9, 9);
+      if (txt) label((SF + GX) / 2, zd, txt, { px: 9 });
+    }
+
+    // the Tee Booth
+    for (const hb of LY.hubs) {
+      rect(hb[0], hb[1], hb[2], hb[3], 'hub', svg, { rx: 0.2 });
+      const hz = Math.abs(hb[3] - hb[1]), hx = Math.abs(hb[2] - hb[0]);
+      const tall = hz >= hx, avail = (tall ? hz : hx) / u * 0.86;
+      const px = Math.max(6.5, Math.min(11, avail / (9 * 0.6))) / k;
+      label((hb[0] + hb[2]) / 2, (hb[1] + hb[3]) / 2, 'TEE BOOTH', { px, cls: 'hubt', rot: tall ? -90 : 0 });
+    }
+
+    // walk routes
+    if (state.layers.routes) {
+      for (const k in LY.routes) for (const hop of LY.routes[k]) line(hop, 'route ' + dcls(k), svg, { 'marker-end': `url(#mk-${dcls(k)})` });
+    }
+
+    // holes
+    for (const h of HOLES) drawHole(h, u, poly, label);
+
+    // district names, in the walkway between each district and the runway
+    for (const d of districts) {
+      const xs = d.holes.map(h => h.c[0]), zs = d.holes.map(h => h.c[1]);
+      const mx = xs.reduce((a, b) => a + b, 0) / xs.length, mz = zs.reduce((a, b) => a + b, 0) / zs.length;
+      const above = mz < (RW.z[0] + RW.z[1]) / 2;
+      const z = above ? RW.z[0] - 1.25 : RW.z[1] + 1.25;
+      label(mx, z, `${d.name.toUpperCase()} · ${rangeTxt(d.holes).replace('holes ', '')}`, { px: 10.5, cls: dcls(d.key), clamp: true });
+    }
+
+    // cables: approximate runs and power flags, or a note that they aren't placed
+    if (CAB.placed && state.layers.cables) {
+      for (const r of CAB.runs) {
+        const e = line(r.points, 'cable ' + r.kind);
+        S('title', null, e).textContent = `${r.label} (${r.id}), ${r.kind}: approximate position`;
+      }
+      for (const f of CAB.power_flags) {
+        S('circle', { cx: f.x, cy: f.z, r: r2(Math.max(0.9, 11 * u)), class: 'flag-ring' }, svg);
+        S('circle', { cx: f.x, cy: f.z, r: r2(Math.max(0.28, 3.5 * u)), class: 'flag' }, svg);
+        label(f.x + Math.max(1.1, 14 * u), f.z, `${f.node} · ${f.circuit} · ${f.load_percent}% load`, { px: 9.5, anchor: 'start', cls: 'risk' });
+      }
+    }
+    const noteZ = W + 2.55;
+    if (CAB.placed) {
+      if (state.layers.cables) label(vx + 0.4, noteZ, 'Cable runs and drops: approximate positions', { px: 9.5, anchor: 'start', cls: 'risk' });
+    } else {
+      label(vx + 0.4, noteZ, 'Cables: not placed on this plan yet', { px: 9.5, anchor: 'start', cls: 'risk' });
+    }
+
+    // scale bar and sizes
+    const sx = state.zoom === 'room' ? 0 : vx + 0.4, sz = W + 1.25;
+    S('rect', { x: r2(sx), y: r2(sz - 2 * u), width: 5, height: r2(4 * u), class: 'scale' }, svg);
+    label(sx + 5 + 6 * u, sz, '5 m', { px: 9.5, anchor: 'start', cls: 'b' });
+    const sizeTxt = state.zoom === 'room'
+      ? `Room ${fmt(L)} m${G.room.L_measured ? '' : ' (not measured)'} × ${fmt(W)} m${G.room.W_measured ? ' (measured, rough)' : ''}`
+      : `Golf zone ${fmt(G.golf_limit.from_stage_front)} × ${fmt(W)} m`;
+    label(vx + vw - 0.4, sz, sizeTxt, { px: 9, anchor: 'end' });
+  }
+
+  function drawHole(h, u, poly, label) {
+    const g = S('g', { class: 'hole' + (state.sel === h.n ? ' sel' : ''), 'data-n': h.n, tabindex: 0, role: 'button', 'aria-label': `Hole ${h.n}: ${h.name}` }, svg);
+    for (const b of h.beside || []) poly(b.poly, b.kind === 'totem' ? 'totem' : 'prop', g);
+    poly(h.deck, 'deck ' + surfaceCls(h.surface), g, { style: `stroke:${h.glow || 'var(--accent)'}` });
+    S('rect', { x: r2(h.tee[0] - 0.15), y: r2(h.tee[1] - 0.15), width: 0.3, height: 0.3, class: 'tee' }, g);
+    const rad = Math.max(0.42, 9 * u);
+    S('circle', { cx: h.c[0], cy: h.c[1], r: r2(rad), class: 'bullet', style: `fill:${h.glow || 'var(--accent)'}` }, g);
+    const t = S('text', { x: h.c[0], y: r2(h.c[1] + rad * 0.06), 'font-size': r2(rad * 1.15), 'text-anchor': 'middle', 'dominant-baseline': 'middle', class: 'bullet-t' }, g);
+    t.textContent = h.n;
+    if (state.sel === h.n) {
+      const zs = h.deck.map(p => p[1]);
+      label(h.c[0], Math.min(...zs) - 0.35 - 7 * u, `${h.n} · ${h.name}`, { px: 11.5, cls: 'sel', p: g, clamp: true });
+    }
+    g.addEventListener('pointerenter', () => setHover(h.n, true));
+    g.addEventListener('pointerleave', () => setHover(h.n, false));
+    g.addEventListener('click', () => select(h.n));
+    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(h.n); } });
+  }
+
+  /* ---------------- selected-hole detail */
+  function renderDetail() {
+    const h = H[state.sel];
+    const el = document.getElementById('detail');
+    if (!h) { el.hidden = true; return; }
+    el.hidden = false;
+    const rows = [['Props', h.prop], ['Find the 11:59', h.clock], ['Surface', h.surface], ['Deck', `${fmt(h.L)} × ${fmt(h.W)} m`]].filter(r => r[1]);
+    el.innerHTML = `<div class="detail-top"><span class="bullet" style="--g:${esc(h.glow || '')}">${esc(h.n)}</span>
+        <div><h3>${esc(h.name)}</h3>${h.sign ? `<p class="sign-line">“${esc(h.sign)}”</p>` : ''}</div>
+        <span class="chip est">${esc(h.district)}${h.cls ? ' · ' + esc(h.cls) : ''}${h.par ? ' · Par ' + esc(h.par) : ''}</span></div>
+      ${h.play ? `<p>${esc(h.play)}</p>` : ''}
+      <dl>${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+  }
+
+  /* ---------------- caption: what the layout is, its clearances, what could move it */
+  const RULES = {
+      hole_hole: ['Hole to hole', 1.2], hole_wall: ['Hole to side wall', 1.6], hole_runway: ['Hole to runway side', 1.75],
+      hole_stage_front: ['Hole to stage front', 6.5], hole_golf_limit: ['Hole to golf limit', 0.6], hole_hub: ['Hole to Tee Booth', 1.5],
+      hub_runway_tip: ['Tee Booth to runway tip', 1.2], route_corridor: ['Narrowest walkway', 1.2], tall_sightline: ['Tall props to sightline', 0.5],
+  };
+  {
+    const tight = Object.entries(LY.checks || {}).filter(([k, v]) => RULES[k] && v - RULES[k][1] < 0.1).length;
+    fill('tight', tight === 0 ? 'no checked clearance is within 0.1 m of its rule' : `${words[tight] || tight} checked clearance${tight === 1 ? ' sits' : 's sit'} within 0.1 m of ${tight === 1 ? 'its' : 'their'} rule (see the map)`);
+  }
+  (function caption() {
+    const checks = Object.entries(LY.checks || {}).map(([k, v]) => {
+      const [name, rule] = RULES[k] || [k.replace(/_/g, ' '), null];
+      const tight = rule != null && v - rule < 0.1;
+      return `<div class="${tight ? 'tight' : ''}"><span>${esc(name)}</span><b>${fmt(v)} m${rule != null ? ` <small>≥ ${fmt(rule)}</small>` : ''}</b></div>`;
+    }).join('');
+    const cab = CAB.placed
+      ? `Cable runs and drops come from the cable plan, re-placed on these measurements: approximate. ${esc(CAB.confidence || '')}`
+      : `Cables aren't placed on this plan yet. They're being re-placed from the cable plan; until then no hole position is final.`;
+    const dnames = districts.map(d => `${esc(d.name)} (${rangeTxt(d.holes)})`).join(' and ');
+    document.getElementById('map-caption').innerHTML = `
+      <p><strong>${esc(D.source.layout_name)}: a proposal, not decided.</strong> ${dnames} sit beside the runway, each a loop that leaves the Tee Booth at the runway tip and comes back to it. Groups start at any open hole and play their district in order; when the queue is long, each group plays one district. About 6.5 m stays clear in front of the stage. Decks are drawn as their bounding rectangles; <code>floorplan/</code> has the full drawing.</p>
+      <p>Positions are ±1 m: they hang on the stage depth and the stair positions, which aren't measured. ${cab}</p>
+      ${checks ? `<p><strong>Clearances checked by the layout script</strong> (tightest value, then the rule; amber is within 0.1 m):</p><div class="checks">${checks}</div>` : ''}
+      <p><strong>What could move it:</strong> the stage depth (every position moves with it); the ≈ 8.6 m runway extension, which would run through the Tee Booth; the floor cables; side-wall exits; where the countdown crowd stands at midnight.</p>`;
+  })();
+
+  /* ---------------- hole cards by district */
+  const cardEls = {};
+  const dhost = document.getElementById('districts');
+  for (const d of districts) {
+    const wrap = document.createElement('div');
+    wrap.className = 'district';
+    wrap.innerHTML = `<h3><i class="dot" style="background:${dcol(d.key)}"></i>${esc(d.name)}<span>${rangeTxt(d.holes)} · leaves the Tee Booth and loops back</span></h3><div class="cards"></div>`;
+    const grid = wrap.querySelector('.cards');
+    for (const h of d.holes) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'hcard';
+      b.id = 'card-' + h.n;
+      b.innerHTML = `<div class="hcard-top"><span class="bullet" style="--g:${esc(h.glow || '')}">${esc(h.n)}</span><div><div class="hcard-name">${esc(h.name)}</div>${h.sign ? `<div class="hcard-sign">“${esc(h.sign)}”</div>` : ''}</div></div>
+        ${h.play ? `<p class="hcard-play">${esc(h.play)}</p>` : ''}
+        <div class="hcard-meta">${h.cls ? `<span class="cls ${esc(h.cls)}">${esc(h.cls)}</span>` : ''}${h.par ? `<span>Par ${esc(h.par)}</span>` : ''}<span>${fmt(h.L)} × ${fmt(h.W)} m</span></div>`;
+      b.addEventListener('click', () => select(h.n));
+      b.addEventListener('pointerenter', () => setHover(h.n, true));
+      b.addEventListener('pointerleave', () => setHover(h.n, false));
+      cardEls[h.n] = b;
+      grid.appendChild(b);
+    }
+    dhost.appendChild(wrap);
+  }
+
+  function setHover(n, on) {
+    const g = svg.querySelector(`.hole[data-n="${n}"]`);
+    if (g) g.classList.toggle('hl', on);
+    if (cardEls[n]) cardEls[n].classList.toggle('hl', on);
+  }
+  function select(n) {
+    state.sel = n;
+    for (const k in cardEls) cardEls[k].classList.toggle('sel', +k === n);
+    renderDetail();
+    render();
+  }
+
+  /* ---------------- controls */
+  const cabBtn = document.getElementById('ly-cables');
+  if (!CAB.placed) { cabBtn.disabled = true; cabBtn.setAttribute('aria-pressed', 'false'); cabBtn.textContent = 'Cables: not placed yet'; }
+  function syncControls() {
+    document.querySelectorAll('[data-zoom]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.zoom === state.zoom)));
+    document.querySelectorAll('[data-layer]').forEach(b => { if (!b.disabled) b.setAttribute('aria-pressed', String(state.layers[b.dataset.layer])); });
+  }
+  document.querySelectorAll('[data-zoom]').forEach(b => b.addEventListener('click', () => { state.zoom = b.dataset.zoom; syncControls(); render(); }));
+  document.querySelectorAll('[data-layer]').forEach(b => b.addEventListener('click', () => { if (b.disabled) return; const k = b.dataset.layer; state.layers[k] = !state.layers[k]; syncControls(); render(); }));
+
+  let rt, lastW = 0;
+  const onResize = () => { clearTimeout(rt); rt = setTimeout(() => { if (host.clientWidth !== lastW) { lastW = host.clientWidth; render(); } }, 60); };
+  if ('ResizeObserver' in window) new ResizeObserver(onResize).observe(host); else window.addEventListener('resize', onResize);
+
+  for (const k in cardEls) cardEls[k].classList.toggle('sel', +k === state.sel);
+  syncControls();
+  renderDetail();
+  lastW = host.clientWidth;
+  render();
 })();
 </script>
 </body>

@@ -40,7 +40,7 @@ OUT = sys.argv[2] if len(sys.argv) > 2 else "floorplan"
 PNG = "--png" in sys.argv
 INJECT = sys.argv[sys.argv.index("--inject") + 1] if "--inject" in sys.argv else None
 
-ROOM_L = dims["auditorium"]["length_x"]          # 54.7, not re-measured
+ROOM_L = dims["auditorium"]["length_x"]          # about 53, estimated (20 Nov): not measured
 ROOM_W = dims["auditorium"]["width_z"]           # 25.6, measured (rough)
 SX = dims["stage"]["front_x"]                    # 6.0, not measured
 RW_X0, RW_X1 = dims["runway"]["x"]               # 6.0 .. 28.54
@@ -127,7 +127,7 @@ HOLES = [
          clock="The whole hole is 11:59.",
          extras=[(2.45, -0.45, 3.25, 0.45), (3.35, -1.6, 3.6, 1.6)], tall=[(3.45, 0.0, 3.0)], exit=1),
     dict(n=1, d="B", name="Times Square", sign="Drop the Ball", cls="Hero", par=2, L=6.0, W=1.4,
-         c=(31.3, 20.4), th=-90, glow="#FF3DCB", surface="Green turf, red-step hump",
+         c=(31.3, 20.55), th=-90, glow="#FF3DCB", surface="Green turf, red-step hump",
          play="The finale. Putt up and over the red steps, between glowing billboards, into the cup under the ball-drop tower. The cup keeps your ball (that's the end of the round), and the tower's ball lights up with a cheer.",
          prop="A 3.6 m ball-drop tower with a glitter ball and lit 2027 numbers. Billboard flats either side of the lane. A neon-style \"See you in 2027\" sign.",
          robust="The light and cheer are a bonus on a battery and microswitch: if they fail, the hole still plays and still collects the balls. The tower is a truss on a weighted, guyed base outside the rails.",
@@ -542,8 +542,8 @@ def figure(fps, res):
     # border
     cv.rect(0, 0, x_hi, ROOM_W, "none", "#2C2C2A", 2.2)
     cv.add(f'<line x1="{cv.X(x_hi):.1f}" y1="{cv.Z(0):.1f}" x2="{cv.X(x_hi):.1f}" y2="{cv.Z(ROOM_W):.1f}" stroke="#F7F6F2" stroke-width="5"/>')
-    cv.text(x_hi - 0.2, ROOM_W / 2 + 4.6, "room continues to the", 9, "#77736A", anchor="end")
-    cv.text(x_hi - 0.2, ROOM_W / 2 + 5.1, "sound console (≈ 54.7 m)", 9, "#77736A", anchor="end")
+    cv.text(x_hi - 0.2, ROOM_W / 2 + 4.6, f"room continues ≈ {ROOM_L - GX:g} m to the", 9, "#77736A", anchor="end")
+    cv.text(x_hi - 0.2, ROOM_W / 2 + 5.1, "console and back wall (estimated)", 9, "#77736A", anchor="end")
     # scale bar
     sx0, sz = 0.0, ROOM_W + 1.6
     for k in range(0, 5):

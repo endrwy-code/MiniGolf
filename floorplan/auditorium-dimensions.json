@@ -1,19 +1,26 @@
 {
-  "_about": "Auditorium geometry, version 2 (18 Nov 2026). Source: the team's hand sketch with tape measurements (floorplan/source-sketches/2026-11-18-hand-sketch-tape-measurements.jpg) and the team's answers the same day. Replaces version 1, which was read off the cable-planning tool and had the width and the runway length wrong; v1 is kept as floorplan/auditorium-dimensions-v1-cable-plan.json. Each value says how it is known: 'measured' = the team's tape measurement; 'derived' = arithmetic on measured values; 'not measured' = drawn where the sketch shows it, or carried over from v1, only so the plan can be drawn. Do not build to a 'not measured' value.",
+  "_about": "Auditorium geometry, version 2 (18 Nov 2026). Source: the team's hand sketch with tape measurements (floorplan/source-sketches/2026-11-18-hand-sketch-tape-measurements.jpg) and the team's answers the same day. Replaces version 1, which was read off the cable-planning tool and had the width and the runway length wrong; v1 is kept as floorplan/auditorium-dimensions-v1-cable-plan.json. Each value says how it is known: 'measured' = the team's tape measurement; 'derived' = arithmetic on measured values; 'not measured' = drawn where the sketch shows it, or carried over from v1, only so the plan can be drawn. Do not build to a 'not measured' value. 19 Nov 2026: room length, the console's position, heights and wall finishes added as estimates from the team's photos (see photo_estimates and docs/13-auditorium-from-photos.md); they are labelled 'estimated from photos'. 20 Nov 2026: room length revised to about 53 m (back wall about 47 m from the stage front) after the team said the floor past the golf limit is much longer than the photo estimate; the delay screen is two screens, one over each runway edge (team).",
   "version": 2,
-  "date": "2026-11-18",
+  "date": "2026-11-20",
   "units": "metres",
   "coordinate_system": {
     "origin": "Corner of the stage end wall and the top wall, with the plan drawn stage-left as in the cable-planning tool",
     "x": "Along the length, from the stage end wall toward the back wall behind the sound console",
     "z": "Across the width, from the top wall (the 11.65 m side, team 18 Nov) to the bottom wall (the LF platform side)",
-    "y": "Up. Ceiling height not measured."
+    "y": "Up. Ceiling height not measured (photos suggest about 7.5-8.5 m)."
   },
   "auditorium": {
-    "length_x": 54.7,
-    "length_confidence": "not re-measured: carried over from v1 (cable plan); the team says the length is unchanged. The sketch draws the room shorter beyond the golf limit than this implies, so it needs checking.",
+    "length_x": 53.0,
+    "length_confidence": "estimated (20 Nov): the team says the floor past the golf limit is much longer than the 19 Nov photo estimate, about twice as deep, so about 20 m. That puts the back wall about 47 m from the stage front (range 44-50 m); with the 6.0 m stage-depth placeholder the room is 53 m. It agrees with the old cable plan (54.7 m room; console 20.73 m past the runway tip, i.e. about 43.3 m from the stage front). The 19 Nov photo estimate (37 m) rested on assumed sizes: an 85-inch confidence monitor and exit signs at 2.3 m; a 110-inch monitor alone moves it to about 48 m. Not measured: tape the golf limit to the back wall to settle it.",
     "width_z": 25.6,
-    "width_confidence": "measured (rough): 11.65 + 2.4 + 10.25 + 1.3"
+    "width_confidence": "measured (rough): 11.65 + 2.4 + 10.25 + 1.3",
+    "back_wall_from_stage_front": 47.0,
+    "back_wall_from_stage_front_range": [
+      44.0,
+      50.0
+    ],
+    "ceiling_y": 8.5,
+    "ceiling_confidence": "estimated from photos (19 Nov): the side walls rise about 7.5-8 m to the black ceiling structure, using a 2.1 m door as the ruler; 8.5 m used for the ceiling deck, +-1 m"
   },
   "stage": {
     "front_x": 6.0,
@@ -35,40 +42,63 @@
         "confidence": "not measured: shape and size scaled off the sketch",
         "note": "Part of the stage (team 18 Nov)."
       }
-    ]
+    ],
+    "height": 0.9,
+    "height_confidence": "estimated from photos (19 Nov): a person standing beside the runway in the empty-room photo, and four risers on the side stairs. About 0.9 m, range 0.8-1.0 m",
+    "depth_note": "The stage-view photos were taken from a camera roughly 9-13 m behind the stage front, so the stage may be deeper than the 6 m placeholder. Kept at 6 m; it doesn't change the golf zone."
   },
   "runway": {
-    "x": [6.0, 28.54],
-    "z": [11.65, 14.05],
+    "x": [
+      6.0,
+      28.54
+    ],
+    "z": [
+      11.65,
+      14.05
+    ],
     "length": 22.54,
     "length_confidence": "measured: stage front to runway tip (team 18 Nov)",
     "width": 2.4,
     "width_confidence": "measured",
     "z_confidence": "measured: 11.65 m from the top wall",
-    "height": null,
-    "note": "Raised, part of the stage; players can't cross it. The sketch also shows 22.1 m beside the runway; the team gave 22.54 m as the runway length. The v1 dotted extension (about 8.6 m) is not on the sketch; whether one will be built is still open."
+    "height": 0.9,
+    "note": "Raised, part of the stage; players can't cross it. The sketch also shows 22.1 m beside the runway; the team gave 22.54 m as the runway length. The v1 dotted extension (about 8.6 m) is not on the sketch; whether one will be built is still open.",
+    "height_confidence": "estimated from photos (19 Nov), same as the stage",
+    "width_check": "Photos (19 Nov) suggest the runway's white top is closer to 2.0 m wide: the performers on it only come out at a normal height (about 1.6-1.7 m) if it is. Kept at the measured 2.4 m. Check whether 2.4 m includes the black skirt or the stair units."
   },
   "runway_side_items": {
     "note": "The same on both sides (team 18 Nov): one set of stairs nearest the stage, then two speaker stands toward the tip. Speaker stands stick out 51.5 cm from the runway side (measured). Stair depth, the sizes of all six items and their positions along the runway are not measured: 'from_tip' is scaled off the sketch.",
-    "sides": ["top", "bottom"],
+    "sides": [
+      "top",
+      "bottom"
+    ],
     "items": [
       {
         "type": "speaker_stand",
-        "from_tip": [2.5, 4.1],
+        "from_tip": [
+          2.5,
+          4.1
+        ],
         "out": 0.515,
         "out_confidence": "measured",
         "position_confidence": "not measured: scaled off the sketch"
       },
       {
         "type": "speaker_stand",
-        "from_tip": [10.7, 12.5],
+        "from_tip": [
+          10.7,
+          12.5
+        ],
         "out": 0.515,
         "out_confidence": "measured",
         "position_confidence": "not measured: scaled off the sketch"
       },
       {
         "type": "stairs",
-        "from_tip": [16.2, 18.8],
+        "from_tip": [
+          16.2,
+          18.8
+        ],
         "out": 0.515,
         "out_confidence": "not measured: drawn at the speaker-stand depth",
         "position_confidence": "not measured: scaled off the sketch"
@@ -87,8 +117,14 @@
     {
       "id": "golf_zone",
       "label": "Mini golf zone",
-      "x": [6.0, 33.0],
-      "z": [0.0, 25.6],
+      "x": [
+        6.0,
+        33.0
+      ],
+      "z": [
+        0.0,
+        25.6
+      ],
       "areas_m2": {
         "beside_runway_top": 262.6,
         "beside_runway_bottom": 260.3,
@@ -101,65 +137,223 @@
     {
       "id": "other_activities",
       "label": "Other activities",
-      "x": [33.0, 54.7],
-      "z": [0.0, 25.6],
-      "confidence": "the near edge is the golf limit; the far end depends on the room length and stage depth, neither re-measured"
+      "x": [
+        33.0,
+        53.0
+      ],
+      "z": [
+        0.0,
+        25.6
+      ],
+      "confidence": "the near edge is the golf limit (measured). The back wall is estimated (20 Nov) at about 20 m past the golf limit (range 17-23 m), from the team's sense of the room and the old cable plan; minus the console and the LF platform, about 470 m2 (the 19 Nov photo estimate said 10 m and 220 m2)"
     }
   ],
   "lf_platform": {
     "label": "LF platform",
-    "z": [24.3, 25.6],
+    "z": [
+      24.3,
+      25.6
+    ],
     "depth": 1.3,
     "depth_confidence": "measured",
     "z_confidence": "measured: 10.25 m from the runway side, 24.3 m from the top wall",
-    "x": [33.0, 36.4],
+    "x": [
+      33.0,
+      36.4
+    ],
     "x_confidence": "not measured: drawn starting at the golf limit, about 3.4 m long, as sketched",
     "purpose": "Not known: labelled 'LF platform' on the sketch"
   },
   "sound_console": {
-    "x": [50.7, 54.7],
-    "z": [8.35, 17.35],
-    "confidence": "not measured: against the back wall and centred, as sketched; size scaled off the sketch",
+    "x": [
+      49.0,
+      53.0
+    ],
+    "z": [
+      8.35,
+      17.35
+    ],
+    "confidence": "not measured: against the back wall and centred, as sketched (about 9 x 4 m). Front face about 43 m from the stage front, which matches the old cable plan's 20.73 m past the runway tip; the back wall itself is an estimate (20 Nov)",
     "note": "Confirmed 18 Nov: the box at the back is the sound console (v1 guessed a control booth)."
   },
   "doors": [
     {
       "id": "door_back_top",
-      "wall": "back wall",
-      "z": [2.7, 4.9],
+      "wall": "back",
+      "z": [
+        2.7,
+        4.9
+      ],
       "confidence": "not measured: position and width scaled off the sketch",
       "note": "Door or exit (team 18 Nov)"
     },
     {
       "id": "door_back_bottom",
-      "wall": "back wall",
-      "z": [19.3, 22.0],
+      "wall": "back",
+      "z": [
+        19.3,
+        22.0
+      ],
       "confidence": "not measured: position and width scaled off the sketch",
       "note": "Door or exit (team 18 Nov)"
+    },
+    {
+      "id": "door_top_1",
+      "wall": "top",
+      "x": [
+        16.0,
+        17.8
+      ],
+      "confidence": "estimated from photos (19 Nov): a door with an exit sign in the 11.65 m side wall, position along the wall is a guess +-3 m",
+      "note": "Fire exit: keep the route to it clear and its sign visible"
+    },
+    {
+      "id": "door_top_2",
+      "wall": "top",
+      "x": [
+        23.0,
+        24.8
+      ],
+      "confidence": "estimated from photos (19 Nov), +-3 m",
+      "note": "Fire exit: keep the route to it clear and its sign visible"
+    },
+    {
+      "id": "door_bottom_back",
+      "wall": "bottom",
+      "x": [
+        48.6,
+        50.4
+      ],
+      "confidence": "estimated from photos (19 Nov): exit door near the back corner of the LF-platform side; moved with the back wall on 20 Nov, +-3 m",
+      "note": "Door / exit"
     }
   ],
   "measurements": [
-    { "id": "top_wall_to_runway", "value": 11.65, "axis": "z", "confidence": "measured" },
-    { "id": "runway_width", "value": 2.4, "axis": "z", "confidence": "measured" },
-    { "id": "runway_to_lf_platform", "value": 10.25, "axis": "z", "confidence": "measured" },
-    { "id": "lf_platform_depth", "value": 1.3, "axis": "z", "confidence": "measured" },
-    { "id": "runway_to_bottom_wall", "value": 11.55, "axis": "z", "confidence": "derived: 10.25 + 1.3" },
-    { "id": "top_wall_to_lf_platform", "value": 24.3, "axis": "z", "confidence": "measured (written on the sketch; equals 11.65 + 2.4 + 10.25)" },
-    { "id": "room_width", "value": 25.6, "axis": "z", "confidence": "measured, rough" },
-    { "id": "runway_length_stage_front_to_tip", "value": 22.54, "axis": "x", "confidence": "measured" },
-    { "id": "stage_front_to_golf_limit", "value": 27.0, "axis": "x", "confidence": "measured" },
-    { "id": "speaker_stand_out_from_runway", "value": 0.515, "axis": "z", "confidence": "measured" }
+    {
+      "id": "top_wall_to_runway",
+      "value": 11.65,
+      "axis": "z",
+      "confidence": "measured"
+    },
+    {
+      "id": "runway_width",
+      "value": 2.4,
+      "axis": "z",
+      "confidence": "measured"
+    },
+    {
+      "id": "runway_to_lf_platform",
+      "value": 10.25,
+      "axis": "z",
+      "confidence": "measured"
+    },
+    {
+      "id": "lf_platform_depth",
+      "value": 1.3,
+      "axis": "z",
+      "confidence": "measured"
+    },
+    {
+      "id": "runway_to_bottom_wall",
+      "value": 11.55,
+      "axis": "z",
+      "confidence": "derived: 10.25 + 1.3"
+    },
+    {
+      "id": "top_wall_to_lf_platform",
+      "value": 24.3,
+      "axis": "z",
+      "confidence": "measured (written on the sketch; equals 11.65 + 2.4 + 10.25)"
+    },
+    {
+      "id": "room_width",
+      "value": 25.6,
+      "axis": "z",
+      "confidence": "measured, rough"
+    },
+    {
+      "id": "runway_length_stage_front_to_tip",
+      "value": 22.54,
+      "axis": "x",
+      "confidence": "measured"
+    },
+    {
+      "id": "stage_front_to_golf_limit",
+      "value": 27.0,
+      "axis": "x",
+      "confidence": "measured"
+    },
+    {
+      "id": "speaker_stand_out_from_runway",
+      "value": 0.515,
+      "axis": "z",
+      "confidence": "measured"
+    }
   ],
   "not_measured": [
-    "Room length (54.7 m is from the v1 cable plan)",
-    "Stage depth: back wall to stage front",
+    "Room length: back wall estimated at about 47 m from the stage front (44-50 m; team's sense of the room and the old cable plan, 20 Nov). The 19 Nov photo estimate was 37 m; the old cable plan said a 54.7 m room",
+    "Stage depth: back wall to stage front (photos hint it may be more than 6 m)",
     "Golf limit to sound console, and the console's size",
     "Size of the two curved stage corners",
     "Stairs and speaker stands: positions along the runway, lengths, and the stairs' depth",
     "LF platform: length and where it starts along the wall; what it is for",
-    "Doors at the back wall: positions and widths",
-    "Runway height",
-    "Ceiling height, door and load-in route widths, floor finish"
+    "Doors: positions and widths on all walls (side-wall doors are guesses from photos)",
+    "Runway height (photos: about 0.9 m) and whether the 2.4 m width includes the skirt",
+    "Ceiling height (photos: about 7.5-8.5 m), door and load-in route widths"
   ],
-  "cables": "Not in v2. The cable runs, drops and the two circuits over 100% (ND18 at 101%, ND21 at 106%) are in the v1 file and the cable-plan screenshots, drawn in the v1 geometry. They still apply, but they need re-placing on these measurements."
+  "cables": "Not in v2. The cable runs, drops and the two circuits over 100% (ND18 at 101%, ND21 at 106%) are in the v1 file and the cable-plan screenshots, drawn in the v1 geometry. They still apply, but they need re-placing on these measurements.",
+  "photo_estimates": {
+    "_about": "From the team's photos of the auditorium in use (services, a 2020 event with house lights on), 19 Nov 2026. The photos aren't stored in the repo because they show identifiable people. Method and working: docs/13-auditorium-from-photos.md. Estimates, not measurements: build to none of them.",
+    "floor": "Light grey, smooth and slightly glossy (polished concrete or sheet vinyl look)",
+    "walls": {
+      "top": "Dark navy-black acoustic panels; a row of round surround speakers about 3.7 m up; two doors with exit signs; blue wall-wash lights near the top",
+      "bottom": "Dark wall with a long glazed band at floor level looking into a lit room (foyer?), roughly from x 9 to 31; beige diamond-quilted acoustic panels from about x 31 to the back wall; surround speakers; an exit door near the back corner",
+      "back": "Black drapes; the sound console in front; exit doors either side; a confidence monitor with a red clock hung over the console, facing the stage. The stage-view photos show four exit signs across the back, so there may be more doors than the sketch shows",
+      "stage_end": "Black"
+    },
+    "ceiling": {
+      "wall_top_y": [
+        7.5,
+        8.0
+      ],
+      "deck_y_used": 8.5,
+      "note": "Black, exposed ducts and beams, a grid of black cylinder downlights hanging below it"
+    },
+    "side_trusses": {
+      "y": [
+        5.5,
+        6.0
+      ],
+      "y_used": 5.8,
+      "note": "Along both side walls, with white LED batons and moving heads; the LED batons are the white dashes in the stage-view photos"
+    },
+    "surround_speakers_y": 3.7,
+    "delay_screen": {
+      "x_used": [
+        8.0,
+        24.0
+      ],
+      "z": [
+        11.65,
+        14.05
+      ],
+      "underside_y": 3.5,
+      "height": 2.2,
+      "note": "Two LED screens hung along the room, parallel to the runway, one above each runway edge, so about 2.4 m apart (team 20 Nov). Backs to each other: the one over the top edge faces the 11.65 m side, the one over the bottom edge faces the LF-platform side. Underside about 3.5 m (photos, 19 Nov); length and position along the runway are guesses. An unlit lattice section at the back end."
+    },
+    "stage_set": {
+      "led_wall": "About 15 x 2.5 m, upstage, bottom about 1.8 m above the deck",
+      "portrait_screens": "Two each side: inner about 1.6 x 2.6 m hung, outer about 1.8 x 4.4 m standing near the curved corners",
+      "line_arrays": "Hung at the ends of the LED wall",
+      "deck": "Glossy pale grey, black fascia, light-blue LED strip along the front edge",
+      "runway": "Glossy white top, black skirt; black side stairs with four risers"
+    },
+    "confidence_monitors": "One over the console and one hung mid-room on the 11.65 m side, both facing the stage, each with a red LED clock",
+    "camera_heights": {
+      "empty_room_photo": 3.5,
+      "stage_view_photos": "about 2.45 m above the stage deck",
+      "centre_audience_photo": 2.2,
+      "back_corner_photo": "about 4 m"
+    }
+  }
 }

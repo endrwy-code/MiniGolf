@@ -1,6 +1,6 @@
 # Renting: what's possible, how, and how good it is
 
-Researched 18 Nov 2026, before the New York direction and the route C costing; merged into the main plan on 27 Nov. Where it compares rentals with "our holes", it means the spec sheet v1 holes (`03-hole-spec-sheet.md`); the New York holes are similar in size (`10-new-york-concept.md`). The "Neon Countdown" look it mentions is superseded by New York Countdown. It was numbered 09 on its own branch and renumbered to 14 because 09 is now the city concept.
+Researched 18 Nov 2026, before the New York direction and the route C costing; merged into the main plan on 27 Nov. Where it compares rentals with "our holes", it means the spec sheet v1 holes (`03-hole-spec-sheet.md`); the New York holes are similar in size (`10-new-york-concept.md`). The "Neon Countdown" look it mentions is superseded by New York Countdown. It was numbered 09 on its own branch and renumbered to 19 on 27 Nov (09 is the city concept; 13–17 are the 19–25 Nov docs).
 
 Researched 18 Nov 2026. This session couldn't open the vendor websites directly (blocked by the session's network settings), so every vendor fact below comes from **search-result extracts of their pages**. That is weaker than reading the page. Confirm every size, price and stock level by email or phone before relying on it. **Inference** means our reading of the evidence, not something a vendor said.
 

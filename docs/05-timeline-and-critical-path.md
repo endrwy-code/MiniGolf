@@ -6,7 +6,7 @@ Added Fri 27 Nov 2026, 34 days before the event. Claude's reading of the dates, 
 
 **Where it stands.** G0 (Fri 20 Nov) and G1 (Wed 25 Nov) have passed, and the repo records no team decision after 18 Nov: no budget ceiling, no build route, no builder or carpenter, no turf order, no confirmed install window. If the team has decided any of these outside the repo, record them in the decision log and most of this section falls away.
 
-**What the slip costs.** The gates after G1 keep their dates, but the slack in front of them has gone. The G1 rule below says "switch to the rental fallback", but the 18 Nov rental check (`14-rental-options.md`) found that only single carnival putting lanes can be rented locally, so that fallback is a plain course, not the city the team asked for. Route C (one paid carpenter plus volunteers, `11-route-c-carpenter-build.md`) is the route that still fits, because its drawings are ready (`12-carpenter-pack.md`).
+**What the slip costs.** The gates after G1 keep their dates, but the slack in front of them has gone. The G1 rule below says "switch to the rental fallback", but the 18 Nov rental check (`19-rental-options.md`) found that only single carnival putting lanes can be rented locally, so that fallback is a plain course, not the city the team asked for. Route C (one paid carpenter plus volunteers, `11-route-c-carpenter-build.md`) is the route that still fits, because its drawings are ready (`12-carpenter-pack.md`).
 
 **The dates that still work for route C (recommended):**
 

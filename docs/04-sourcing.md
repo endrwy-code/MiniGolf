@@ -7,7 +7,7 @@ Researched 16 Nov 2026. Prices and claims change, so re-check before relying on 
 | Route | Verdict for 31 Dec |
 |---|---|
 | **Hybrid local build** (buy turf; a Singapore set builder makes holes and props) | **Recommended.** It's the only route that gives a custom look, fits the date and lets us test-play before the night. |
-| **Rent a portable course** | **A full course can't be rented locally; only single carnival putting lanes.** Get one quote as a price floor and fallback, and ask builders for a hire-basis price. Details: `14-rental-options.md`. |
+| **Rent a portable course** | **A full course can't be rented locally; only single carnival putting lanes.** Get one quote as a price floor and fallback, and ask builders for a hire-basis price. Details: `19-rental-options.md`. |
 | **Huadong Play** | **Credible manufacturer, wrong product for this job.** Revisit only if HOGC wants a permanent outdoor course later. |
 | **Other factory order (China or international)** | **Only with ready-made stock shipping within days**, and only if the course will be reused. Otherwise it's a 2027 decision. |
 
@@ -92,7 +92,7 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 | The Carnival Fair | Zig Zag golf game (0.5–0.8 × 1.5–2 m; its two pages disagree) | Priced by guests and hours · [link](https://www.thecarnivalfair.com.sg/products/zig-zag-golf-game-rental) |
 | Funco | Carnival games with "branding options, themed panels, or custom colour schemes upon request"; no golf item confirmed | [link](https://www.funco.com.sg/carnival-games) |
 
-**What this tells us:** rental modules are small and plain, a long way from your references. They're useful as **extra kids' holes**, as a **backup** if one built hole fails, or as a **floor price**, not as the course itself. Full rental check (quality, customisation, how to book, hire-basis builds, renting stage decks as bases): `14-rental-options.md`.
+**What this tells us:** rental modules are small and plain, a long way from your references. They're useful as **extra kids' holes**, as a **backup** if one built hole fails, or as a **floor price**, not as the course itself. Full rental check (quality, customisation, how to book, hire-basis builds, renting stage decks as bases): `19-rental-options.md`.
 
 ### 1b. Budget routes: carnival lane rental and kits (researched 18 Nov)
 
@@ -116,6 +116,8 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 **What this means:** each firm holds 1–3 golf units, so 10 lanes means booking 3–4 vendors early. The units are plain and short. Use them as a hands-off fallback (route A in `08-budget-model.md` section 6), as extra kids' holes, or as a price floor.
 
 ### 2. Chinese manufacturers (Alibaba listings only, so treat with caution)
+
+**20 Nov:** a longer contact list of factories that make portable lanes and putting greens cut to size (PGM / Foshan Qingzhou, Shenzhen Grearth, Huizhou Shenger and others), a message to send in English and Chinese, and how to trace a Taobao or Pinduoduo shop to its factory: `14-china-factory-contacts.md` and `14-china-factory-contacts.csv`. **22 Nov:** a browsing agent checked them on the live pages; the one product that fits is the PGM GL025 modular putting green (see the 22 Nov section of doc 14).
 
 | Supplier | Offer | Listed price | Notes |
 |---|---|---|---|
@@ -150,7 +152,7 @@ None of them rent in Asia. Sources: [Bungee](https://bungeesupply.com/led-games/
 1. **Build locally.** Ask **Props Factory** to quote the 4 hero props, and **Right-Space and/or Giant Carpentry** (check their portfolio) to quote the platforms, rails and LED. Get **Corzzair** as a Johor comparison. Ask your **own production crew** first.
 2. **Turf:** get samples from **Craftway** and **GreenTurf** this week and pick on roll quality and fire certificate.
 3. **Accessories:** UV cups, putters and balls from Kinray by air express, or buy locally.
-4. **Fallback:** ask Propz, The Carnival Fair, Bigtop, Party People and CarnivalGuru about availability on 31 Dec for 2–4 rental lanes (extra kids' holes or backup). Ask every builder for a **hire-basis** price too (`14-rental-options.md`).
+4. **Fallback:** ask Propz, The Carnival Fair, Bigtop, Party People and CarnivalGuru about availability on 31 Dec for 2–4 rental lanes (extra kids' holes or backup). Ask every builder for a **hire-basis** price too (`19-rental-options.md`).
 5. **Factories:** one "ready stock?" message to Guangzhou Infinity *only if* reuse is likely. Park Huadong for a possible permanent outdoor course later.
 
 All quote requests: `06-rfq-templates.md`. Log every reply below.

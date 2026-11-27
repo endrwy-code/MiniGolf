@@ -24,7 +24,7 @@
 <text x="426.9" y="850.0" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#5D6B60" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Kept clear</text>
 <text x="426.9" y="876.6" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#5D6B60" text-anchor="middle" font-weight="400" dominant-baseline="middle" >(about 6.5 m)</text>
 <clipPath id="room"><rect x="64.0" y="128.0" width="1425.0" height="972.8"/></clipPath>
-<polygon points="1990.6,445.3 1990.6,787.3 292.0,661.9 292.0,570.7" fill="#E0533F" stroke="#C2412E" stroke-width="0.8" fill-opacity="0.07" stroke-dasharray="5 4" clip-path="url(#room)"/>
+<polygon points="1926.0,445.3 1926.0,787.3 292.0,661.9 292.0,570.7" fill="#E0533F" stroke="#C2412E" stroke-width="0.8" fill-opacity="0.07" stroke-dasharray="5 4" clip-path="url(#room)"/>
 <text x="1432.0" y="622.0" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >assumed console sightline:</text>
 <text x="1432.0" y="642.9" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >nothing over 2 m inside</text>
 <polygon points="539.0,129.9 862.0,129.9 862.0,143.2 539.0,143.2" fill="#2E3350" stroke="none" stroke-width="1" />
@@ -64,10 +64,10 @@
 <polygon points="812.6,933.6 820.0,926.4 810.4,923.5" fill="#7E3FC0"/>
 <polyline points="618.8,1005.8 831.6,1038.1 854.4,971.6" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
 <polygon points="854.4,971.6 846.8,978.5 856.2,981.7" fill="#7E3FC0"/>
-<polyline points="1048.2,1051.4 1173.6,1049.5 1253.4,1040.0" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
-<polygon points="1253.4,1040.0 1243.9,1036.1 1245.1,1046.0" fill="#7E3FC0"/>
-<polyline points="1204.0,808.2 1242.0,694.2" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
-<polygon points="1242.0,694.2 1234.4,701.2 1243.9,704.3" fill="#7E3FC0"/>
+<polyline points="1048.2,1051.4 1173.6,1049.5 1253.4,1045.7" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1253.4,1045.7 1244.2,1041.1 1244.6,1051.1" fill="#7E3FC0"/>
+<polyline points="1204.0,813.9 1242.0,694.2" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1242.0,694.2 1234.5,701.3 1244.0,704.3" fill="#7E3FC0"/>
 <polygon points="1166.0,473.8 938.0,473.8 938.0,413.0 1166.0,413.0" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
 <polygon points="936.1,473.8 924.7,473.8 924.7,413.0 936.1,413.0" fill="#D9D3C4" stroke="#8A8472" stroke-width="0.7" />
 <polygon points="1147.8,389.1 1161.4,389.1 1161.4,402.7 1147.8,402.7" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
@@ -147,17 +147,17 @@
 <polygon points="1103.3,965.6 1104.9,969.4 1109.0,969.7 1105.9,972.4 1106.8,976.5 1103.3,974.3 1099.8,976.5 1100.7,972.4 1097.6,969.7 1101.7,969.4" fill="#2C2C2A"/>
 <circle cx="972.2" cy="971.6" r="16.0" fill="#E8A33A" stroke="#1B1B1B" stroke-width="1.2" />
 <text x="972.2" y="972.4" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >2</text>
-<polygon points="1226.8,1017.2 1226.8,789.2 1280.0,789.2 1280.0,1017.2" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
-<polygon points="1219.2,960.2 1219.2,846.2 1287.6,846.2 1287.6,960.2" fill="#D9D3C4" stroke="#8A8472" stroke-width="0.7" />
-<polygon points="1242.0,785.4 1242.0,762.6 1264.8,762.6 1264.8,785.4" fill="#D9D3C4" stroke="#8A8472" stroke-width="0.7" />
-<polygon points="1202.9,999.0 1216.5,999.0 1216.5,1012.6 1202.9,1012.6" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
-<polygon points="1222.2,1021.8 1222.2,784.6 1284.6,784.6 1284.6,1021.8" fill="none" stroke="#FF3DCB" stroke-width="2.2" stroke-opacity="0.85" stroke-dasharray="1 0"/>
-<polygon points="1247.7,1000.1 1259.1,1000.1 1259.1,1011.5 1247.7,1011.5" fill="#2B2B2B" stroke="none" stroke-width="1" />
-<polygon points="1253.4,768.0 1255.0,771.8 1259.1,772.1 1256.0,774.8 1256.9,778.9 1253.4,776.7 1249.9,778.9 1250.8,774.8 1247.7,772.1 1251.8,771.8" fill="#2C2C2A"/>
-<polygon points="1285.7,897.2 1287.3,901.0 1291.4,901.3 1288.3,904.0 1289.2,908.1 1285.7,905.9 1282.2,908.1 1283.1,904.0 1280.0,901.3 1284.1,901.0" fill="#2C2C2A"/>
-<polygon points="1221.1,897.2 1222.7,901.0 1226.8,901.3 1223.7,904.0 1224.6,908.1 1221.1,905.9 1217.6,908.1 1218.5,904.0 1215.4,901.3 1219.5,901.0" fill="#2C2C2A"/>
-<circle cx="1253.4" cy="903.2" r="16.0" fill="#FF3DCB" stroke="#1B1B1B" stroke-width="1.2" />
-<text x="1253.4" y="904.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >1</text>
+<polygon points="1226.8,1022.9 1226.8,794.9 1280.0,794.9 1280.0,1022.9" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1219.2,965.9 1219.2,851.9 1287.6,851.9 1287.6,965.9" fill="#D9D3C4" stroke="#8A8472" stroke-width="0.7" />
+<polygon points="1242.0,791.1 1242.0,768.3 1264.8,768.3 1264.8,791.1" fill="#D9D3C4" stroke="#8A8472" stroke-width="0.7" />
+<polygon points="1202.9,1004.7 1216.5,1004.7 1216.5,1018.3 1202.9,1018.3" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="1222.2,1027.5 1222.2,790.3 1284.6,790.3 1284.6,1027.5" fill="none" stroke="#FF3DCB" stroke-width="2.2" stroke-opacity="0.85" stroke-dasharray="1 0"/>
+<polygon points="1247.7,1005.8 1259.1,1005.8 1259.1,1017.2 1247.7,1017.2" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<polygon points="1253.4,773.7 1255.0,777.5 1259.1,777.8 1256.0,780.5 1256.9,784.6 1253.4,782.4 1249.9,784.6 1250.8,780.5 1247.7,777.8 1251.8,777.5" fill="#2C2C2A"/>
+<polygon points="1285.7,902.9 1287.3,906.7 1291.4,907.0 1288.3,909.7 1289.2,913.8 1285.7,911.6 1282.2,913.8 1283.1,909.7 1280.0,907.0 1284.1,906.7" fill="#2C2C2A"/>
+<polygon points="1221.1,902.9 1222.7,906.7 1226.8,907.0 1223.7,909.7 1224.6,913.8 1221.1,911.6 1217.6,913.8 1218.5,909.7 1215.4,907.0 1219.5,906.7" fill="#2C2C2A"/>
+<circle cx="1253.4" cy="908.9" r="16.0" fill="#FF3DCB" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="1253.4" y="909.7" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >1</text>
 <text x="1029.2" y="376.9" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >10 · Bike Lane</text>
 <text x="1029.2" y="397.8" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Wheel See You Next Year”</text>
 <text x="789.8" y="373.1" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >9 · Hot Dog Cart</text>
@@ -182,8 +182,8 @@
 <text x="725.2" y="867.1" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#6A2FA8" text-anchor="middle" font-weight="800" dominant-baseline="middle" letter-spacing="1.5">MIDTOWN · holes 5 → 1</text>
 <polygon points="64.0,128.0 1489.0,128.0 1489.0,1100.8 64.0,1100.8" fill="none" stroke="#2C2C2A" stroke-width="2.2" />
 <line x1="1489.0" y1="128.0" x2="1489.0" y2="1100.8" stroke="#F7F6F2" stroke-width="5"/>
-<text x="1481.4" y="789.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >room continues to the</text>
-<text x="1481.4" y="808.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >sound console (≈ 54.7 m)</text>
+<text x="1481.4" y="789.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >room continues ≈ 20 m to the</text>
+<text x="1481.4" y="808.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >console and back wall (estimated)</text>
 <polygon points="64.0,1161.6 102.0,1161.6 102.0,1171.1 64.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
 <polygon points="102.0,1161.6 140.0,1161.6 140.0,1171.1 102.0,1171.1" fill="#FFFFFF" stroke="#2C2C2A" stroke-width="0.6" />
 <polygon points="140.0,1161.6 178.0,1161.6 178.0,1171.1 140.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
@@ -197,10 +197,10 @@
 <text x="1515.0" y="187.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to runway side: 2.12 m (rule ≥ 1.75)</text>
 <text x="1515.0" y="204.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to stage front: 6.57 m (rule ≥ 6.5)</text>
 <text x="1515.0" y="222.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to golf limit: 0.80 m (rule ≥ 0.6)</text>
-<text x="1515.0" y="239.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to hub: 2.00 m (rule ≥ 1.5)</text>
+<text x="1515.0" y="239.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to hub: 2.15 m (rule ≥ 1.5)</text>
 <text x="1515.0" y="257.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hub to runway tip: 1.46 m (rule ≥ 1.2)</text>
 <text x="1515.0" y="274.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Walkway width: 1.75 m (rule ≥ 1.2)</text>
-<text x="1515.0" y="292.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Tall props to sightline: 1.08 m (rule ≥ 0.5)</text>
+<text x="1515.0" y="292.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Tall props to sightline: 1.15 m (rule ≥ 0.5)</text>
 <text x="1515.0" y="309.5" font-family="Helvetica, Arial, sans-serif" font-size="6" font-weight="400" fill="#000"></text>
 <text x="1515.0" y="322.5" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A18">Walk routes</text>
 <text x="1515.0" y="342.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9A6A0C">Downtown: hub → 10 → 9 → 8 → 7 → 6 → hub</text>
