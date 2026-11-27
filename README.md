@@ -40,6 +40,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | [Rental options](docs/19-rental-options.md) | 18 Nov: what can be rented (only single carnival putting lanes locally), how good and how customisable it is, how to book it, and asking builders for a hire-basis price |
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies, factories and a freelance carpenter |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
+| **[3D model, iteration 1](status/countdown-golf-3d-iter1.html)** | **27 Nov: the ten iteration-1 holes (doc 14) at true size on layout v4, reviewed against doc 14. Published privately as an Artifact; offline copy in `status/standalone/`** |
 | [Status page](status/countdown-golf-status.html) | 18 Nov: one visual page with the gates, what's decided, today's changes, the plaza layout, capacity and cost. Published privately as an Artifact |
 | [3D view](status/countdown-golf-3d.html) | The New York holes on layout v3, to scale, inside the auditorium as the photos show it (19 Nov: black walls and ceiling, stage screens, trusses, exits, console), with three lighting set-ups, a tee view of each hole, full screen, and a walk mode at human scale (child, average adult or tall adult). Published privately as an Artifact |
 | [Project brief](docs/project-brief.md) | Original context, floorplan decode, earlier research and the **decision log** |

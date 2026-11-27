@@ -102,6 +102,9 @@ def wrap(fragment, extra_body_start=""):
     return SKELETON_HEAD + head.strip() + "\n</head>\n<body>\n" + extra_body_start + body.strip() + "\n</body>\n</html>\n"
 
 
+THREE_D_PAGES = ("countdown-golf-3d.html", "countdown-golf-3d-iter1.html")
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
 
@@ -110,25 +113,27 @@ def main():
     with open(os.path.join(OUT, "countdown-golf-status.html"), "w", encoding="utf-8") as f:
         f.write(wrap(status))
 
-    with open(os.path.join(SRC, "countdown-golf-3d.html"), encoding="utf-8") as f:
-        page = f.read()
-    page, n = re.subn(r'<script type="importmap">.*?</script>\s*', "", page, flags=re.S)
-    if n != 1:
-        sys.exit("import map not found in the 3D page")
-    if LOADER_OLD not in page:
-        sys.exit("three.js loader block not found in the 3D page; update LOADER_OLD")
-    page = page.replace(LOADER_OLD, LOADER_NEW)
-    lib = fetch_three()
-    embedded = (
-        f'<!-- three.js {THREE_VER} (MIT licence, (c) three.js authors), embedded so this file works offline -->\n'
-        f'<script type="text/plain" id="src-three-core">{lib["core"]}</script>\n'
-        f'<script type="text/plain" id="src-three">{lib["three"]}</script>\n'
-        f'<script type="text/plain" id="src-orbit">{lib["orbit"]}</script>\n'
-    )
-    with open(os.path.join(OUT, "countdown-golf-3d.html"), "w", encoding="utf-8") as f:
-        f.write(wrap(page, embedded))
+    lib = None
+    for name in THREE_D_PAGES:
+        with open(os.path.join(SRC, name), encoding="utf-8") as f:
+            page = f.read()
+        page, n = re.subn(r'<script type="importmap">.*?</script>\s*', "", page, flags=re.S)
+        if n != 1:
+            sys.exit(f"import map not found in {name}")
+        if LOADER_OLD not in page:
+            sys.exit(f"three.js loader block not found in {name}; update LOADER_OLD")
+        page = page.replace(LOADER_OLD, LOADER_NEW)
+        lib = lib or fetch_three()
+        embedded = (
+            f'<!-- three.js {THREE_VER} (MIT licence, (c) three.js authors), embedded so this file works offline -->\n'
+            f'<script type="text/plain" id="src-three-core">{lib["core"]}</script>\n'
+            f'<script type="text/plain" id="src-three">{lib["three"]}</script>\n'
+            f'<script type="text/plain" id="src-orbit">{lib["orbit"]}</script>\n'
+        )
+        with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
+            f.write(wrap(page, embedded))
 
-    for name in ("countdown-golf-status.html", "countdown-golf-3d.html"):
+    for name in ("countdown-golf-status.html",) + THREE_D_PAGES:
         p = os.path.join(OUT, name)
         print(f"{os.path.relpath(p, ROOT)}  {os.path.getsize(p) / 1024:.0f} KB")
 
