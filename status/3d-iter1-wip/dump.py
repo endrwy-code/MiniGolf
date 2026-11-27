@@ -3,7 +3,10 @@
   python dump.py out/test.html            # all holes
   python dump.py out/test.html 10 9       # some holes
 Flags a hole whose meshes stick out of its declared L x W box by more than 35 mm (a rail drawn just outside a deck edge is about 31 mm) (props outside the rails that are
-declared as extras in the brief are expected; check them against the brief's table)."""
+declared as extras in the brief are expected; check them against the brief's table).
+Known limit: instanced meshes (InstancedMesh: pegs, bulbs, fries, fairy lights) are measured by their base geometry at
+the group origin, not at each instance, so a small "below the floor" y reading (holes 5 and 7) comes from them, not
+from real geometry. Uses Chromium with --headless=new (works on Linux for --dump-dom; shot.py needs the headless shell)."""
 import html, json, os, pathlib, re, subprocess, sys, tempfile
 _WIN_CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 _LINUX_CHROME = "/opt/pw-browsers/chromium"

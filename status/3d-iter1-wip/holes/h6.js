@@ -193,18 +193,28 @@ HOLE_BUILDERS[6] = function (h, g, K) {
     (i, j) => { const ph = rad(-90 + 90 * i / NPH); return [CU + prof[j][0] * Math.cos(ph), BASE + prof[j][1], CV + prof[j][0] * Math.sin(ph)]; },
     (i, j) => [i / NPH, arcL[j] / arcL[arcL.length - 1]],
     (i, j) => { const ph = rad(-90 + 90 * i / NPH); return [prof[j][2] * Math.cos(ph), prof[j][3], s * prof[j][2] * Math.sin(ph)]; }, waveMat);
+  // integration fix (27 Nov; review MF1 and its should-fix, doc 14 to follow, rig to confirm): a 0.8 m tapered run-in along the
+  // outer rail replaces the vertical upstream cheek, so no face points back down leg A; and the closed back is a flat crest
+  // band plus a fairing sloping down to the rail caps, level with them (doc 14), instead of a block standing 300 mm above them
+  const LRI = 0.8, NRI = 12, R2 = CR + RHO + 0.03, YR = RAIL_H;   // run-in length; outer edge of the crest band; fairing edge at the rail-cap top (+100)
+  grid(NRI, prof.length - 1, (i, j) => { const t = 1 - i / NRI; return [CU - LRI * i / NRI, BASE + t * prof[j][1], VA + t * (1.0 - prof[j][0])]; },
+    (i, j) => [1 - i / NRI, arcL[j] / arcL[arcL.length - 1]], (i, j) => [0, prof[j][3], -s * prof[j][2]], waveMat);
   {
-    const cp = [...prof.map(p => [p[0], p[1]]), [1.0, WH], [1.0, 0]];
+    const rr = ph => 1.0 / Math.max(Math.abs(Math.cos(ph)), Math.abs(Math.sin(ph)));   // axis to the outer rail line (a square corner)
+    const phi = i => rad(-90 + 90 * i / NPH);
+    grid(NPH, 1, (i, j) => { const r = j ? R2 : RTOP; return [CU + r * Math.cos(phi(i)), BASE + WH, CV + r * Math.sin(phi(i))]; }, (i, j) => [i / NPH, j], () => [0, 1, 0], foamMat);
+    grid(NPH, 1, (i, j) => { const r = j ? rr(phi(i)) : R2; return [CU + r * Math.cos(phi(i)), BASE + (j ? YR : WH), CV + r * Math.sin(phi(i))]; }, (i, j) => [i / NPH, j], i => [Math.cos(phi(i)), 0.6, s * Math.sin(phi(i))], backMat);
+    grid(NRI, 1, (i, j) => { const t = 1 - i / NRI, r = j ? R2 : RTOP; return [CU - LRI * i / NRI, BASE + t * WH, VA + t * (1.0 - r)]; }, (i, j) => [1 - i / NRI, j], () => [0, 1, 0], foamMat);
+    grid(NRI, 1, (i, j) => { const t = 1 - i / NRI; return [CU - LRI * i / NRI, BASE + t * (j ? YR : WH), VA + t * (j ? 0 : 1.0 - R2)]; }, (i, j) => [1 - i / NRI, j], () => [0, 0.6, -s], backMat);
+  }
+  {
+    const cp = [...prof.map(p => [p[0], p[1]]), [R2, WH], [1.0, YR], [1.0, 0]];   // the downstream cheek, matching the sloped back
     const tris = THREE.ShapeUtils.triangulateShape(cp.map(p => new THREE.Vector2(p[0], p[1])), []), ch = GB();
-    for (const [ph, out] of [[-Math.PI / 2, [-1, 0, 0]], [0, [0, 0, s]]]) {
+    for (const [ph, out] of [[0, [0, 0, s]]]) {   // (the upstream cheek at -90 deg is gone: the run-in replaces it)
       const c = Math.cos(ph), sn = Math.sin(ph), at = p => P3(CU + p[0] * c, BASE + p[1], CV + p[0] * sn);
       for (const t of tris) ch.tri(at(cp[t[0]]), at(cp[t[1]]), at(cp[t[2]]), [0, 0], [0, 0], [0, 0], out);
     }
     ch.build(cheekMat);
-    const shelf = [[UC, CV], [UC, VA], [CU, VA]];
-    for (let k = 0; k <= NPH; k++) { const ph = rad(-90 + 90 * k / NPH); shelf.push([CU + RTOP * Math.cos(ph), CV + RTOP * Math.sin(ph)]); }
-    const se = allNull(shelf); se[0] = backMat; se[1] = backMat;
-    polyBox(shelf, () => BASE + WH, foamMat, { edge: se });     // closed back: the corner behind the face, topped at the curl
     const nose = mesh(new THREE.TorusGeometry(RTOP + 0.006, 0.02, 8, 48, Math.PI / 2), MC('#F3F6F7', { roughness: 0.95 }), g, CU, BASE + WH - 0.006, s * CV);
     nose.rotation.x = -s * Math.PI / 2;                          // padded curl nosing (S5)
   }
@@ -280,7 +290,8 @@ HOLE_BUILDERS[6] = function (h, g, K) {
     outlines: [{ p: outer }],
     sizes: [
       ['Leg A (harbour)', '0.90 m inside x 3.00 m (tee-end rail to the island leg), blue carpet at BASE; tee 0.3 m from the end rail'],
-      ['Banked corner', 'conical 90 deg segment, axis 1.00 m from both outer rails: 45 deg face from R 0.60 (foot) to R 0.91 at +315 mm, 50 mm curl lip to +400 (lip edge R 0.88); closed back filled to the rails; cheeks closed to the rails; padded nosing'],
+      ['Banked corner', 'conical 90 deg segment, axis 1.00 m from both outer rails: 45 deg face from R 0.60 (foot) to R 0.91 at +315 mm, 50 mm curl lip to +400 (lip edge R 0.88); closed back sloping from the crest down to the rail caps, level with them; downstream cheek closed to the rail; padded nosing'],
+      ['Run-in', '0.8 m tapered bank along the outer rail before the corner, growing from the floor to the full wave (replaces the upstream cheek; review fix, rig to confirm)'],
       ['Leg B (island)', '1.40 m inside x 2.20 m (harbour rail line to the end rail)'],
       ['Shore', '1:5, 375 mm long, BASE to +75; its foot 0.10 m past the wave\'s cheek'],
       ['Island', 'BASE +75, 1.63 m flat from the crest to the end rail'],

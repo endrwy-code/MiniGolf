@@ -224,12 +224,13 @@ HOLE_BUILDERS[8] = function (h, g, K) {
     const bm = MC(col, { roughness: 0.4 }), u = CU0 - 0.12;
     cyl(0.09, 0.09, 0.45, bm, g, u, ST + 0.225, s * v); cyl(0.02, 0.09, 0.15, bm, g, u, ST + 0.525, s * v); cyl(0.006, 0.014, 0.08, bm, g, u, ST + 0.64, s * v, 8);
   }
-  // ---- fries: a giant carton against the -v rail between the cart and the kerb
+  // ---- fries: a giant carton on the cart's counter, beside the display dog (integration fix 27 Nov: it stood in the lane
+  //      against the -v rail, an obstacle doc 14 does not have; doc 14 lists fries as dressing only)
   {
-    const fu = -0.12, fv = -(HW - 0.065), red = MC('#C8273A', { roughness: 0.6 }), fry = MC('#E8C26A', { roughness: 0.8 }), Rf = rand(9), list = [];
-    box(0.2, 0.2, 0.13, [red, red, red, red, MC('#F4EBD6'), MC('#F4EBD6')], g, fu, ST + 0.1, s * fv);
+    const fu = CU1 - 0.11, fv = -0.47, FY = yt + 0.03 - ST, red = MC('#C8273A', { roughness: 0.6 }), fry = MC('#E8C26A', { roughness: 0.8 }), Rf = rand(9), list = [];
+    box(0.2, 0.2, 0.13, [red, red, red, red, MC('#F4EBD6'), MC('#F4EBD6')], g, fu, ST + FY + 0.1, s * fv);
     const fg = new THREE.BoxGeometry(0.022, 1, 0.022).translate(0, 0.5, 0);
-    for (let k = 0; k < 12; k++) { const l = 0.14 + Rf() * 0.12; list.push([fu - 0.08 + Rf() * 0.16, ST + 0.17, s * (fv - 0.045 + Rf() * 0.09), (Rf() - 0.5) * 0.4, Rf() * 3, (Rf() - 0.5) * 0.4, 1, l, 1]); }
+    for (let k = 0; k < 12; k++) { const l = 0.14 + Rf() * 0.12; list.push([fu - 0.08 + Rf() * 0.16, ST + FY + 0.17, s * (fv - 0.045 + Rf() * 0.09), (Rf() - 0.5) * 0.4, Rf() * 3, (Rf() - 0.5) * 0.4, 1, l, 1]); }
     inst(fg, fry, list, g);
   }
 
@@ -247,9 +248,10 @@ HOLE_BUILDERS[8] = function (h, g, K) {
     box(0.44, 0.11, 0.012, [mats.base, mats.base, mats.base, mats.base, fR, fL], g, pu + 0.24, 1.55, pv);   // the arrow points +u (on down the hole) from both sides
   }
 
-  // ---- far end: the neon pun sign on slim posts behind the back rail
-  for (const sg of [-1, 1]) { box(0.04, 1.66, 0.04, mats.pole, g, 2.525, 0.83, sg * 0.5); box(0.12, 0.02, 0.12, mats.base, g, 2.525, 0.01, sg * 0.5); }
-  boardSign(g, neonTex(['RELISH THE', 'MOMENT'], h.glow), 2.49, 0, 1.2, 0.42, 1.2, false);
+  // ---- far end: the neon pun sign on slim posts behind the back rail, raised to 1.6-2.02 m (integration fix 27 Nov) so the
+  //      cart, display dog and umbrella no longer hide it from the tee
+  for (const sg of [-1, 1]) { box(0.04, 2.06, 0.04, mats.pole, g, 2.525, 1.03, sg * 0.5); box(0.12, 0.02, 0.12, mats.base, g, 2.525, 0.01, sg * 0.5); }
+  boardSign(g, neonTex(['RELISH THE', 'MOMENT'], h.glow), 2.49, 0, 1.2, 0.42, 1.6, false);
 
   // ---- junior tee on the sidewalk
   teeMat(JT[0], JT[1], SW, 0.22, '#7C8494');
@@ -269,7 +271,7 @@ HOLE_BUILDERS[8] = function (h, g, K) {
       ['Cup', '0.30 m from the closed end, on the axis (lever: 0.1 m off axis if aces run over 40%)'],
       ['Heights', 'street BASE, sidewalk BASE +75 mm, bun crown BASE +225 mm'],
       ['Junior tee', 'on the sidewalk 1.0 m past the cart, 1.45 m from the cup (about 1.3 m/s)'],
-      ['Props', 'Ø180 bottles touching the rails at the arch; fries carton; umbrella about 2.2 m on a sandbagged post outside the rail'],
+      ['Props', 'Ø180 bottles touching the rails at the arch; fries carton on the counter (dressing, not in the lane); umbrella about 2.2 m on a sandbagged post outside the rail; pun sign 1.6–2.02 m'],
     ],
   };
 };

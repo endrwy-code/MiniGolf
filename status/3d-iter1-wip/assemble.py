@@ -16,8 +16,9 @@ Test hook URL parameters (test builds only):
   ?hole=N         select hole N
   &cam=close|tee|top|side|overview   camera (default close: a raised three-quarter view from the tee end)
   &light=glow|house|dark
-  &iso=1          hide every other hole, the skyline flats, the rig and labels, to look at one hole alone
+  &iso=1          hide every other hole, the shared scenery, the skyline flats, the rig and labels, to look at one hole alone
   &ui=0           hide the header, side panel and buttons; the 3D view fills the window
+  &label=0        hide the floating selection label (renders for the factory)
   &zoom=1.0       move the close/top/side camera nearer (>1) or further (<1)
   &dump=1         write every hole's local extents and builder return value as JSON into <pre id="dump">
                   (read it with: python dump.py out/x.html)
@@ -74,6 +75,7 @@ HOOK = r"""
     document.head.appendChild(st);
     resize();
   }
+  if (q.get('label') === '0') { const st = document.createElement('style'); st.textContent = '.lbl.sel{display:none!important}'; document.head.appendChild(st); }   // renders without the selection label
   if (q.has('light')) { applyLight(q.get('light')); document.querySelectorAll('[data-light]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.light === q.get('light')))); }
   const n = +q.get('hole');
   if (n && H[n] && holeGroups[n]) {
@@ -83,7 +85,7 @@ HOOK = r"""
       // the hole alone on the floor: hide every other top-level object except lights and the floor
       for (const ch of scene.children) { if (ch.isLight || ch === g || (ch.isMesh && ch.material === mats.floor)) continue; ch.visible = false; }
       cullShell = () => {};
-      layers.tags = false; layers.labels = false; layers.rig = false; applyLayers();
+      layers.tags = false; layers.labels = false; layers.rig = false; layers.flats = false; applyLayers();   // flats too: applyLayers would show them again
     }
     const zoom = +(q.get('zoom') || 1);
     const bb = new THREE.Box3().setFromObject(g), c = bb.getCenter(new THREE.Vector3()), sz = bb.getSize(new THREE.Vector3());

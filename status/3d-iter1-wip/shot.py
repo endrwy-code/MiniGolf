@@ -9,6 +9,7 @@ image read shows four views. ui=0 is added to every query unless the query alrea
 Defaults: 1280 x 800 per shot, 22 s of virtual time (SwiftShader is slow; raise --budget if a shot is blank).
 """
 import argparse
+import glob
 import os
 import pathlib
 import subprocess
@@ -17,7 +18,10 @@ import tempfile
 
 _WIN_CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 _LINUX_CHROME = "/opt/pw-browsers/chromium"
-CHROME = os.environ.get("CHROME") or (_LINUX_CHROME if os.path.exists(_LINUX_CHROME) else _WIN_CHROME)
+# On Linux, Chromium's --headless=new --screenshot returns blank WebGL tiles; chrome-headless-shell (no headless flag) works.
+_LINUX_SHELLS = sorted(glob.glob("/opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell"))
+CHROME = os.environ.get("CHROME") or next((p for p in [*_LINUX_SHELLS[-1:], _LINUX_CHROME] if os.path.exists(p)), _WIN_CHROME)
+HEADLESS = [] if "headless-shell" in os.path.basename(CHROME) else ["--headless=new"]
 # Linux containers run as root: Chrome needs --no-sandbox there. Windows keeps its sandbox.
 CHROME_EXTRA = ["--no-sandbox"] if sys.platform.startswith("linux") else []
 
@@ -27,7 +31,7 @@ def shoot(page, query, out, w, h, budget):
         query = (query + "&ui=0").lstrip("&")
     url = pathlib.Path(os.path.abspath(page)).as_uri() + "?" + query
     prof = tempfile.mkdtemp(prefix="chr-")
-    cmd = [CHROME, *CHROME_EXTRA, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist",
+    cmd = [CHROME, *CHROME_EXTRA, *HEADLESS, "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist",
            "--hide-scrollbars", "--no-first-run", "--no-default-browser-check", f"--user-data-dir={prof}",
            f"--window-size={w},{h}", f"--virtual-time-budget={budget}", f"--screenshot={os.path.abspath(out)}", url]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)

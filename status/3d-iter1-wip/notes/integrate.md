@@ -65,3 +65,71 @@ Hole-file fixes (integration only):
 - `holes/h2.js`: the Ø1 m clock gets a second rim and face on its back, so the 11:59 clock also faces hole 1's 2027
   tower (doc 14 blending: "one minute to go"); it showed a black disc to hole 1 before. Sizes row says so.
   Original in the session scratchpad.
+
+## Step 3: the reviewers' fixes the coordinator asked for (27 Nov)
+
+Read `notes/review-fidelity.md` and `notes/review-visual.md` (not edited). Applied as integration work; the doc 14
+contradictions (holes 3, 5, 7, 8, 9, 1) are left to the coordinator and the team. Originals of every touched hole file
+are in the session scratchpad.
+- **MF1, `holes/h6.js`** (doc 14 to follow, flagged as a review fix for the team to confirm at the full-width rig):
+  the vertical upstream cheek (ph -90 deg) is gone; a 0.8 m tapered run-in (12 stations) grows the full wave profile
+  out of the floor along the outer rail, from u 0.4 to the cone at u 1.2, as the review's code gives. The closed back
+  no longer stands 300 mm above the rail caps: the old flat +400 shelf (polyBox with rail-line walls) is replaced by a
+  flat crest band (R 0.879-0.959 at +400) and a fairing sloping from it down to +100 at the outer rail lines, level with
+  the rail-cap tops (doc 14's updated wording: "the corner's back stays level with the rail caps"), round the cone and
+  along the run-in; the downstream cheek's outline follows the slope. New
+  sizes row "Run-in"; "Banked corner" row updated. dump: extents unchanged (u +-2.276, v -1.80..1.799).
+  Open: a ball that clears the curl lip now rolls down the fairing and over the rail cap (the old flat shelf kept it on
+  top). The rig should show whether the 50 mm curl ever lets a ball over; if it does, stop the fairing 40 mm under the
+  caps (`YR = 0.06` in h6.js) so the rail catches it.
+- **Cup (page `addCup`)**: no white Ø160 collar 2 mm proud any more. A flush 108 mm opening with a 3 mm steel lip,
+  and the 64 mm sleeve and its soft floor drawn below the surface; a depth-only disc at the surface (renderOrder -1,
+  drawn after the sleeve, before the deck) keeps the deck top from painting over the opening, so you see into the cup.
+- **Picker and tags**: side-panel hole buttons are 10 px rounded squares; the floating hole numbers 6 px rounded squares
+  (same reason as the totem badge, doc 13 section 5.8).
+- **`holes/h8.js`**: the fries carton moves from the lane (against the -v rail at u -0.22..-0.02, an obstacle doc 14
+  does not have) onto the counter beside the display dog (u -0.51, v -0.47 x s, on the plate). The neon "RELISH THE
+  MOMENT" is raised to 1.60-2.02 m on 2.06 m posts so the cart, dog and umbrella no longer hide it from the tee
+  (checked in a tee render). Props sizes row updated.
+- **Test hook (`assemble.py`)**: `iso=1` also turns the skyline flats off (applyLayers turned them back on); new
+  `label=0` hides the floating selection label for factory renders. Docstring updated.
+- **Tools on Linux**: `shot.py` now prefers `chrome-headless-shell` from `/opt/pw-browsers/chromium_headless_shell-*`
+  with no headless flag (Chromium's `--headless=new --screenshot` gives blank WebGL tiles here), then Chromium, then
+  the Windows path; `CHROME` still overrides. `dump.py` keeps Chromium `--headless=new`, and its docstring now says
+  instanced meshes are measured at the group origin, so holes 5's and 7's small "below the floor" readings are false.
+- The page's "What changed" card has bullets for the rounded-square numbers, the flush cups and these review fixes.
+
+Not done from the reviews (cosmetic or for the team): hole 9's pizza-slice cut-out sits in the bottom corner of hole
+8's tee view; hole 2's tee view camera stands over hole 3 (1.2 m apart), so hole 3's sign shows at the frame's foot;
+hole 5's tree B fairy lights over part of its sign; hole 1's walkway billboard hides the peg board from the side (use
+the top or tee view for the factory); hole 6's downstream cone end and pun-sign posts through the cap overhang.
+
+## Step 4: checks and the final page (27 Nov)
+
+- `dump.py` (test build of the final): every hole inside its layout-v4 box except hole 8's umbrella (v to 1.70, the
+  brief's declared extra). Extents: 10 5.345 x 1.20; 9 5.13 x 1.90; 8 5.19 x 1.50 (+ umbrella); 7 5.15 x 1.56; 6 4.552 x
+  3.60; 5 4.68 x 2.76; 4 5.06 x 1.86 (rails inside the 35 mm tolerance); 3 4.02 x 2.55; 2 3.22 x 2.05; 1 5.38 x 2.14.
+- Console: no page errors, failed requests or console errors (desktop 1280 and phone 390); only SwiftShader's
+  "GPU stall due to ReadPixels" performance warnings, which come from headless software WebGL.
+- UI (Playwright): all ten hole buttons select their hole; every info card has Mechanism, Build, If the putt misses,
+  Sizes in this model (7-11 rows), Find the 11:59, Kulnari lesson, Surface; the three lighting buttons work; no
+  horizontal scroll at 390 px (scrollWidth = clientWidth = 390), picker and card render at phone width.
+- Renders (9 contact sheets, 9 image reads): Downtown and Midtown views, top and golf overviews, every hole's tee view,
+  console view with the sightline layer (portals and facade outside the cone, as the layout checks), dark, house and
+  glow lighting, the scenery close-ups, the fixes above, phone UI.
+- Final Artifact fragment: `R/status/countdown-golf-3d-iter1.html` (`python3 assemble.py --base base-v2.html --layout
+  layout.json --fragment --no-hook --out ../countdown-golf-3d-iter1.html`): no test hook, no doctype (the Artifact wraps
+  it), three.js 0.186.1 pinned from jsDelivr, no local paths or personal details. Title "Countdown Golf 3D, Iteration 1".
+  `R/status/countdown-golf-3d.html` (doc 10, `tools/make_layout_nyc.py`) is untouched. Not published.
+
+## Open issues for the team (integration view)
+
+- Hole 1: layout v4 keeps doc 14's 6.2 m box, the built hole is 5.38 m (0.82 m free behind the tower). Shorten the box
+  in the layout script or keep the slack.
+- Hole 5: doc 14's legs (1.8 / 1.2 / 2.2 on the centre line, R 0.9 corners) give a 4.15 x 2.25 m Z, not 4.8 x 2.8; the
+  Z is centred in the 4.8 x 2.8 box and dressing fills the rest. Doc 14 must change either the legs or the box.
+- Hole 6: the run-in and lowered back are a review fix for the 5 Dec full-width rig to confirm (doc 14 to be updated).
+- Hub portals carry the district names now; if they're the first cut, the hub street posts must come back clear of
+  the walk routes (the old spots are inside the v4 Midtown route).
+- Doc 14 contradictions (holes 3, 5, 7, 8, 9, 1): see the builders' notes and `review-fidelity.md`; not integration work.
+- `CLAUDE.md`'s Files section doesn't list `status/countdown-golf-3d-iter1.html` or `scenery.js` yet (not mine to edit).

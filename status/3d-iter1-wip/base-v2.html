@@ -89,7 +89,7 @@ body.lock{overflow:hidden}
 .lbl.distA{background:rgba(176,115,7,.94)}
 .lbl.distB{background:rgba(112,52,178,.94)}
 .lbl.zone{background:rgba(14,110,80,.92)}
-.lbl.tag{min-width:26px;height:26px;padding:0 6px;display:grid;place-items:center;font:900 .86rem/1 var(--font-display);background:var(--c);color:var(--t);box-shadow:0 0 0 2px rgba(10,12,20,.75),0 2px 8px rgba(0,0,0,.35)}
+.lbl.tag{min-width:26px;height:26px;padding:0 6px;border-radius:6px;display:grid;place-items:center;font:900 .86rem/1 var(--font-display);background:var(--c);color:var(--t);box-shadow:0 0 0 2px rgba(10,12,20,.75),0 2px 8px rgba(0,0,0,.35)}
 .lbl.size{font:700 .7rem/1.1 var(--font-mono);letter-spacing:0;background:rgba(250,250,246,.95);color:#151A26;padding:3px 7px;border-radius:4px;box-shadow:0 0 0 2px var(--c),0 1px 6px rgba(0,0,0,.3)}
 .lbl.sel{font:800 .9rem/1.2 var(--font-display);letter-spacing:0;background:var(--now);color:#1b1404;padding:6px 12px;box-shadow:0 0 0 2px rgba(10,12,20,.6),0 3px 12px rgba(0,0,0,.35)}
 .status{position:absolute;inset:0;display:grid;place-items:center;z-index:4;padding:24px;text-align:center;color:var(--ink-2);font-size:.95rem}
@@ -115,7 +115,7 @@ body.lock{overflow:hidden}
 
 /* hole picker: one subway-style bullet per hole, in that hole's LED colour */
 .bullets{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;justify-items:center}
-.bullets button{width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:var(--c);color:var(--t);font:900 1.15rem/1 var(--font-display);box-shadow:0 0 0 2px var(--surface),0 0 0 3px transparent;transition:box-shadow .15s}
+.bullets button{width:46px;height:46px;border-radius:10px;border:0;cursor:pointer;background:var(--c);color:var(--t);font:900 1.15rem/1 var(--font-display);box-shadow:0 0 0 2px var(--surface),0 0 0 3px transparent;transition:box-shadow .15s}
 .bullets button[aria-pressed="true"]{box-shadow:0 0 0 3px var(--surface),0 0 0 6px var(--ink)}
 .bullets-legend{display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink-3);padding-inline:4px}
 .info{border-top:1px solid var(--rule);padding-top:12px;display:grid;gap:8px}
@@ -311,7 +311,9 @@ code{font-family:var(--font-mono);font-size:.9em}
           <li><b>Holes 4 and 5 lose their raised greens.</b> In the floor-laid route C they were there only to give the cup depth; the deck does that now. Gridlock's zebra crossing is printed flat and the Central Park lawn stays flat.</li>
           <li><b>Rails.</b> The white cap is exactly 100 mm above the surface it guards, and steps or slopes with it.</li>
           <li><b>Shared scenery.</b> The brownstone façade behind 10 and 9 (stoops, pizzeria shopfront, braced through the hole frames plus one L-jack), the subway kiosk on Gridlock's sidewalk, the park-wall cut-out between 5 and 4, festoons on 3 m poles (park and Times Square, at least 2.4 m up), charcoal "asphalt" Downtown and light-grey "sidewalk" Midtown, zebra crossings between holes, and the two hub portals: the Downtown bridge arch and the Midtown park gate, which now carry the district names. Each totem has its warm flood at 2.1 m. The portals are the first cut if money is tight.</li>
-          <li><b>Totem badge.</b> The hole number now sits on a rounded square, not a round subway-style bullet (doc 13, section 5.8: a coloured circle with a number is too close to the licensed line bullets).</li>
+          <li><b>Hole numbers as rounded squares.</b> The totem badge, the hole buttons and the floating hole numbers are rounded squares, not round subway-style bullets (doc 13, section 5.8: a coloured circle with a number is too close to the licensed line bullets).</li>
+          <li><b>Cups.</b> Flush 108 mm cups with a 64 mm sleeve and no raised collar (doc 13, section 5.3), so the renders can't be read as a flange.</li>
+          <li><b>Review fixes (to confirm).</b> Liberty's banked corner starts with a 0.8 m tapered run-in along the outer rail instead of a vertical end face, and its closed back slopes down below the rail caps; the full-width rig on Sat 5 Dec should confirm it. Hot Dog Cart: the fries carton sits on the counter, out of the lane, and "Relish the Moment" is raised so it reads from the tee. Grand Central's clock has a face on both sides, so it also looks at the 2027 tower.</li>
           <li><b>This model is the design reference.</b> It shows what each hole looks like, how it plays and its true size, for the factory's reference renders. It is not the build guide: a separate professional build guide with dimensioned drawings and specs follows, made from the same numbers.</li>
         </ul>
       </details>
@@ -554,9 +556,17 @@ function kickCircle(parent, cu, cv, r, led) { arcRing(parent, cu, cv, r + 0.032,
 function deckPoly(pts, parent, fascia, y = 0, h = DECK, top = mats.turf) { return extrudeXZ(pts, h, [top, fascia], parent, y); }
 function deckCircle(parent, cu, cv, r, fascia, top = mats.turf, h = DECK, y = 0) { return mesh(new THREE.CylinderGeometry(r, r, h, 64), [fascia, top, top], parent, cu, y + h / 2, cv); }
 const rectPts = (u0, v0, u1, v1) => [[u0, v0], [u1, v0], [u1, v1], [u0, v1]];
+/* a flush 108 mm cup with its 64 mm sleeve (doc 13 section 5.3: flush, sleeved, soft bottom). No raised collar: a factory
+   must not read a flange. The sleeve and its bottom are drawn first; then a depth-only disc at the surface stops the deck top,
+   drawn after it, from painting over the opening, so you see down into the cup. A 3 mm steel lip lies flush round the edge. */
+const CUP_SLEEVE = M('#2A2C31', { roughness: 0.6, side: THREE.BackSide }), CUP_FLOOR = M('#45484F', { roughness: 0.95 });
+const CUP_MASK = new THREE.MeshBasicMaterial({ colorWrite: false });
+const CUP_LIP = M('#AEB3BA', { roughness: 0.35, metalness: 0.6, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -4 });
 function addCup(parent, u, v, y = DECK) {
-  const hole = mesh(new THREE.CircleGeometry(0.054, 24), mats.cupHole, parent, u, y + 0.002, v, false); hole.rotation.x = -Math.PI / 2;
-  const col = mesh(new THREE.RingGeometry(0.054, 0.08, 24), mats.collar, parent, u, y + 0.0018, v, false); col.rotation.x = -Math.PI / 2;
+  const sl = mesh(new THREE.CylinderGeometry(0.054, 0.054, 0.064, 32, 1, true), CUP_SLEEVE, parent, u, y - 0.032, v, false); sl.renderOrder = -2;
+  const fl = mesh(new THREE.CircleGeometry(0.054, 32), CUP_FLOOR, parent, u, y - 0.064, v, false); fl.rotation.x = -Math.PI / 2; fl.renderOrder = -2;
+  const mk = mesh(new THREE.CircleGeometry(0.054, 32), CUP_MASK, parent, u, y + 0.0015, v, false); mk.rotation.x = -Math.PI / 2; mk.renderOrder = -1;
+  const lip = mesh(new THREE.RingGeometry(0.054, 0.057, 32), CUP_LIP, parent, u, y + 0.0005, v, false); lip.rotation.x = -Math.PI / 2;
 }
 /* a lane top texture: draw(x, w, h, ppm) in a canvas covering u0..u1, v0..v1; maps onto an extruded deck's top face */
 function laneTex(u0, v0, u1, v1, draw, ppm = 128) {
