@@ -27,6 +27,7 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 | **[Route C: carpenter + volunteers](docs/11-route-c-carpenter-build.md)** | **18 Nov: how to do New York for S$6–10k: what changes, hole by hole, a costed plan (≈ S$10.9k, ≈ S$9.8k with cuts), who does what, the cut list, schedule and risks** |
 | **[Carpenter's pack](carpenter-pack/countdown-golf-carpenter-pack.pdf)** · [what a carpenter needs](docs/12-carpenter-pack.md) | **18 Nov: 16 A3 drawing sheets for route C (details, every hole, materials), plus a plain-English guide to what a carpenter needs and how to read the drawings** |
 | [Singapore benchmark visits](docs/13-singapore-benchmark-visits.md) | 22 Nov: the three mini golf courses open in Singapore (Kulnari indoor, Dino Putt, UltraGolf), what to study at each, and a scorecard for team visits |
+| [Rental options](docs/14-rental-options.md) | 18 Nov: what can be rented (only single carnival putting lanes locally), how good and how customisable it is, how to book it, and asking builders for a hire-basis price |
 | [Quote-request templates](docs/06-rfq-templates.md) | Messages for builders, turf suppliers, rental companies, factories and a freelance carpenter |
 | [Operations and safety](docs/07-operations-and-safety.md) | Throughput, staffing, kit and safety checklist |
 | [Status page](status/countdown-golf-status.html) | 18 Nov: one visual page with the gates, what's decided, today's changes, the plaza layout, capacity and cost. Published privately as an Artifact |
