@@ -39,6 +39,7 @@ and shared scenery that stands on the floor):
 import json
 import math
 import os
+import pathlib
 import re
 import subprocess
 import sys
@@ -53,7 +54,11 @@ OUT = ARGS[1] if len(ARGS) > 1 and not ARGS[1].startswith("--") else "floorplan"
 PNG = "--png" in ARGS
 INJECT = ARGS[ARGS.index("--inject") + 1] if "--inject" in ARGS else None
 LAYOUT_OUT = ARGS[ARGS.index("--layout-out") + 1] if "--layout-out" in ARGS else None
-CHROME = os.environ.get("CHROME", r"C:/Program Files/Google/Chrome/Application/chrome.exe")
+_WIN_CHROME = r"C:/Program Files/Google/Chrome/Application/chrome.exe"
+_LINUX_CHROME = "/opt/pw-browsers/chromium"
+CHROME = os.environ.get("CHROME") or (_LINUX_CHROME if os.path.exists(_LINUX_CHROME) else _WIN_CHROME)
+# Linux containers run as root: Chrome needs --no-sandbox there. Windows keeps its sandbox.
+CHROME_EXTRA = ["--no-sandbox"] if sys.platform.startswith("linux") else []
 
 ROOM_W = dims["auditorium"]["width_z"]           # 25.6, measured (rough)
 SX = dims["stage"]["front_x"]                    # 6.0, not measured
@@ -970,8 +975,8 @@ def render_png(svg_path, png_path, W, H):
     with tempfile.TemporaryDirectory() as td:
         html = os.path.join(td, "page.html")
         open(html, "w", encoding="utf-8").write(f'<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#fff">{svg}</body></html>')
-        url = "file:///" + html.replace("\\", "/")
-        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2",
+        url = pathlib.Path(html).as_uri()
+        subprocess.run([CHROME, *CHROME_EXTRA, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2",
                         f"--window-size={W},{H}", f"--screenshot={os.path.abspath(png_path)}", url],
                        check=True, capture_output=True, timeout=120)
 

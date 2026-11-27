@@ -15,7 +15,11 @@ import subprocess
 import sys
 import tempfile
 
-CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+_WIN_CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+_LINUX_CHROME = "/opt/pw-browsers/chromium"
+CHROME = os.environ.get("CHROME") or (_LINUX_CHROME if os.path.exists(_LINUX_CHROME) else _WIN_CHROME)
+# Linux containers run as root: Chrome needs --no-sandbox there. Windows keeps its sandbox.
+CHROME_EXTRA = ["--no-sandbox"] if sys.platform.startswith("linux") else []
 
 
 def shoot(page, query, out, w, h, budget):
@@ -23,7 +27,7 @@ def shoot(page, query, out, w, h, budget):
         query = (query + "&ui=0").lstrip("&")
     url = pathlib.Path(os.path.abspath(page)).as_uri() + "?" + query
     prof = tempfile.mkdtemp(prefix="chr-")
-    cmd = [CHROME, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist",
+    cmd = [CHROME, *CHROME_EXTRA, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist",
            "--hide-scrollbars", "--no-first-run", "--no-default-browser-check", f"--user-data-dir={prof}",
            f"--window-size={w},{h}", f"--virtual-time-budget={budget}", f"--screenshot={os.path.abspath(out)}", url]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)

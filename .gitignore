@@ -4,3 +4,5 @@ CLAUDE.local.md
 node_modules/
 .DS_Store
 .cache/
+status/3d-iter1-wip/out/
+__pycache__/

@@ -5,11 +5,15 @@
 Flags a hole whose meshes stick out of its declared L x W box by more than 35 mm (a rail drawn just outside a deck edge is about 31 mm) (props outside the rails that are
 declared as extras in the brief are expected; check them against the brief's table)."""
 import html, json, os, pathlib, re, subprocess, sys, tempfile
-CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+_WIN_CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+_LINUX_CHROME = "/opt/pw-browsers/chromium"
+CHROME = os.environ.get("CHROME") or (_LINUX_CHROME if os.path.exists(_LINUX_CHROME) else _WIN_CHROME)
+# Linux containers run as root: Chrome needs --no-sandbox there. Windows keeps its sandbox.
+CHROME_EXTRA = ["--no-sandbox"] if sys.platform.startswith("linux") else []
 page = sys.argv[1]; only = set(sys.argv[2:])
 url = pathlib.Path(os.path.abspath(page)).as_uri() + "?dump=1&ui=0"
 prof = tempfile.mkdtemp(prefix="chr-")
-r = subprocess.run([CHROME, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist",
+r = subprocess.run([CHROME, *CHROME_EXTRA, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist",
                     f"--user-data-dir={prof}", "--virtual-time-budget=20000", "--window-size=1200,800", "--dump-dom", url],
                    capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180)
 m = re.search(r'<pre id="dump">(.*?)</pre>', r.stdout, re.S)

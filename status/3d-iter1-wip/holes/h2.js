@@ -215,6 +215,10 @@ HOLE_BUILDERS[2] = function (h, g, K) {
     const rim = mesh(new THREE.TorusGeometry(CR - 0.012, 0.028, 10, 64), mats.gold, clk, -0.035, 0, 0); rim.rotation.y = H;
     const face = mesh(new THREE.CircleGeometry(CR - 0.03, 64), lit(dialTex(512, '#FFF3D6', '#1A2238', '#B8892E', true), { glow: 0.9, house: 0.35, dark: 1.1 }), clk, -0.0365, 0, 0, false);
     face.rotation.y = -H;
+    // integration fix (27 Nov): a second face on the back, so the 11:59 clock also faces hole 1's 2027 tower (doc 14 blending: "one minute to go")
+    const rimB = mesh(new THREE.TorusGeometry(CR - 0.012, 0.028, 10, 64), mats.gold, clk, 0.035, 0, 0); rimB.rotation.y = H;
+    const faceB = mesh(new THREE.CircleGeometry(CR - 0.03, 64), face.material, clk, 0.0365, 0, 0, false);
+    faceB.rotation.y = H;
   }
   boardSign(g, neonTex(['MEET ME UNDER', 'THE CLOCK'], h.glow), CU, 0, 1.0, 0.3, 0.92, false);
   plaque(-1.45, (h.tside || -1) * 0.75, ['AIM ANYWHERE OFF THE WALL.', 'EVERY BOUNCE IS', 'THE SAME DISTANCE.'], '#1A2238', '#F2D27A', '#C9A24A');
@@ -229,7 +233,7 @@ HOLE_BUILDERS[2] = function (h, g, K) {
       ['Booth', 'Ø0.40 × 0.35 m at the centre, EVA face, cone top with four clock faces; blocks about ±12°'],
       ['Rail face', 'hard lacquered hardboard, no EVA (M7); cap 100 mm above the deck'],
       ['Deck', 'one flat level at the deck height, levelled to ±2 mm; teal star field, brass spots at A and B'],
-      ['Clock', 'Ø1.0 m at 11:59 on a braced post behind B, top 2.3 m'],
+      ['Clock', 'Ø1.0 m at 11:59 on a braced post behind B, top 2.3 m; two faces (the back one looks at hole 1\'s 2027 tower)'],
       ['Footprint', '2.95 × 2.05 m over the rail; 3.4 × 2.1 m with the clock post'],
     ],
   };
