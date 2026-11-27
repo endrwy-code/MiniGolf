@@ -1,5 +1,26 @@
 # Timeline and critical path
 
+## 27 Nov update: G0 and G1 have passed
+
+Added Fri 27 Nov 2026, 34 days before the event. Claude's reading of the dates, not a team decision.
+
+**Where it stands.** G0 (Fri 20 Nov) and G1 (Wed 25 Nov) have passed, and the repo records no team decision after 18 Nov: no budget ceiling, no build route, no builder or carpenter, no turf order, no confirmed install window. If the team has decided any of these outside the repo, record them in the decision log and most of this section falls away.
+
+**What the slip costs.** The gates after G1 keep their dates, but the slack in front of them has gone. The G1 rule below says "switch to the rental fallback", but the 18 Nov rental check (`14-rental-options.md`) found that only single carnival putting lanes can be rented locally, so that fallback is a plain course, not the city the team asked for. Route C (one paid carpenter plus volunteers, `11-route-c-carpenter-build.md`) is the route that still fits, because its drawings are ready (`12-carpenter-pack.md`).
+
+**The dates that still work for route C (recommended):**
+
+| By | What has to happen | Why |
+|---|---|---|
+| **Mon 30 Nov** | One decision meeting: budget ceiling, route, the look and hole list, install window. Then book the carpenter in writing (template E in `06-rfq-templates.md`) | The carpenter has to start by Wed 2 Dec for the prototype to be built and tested by Fri 4 Dec (G2) |
+| **Tue 1 Dec** | Buy the turf or carpet grass from **Singapore stock** and test a roll on the venue floor. Buy the LED strip locally, or order from China with express delivery | Imported turf (about 20 days' production plus freight) now lands after Christmas. Standard China shipping on LED ordered now lands about 13–18 Dec, during the build instead of before it |
+| Fri 4 Dec (G2, unchanged) | Prototype hole built and test-played; buy the bulk timber | |
+| 7–Fri 18 Dec (G3, unchanged) | Nine holes built (about 8 carpenter-days), dry run on Fri 18 Dec | |
+
+**If the carpenter can't start until Mon 7 Dec,** the prototype and the build need about 10 carpenter-days (2 + 8) before the dry run on Fri 18 Dec, and Mon 7 to Thu 17 Dec has exactly 10 working days (Mon–Sat). That leaves no slack and no pause to apply what the prototype teaches, so route C then needs the 21–23 Dec buffer or the cut list in section 6 of doc 11 (fewer or simpler holes). **Any later than that,** a ten-hole route C no longer fits without dropping holes.
+
+---
+
 Today is Mon 16 Nov 2026. The event is Thu 31 Dec. **There are 45 calendar days, and about 25 working days once Christmas is taken out.**
 
 This works backwards from the install window. If anything below turns out to be wrong (especially the install window), redo this page first.

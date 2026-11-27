@@ -62,6 +62,8 @@ Geometry for layouts and 3D: `floorplan/auditorium-dimensions.json` (v2, 18 Nov 
 
 ## Timeline (gates; full detail in `docs/05-timeline-and-critical-path.md`)
 
+27 Nov: G0 and G1 have passed with no team decision recorded since 18 Nov. Recommended catch-up (not decided; `docs/05` "27 Nov update"): one decision meeting and the carpenter booked by Mon 30 Nov; Singapore-stock turf and local or express LED by Tue 1 Dec; G2–G5 dates unchanged. If the carpenter only starts Mon 7 Dec there's no slack; later than that, ten holes don't fit without cuts.
+
 - G0 Fri 20 Nov: budget ceiling, crowd estimate, reuse yes or no, install window confirmed.
 - G1 Wed 25 Nov: art direction and hole list frozen; builder chosen from at least 2 quotes; turf ordered; rental fallback quote in hand.
 - G2 Fri 4 Dec: prototype hole built and test-played. Turf in hand by about 7 Dec.
