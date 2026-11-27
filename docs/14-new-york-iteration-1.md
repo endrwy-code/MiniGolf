@@ -120,9 +120,9 @@ Speeds assume about 0.6 m/s² drag on carpet grass (the prototype's Stimp readin
 
 **Plays.** Putt along the blue harbour at a breaking wave in the corner. The ball rides round it 90° toward Liberty Island; with pace it climbs the shore and runs at the cup in the star-shaped pedestal. Too soft slides back to the wave foot; too hard lands deep.
 
-**Mechanism (M4).** The review showed the drawn flat 45° face fails: a ball spends about 0.75 s up a R 450 wave at any speed, travels 1.0–1.6 m along a 1.3 m face, hits the closed cheek and comes back down leg A. The baseline is now a **conical banked corner**: the face curved in plan at about R 1.0 m on tapered radial ribs, skinned in 2 × 4 mm flexi-ply (a cone is developable, so ply wraps it), 400 mm high with the 50 mm curl lip and cheeks closed to the rails. The ball rides round at any speed. Leg A: 3.0 × 0.9 m blue carpet. Leg B: a 2.2 × 1.4 m +75 island with a 1:5 shore (about 1.2 m/s at its foot with drag), cup 1.2 m past the crest in a painted star. Check the corner's footprint in the layout rerun.
+**Mechanism (M4).** The review showed the drawn flat 45° face fails: a ball spends about 0.75 s up a R 450 wave at any speed, travels 1.0–1.6 m along a 1.3 m face, hits the closed cheek and comes back down leg A. The baseline is now a **conical banked corner**: the face curved in plan at about R 1.0 m on tapered radial ribs, skinned in 2 × 4 mm flexi-ply (a cone is developable, so ply wraps it), 400 mm high with the 50 mm curl lip. **27 Nov, 3D review (for the team to confirm at the rig):** the upstream side is not a closed cheek but a 0.8 m tapered run-in along the outer rail, rising out of the floor at about 27° to the rail into the full cone profile. A vertical cheek across the outer 0.40 m of the 0.90 m harbour would send any putt along the outer 45% of leg A straight back, the very failure the cone is meant to cure. The downstream cheek stays closed to the rail, and the corner's back stays level with the rail caps. The ball rides round at any speed. Leg A: 3.0 × 0.9 m blue carpet. Leg B: a 2.2 × 1.4 m +75 island with a 1:5 shore (about 1.2 m/s at its foot with drag), cup 1.2 m past the crest in a painted star. Check the corner's footprint in the layout rerun.
 
-**Test (M4).** The one-rib rig can't show a cheek strike. Replace it with a full-width section, real cheeks and a 3 m run-up: 20 putts at each of 1.5, 2 and 3 m/s; pass is at least 70% toward the island. Decide by Sat 5 Dec. Fallbacks: the full 1.84 m diagonal face at R 300/300 mm (partial), then a flat 45° chamfer bank with a painted wave cut-out behind.
+**Test (M4).** The one-rib rig can't show a cheek strike. Replace it with a full-width section, the 0.8 m run-in, the real downstream cheek and a 3 m run-up: 20 putts at each of 1.5, 2 and 3 m/s; pass is at least 70% toward the island. Decide by Sat 5 Dec. Fallbacks: the full 1.84 m diagonal face at R 300/300 mm (partial), then a flat 45° chamfer bank with a painted wave cut-out behind.
 
 **Build.** Ribs and skin, curl nosing, foot seam 1 mm or less; island deck; pedestal of at least 30 kg outside the rail. Carpenter 2.0 days (1.5). Volunteers about 2 days: the 2.6 m statue with a battery flame, wave paint, harbour skyline.
 
@@ -288,6 +288,18 @@ The S$10k ceiling has never been set; that is the project lead's call. **Fallbac
 | S10 | Lighting | The rail-base strip lights outside the rails; aim totem floods at the cup end or add a second flood on holes over 4 m |
 | S11 | Wording | Pun twist such as "Stand Clear of the Closing Year"; keep the booth and clock generic |
 | S12 | 9 | One carpet with a painted pizza instead of a taped inlay; saves about 1 volunteer-day |
+
+## Found by the 3D review (27 Nov)
+
+An independent check of the 3D hole builders against this doc (`status/3d-iter1-wip/notes/review-fidelity.md`) found the builders faithful, and found places where this doc contradicts itself. The 3D model follows the readings below. Settle each before the factory build guide is drawn.
+
+1. **Hole 3 (The Subway):** a lid 60 mm over the 5° loop floor leaves 10 mm over the inner sill, so no ball can enter any portal (8, 20 and 32 mm short at the outer, middle and inner), and three stacked 18 mm arcs (54 mm) can't carry a 60 mm lid. The model uses a raised clear strip over the lead-ins; adopt it here. With clear widths the U is 2.55 m wide, and the funnel isn't defined.
+2. **Hole 5 (Central Park Loop):** legs of 1.8, 1.2 and 2.2 m with a 0.9 m path and R 0.9 corners fit no 4.8 × 2.8 m Z. Read along the centre line they give 4.15 × 2.25 m over the rails, and read as straight parts 5.05 × 3.15 m. The model uses the centre-line reading, which matches this doc's own ace speed (2.95 m/s). Restate either the box or the legs. Five 18 mm arcs also give a 90 mm rail, not 100 mm.
+3. **Hole 7 (Brooklyn Bridge):** a 12° ramp with R 600 transitions rising 150 mm is 0.83 m long, not "about 0.95"; the 1.80 m/s ace speed uses 0.95.
+4. **Hole 8 (Hot Dog Cart):** the 2.2–2.4 m/s ace speed comes from design B's 3.5 m hole; in the 5.2 m box it is about 2.5 m/s. "Kerb at 2.7 m" is ambiguous (from which end?).
+5. **Hole 6 (Liberty Island):** "about R 1.0" and the face angle are undefined; the leg lengths make the hole 4.55 m long; is the 2.6 m statue the figure alone or the total height? The upstream cheek is replaced by a run-in (see the hole).
+6. **Hole 1 (Times Square):** "slot end about 35 mm" ignores the 3° crest tilt, so the board ends 18 mm up and the tray drop is 18 mm, not 25. The built hole is 5.38 m in a 6.2 m box (0.82 m spare): shorten the box or use the space.
+7. **Hole 9 (Brooklyn Pizza):** its parts add up to 5.13 m against a 5.0 m box. The gutter only fits on the raised deck and needs a hard floor to drain.
 
 ## To decide, and open questions
 
