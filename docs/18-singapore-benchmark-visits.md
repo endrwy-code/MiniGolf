@@ -94,4 +94,4 @@ Take this on every visit. One person keeps time and one takes photos.
 
 | Date | Venue | Went (roles) | Findings |
 |---|---|---|---|
-| | | | |
+| Tue 24 Nov | Kulnari Mystery Golf | The team | Written up 26 Nov in `docs/13-kulnari-benchmark.md`: a library of 14 of its 18 holes, ten lessons, cups (flush and sleeved, not raised) and a gimmick catalogue. It led to New York iteration 1 (`docs/14-new-york-iteration-1.md`) |

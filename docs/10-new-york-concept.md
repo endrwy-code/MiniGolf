@@ -128,7 +128,7 @@ Countdown order, 10 down to 1. Downtown is holes 10 to 6, Midtown is 5 to 1. Eac
 **What could break it** (confirm before anyone fixes a position):
 - **Stage depth.** Every x position moves with the stage front, which isn't measured.
 - **Stairs and speaker stands.** Their positions along the runway aren't measured. The 1.75 m runway clearance covers their depth, but performers may need more room at the stairs.
-- **Side-wall exits.** If there are exits in the side walls, the skyline flats must leave them clear. The photos (19 Nov) show two in the 11.65 m wall; the 3D model leaves gaps at their guessed positions, and the totems of holes 7 and 6 may need to move (`docs/13-auditorium-from-photos.md`).
+- **Side-wall exits.** If there are exits in the side walls, the skyline flats must leave them clear. The photos (19 Nov) show two in the 11.65 m wall; the 3D model leaves gaps at their guessed positions, and the totems of holes 7 and 6 may need to move (`docs/20-auditorium-from-photos.md`).
 - **The runway extension.** If the ≈ 8.6 m extension is built, it runs through the hub. The hub would split into one booth per district.
 - **Floor cables.** Not re-placed on the v2 geometry yet. Re-place them before fixing positions.
 - **Where the countdown crowd stands.** Golf now fills both sides of the runway. If the crowd needs that floor at midnight, golf closes and is cleared before the countdown, or the team moves the golf limit.

@@ -1,6 +1,6 @@
 # China factories for ready-made lanes, customised (20 Nov 2026; checked 22 Nov)
 
-The team's idea: find the factories behind the simple portable mini golf products sold on Taobao and Pinduoduo (a long turf lane with a border, cups and flags), then ask one of them to make a custom set for us. This note checks whether that can work by 31 Dec, lists who to contact, and gives a ready-to-send message in English and Chinese. The contact list is also in `docs/14-china-factory-contacts.csv`.
+The team's idea: find the factories behind the simple portable mini golf products sold on Taobao and Pinduoduo (a long turf lane with a border, cups and flags), then ask one of them to make a custom set for us. This note checks whether that can work by 31 Dec, lists who to contact, and gives a ready-to-send message in English and Chinese. The contact list is also in `docs/21-china-factory-contacts.csv`.
 
 **How to send (24 Nov):** step-by-step instructions for every channel (1688 chat, WhatsApp, email, WeChat, Alibaba, Taobao), the messages ready to paste and a lane-size sheet to attach are in `17-how-to-contact-suppliers.md`. Use its version of the GL025 message: the one below says "about 83 m²", but its ten lane rectangles add up to 102.5 m² (83 m² is the shaped playing area inside them).
 

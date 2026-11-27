@@ -6,6 +6,8 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 
 ## Start here
 
+**Latest (27 Nov):** [Kulnari benchmark](docs/13-kulnari-benchmark.md) and [New York iteration 1](docs/14-new-york-iteration-1.md); `CLAUDE.md` opens with where things stand.
+
 1. **[How to think about this](docs/01-how-to-think-about-this.md)**: the constraints, seven truths to align on, and the decision order.
 2. **[Sourcing: Huadong Play and the alternatives](docs/04-sourcing.md)**: who to buy, rent or build from, and why.
 3. **[Timeline and critical path](docs/05-timeline-and-critical-path.md)**: gates from now to install.
@@ -16,14 +18,17 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 |---|---|
 | [Reference decoder](docs/02-reference-decoder.md) | What each inspiration photo really is, and what to copy |
 | [10-hole spec sheet](docs/03-hole-spec-sheet.md) | Build standard plus the 10 holes, for the builder and turf supplier |
+| **[Kulnari benchmark](docs/13-kulnari-benchmark.md)** | **The team's visit to Kulnari Mystery Golf (24 Nov; written 26 Nov). A library of 14 of its 18 holes with stills and a footage index ([`reference/kulnari/`](reference/kulnari/README.md)), ten lessons, a logic check of the team's observations, and a gimmick catalogue** |
+| **[New York iteration 1](docs/14-new-york-iteration-1.md)** | **27 Nov: ten redesigned New York holes after Kulnari (terraces, curling, a cup in a bun, a rally-hill bridge, a banked wave, curves, left-in-right-out subway tubes, an elliptical bank, plinko), adversarially reviewed. About S$12–13.5k after cuts, S$2.1–3.7k more than route C like for like, and 19 carpenter-days. Proposal, not decided** |
+| [Working papers](docs/working-papers/README.md) | 26–27 Nov: the raw agent outputs behind docs 13 and 14 (full hole library, research with sources, designs A and B, the full review). The docs win where they differ |
 | **[New York Countdown](docs/10-new-york-concept.md)** | **18 Nov (later): the ten New York holes, how each is built and why it holds up, the LED glow, layout v3 and decisions for G1** |
 | **[Layout v3](floorplan/layout-v3-nyc.png)** | **The ten holes inside the golf zone, two districts and one hub, with every clearance checked** |
 | [The city concept](docs/09-city-concept.md) | 18 Nov: the city brief, logic-checked. Its look is superseded by New York Countdown; play order and capacity still apply |
 | **[How to message the suppliers](docs/17-how-to-contact-suppliers.md)** · [lane sheet to attach](docs/17-lane-sizes-for-suppliers.png) | **24 Nov: step by step for each channel (1688 chat, WhatsApp, email, WeChat, Alibaba, Taobao), who to contact today and who not to, the messages in English and Chinese, a follow-up, useful replies, red flags, and the Singapore suppliers. Corrects the GL025 area to 102.5 m² of lane rectangles** |
-| **[China factories for custom lanes](docs/14-china-factory-contacts.md)** · [contact list (CSV)](docs/14-china-factory-contacts.csv) | **22 Nov: the browsing agent's results, checked. One product fits: the PGM GL025 modular putting green (5 cm interlocking tiles, a 3 cm lip, putting turf; ≈ S$4.5–5k for our 83 m² before freight). It's a deck, not a rail, so the rails stay local. Shortlist, gaps, a GL025 message in English and Chinese, and next steps for Tue 24 Nov. Nothing contacted** |
+| **[China factories for custom lanes](docs/21-china-factory-contacts.md)** · [contact list (CSV)](docs/21-china-factory-contacts.csv) | **22 Nov: the browsing agent's results, checked. One product fits: the PGM GL025 modular putting green (5 cm interlocking tiles, a 3 cm lip, putting turf; ≈ S$4.5–5k for our 83 m² before freight). It's a deck, not a rail, so the rails stay local. Shortlist, gaps, a GL025 message in English and Chinese, and next steps for Tue 24 Nov. Nothing contacted** |
 | **[Round-2 brief for a browsing agent](docs/16-sourcing-agent-brief-round-2.md)** | **23 Nov: hand this to a new agent. Same method as round 1, done thoroughly: find a lane maker independent of PGM, look for lanes with a real rail, trace and verify every factory, and log every search so the coverage shows. Results due end of Tue 24 Nov** |
 | [Brief for a browsing agent](docs/15-sourcing-agent-brief.md) | 21 Nov: the brief the agent worked from (Taobao, 1688, Pinduoduo, Alibaba; research only). Its handback is in [supplier evidence](reference/supplier-evidence/2026-11-22-sourcing-agent/) and merged into the China factories note |
-| **[The auditorium from photos](docs/13-auditorium-from-photos.md)** | **19 Nov, revised 20 Nov: the back wall is now estimated ≈ 20 m past the golf limit (the team's sense of the room and the old cable plan; the photos said ≈ 10 m); the delay screen is two screens, one over each runway edge. Heights of the ceiling, trusses and screens, wall finishes, exits, and what that makes more and less possible. Five quick measurements to settle it** |
+| **[The auditorium from photos](docs/20-auditorium-from-photos.md)** | **19 Nov, revised 20 Nov: the back wall is now estimated ≈ 20 m past the golf limit (the team's sense of the room and the old cable plan; the photos said ≈ 10 m); the delay screen is two screens, one over each runway edge. Heights of the ceiling, trusses and screens, wall finishes, exits, and what that makes more and less possible. Five quick measurements to settle it** |
 | **[Auditorium plan v2](floorplan/auditorium-simplified.png)** | **18 Nov: the team's tape measurements and the golf zone (stage side of a line 27 m from the stage front). Not-measured items are dashed** |
 | [Zone options](floorplan/zone-options.png) · [Plaza layout v2](floorplan/layout-draft-plaza.png) | Superseded by the golf zone (18 Nov), and drawn on the old cable-plan geometry: 10 holes as two districts at the runway tip |
 | [Draft layout v1](floorplan/layout-draft-zone-a.png) | Superseded: 10 holes in a line in Zone A |
@@ -52,18 +57,20 @@ A 10-hole indoor mini golf course for the HOGC countdown party on **Thu 31 Dec 2
 
 **Team input 18 Nov:** the central strip is a raised runway (part of the stage). Design brief: one coherent "city", not a line; fun holes; a story that works in any order. New tape measurements (width 25.6 m, runway 22.54 × 2.4 m) and the golf zone: golf stays on the stage side of a line 27 m from the stage front. Later: a New York direction (Times Square on countdown night), holes like the hot dog and bicycle-wheel photos, lighting like the Electric Greens photo.
 
-**From the team's photos (19 Nov, estimates; length revised 20 Nov):** the room is ≈ 20 m deep past the golf limit (the team's sense of it, matching the old cable plan; the photos had suggested ≈ 10 m), so the party side has ≈ 470 m² and the countdown crowd may fit there; two exits in the 11.65 m wall must stay clear; the side trusses over the golf districts can light the course. See [the auditorium from photos](docs/13-auditorium-from-photos.md).
+**From the team's photos (19 Nov, estimates; length revised 20 Nov):** the room is ≈ 20 m deep past the golf limit (the team's sense of it, matching the old cable plan; the photos had suggested ≈ 10 m), so the party side has ≈ 470 m² and the countdown crowd may fit there; two exits in the 11.65 m wall must stay clear; the side trusses over the golf districts can light the course. See [the auditorium from photos](docs/20-auditorium-from-photos.md).
+
+**Since then (26–27 Nov):** the team played Kulnari Mystery Golf; Claude built a benchmark library and logic check ([doc 13](docs/13-kulnari-benchmark.md)) and New York iteration 1 ([doc 14](docs/14-new-york-iteration-1.md)). The team now needs to approve iteration 1 or pick fallbacks, and to decide on its cost and labour. Hole 3 is the prototype for Fri 4 Dec.
 
 **Recommended, not decided:** hybrid local build · New York Countdown look and ten New York holes · layout v3: two 5-hole districts beside the runway sharing one hub at the tip · 4 hero holes (8, 6, 2, 1) · see [New York Countdown](docs/10-new-york-concept.md).
 
 ## Folder map
 
 ```
-docs/          planning documents (numbered in reading order)
+docs/          planning documents (numbered in reading order); working-papers/ holds raw agent outputs
 floorplan/     auditorium plan v2, dimensions JSON (v2; v1 kept), draft layouts, source sketch and screenshots
-reference/     inspiration photos and video stills
+reference/     inspiration photos and video stills; kulnari/ is the benchmark footage index and stills
 concepts/      isometric concept renders of the holes and the whole course (two art directions)
-tools/         make_floorplan.py (plan v2) · make_layout_nyc.py (layout v3, checks, 3D data) · make_layout_svg.py (layout v1) · make_zone_options.py (zones, layout v2) · flow_sim.py (capacity) · make_concepts.py (renders) · make_standalone.py (offline copies)
+tools/         video_sheets.py (frames and overview sheets from clips) · make_floorplan.py (plan v2) · make_layout_nyc.py (layout v3, checks, 3D data) · make_layout_svg.py (layout v1) · make_zone_options.py (zones, layout v2) · flow_sim.py (capacity) · make_concepts.py (renders) · make_standalone.py (offline copies)
 ```
 
 Redraw the auditorium plan after editing `floorplan/auditorium-dimensions.json`:

@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3698" height="2660" viewBox="0 0 1849 1330"><title>Layout v4: New York Countdown, iteration 1</title><rect width="1849" height="1330" fill="#F7F6F2"/><text x="64" y="40" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A18">Layout v4 · New York Countdown, iteration 1 (doc 14) · proposal, not decided</text>
+<text x="64" y="66" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#55524B">Ten iteration-1 holes at true footprint (L, Z and U shapes as drawn), two five-hole loops from the Tee Booth. Plan v2 (18 Nov tape measurements) plus the 20 Nov room facts (console, side exits).</text>
+<text x="64" y="86" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#55524B">Positions sit on values that are not measured (stage depth, stairs, stands, console, exits): treat them as about ±0.5 m. Stars mark props over 2 m; dotted gold lines are festoons; white dashes are zebra crossings.</text>
+<polygon points="64.0,128.0 1489.0,128.0 1489.0,1100.8 64.0,1100.8" fill="#EFEDE7" stroke="none" stroke-width="1" />
+<polygon points="1318.0,128.0 1489.0,128.0 1489.0,1100.8 1318.0,1100.8" fill="#F3EBDD" stroke="none" stroke-width="1" />
+<polygon points="292.0,128.0 1318.0,128.0 1318.0,1100.8 292.0,1100.8" fill="#E4F0EA" stroke="none" stroke-width="1" />
+<polygon points="539.0,145.1 1316.1,145.1 1316.1,542.2 539.0,542.2" fill="#2E2F33" stroke="none" stroke-width="0" fill-opacity="0.16"/>
+<polygon points="539.0,690.4 1316.1,690.4 1316.1,1083.7 539.0,1083.7" fill="#C9CCD0" stroke="none" stroke-width="0" fill-opacity="0.16"/>
+<polygon points="292.0,128.0 539.0,128.0 539.0,1100.8 292.0,1100.8" fill="#EDEFEA" stroke="none" stroke-width="1" />
+<polygon points="64.0,128.0 292.0,128.0 292.0,1100.8 64.0,1100.8" fill="#D8D4CB" stroke="#9A958A" stroke-width="0.8" />
+<polygon points="387.0,128.0 386.5,142.9 385.2,157.7 382.9,172.1 379.8,186.2 375.8,199.7 371.0,212.4 365.4,224.4 359.2,235.5 352.3,245.5 344.8,254.4 336.8,262.1 328.4,268.4 319.6,273.5 310.5,277.1 301.3,279.3 292.0,280.0 292.0,128.0" fill="#D8D4CB" stroke="#9A958A" stroke-width="0.8" stroke-dasharray="4 3"/>
+<polygon points="387.0,1100.8 386.5,1091.5 385.2,1082.3 382.9,1073.2 379.8,1064.4 375.8,1056.0 371.0,1048.0 365.4,1040.5 359.2,1033.6 352.3,1027.4 344.8,1021.8 336.8,1017.0 328.4,1013.0 319.6,1009.9 310.5,1007.6 301.3,1006.3 292.0,1005.8 292.0,1100.8" fill="#D8D4CB" stroke="#9A958A" stroke-width="0.8" stroke-dasharray="4 3"/>
+<text x="178.0" y="614.4" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4A463E" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Stage</text>
+<text x="178.0" y="644.8" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >depth not measured</text>
+<polygon points="292.0,570.7 1148.5,570.7 1148.5,661.9 292.0,661.9" fill="#D8D4CB" stroke="#7A756B" stroke-width="0.9" />
+<text x="606.3" y="616.3" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#3C3932" text-anchor="middle" font-weight="400" dominant-baseline="middle" >Runway (raised, part of the stage) · 22.54 × 2.4 m · players can't cross</text>
+<polygon points="992.7,551.1 1053.5,551.1 1053.5,570.7 992.7,570.7" fill="#F4C46A" stroke="#8A6A2A" stroke-width="0.7" stroke-dasharray="3 2"/>
+<polygon points="992.7,661.9 1053.5,661.9 1053.5,681.5 992.7,681.5" fill="#F4C46A" stroke="#8A6A2A" stroke-width="0.7" stroke-dasharray="3 2"/>
+<polygon points="673.5,551.1 741.9,551.1 741.9,570.7 673.5,570.7" fill="#F4C46A" stroke="#8A6A2A" stroke-width="0.7" stroke-dasharray="3 2"/>
+<polygon points="673.5,661.9 741.9,661.9 741.9,681.5 673.5,681.5" fill="#F4C46A" stroke="#8A6A2A" stroke-width="0.7" stroke-dasharray="3 2"/>
+<polygon points="434.1,551.1 532.9,551.1 532.9,570.7 434.1,570.7" fill="#CFC8BA" stroke="#8A6A2A" stroke-width="0.7" stroke-dasharray="3 2"/>
+<polygon points="434.1,661.9 532.9,661.9 532.9,681.5 434.1,681.5" fill="#CFC8BA" stroke="#8A6A2A" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="426.9" y="340.8" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#5D6B60" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Kept clear</text>
+<text x="426.9" y="367.4" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#5D6B60" text-anchor="middle" font-weight="400" dominant-baseline="middle" >stage stairs and</text>
+<text x="426.9" y="390.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#5D6B60" text-anchor="middle" font-weight="400" dominant-baseline="middle" >performer access</text>
+<text x="426.9" y="850.0" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#5D6B60" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Kept clear</text>
+<text x="426.9" y="876.6" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#5D6B60" text-anchor="middle" font-weight="400" dominant-baseline="middle" >(about 6.5 m)</text>
+<clipPath id="room"><rect x="64.0" y="128.0" width="1425.0" height="972.8"/></clipPath>
+<polygon points="1926.0,445.3 1926.0,787.3 292.0,661.9 292.0,570.7" fill="#E0533F" stroke="#C2412E" stroke-width="0.8" fill-opacity="0.07" stroke-dasharray="5 4" clip-path="url(#room)"/>
+<text x="1416.8" y="604.9" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >assumed console sightline</text>
+<text x="1416.8" y="625.8" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >(console x 49–53, 20 Nov):</text>
+<text x="1416.8" y="646.7" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#A63A2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >nothing over 2 m inside</text>
+<polygon points="539.0,129.9 660.6,129.9 660.6,143.2 539.0,143.2" fill="#2E3350" stroke="none" stroke-width="1" />
+<polygon points="751.8,129.9 926.6,129.9 926.6,143.2 751.8,143.2" fill="#2E3350" stroke="none" stroke-width="1" />
+<polygon points="1017.8,129.9 1302.8,129.9 1302.8,143.2 1017.8,143.2" fill="#2E3350" stroke="none" stroke-width="1" />
+<polygon points="539.0,1085.6 1302.8,1085.6 1302.8,1098.9 539.0,1098.9" fill="#2E3350" stroke="none" stroke-width="1" />
+<polygon points="660.6,128.0 751.8,128.0 751.8,185.0 660.6,185.0" fill="#1E9E57" stroke="#1E9E57" stroke-width="0.8" fill-opacity="0.12" stroke-dasharray="3 2"/>
+<polygon points="672.0,123.4 740.4,123.4 740.4,132.6 672.0,132.6" fill="#1E9E57" stroke="none" stroke-width="1" />
+<text x="706.2" y="160.3" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#146B3B" text-anchor="middle" font-weight="700" dominant-baseline="middle" >EXIT (guess ±2–3 m)</text>
+<polygon points="926.6,128.0 1017.8,128.0 1017.8,185.0 926.6,185.0" fill="#1E9E57" stroke="#1E9E57" stroke-width="0.8" fill-opacity="0.12" stroke-dasharray="3 2"/>
+<polygon points="938.0,123.4 1006.4,123.4 1006.4,132.6 938.0,132.6" fill="#1E9E57" stroke="none" stroke-width="1" />
+<text x="972.2" y="160.3" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#146B3B" text-anchor="middle" font-weight="700" dominant-baseline="middle" >EXIT (guess ±2–3 m)</text>
+<text x="1143.2" y="160.3" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#3A3F5C" text-anchor="middle" font-weight="400" dominant-baseline="middle" >skyline flats on the wall, gaps at the exits</text>
+<text x="919.0" y="1064.7" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#3A3F5C" text-anchor="middle" font-weight="400" dominant-baseline="middle" >skyline flats on the wall (2.4–3.6 m), then a 1.2 m walkway</text>
+<line x1="1318.0" y1="114.0" x2="1318.0" y2="1106.8" stroke="#0F6E56" stroke-width="3" stroke-dasharray="10 6"/>
+<text x="1318.0" y="99.5" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#0F6E56" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Golf limit · 27 m from the stage front (decided 18 Nov)</text>
+<text x="1405.4" y="280.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6B5426" text-anchor="middle" font-weight="700" dominant-baseline="middle" >Other</text>
+<text x="1405.4" y="302.8" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6B5426" text-anchor="middle" font-weight="700" dominant-baseline="middle" >activities</text>
+<polygon points="1318.0,1051.4 1447.2,1051.4 1447.2,1100.8 1318.0,1100.8" fill="#DCD6F0" stroke="#5A4FA0" stroke-width="0.8" stroke-dasharray="3 2"/>
+<polygon points="1204.0,546.0 1302.8,546.0 1302.8,686.6 1204.0,686.6" fill="#F6D9E9" stroke="#9C2C6E" stroke-width="1.2" />
+<text x="1253.4" y="595.4" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6E1B4C" text-anchor="middle" font-weight="800" dominant-baseline="middle" >TEE BOOTH</text>
+<text x="1253.4" y="618.2" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#6E1B4C" text-anchor="middle" font-weight="400" dominant-baseline="middle" >hub: queue, putters,</text>
+<text x="1253.4" y="637.2" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#6E1B4C" text-anchor="middle" font-weight="400" dominant-baseline="middle" >balls · all ≤ 1.5 m</text>
+<polyline points="948.5,404.3 894.5,428.3" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="676.4,373.1 641.6,373.1" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="641.6,370.2 641.6,415.8" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="641.6,413.0 603.6,413.0" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="635.2,195.0 655.6,235.8" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="882.9,219.2 928.5,219.2" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="898.2,733.8 879.0,775.1" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="697.0,829.3 761.0,932.4" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="915.2,1037.1 968.4,1037.1" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="968.4,1037.1 968.4,986.8" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="1146.1,986.4 1162.2,1047.6" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="1162.2,1047.6 1240.1,1047.6" fill="none" stroke="#FFFFFF" stroke-width="34.2" stroke-opacity="0.85" stroke-dasharray="4 4"/>
+<polyline points="1228.7,538.4 1228.7,422.5 1167.9,446.2" fill="none" stroke="#C98A12" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1167.9,446.2 1178.1,447.6 1174.5,438.3" fill="#C98A12"/>
+<polyline points="958.9,399.7 884.0,432.9" fill="none" stroke="#C98A12" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="884.0,432.9 894.3,433.9 890.2,424.7" fill="#C98A12"/>
+<polyline points="687.8,373.1 641.6,373.1 641.6,413.0 592.2,413.0" fill="none" stroke="#C98A12" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="592.2,413.0 601.2,418.0 601.2,408.0" fill="#C98A12"/>
+<polyline points="643.5,211.6 647.3,219.2" fill="none" stroke="#C98A12" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="647.3,219.2 647.7,208.9 638.8,213.4" fill="#C98A12"/>
+<polyline points="898.1,219.2 913.2,219.2" fill="none" stroke="#C98A12" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="913.2,219.2 904.2,214.2 904.2,224.2" fill="#C98A12"/>
+<polyline points="1128.9,303.7 1255.3,337.0 1255.3,538.4" fill="none" stroke="#C98A12" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1255.3,538.4 1260.3,529.4 1250.3,529.4" fill="#C98A12"/>
+<polyline points="1207.8,694.2 1179.3,736.0 1179.3,804.4 1128.0,804.4" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1128.0,804.4 1137.0,809.4 1137.0,799.4" fill="#7E3FC0"/>
+<polyline points="892.4,746.3 884.8,762.6" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="884.8,762.6 893.1,756.5 884.1,752.3" fill="#7E3FC0"/>
+<polyline points="691.0,819.6 767.0,942.1" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="767.0,942.1 766.5,931.8 758.0,937.1" fill="#7E3FC0"/>
+<polyline points="903.8,1037.1 968.4,1037.1 968.4,975.4" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="968.4,975.4 963.4,984.4 973.4,984.4" fill="#7E3FC0"/>
+<polyline points="1143.2,975.4 1162.2,1047.6 1251.5,1047.6" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1251.5,1047.6 1242.5,1042.6 1242.5,1052.6" fill="#7E3FC0"/>
+<polyline points="1221.1,766.4 1242.0,694.2" fill="none" stroke="#7E3FC0" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<polygon points="1242.0,694.2 1234.7,701.5 1244.3,704.2" fill="#7E3FC0"/>
+<polygon points="1145.1,422.5 939.9,422.5 939.9,470.0 1145.1,470.0" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1126.9,398.6 1140.5,398.6 1140.5,412.2 1126.9,412.2" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="1145.1,422.5 939.9,422.5 939.9,470.0 1145.1,470.0" fill="none" stroke="#3BE36B" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1126.1,440.6 1137.5,440.6 1137.5,451.9 1126.1,451.9" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="976.0" cy="438.7" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="861.2,470.0 666.3,470.0 666.3,395.9 861.2,395.9" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="843.0,372.0 856.7,372.0 856.7,385.6 843.0,385.6" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="861.2,470.0 666.3,470.0 666.3,395.9 861.2,395.9" fill="none" stroke="#FF6A2B" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="844.1,427.2 855.5,427.2 855.5,438.7 844.1,438.7" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="705.4" cy="432.9" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="563.7,390.2 563.7,192.6 620.7,192.6 620.7,390.2" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="620.1,325.6 620.1,310.4 632.7,310.4 632.7,325.6" fill="#D9D3C4" stroke="#8A8472" stroke-width="0.7" />
+<polygon points="539.8,372.0 553.4,372.0 553.4,385.6 539.8,385.6" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="563.7,390.2 563.7,192.6 620.7,192.6 620.7,390.2" fill="none" stroke="#FF2E4D" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="586.5,373.1 597.9,373.1 597.9,384.5 586.5,384.5" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="592.2" cy="213.5" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="626.4,312.0 628.0,315.8 632.1,316.1 629.0,318.8 629.9,322.9 626.4,320.7 622.9,322.9 623.8,318.8 620.7,316.1 624.8,315.8" fill="#2C2C2A"/>
+<polygon points="670.1,188.8 875.3,188.8 875.3,249.6 670.1,249.6" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="674.7,259.9 688.3,259.9 688.3,273.5 674.7,273.5" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="670.1,188.8 875.3,188.8 875.3,249.6 670.1,249.6" fill="none" stroke="#FFE21A" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="681.5,213.5 692.9,213.5 692.9,224.9 681.5,224.9" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<polygon points="852.5,213.5 863.9,213.5 863.9,224.9 852.5,224.9" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="772.7" cy="219.2" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="723.3,188.1 724.9,191.9 729.0,192.3 725.9,195.0 726.8,199.0 723.3,196.8 719.8,199.0 720.7,195.0 717.6,192.3 721.7,191.9" fill="#2C2C2A"/>
+<polygon points="723.3,238.3 724.9,242.1 729.0,242.4 725.9,245.1 726.8,249.1 723.3,247.0 719.8,249.1 720.7,245.1 717.6,242.4 721.7,242.1" fill="#2C2C2A"/>
+<polygon points="822.1,188.1 823.7,191.9 827.8,192.3 824.7,195.0 825.6,199.0 822.1,196.8 818.6,199.0 819.5,195.0 816.4,192.3 820.5,191.9" fill="#2C2C2A"/>
+<polygon points="822.1,238.3 823.7,242.1 827.8,242.4 824.7,245.1 825.6,249.1 822.1,247.0 818.6,249.1 819.5,245.1 816.4,242.4 820.5,242.1" fill="#2C2C2A"/>
+<polygon points="936.0,199.2 1109.0,199.2 1109.0,239.2 936.0,239.2" fill="#7FB8E6" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1050.0,239.2 1109.0,239.2 1109.0,322.8 1050.0,322.8" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1066.2,322.8 1092.8,322.8 1092.8,336.0 1066.2,336.0" fill="#9FB3A8" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="940.6,346.3 954.3,346.3 954.3,360.0 940.6,360.0" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="936.0,199.2 1109.0,199.2 1109.0,239.2 936.0,239.2" fill="none" stroke="#2EE6B8" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1050.0,239.2 1109.0,239.2 1109.0,322.8 1050.0,322.8" fill="none" stroke="#2EE6B8" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1066.2,322.8 1092.8,322.8 1092.8,336.0 1066.2,336.0" fill="none" stroke="#2EE6B8" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="944.6,213.5 956.0,213.5 956.0,224.9 944.6,224.9" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="1079.5" cy="303.8" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="1079.5,323.4 1081.1,327.2 1085.2,327.5 1082.1,330.2 1083.0,334.3 1079.5,332.1 1076.0,334.3 1076.9,330.2 1073.8,327.5 1077.9,327.2" fill="#2C2C2A"/>
+<polygon points="1092.9,824.4 1001.6,824.4 1001.6,784.4 1092.9,784.4" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1041.6,824.4 1001.6,824.4 1001.6,738.8 1041.6,738.8" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1041.6,778.8 935.1,778.8 935.1,738.8 1041.6,738.8" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1001.6,834.8 922.8,834.8 922.8,778.8 1001.6,778.8" fill="#A9CFA0" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1105.2,784.4 1041.6,784.4 1041.6,728.4 1105.2,728.4" fill="#A9CFA0" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="935.1,778.8 922.8,778.8 922.8,728.4 935.1,728.4" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1087.0,845.1 1100.6,845.1 1100.6,858.7 1087.0,858.7" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="1092.9,824.4 1001.6,824.4 1001.6,784.4 1092.9,784.4" fill="none" stroke="#2F80FF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1041.6,824.4 1001.6,824.4 1001.6,738.8 1041.6,738.8" fill="none" stroke="#2F80FF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1041.6,778.8 935.1,778.8 935.1,738.8 1041.6,738.8" fill="none" stroke="#2F80FF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1001.6,834.8 922.8,834.8 922.8,778.8 1001.6,778.8" fill="none" stroke="#2F80FF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1105.2,784.4 1041.6,784.4 1041.6,728.4 1105.2,728.4" fill="none" stroke="#2F80FF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="935.1,778.8 922.8,778.8 922.8,728.4 935.1,728.4" fill="none" stroke="#2F80FF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1072.9,798.7 1084.3,798.7 1084.3,810.1 1072.9,810.1" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="964.6" cy="758.8" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="977.9,804.1 979.5,807.9 983.6,808.2 980.5,810.9 981.4,815.0 977.9,812.8 974.4,815.0 975.3,810.9 972.2,808.2 976.3,807.9" fill="#2C2C2A"/>
+<polygon points="1056.6,746.0 1058.1,749.8 1062.3,750.1 1059.1,752.8 1060.1,756.8 1056.6,754.7 1053.0,756.8 1054.0,752.8 1050.9,750.1 1055.0,749.8" fill="#2C2C2A"/>
+<polygon points="862.0,796.8 672.0,796.8 672.0,728.4 862.0,728.4" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="843.8,807.1 857.4,807.1 857.4,820.7 843.8,820.7" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="862.0,796.8 672.0,796.8 672.0,728.4 862.0,728.4" fill="none" stroke="#9B5CFF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="844.9,756.9 856.3,756.9 856.3,768.3 844.9,768.3" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="702.4" cy="762.6" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="789.8,920.2 913.3,920.2 913.3,964.0 789.8,964.0" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="913.3,920.2 942.6,920.2 942.6,1017.2 913.3,1017.2" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="811.6,973.4 913.3,973.4 913.3,1017.2 811.6,1017.2" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="811.6,964.0 913.3,964.0 913.3,973.4 811.6,973.4" fill="#B9B5AA" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="794.4,896.3 808.0,896.3 808.0,910.0 794.4,910.0" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="789.8,920.2 913.3,920.2 913.3,964.0 789.8,964.0" fill="none" stroke="#79DCFF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="913.3,920.2 942.6,920.2 942.6,1017.2 913.3,1017.2" fill="none" stroke="#79DCFF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="811.6,973.4 913.3,973.4 913.3,1017.2 811.6,1017.2" fill="none" stroke="#79DCFF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="811.6,964.0 913.3,964.0 913.3,973.4 811.6,973.4" fill="none" stroke="#79DCFF" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="795.5,936.4 806.9,936.4 806.9,947.8 795.5,947.8" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="867.7" cy="990.8" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="991.2,935.5 1120.4,935.5 1120.4,1015.3 991.2,1015.3" fill="#E9E4D6" stroke="#8A8472" stroke-width="0.7" />
+<polygon points="1110.7,975.4 1110.2,980.3 1108.8,985.2 1106.5,989.9 1103.4,994.3 1099.4,998.4 1094.6,1002.1 1089.2,1005.4 1083.3,1008.1 1076.8,1010.3 1070.0,1011.9 1063.0,1012.9 1055.8,1013.2 1048.6,1012.9 1041.6,1011.9 1034.8,1010.3 1028.3,1008.1 1022.4,1005.4 1017.0,1002.1 1012.2,998.4 1008.2,994.3 1005.1,989.9 1002.8,985.2 1001.4,980.3 1000.9,975.4 1001.4,970.5 1002.8,965.6 1005.1,960.9 1008.2,956.5 1012.2,952.4 1017.0,948.7 1022.4,945.4 1028.3,942.7 1034.8,940.5 1041.6,938.9 1048.6,937.9 1055.8,937.6 1063.0,937.9 1070.0,938.9 1076.8,940.5 1083.3,942.7 1089.2,945.4 1094.6,948.7 1099.4,952.4 1103.4,956.5 1106.5,960.9 1108.8,965.6 1110.2,970.5" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<circle cx="1055.8" cy="975.4" r="7.6" fill="#C9A24A" stroke="#5B4614" stroke-width="0.8" />
+<polygon points="995.8,911.6 1009.4,911.6 1009.4,925.2 995.8,925.2" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="991.2,935.5 1120.4,935.5 1120.4,1015.3 991.2,1015.3" fill="none" stroke="#E8A33A" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1011.0,969.7 1022.4,969.7 1022.4,981.1 1011.0,981.1" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<circle cx="1094.9" cy="975.4" r="3.4" fill="#FFFFFF" stroke="#111" stroke-width="1.2" />
+<polygon points="1115.8,969.4 1117.4,973.2 1121.5,973.5 1118.4,976.2 1119.4,980.3 1115.8,978.1 1112.3,980.3 1113.3,976.2 1110.1,973.5 1114.3,973.2" fill="#2C2C2A"/>
+<polygon points="1209.7,1024.8 1209.7,789.2 1293.3,789.2 1293.3,1024.8" fill="#5DAA6E" stroke="#1E3B2A" stroke-width="1.1" />
+<polygon points="1185.8,1006.6 1199.4,1006.6 1199.4,1020.2 1185.8,1020.2" fill="#1B5E3B" stroke="#0E3322" stroke-width="0.7" />
+<polygon points="1209.7,1024.8 1209.7,789.2 1293.3,789.2 1293.3,1024.8" fill="none" stroke="#FF3DCB" stroke-width="2.0" stroke-opacity="0.9"/>
+<polygon points="1245.8,984.9 1257.2,984.9 1257.2,996.3 1245.8,996.3" fill="#2B2B2B" stroke="none" stroke-width="1" />
+<polygon points="1251.5,829.6 1253.1,833.4 1257.2,833.7 1254.1,836.4 1255.0,840.4 1251.5,838.3 1248.0,840.4 1248.9,836.4 1245.8,833.7 1249.9,833.4" fill="#2C2C2A"/>
+<polygon points="1288.7,916.2 1290.3,920.0 1294.4,920.3 1291.3,923.0 1292.3,927.1 1288.7,924.9 1285.2,927.1 1286.2,923.0 1283.0,920.3 1287.2,920.0" fill="#2C2C2A"/>
+<polygon points="1214.3,916.2 1215.8,920.0 1220.0,920.3 1216.8,923.0 1217.8,927.1 1214.3,924.9 1210.7,927.1 1211.7,923.0 1208.6,920.3 1212.7,920.0" fill="#2C2C2A"/>
+<polygon points="809.4,475.7 991.8,475.7 991.8,483.3 809.4,483.3" fill="#8C4B32" stroke="#4A2414" stroke-width="0.9" />
+<polyline points="832.2,475.7 832.2,424.4" fill="none" stroke="#6B6B6B" stroke-width="1.2" stroke-dasharray="3 2"/>
+<polyline points="969.0,475.7 969.0,432.0" fill="none" stroke="#6B6B6B" stroke-width="1.2" stroke-dasharray="3 2"/>
+<polygon points="915.2,452.9 926.6,452.9 926.6,475.7 915.2,475.7" fill="#6B6B6B" stroke="#333" stroke-width="0.6" />
+<polygon points="729.0,806.3 767.0,806.3 767.0,832.9 729.0,832.9" fill="#2E7D4F" stroke="#123" stroke-width="0.8" />
+<polygon points="913.3,778.8 919.0,778.8 919.0,834.8 913.3,834.8" fill="#8E8A7E" stroke="#444" stroke-width="0.6" />
+<circle cx="930.4" cy="844.3" r="5.3" fill="#F2C230" stroke="#5A4A10" stroke-width="0.9" />
+<circle cx="1114.7" cy="756.9" r="5.3" fill="#F2C230" stroke="#5A4A10" stroke-width="0.9" />
+<circle cx="1200.2" cy="857.6" r="5.3" fill="#F2C230" stroke="#5A4A10" stroke-width="0.9" />
+<circle cx="1200.2" cy="990.6" r="5.3" fill="#F2C230" stroke="#5A4A10" stroke-width="0.9" />
+<polyline points="930.4,844.3 1114.7,756.9" fill="none" stroke="#D9A400" stroke-width="1.3" stroke-dasharray="1.5 3" stroke-linecap="round"/>
+<polyline points="1200.2,857.6 1200.2,990.6" fill="none" stroke="#D9A400" stroke-width="1.3" stroke-dasharray="1.5 3" stroke-linecap="round"/>
+<polyline points="1200.2,857.6 1251.5,835.6" fill="none" stroke="#D9A400" stroke-width="1.3" stroke-dasharray="1.5 3" stroke-linecap="round"/>
+<polyline points="1200.2,990.6 1251.5,835.6" fill="none" stroke="#D9A400" stroke-width="1.3" stroke-dasharray="1.5 3" stroke-linecap="round"/>
+<polyline points="1198.3,468.1 1285.7,468.1" fill="none" stroke="#9C2C6E" stroke-width="3.0" stroke-opacity="0.55"/>
+<polygon points="1192.6,462.4 1204.0,462.4 1204.0,473.8 1192.6,473.8" fill="#9C2C6E" stroke="#4E0F33" stroke-width="0.8" />
+<polygon points="1280.0,462.4 1291.4,462.4 1291.4,473.8 1280.0,473.8" fill="#9C2C6E" stroke="#4E0F33" stroke-width="0.8" />
+<polyline points="1148.9,768.3 1148.9,840.5" fill="none" stroke="#9C2C6E" stroke-width="3.0" stroke-opacity="0.55"/>
+<polygon points="1143.2,762.6 1154.6,762.6 1154.6,774.0 1143.2,774.0" fill="#9C2C6E" stroke="#4E0F33" stroke-width="0.8" />
+<polygon points="1143.2,834.8 1154.6,834.8 1154.6,846.2 1143.2,846.2" fill="#9C2C6E" stroke="#4E0F33" stroke-width="0.8" />
+<circle cx="1042.5" cy="446.2" r="13.7" fill="#3BE36B" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="1042.5" y="447.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >10</text>
+<circle cx="763.8" cy="432.9" r="13.7" fill="#FF6A2B" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="763.8" y="433.7" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >9</text>
+<circle cx="592.2" cy="291.4" r="13.7" fill="#FF2E4D" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="592.2" y="292.2" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >8</text>
+<circle cx="772.7" cy="219.2" r="13.7" fill="#FFE21A" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="772.7" y="220.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >7</text>
+<circle cx="1022.5" cy="313.2" r="13.7" fill="#2EE6B8" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="1022.5" y="314.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >6</text>
+<circle cx="1014.0" cy="781.6" r="13.7" fill="#2F80FF" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="1014.0" y="782.4" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >5</text>
+<circle cx="767.0" cy="762.6" r="13.7" fill="#9B5CFF" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="767.0" y="763.4" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >4</text>
+<circle cx="865.8" cy="968.7" r="13.7" fill="#79DCFF" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="865.8" y="969.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >3</text>
+<circle cx="1055.8" cy="975.4" r="13.7" fill="#E8A33A" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="1055.8" y="976.2" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >2</text>
+<circle cx="1251.5" cy="907.0" r="13.7" fill="#FF3DCB" stroke="#1B1B1B" stroke-width="1.2" />
+<text x="1251.5" y="907.8" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111" text-anchor="middle" font-weight="800" dominant-baseline="middle" >1</text>
+<text x="1042.5" y="511.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >10 · Brownstone Stoops</text>
+<text x="1042.5" y="531.6" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Stoop to Conquer” · Teach · par 2</text>
+<text x="761.3" y="511.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >9 · Brooklyn Pizza</text>
+<text x="761.3" y="531.6" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Pizza the Action” · Social · par 3</text>
+<text x="548.5" y="430.1" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="start" font-weight="700" dominant-baseline="middle" >8 · Hot Dog Cart</text>
+<text x="548.5" y="449.9" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="start" font-weight="400" dominant-baseline="middle" font-style="italic">“Relish the Moment” · Friendly ace · par 2</text>
+<text x="772.7" y="300.9" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >7 · Brooklyn Bridge</text>
+<text x="772.7" y="320.7" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Meet You in the Middle” · Spike · par 2</text>
+<text x="964.6" y="390.2" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >6 · Liberty Island</text>
+<text x="964.6" y="410.0" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Lift Your Lamp” · Hardest · par 3</text>
+<text x="1006.4" y="882.3" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >5 · Central Park Loop</text>
+<text x="1006.4" y="902.1" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Wheel See You Next Year” · Teach · par 3</text>
+<text x="767.0" y="859.5" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >4 · Gridlock</text>
+<text x="767.0" y="879.3" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Don't Honk. Just Putt.” · Chaos · par 3</text>
+<text x="865.8" y="891.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >3 · The Subway</text>
+<text x="865.8" y="911.6" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Stand Clear of the Closing Doors” · Spike · par 3</text>
+<text x="1055.8" y="899.4" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="middle" font-weight="700" dominant-baseline="middle" >2 · Grand Central Whispering Gallery</text>
+<text x="1055.8" y="919.2" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="middle" font-weight="400" dominant-baseline="middle" font-style="italic">“Meet Me Under the Clock” · Spike · par 2</text>
+<text x="1306.6" y="1079.9" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#14201A" text-anchor="end" font-weight="700" dominant-baseline="middle" >1 · Times Square</text>
+<text x="1306.6" y="1099.7" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4C5A50" text-anchor="end" font-weight="400" dominant-baseline="middle" font-style="italic">“Drop the Ball” · Lottery finale · par 2</text>
+<text x="1067.2" y="544.1" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#5A2A16" text-anchor="middle" font-weight="400" dominant-baseline="middle" >brownstone façade (shared, 4.8 × 2.4 m)</text>
+<text x="698.6" y="357.9" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#7A5A0C" text-anchor="middle" font-weight="800" dominant-baseline="middle" letter-spacing="1.2">DOWNTOWN · 10 → 6 · charcoal “asphalt”</text>
+<text x="672.0" y="1055.2" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6A2FA8" text-anchor="middle" font-weight="800" dominant-baseline="middle" letter-spacing="1.2">MIDTOWN · 5 → 1 · light-grey “sidewalk”</text>
+<text x="1242.0" y="445.3" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#6E1B4C" text-anchor="middle" font-weight="700" dominant-baseline="middle" >bridge-arch portal</text>
+<text x="1148.9" y="888.0" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#6E1B4C" text-anchor="middle" font-weight="700" dominant-baseline="middle" >park gate</text>
+<text x="748.0" y="853.8" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#2C2C2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" ></text>
+<polygon points="64.0,128.0 1489.0,128.0 1489.0,1100.8 64.0,1100.8" fill="none" stroke="#2C2C2A" stroke-width="2.2" />
+<line x1="1489.0" y1="128.0" x2="1489.0" y2="1100.8" stroke="#F7F6F2" stroke-width="5"/>
+<text x="1481.4" y="789.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >room continues to the</text>
+<text x="1481.4" y="808.2" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#77736A" text-anchor="end" font-weight="400" dominant-baseline="middle" >sound console (≈ 47 m, est.)</text>
+<polygon points="64.0,1161.6 102.0,1161.6 102.0,1171.1 64.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
+<polygon points="102.0,1161.6 140.0,1161.6 140.0,1171.1 102.0,1171.1" fill="#FFFFFF" stroke="#2C2C2A" stroke-width="0.6" />
+<polygon points="140.0,1161.6 178.0,1161.6 178.0,1171.1 140.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
+<polygon points="178.0,1161.6 216.0,1161.6 216.0,1171.1 178.0,1171.1" fill="#FFFFFF" stroke="#2C2C2A" stroke-width="0.6" />
+<polygon points="216.0,1161.6 254.0,1161.6 254.0,1171.1 216.0,1171.1" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="0.6" />
+<text x="64.0" y="1190.1" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#2C2C2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >0</text>
+<text x="254.0" y="1190.1" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#2C2C2A" text-anchor="middle" font-weight="400" dominant-baseline="middle" >5 m</text>
+<text x="1511.0" y="132.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A18">Clearances checked (tightest)</text>
+<text x="1511.0" y="151.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to hole: 1.21 m (≥ 1.2)</text>
+<text x="1511.0" y="168.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to side wall: 1.60 m (≥ 1.6)</text>
+<text x="1511.0" y="185.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to runway side: 1.75 m (≥ 1.75)</text>
+<text x="1511.0" y="202.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to stage front: 6.52 m (≥ 6.5)</text>
+<text x="1511.0" y="219.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to golf limit: 0.65 m (≥ 0.6)</text>
+<text x="1511.0" y="236.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hole to hub: 2.53 m (≥ 1.5)</text>
+<text x="1511.0" y="253.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Hub to runway tip: 1.46 m (≥ 1.2)</text>
+<text x="1511.0" y="270.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Walkway width: 1.26 m (≥ 1.2)</text>
+<text x="1511.0" y="287.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Route to its own hole: 0.35 m (≥ 0.3)</text>
+<text x="1511.0" y="304.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Tall props to sightline: 0.53 m (≥ 0.5)</text>
+<text x="1511.0" y="321.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Clear in front of exits: 1.60 m (≥ 1.5)</text>
+<text x="1511.0" y="338.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Scenery to other holes: 1.25 m (≥ 1.2)</text>
+<text x="1511.0" y="355.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Scenery to runway: 2.30 m (≥ 1.75)</text>
+<text x="1511.0" y="372.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Façade back face z: 9.35 m (≤ 9.9)</text>
+<text x="1511.0" y="389.5" font-family="Helvetica, Arial, sans-serif" font-size="5" font-weight="400" fill="#000"></text>
+<text x="1511.0" y="401.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A18">Exempted (attached scenery)</text>
+<text x="1511.0" y="420.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">facade-10-9 – hole 10: 0.15 m</text>
+<text x="1511.0" y="436.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">facade-10-9 – hole 9: 0.15 m</text>
+<text x="1511.0" y="452.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">facade-jack – hole 10: 0.35 m</text>
+<text x="1511.0" y="468.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">subway-kiosk – hole 4: 0.25 m</text>
+<text x="1511.0" y="484.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">park-wall-cutout – hole 5: 0.10 m</text>
+<text x="1511.0" y="500.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">pole-5a – hole 5: 0.05 m</text>
+<text x="1511.0" y="516.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">pole-5b – hole 5: 0.05 m</text>
+<text x="1511.0" y="532.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">pole-1a – hole 1: 0.05 m</text>
+<text x="1511.0" y="548.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">pole-1b – hole 1: 0.05 m</text>
+<text x="1511.0" y="564.5" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#5A4A2A">portal-midtown – hole 5: 1.00 m</text>
+<text x="1511.0" y="580.5" font-family="Helvetica, Arial, sans-serif" font-size="5" font-weight="400" fill="#000"></text>
+<text x="1511.0" y="592.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A18">Walk routes</text>
+<text x="1511.0" y="611.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9A6A0C">Downtown: hub → 10 → 9 → 8 → 7 → 6 → hub</text>
+<text x="1511.0" y="628.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6A2FA8">Midtown: hub → 5 → 4 → 3 → 2 → 1 → hub</text>
+<text x="1511.0" y="645.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Routes don't cross. Hole 7 is two-ended:</text>
+<text x="1511.0" y="662.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">the group leaves from its far end.</text>
+<text x="1511.0" y="679.5" font-family="Helvetica, Arial, sans-serif" font-size="5" font-weight="400" fill="#000"></text>
+<text x="1511.0" y="691.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A18">Footprint</text>
+<text x="1511.0" y="710.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Bounding boxes 103 m² (doc 14: ≈ 101)</text>
+<text x="1511.0" y="727.5" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#2C2C2A">Occupied (L, Z, U as drawn) 95 m²</text>
+<text x="64" y="1278" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#55524B">Not shown: cable runs and drops (old cable-plan geometry), the runway extension (if built it would run through the hub). Hub portals sit outside the assumed sightline, not at the hub itself (the hub is inside it).</text>
+<text x="64" y="1296" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#55524B">Generated by tools/make_layout_nyc_v4.py from floorplan/auditorium-dimensions.json · holes: docs/14-new-york-iteration-1.md · AI-drafted: a team member must check and own it.</text></svg>

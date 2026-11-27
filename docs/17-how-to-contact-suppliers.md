@@ -1,6 +1,6 @@
 # How to message the suppliers, step by step (24 Nov 2026)
 
-The contact list is `docs/14-china-factory-contacts.csv` (22 Chinese suppliers, checked 22 Nov). This guide covers who to message, through which channel (1688 chat, WhatsApp, email, WeChat, Alibaba.com, Taobao), exactly what to tap and type, the messages to paste in English and Chinese, and what to do with the replies. The Singapore suppliers are at the end.
+The contact list is `docs/21-china-factory-contacts.csv` (22 Chinese suppliers, checked 22 Nov). This guide covers who to message, through which channel (1688 chat, WhatsApp, email, WeChat, Alibaba.com, Taobao), exactly what to tap and type, the messages to paste in English and Chinese, and what to do with the replies. The Singapore suppliers are at the end.
 
 **Status: proposal. Nothing has been contacted yet.** A team member sends the messages and owns the replies. Asking for a quote commits you to nothing, but paying does: buying anything, including the optional sample set, is the team's call.
 
@@ -13,7 +13,7 @@ The contact list is `docs/14-china-factory-contacts.csv` (22 Chinese suppliers, 
 | 3 | A freight forwarder (two if possible) | Email | Message 3 |
 | 4 | Craftway and GreenTurf (Singapore turf, the fallback) | Email | `06-rfq-templates.md` section B |
 
-Attach **`docs/17-lane-sizes-for-suppliers.png`** to every message: the ten lane sizes in English and Chinese, drawn to scale. Decide by **Fri 27 Nov** (`14-china-factory-contacts.md`, next steps).
+Attach **`docs/17-lane-sizes-for-suppliers.png`** to every message: the ten lane sizes in English and Chinese, drawn to scale. Decide by **Fri 27 Nov** (`21-china-factory-contacts.md`, next steps).
 
 Yibang and Foshan Qingzhou are **one company** (the PGM group) reached through two channels: 1688 gives the domestic price in yuan, Ryan Wu gives an export price in US$ with shipping. Compare the two answers, but they aren't competing quotes.
 
@@ -35,7 +35,7 @@ Yibang and Foshan Qingzhou are **one company** (the PGM group) reached through t
 
 **When to send:** China is on Singapore time (UTC+8). Sales staff work about 9 am to 6 pm, Monday to Saturday, and many 1688 sellers reply into the evening. A message sent this morning normally gets an answer today.
 
-**Correction to the 22 Nov message.** The GL025 message in `14-china-factory-contacts.md` says "about 83 m² in total", but its ten lane sizes add up to **102.5 m²**: 83 m² is the shaped playing area inside the rectangles. A factory works from the rectangles, so the messages below give 102.5 m². If the decks are full rectangles, the GL025 estimate becomes about ¥27,700–30,800 (≈ S$5.5–6.2k) before freight, about 1.1 t and about 10 m³ (scaled from the 22 Nov figures; not quotes).
+**Correction to the 22 Nov message.** The GL025 message in `21-china-factory-contacts.md` says "about 83 m² in total", but its ten lane sizes add up to **102.5 m²**: 83 m² is the shaped playing area inside the rectangles. A factory works from the rectangles, so the messages below give 102.5 m². If the decks are full rectangles, the GL025 estimate becomes about ¥27,700–30,800 (≈ S$5.5–6.2k) before freight, about 1.1 t and about 10 m³ (scaled from the 22 Nov figures; not quotes).
 
 ## 2. Who to contact, and how, for every row in the CSV
 
@@ -123,7 +123,7 @@ Use a computer if you can: pasting Chinese and attaching the image is easier. Th
 
 ## 7. Other channels
 
-**Taobao or Tmall shop** (for example the Tmall PGM flagship, or new shops from the round-2 search): in the Taobao app, open the product, tap **客服** (customer service) at the bottom left, paste the Chinese message, then **+** → photo to send the lane sheet. To find the company behind a shop, see `14-china-factory-contacts.md` ("Finding the factory behind a Taobao or Pinduoduo shop").
+**Taobao or Tmall shop** (for example the Tmall PGM flagship, or new shops from the round-2 search): in the Taobao app, open the product, tap **客服** (customer service) at the bottom left, paste the Chinese message, then **+** → photo to send the lane sheet. To find the company behind a shop, see `21-china-factory-contacts.md` ("Finding the factory behind a Taobao or Pinduoduo shop").
 
 **Phone call.** Only worth it if a supplier goes quiet after showing interest. Most sales staff speak Mandarin only, and carrier rates to China apply (a WhatsApp or WeChat call is free). From Singapore, dial +86 and drop the 0 from the Chinese area code: 0757-2639 9246 becomes **+86 757 2639 9246**; mobiles are +86 then the 11 digits, for example **+86 130 7741 4019**.
 
@@ -241,11 +241,11 @@ The repo has no forwarder on file. Ask whoever the organisation normally uses, o
 
 ## 9. After you send
 
-1. **Log it.** In `docs/14-china-factory-contacts.csv`, change the supplier's `status` from "not contacted" to, for example, "messaged 24 Nov (1688 chat)", and later "quote received 25 Nov". Or send the replies (copied text or screenshots) back to Claude to log, in the CSV and in `04-sourcing.md`. Cover the team's account name and phone number in any screenshot before it goes into the repo.
+1. **Log it.** In `docs/21-china-factory-contacts.csv`, change the supplier's `status` from "not contacted" to, for example, "messaged 24 Nov (1688 chat)", and later "quote received 25 Nov". Or send the replies (copied text or screenshots) back to Claude to log, in the CSV and in `04-sourcing.md`. Cover the team's account name and phone number in any screenshot before it goes into the repo.
 2. **Chase once.** No reply by 5 pm the next working day: send Message 4. Still nothing by Thu 26 Nov: treat that channel as dead for this event.
-3. **Check every quote** against "What to get in writing before paying" in `14-china-factory-contacts.md`: real photos or video, a delivery date in Singapore no later than 10 Dec, the fire-test report, an itemised price, and the same company name on the licence, the quote and the bank account.
+3. **Check every quote** against "What to get in writing before paying" in `21-china-factory-contacts.md`: real photos or video, a delivery date in Singapore no later than 10 Dec, the fire-test report, an itemised price, and the same company name on the licence, the quote and the bank account.
 4. **Expect the sizes to change.** If the tiles come on a 60 cm grid, the factory may suggest lanes such as 6.0 × 1.8 instead of 6.0 × 1.6. Don't accept on the spot: send the suggested sizes back to Claude so the layout and its clearances can be re-checked (`tools/make_layout_nyc.py`) before anyone confirms.
-5. **Get the landed price**: goods + freight (Message 3) + 9% GST. Then decide by Fri 27 Nov, as in `14-china-factory-contacts.md`: GL025 decks plus local rails, or route C's local surface.
+5. **Get the landed price**: goods + freight (Message 3) + 9% GST. Then decide by Fri 27 Nov, as in `21-china-factory-contacts.md`: GL025 decks plus local rails, or route C's local surface.
 
 **Red flags (stop and check with the team):**
 

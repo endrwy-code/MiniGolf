@@ -1,0 +1,10 @@
+# Lean rules (round 2): read this right after BRIEF.md
+
+Round 1 ran out of usage before any agent finished, mostly because every agent read the whole 171 KB page and the whole of doc 14, and re-sent images every turn. Quality must not drop, so work smarter:
+
+- **Don't read `base.html` or doc 14 in full.** Your hole's doc 14 text is in `W/ref/h<N>.md` (a verbatim extract: summary row, full hole section, its review items). Read doc 14 itself only for a specific line the extract doesn't have, with `grep -n` and a narrow `sed -n 'a,bp'`.
+- **Template: `W/holes/h10.js`** (group A, done and checked). Copy its helper block (`polyBox`, `railRun`, `GB`, between `group A helpers BEGIN/END`) into your builder rather than writing your own rails and geometry: it already puts the cap top at +100 mm (the page's old `railsFor` puts it at 118 mm, so don't use `railsFor`), follows steps and slopes, mitres corners and survives mirroring. `W/holes/h4.js` is a second finished example (curve-free, cabs). Read h10.js once; skim h4.js only if useful.
+- **Old props to reuse:** find the block with `grep -n "case <old n>:" W/base.html`, then read only that block with `sed -n`. Old numbering: case 9 hot dog cart, case 7 cabs (Gridlock), case 6 Liberty torch, case 5 subway tiles and line roundels, case 2 Grand Central clock and booth, case 1 Times Square tower and 2027 sign. Page helper signatures are listed in BRIEF.md; `sed -n '450,680p' W/base.html` shows their code if you really need it.
+- **Images: at most 6 reads in total.** Make 2-by-2 contact sheets at `--w 900 --h 560` (one read shows four views), at most two sheet rounds per hole. Check numbers with `dump.py` and with prints from your own constants, not with extra images. `iso=1` now shows the hole alone on the floor, and `cam=side` works under `iso=1`.
+- **Keep your turns few and your files tight:** write a whole builder in one go, then test; don't re-read your own file after writing it unless a test fails.
+- Write your notes file as you finish each hole (that is what survives if usage runs out).

@@ -117,7 +117,7 @@ Use template D in `06-rfq-templates.md`, and make sure to ask:
 
 ### 2. Chinese manufacturers (Alibaba listings only, so treat with caution)
 
-**20 Nov:** a longer contact list of factories that make portable lanes and putting greens cut to size (PGM / Foshan Qingzhou, Shenzhen Grearth, Huizhou Shenger and others), a message to send in English and Chinese, and how to trace a Taobao or Pinduoduo shop to its factory: `14-china-factory-contacts.md` and `14-china-factory-contacts.csv`. **22 Nov:** a browsing agent checked them on the live pages; the one product that fits is the PGM GL025 modular putting green (see the 22 Nov section of doc 14).
+**20 Nov:** a longer contact list of factories that make portable lanes and putting greens cut to size (PGM / Foshan Qingzhou, Shenzhen Grearth, Huizhou Shenger and others), a message to send in English and Chinese, and how to trace a Taobao or Pinduoduo shop to its factory: `21-china-factory-contacts.md` and `21-china-factory-contacts.csv`. **22 Nov:** a browsing agent checked them on the live pages; the one product that fits is the PGM GL025 modular putting green (see the 22 Nov section of doc 21).
 
 | Supplier | Offer | Listed price | Notes |
 |---|---|---|---|
