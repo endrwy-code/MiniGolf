@@ -115,6 +115,7 @@ HOOK = r"""
     }
     const pre = document.createElement('pre'); pre.id = 'dump'; pre.textContent = JSON.stringify(out); document.body.appendChild(pre);
   }
+  if (typeof golfApi !== 'undefined') window.__golf = golfApi;   // headless putting checks
   window.__ready = true;
 }
 """

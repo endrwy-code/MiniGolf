@@ -153,6 +153,9 @@ code{font-family:var(--font-mono);font-size:.9em}
 .joy{position:absolute;left:calc(14px + var(--inset-l));bottom:calc(14px + var(--inset-b));z-index:3;width:112px;height:112px;border-radius:50%;background:var(--label-bg);border:1.5px solid rgba(255,255,255,.28);touch-action:none;cursor:grab;display:grid;place-items:center}
 .joy::before{content:"";position:absolute;inset:30%;border-radius:50%;border:1px dashed rgba(255,255,255,.25)}
 .joy .knob{width:46px;height:46px;border-radius:50%;background:var(--now);box-shadow:0 2px 8px rgba(0,0,0,.4);pointer-events:none}
+.run-btn{position:absolute;left:calc(134px + var(--inset-l));bottom:calc(14px + var(--inset-b));z-index:3;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(255,255,255,.28);background:var(--label-bg);color:var(--label-ink);font:800 .74rem/1 var(--font-display);letter-spacing:.04em;cursor:pointer;touch-action:none}
+.run-btn[aria-pressed="true"]{background:var(--now);color:#1b1404;border-color:var(--now)}
+.run-btn[hidden]{display:none}
 .minimap{position:absolute;right:calc(12px + var(--inset-r));bottom:calc(12px + var(--inset-b));z-index:3;width:210px;aspect-ratio:var(--room-aspect,2.07);height:auto;border-radius:8px;border:1px solid rgba(255,255,255,.25);cursor:crosshair;touch-action:none}
 @media (max-width:640px){.minimap{width:160px}}
 
@@ -218,6 +221,7 @@ code{font-family:var(--font-mono);font-size:.9em}
         </button>
       </div>
       <div class="joy" id="joy" hidden aria-hidden="true"><div class="knob"></div></div>
+      <button type="button" class="run-btn" id="runBtn" hidden aria-pressed="false" aria-label="Sprint" title="Sprint (or hold Shift)">RUN</button>
       <canvas class="minimap" id="minimap" hidden aria-label="Map: tap to jump there"></canvas>
 
       <aside class="drawer" id="drawer" hidden aria-labelledby="dr-h">
@@ -286,7 +290,7 @@ code{font-family:var(--font-mono);font-size:.9em}
             <button type="button" id="o-map" data-opt="map" aria-pressed="true">Map</button>
             <button type="button" id="o-pad" data-opt="pad" aria-pressed="false">Touch pad</button>
           </div>
-          <p class="dr-fine" id="keysNote">W A S D or the arrow keys to walk, Shift to hurry, Q and E to turn, drag to look, Esc to stop. On a phone, switch on the touch pad.</p>
+          <p class="dr-fine" id="keysNote">W A S D or the arrow keys to walk, hold Shift to sprint, Q and E to turn, drag to look, Esc to stop. On a phone, switch on the touch pad.</p>
         </section>
 
         <section class="dr-sec" aria-labelledby="dj-h">
@@ -305,6 +309,7 @@ code{font-family:var(--font-mono);font-size:.9em}
       <details class="pcard note" open>
         <summary><h2>What changed on 27 Nov</h2><span>Iteration 1: doc 14's holes on a factory deck</span></summary>
         <ul>
+          <li><b>Play it (new).</b> Every hole is playable with a putter and ball: the ⛳ button, "Play this hole" on a hole's card, or F at a tee while walking. The ball rolls on the holes exactly as modelled (steps, ramps, banks, tubes, pegs) with doc 14's 0.6 m/s² carpet drag, and the speed bar shows m/s so you can try doc 14's paces. Special rules: one-shot curling on 9, the rally on 7, plinko slots on 1. A model to argue with, not a rig result. Shift now sprints while you walk.</li>
           <li><b>Iteration-1 holes in every slot.</b> All ten holes are now doc 14's New York iteration 1, redesigned after the team's Kulnari visit (doc 13). Tap a hole for how it plays, its mechanism, build, sizes and Kulnari lesson.</li>
           <li><b>Layout v4.</b> New positions and walk routes; every clearance check passes. Holes 9, 6 and 3 need a little more floor than doc 14's boxes, because doc 14's own numbers don't fit them: hole 9 is 5.13 m long, hole 6 is 4.55 m and hole 3 is 2.55 m wide.</li>
           <li><b>Factory deck.</b> For the 1688 factory route every hole is a raised deck. Its lowest playing surface sits 100 mm off the floor, and doc 14's heights are kept relative to that surface.</li>
@@ -1642,7 +1647,9 @@ function select(n, fly) {
     <p class="pun">“${esc(h.sign)}”</p>
     <div class="meta"><span>Par <b>${h.par}</b></span><span><b>${esc(h.mins || '')}</b> min per group of 4</span><span><b>${fmtM(h.L)} × ${fmtM(h.W)}</b> m</span></div>
     <p>${esc(h.play)}</p>
+    ${golfCardBits(n).button}
     <dl>
+      ${row('The shot, as designed', golfCardBits(n).shot)}
       ${row('Mechanism', h.mech)}
       ${row('Build', h.build)}
       ${row('If the putt misses', h.miss)}
@@ -1661,7 +1668,7 @@ function select(n, fly) {
 const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null;
 renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; });
 renderer.domElement.addEventListener('pointerup', e => {
-  if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return;
+  if (!down || golfOn() || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return;
   const r = renderer.domElement.getBoundingClientRect(); ndc.set((e.clientX - r.left) / r.width * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
   ray.setFromCamera(ndc, camera); const hit = ray.intersectObjects(pickables, false)[0];
   if (hit) select(hit.object.userData.n, !walking);
@@ -1674,9 +1681,9 @@ controls.addEventListener('start', () => { tween = null; });
    shoulder width (the collision width), comfortable and brisk walking speed. Step length is about 0.41 × stature.
    The average adult sits between a typical Singapore man (about 1.72 m) and woman (about 1.60 m). */
 const PEOPLE = {
-  child: { label: 'Child, about 8', h: 1.28, eye: 1.17, shoulders: 0.30, walk: 1.1, hurry: 1.6 },
-  adult: { label: 'Average adult', h: 1.66, eye: 1.55, shoulders: 0.43, walk: 1.35, hurry: 1.9 },
-  tall: { label: 'Tall adult', h: 1.88, eye: 1.76, shoulders: 0.48, walk: 1.45, hurry: 2.1 },
+  child: { label: 'Child, about 8', h: 1.28, eye: 1.17, shoulders: 0.30, walk: 1.1, sprint: 4.0 },
+  adult: { label: 'Average adult', h: 1.66, eye: 1.55, shoulders: 0.43, walk: 1.35, sprint: 5.5 },
+  tall: { label: 'Tall adult', h: 1.88, eye: 1.76, shoulders: 0.48, walk: 1.45, sprint: 6.0 },
 };
 const TURN_V = 1.8;
 const coarse = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
@@ -1694,9 +1701,10 @@ const saveSettings = () => { try { localStorage.setItem('countdownGolf3d.v1', JS
 let P = PEOPLE[settings.person];
 
 const btnWalk = document.getElementById('b-walk'), dWalk = document.getElementById('d-walk');
-const joy = document.getElementById('joy'), knob = joy.querySelector('.knob'), mini = document.getElementById('minimap');
+const joy = document.getElementById('joy'), knob = joy.querySelector('.knob'), mini = document.getElementById('minimap'), runBtn = document.getElementById('runBtn');
 const fovIn = document.getElementById('fov'), fovOut = document.getElementById('fovOut'), personNote = document.getElementById('personNote');
 let walking = false, yaw = 0, pitch = 0, bobPhase = 0, bobAmt = 0;
+let curV = 0, fovKick = 0, runLatch = false;   // sprint: speed eases up and down; the view widens a little while you run
 const me = new THREE.Vector2(34.6, RW_AXIS);
 const ARRIVE = { x: 34.6, z: RW_AXIS + 2.4, yaw: Math.atan2(1, 0.12) };   // party side of the golf limit, facing the Tee Booth
 const keys = new Set(), joyV = { x: 0, y: 0 };
@@ -1705,7 +1713,8 @@ const MOVE_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'KeyQ', 'KeyE', 'Arro
 /* field of view: the slider sets the angle across the long side of the screen */
 function applyFov() {
   const a = camera.aspect || 1, f = settings.fov * Math.PI / 180;
-  camera.fov = a >= 1 ? 2 * Math.atan(Math.tan(f / 2) / a) * 180 / Math.PI : settings.fov;
+  const fk = (settings.fov + fovKick) * Math.PI / 180;
+  camera.fov = a >= 1 ? 2 * Math.atan(Math.tan(fk / 2) / a) * 180 / Math.PI : settings.fov + fovKick;
   camera.updateProjectionMatrix();
   fovIn.value = settings.fov; fovOut.textContent = settings.fov + '°';
 }
@@ -1752,7 +1761,7 @@ function buildAvatar() {
 function setPerson(id) {
   settings.person = id; P = PEOPLE[id]; buildAvatar();
   document.querySelectorAll('[data-person]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.person === id)));
-  personNote.textContent = `${P.h.toFixed(2)} m tall, eyes at ${P.eye.toFixed(2)} m, ${Math.round(P.shoulders * 100)} cm across the shoulders. Walks at ${P.walk} m/s and hurries at ${P.hurry} m/s, so crossing the 27 m golf zone takes about ${Math.round(27 / P.walk)} seconds, as it would on the night.`;
+  personNote.textContent = `${P.h.toFixed(2)} m tall, eyes at ${P.eye.toFixed(2)} m, ${Math.round(P.shoulders * 100)} cm across the shoulders. Walks at ${P.walk} m/s and sprints at ${P.sprint} m/s (hold Shift), so crossing the 27 m golf zone takes about ${Math.round(27 / P.walk)} seconds, as it would on the night.`;
   if (walking && !tween) camera.position.y = P.eye;
 }
 document.querySelectorAll('[data-person]').forEach(b => b.addEventListener('click', () => { setPerson(b.dataset.person); saveSettings(); }));
@@ -1760,7 +1769,7 @@ function setPov(v) { settings.pov = v; document.querySelectorAll('[data-pov]').f
 document.querySelectorAll('[data-pov]').forEach(b => b.addEventListener('click', () => { setPov(b.dataset.pov); saveSettings(); }));
 function applyOpts() {
   document.querySelectorAll('[data-opt]').forEach(b => b.setAttribute('aria-pressed', String(!!settings[b.dataset.opt])));
-  mini.hidden = !(walking && settings.map); joy.hidden = !(walking && settings.pad);
+  mini.hidden = !(walking && settings.map); joy.hidden = !(walking && settings.pad); runBtn.hidden = joy.hidden;
 }
 document.querySelectorAll('[data-opt]').forEach(b => b.addEventListener('click', () => { settings[b.dataset.opt] = !settings[b.dataset.opt]; applyOpts(); saveSettings(); }));
 
@@ -1784,18 +1793,19 @@ function syncWalkButtons() {
   btnWalk.setAttribute('aria-pressed', String(walking)); btnWalk.setAttribute('aria-label', walking ? 'Stop walking' : 'Walk around'); btnWalk.title = walking ? 'Stop walking' : 'Walk around';
   dWalk.setAttribute('aria-pressed', String(walking)); dWalk.textContent = walking ? 'Stop walking' : 'Start walking';
 }
-function enterWalk() {
+function enterWalk(at) {   // at: { x, z, yaw } to start somewhere other than the party side (after playing a hole)
   if (walking) return;
   walking = true; controls.enabled = false; viewer.classList.add('walking');
   camera.near = 0.08; camera.updateProjectionMatrix();
   document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', 'false'));
   syncWalkButtons(); applyOpts(); applyLayers();
-  placeAt(ARRIVE.x, ARRIVE.z, ARRIVE.yaw, 1100);
+  if (at) placeAt(at.x, at.z, at.yaw, 600); else placeAt(ARRIVE.x, ARRIVE.z, ARRIVE.yaw, 1100);
   try { viewer.focus({ preventScroll: true }); } catch (e) { /* focus is a convenience */ }
 }
 function exitWalk() {
   if (!walking) return;
   walking = false; keys.clear(); joyV.x = joyV.y = 0; knob.style.transform = ''; avatar.visible = false;
+  curV = 0; runLatch = false; runBtn.setAttribute('aria-pressed', 'false'); if (fovKick) { fovKick = 0; applyFov(); }
   viewer.classList.remove('walking'); camera.near = 0.5; camera.updateProjectionMatrix();
   syncWalkButtons(); applyOpts(); applyLayers();
   const d = dirFrom(yaw, 0); controls.target.set(me.x + d[0] * 4, 1.0, me.y + d[2] * 4); controls.enabled = true; controls.update();
@@ -1823,7 +1833,14 @@ function walkStep(dt) {
   f -= joyV.y; s += joyV.x;
   yaw += turn * TURN_V * dt;
   const len = Math.hypot(f, s); if (len > 1) { f /= len; s /= len; }
-  const v = (keys.has('ShiftLeft') || keys.has('ShiftRight')) ? P.hurry : P.walk;
+  // hold Shift (or latch RUN on the touch pad) to sprint; the speed eases in over about half a second and out faster
+  const sprinting = (keys.has('ShiftLeft') || keys.has('ShiftRight') || runLatch) && (f > 0.1 || Math.abs(s) > 0.1 || len > 0.1);
+  const want = (len > 0.01 ? Math.min(len, 1) : 0) * (sprinting ? P.sprint : P.walk);
+  curV += (want - curV) * Math.min(1, dt * (want > curV ? 4.5 : 9));
+  const mag = Math.min(len, 1); if (mag > 1e-3) { f /= mag; s /= mag; }   // unit direction; the eased speed carries the stick's tilt
+  const v = mag > 1e-3 ? curV : 0;
+  const kick = sprinting && !reduceMotion ? 8 * Math.min(1, Math.max(0, (curV - P.walk) / (P.sprint - P.walk))) : 0;
+  if (Math.abs(kick - fovKick) > 0.02) { fovKick += (kick - fovKick) * Math.min(1, dt * 6); applyFov(); }
   const dx = (-Math.sin(yaw) * f + Math.cos(yaw) * s) * v * dt, dz = (-Math.cos(yaw) * f - Math.sin(yaw) * s) * v * dt;
   const x0 = me.x, z0 = me.y;
   if (dx || dz) {
@@ -1834,8 +1851,9 @@ function walkStep(dt) {
   // step bob: one gentle dip per step, at the real step rate for this walker (speed ÷ step length)
   const speed = Math.hypot(me.x - x0, me.y - z0) / Math.max(dt, 1e-4);
   bobAmt += ((speed > 0.05 ? 1 : 0) - bobAmt) * Math.min(1, dt * 6);
-  bobPhase += dt * Math.PI * 2 * speed / (0.41 * P.h);
-  const dip = settings.bob && !reduceMotion ? bobAmt * 0.022 * (P.h / 1.66) * (1 - Math.cos(bobPhase)) / 2 : 0;
+  const runK = Math.min(1, Math.max(0, (speed - P.walk) / (P.sprint - P.walk)));   // 0 walking .. 1 flat-out: longer steps, deeper dip
+  bobPhase += dt * Math.PI * 2 * speed / ((0.41 + 0.45 * runK) * P.h);
+  const dip = settings.bob && !reduceMotion ? bobAmt * (0.022 + 0.03 * runK) * (P.h / 1.66) * (1 - Math.cos(bobPhase)) / 2 : 0;
   avatar.position.set(me.x, 0, me.y); avatar.rotation.y = yaw;
   const c = camPose();
   camera.position.set(c.pos[0], c.pos[1] - dip, c.pos[2]);
@@ -1877,6 +1895,8 @@ joy.addEventListener('pointerdown', e => { joyId = e.pointerId; try { joy.setPoi
 joy.addEventListener('pointermove', e => { if (e.pointerId === joyId) moveJoy(e); });
 const endJoy = e => { if (e.pointerId !== joyId) return; joyId = null; joyV.x = joyV.y = 0; knob.style.transform = ''; };
 joy.addEventListener('pointerup', endJoy); joy.addEventListener('pointercancel', endJoy);
+// RUN: a latch for touch screens (Shift does the same on a keyboard)
+runBtn.addEventListener('click', () => { runLatch = !runLatch; runBtn.setAttribute('aria-pressed', String(runLatch)); });
 // map: the whole room, you as a dot with a view cone; tap to jump there
 const MM = { x1: ROOM_L }; mini.style.setProperty('--room-aspect', (ROOM_L / ROOM_W).toFixed(3));
 let miniBase = null, miniScale = 1, miniDpr = 1;
@@ -1944,6 +1964,7 @@ document.addEventListener('fullscreenchange', syncFull);
 document.addEventListener('webkitfullscreenchange', syncFull);
 
 setPerson(settings.person); setPov(settings.pov); applyOpts(); syncWalkButtons();
+golfInit();
 
 /* ------------------------------------------------------------------ controls wiring */
 document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { openDrawer(false); exitWalk(); setView(b.dataset.view); }));
@@ -1974,7 +1995,8 @@ renderer.setAnimationLoop((now) => {
   const dt = Math.min((now - last) / 1000, 0.1); last = now;
   for (const f of animators) f(now / 1000, dt);
   if (tween) { const k = Math.min((now - tween.t0) / tween.ms, 1), e = ease(k); camera.position.lerpVectors(tween.p0, tween.p1, e); controls.target.lerpVectors(tween.q0, tween.q1, e); if (walking) camera.lookAt(controls.target); if (k >= 1) tween = null; }
-  if (walking) { if (!tween) walkStep(dt); } else controls.update();
+  if (golfOn()) golfFrame(dt);   // playing a hole: the golf camera, ball and putter (extra-golf.js)
+  else if (walking) { if (!tween) walkStep(dt); golfIdle(); } else controls.update();
   avatar.visible = walking && settings.pov === 'third';
   cullShell();
   renderer.render(scene, camera);
