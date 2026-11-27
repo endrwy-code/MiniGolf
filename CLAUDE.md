@@ -8,7 +8,7 @@ Full background, floorplan decode, research and sources:
 ## Start here: where things stand (27 Nov)
 
 - **Decided by the team:** only the basics under "Decided by the team" below. The holes, build route, builder and budget are **not** decided. G0 (20 Nov) and G1 (25 Nov) passed with nothing logged: no budget ceiling, builder, quotes or turf order is recorded, so ask before assuming any of them.
-- **Two hole sets are on the table, and the team hasn't chosen.** Doc 10 is the 18 Nov ten; the layout script, carpenter's pack, 3D page and status page still show it. Iteration 1 (`docs/14-new-york-iteration-1.md`, 27 Nov) came after the Kulnari visit and was adversarially reviewed.
+- **Two hole sets are on the table, and the team hasn't chosen.** Doc 10 is the 18 Nov ten; layout v3, the carpenter's pack and the status page's plan still show it, and so does the doc 10 3D page. Iteration 1 has its own 3D page on layout v4 (`status/countdown-golf-3d-iter1.html`, published 27 Nov), and the status page links both. Iteration 1 (`docs/14-new-york-iteration-1.md`, 27 Nov) came after the Kulnari visit and was adversarially reviewed.
 - **Waiting on the team:** approve iteration 1 or pick fallbacks; accept its cost (about S$2.1–3.7k more than route C like for like) and a second carpenter; answer the questions in doc 13 section 7.
 - **Next dated actions:** "Most urgent" under Next tasks (hole 3 redraw 27–29 Nov, build 30 Nov–2 Dec, rigs 3 Dec, G2 Fri 4 Dec). No hole 3 drawing exists yet.
 - **Which doc wins.**
