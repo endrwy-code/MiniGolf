@@ -67,4 +67,28 @@ Fire, tools, practice:
 - Hill (hole 7) plateau 620 mm, cup at 310: reach cup needs v_crest ≥ 0.61 (v_foot ≥ 1.25); off-line ball runs over above v_crest 0.86 (v_foot 1.39).
 
 
-(filled in below)
+- Solid planed 2x4 rails: kapur S$52.90 per 8 ft retail → about S$2.2k for 96 m. Too dear, heavier, bows. Only if a yard quotes straight dressed stock under about S$8/m.
+- Laminated 2 x 12 mm ply rail on a floor-laid lane (route C style, hidden plates): cheapest (~18 sheets ≈ S$650), but carpet on the bare floor creeps and needs floor tape, the lane follows the floor, every cup needs its own raised box. Kept as the fallback if ply > S$45 or no table saw.
+- MDF decks: heavy (~26 kg per 12 mm sheet), swells at edges in humidity, weak screw hold. Rejected.
+- EPS/XPS foam deck core: cheap and light, but a fire-load problem indoors and dents. Rejected.
+- PVC pipe rails (round top, ball climbs, rolls), garden edging (floppy, low, wavy), pool noodles/foam (dead rebound), PVC skirting (too low, thin), cable trunking (hollow, flexes, looks like plumbing): rejected as rails.
+- Carpet grass / putting turf (8–15 mm): S$10–27/m² vs needle-punch ≈ S$2.5–5/m²; nap/grain, frayed edges, slower and less true on thin decks. Needle-punch chosen; carpet grass is an S$4k+ option on two hero holes only.
+- Drain-back harbour (doc 10 hole 6): needs ~5° on 0.6 m/s² carpet; too steep to build cheaply. Replaced by the causeway-and-channels fork.
+- Curved rails (doc 14 holes 5, 2, 6), loop box (3), plinko (1): need CNC or a skilled carpenter; replaced by 45° bank boards, a stretched octagon, fan channels and a two-step climb.
+
+## Revised figures after the container restart (28 Nov, later)
+
+- Heights finalised: rubber strip 3 + ribs 55 + top 12 + carpet 4 = **74 mm** surface. Rail strip 12 x 171 (bottom on the rubber strip, top 100 above carpet). Cup: 110 uPVC sleeve 67 mm + 3 mm hardboard disc glued under it (a "cup can" hanging from the deck), 10 mm EVA inside → depth ≈ 61 mm. Raised cups: same can on a ply spacer stack.
+- Offcut 320 → five 55 mm ribs (5 x 58 = 290).
+- Rail sheet: 6 x 171 + 2 x 60 caps = 1176 of 1220.
+- Hole geometry (calc in scratchpad, deck pieces 900 wide): deck 40.6 m²; full rails 95.7 m (28.0 m of it taller strips beside raised parts); low tee rails 9.0 m; raised area 8.4 m².
+  - 10 Stoops 4.88 x 0.90 (rail 10.7, all tall); 9 Pizza 4.88 (rail 10.7, tall 5.8); 8 Hot Dog 4.88 (10.7); 7 Bridge 3.66 (7.3, tall 2.4, two low ends); 6 Liberty 3.66 (8.2, tall 3.3); 5 Central Park Z 4.56 x 1.80 (11.3); 4 Gridlock 4.88 (10.7); 3 Subway 3.66 (8.2); 2 Grand Central stretched octagon 2.44 x 1.80, chamfers 0.5 m (7.3 inner + outer fascia); 1 Times Square 4.88 (10.7, tall 5.8).
+- Module weight M (2440 x 900): top 14.5 + ribs 6.9 + rails 5.5 + caps 1.9 + carpet 1.4 + glue/screws 1.5 ≈ 32 kg.
+- Physics with 0.6 m/s² drag: 60 mm step at 1:5 needs 1.10 m/s at the foot. Pizza (9): 2-point window 2.14–2.35 m/s from the tee (±4.7%). Times Square (1): ace ≈ 2.6 m/s from the adult tee; junior tee on step 1 ≈ 1.6 m/s. Grand Central (2): mirror bank off the long wall hits its midpoint (x 1220), 48° off the axis.
+
+## Final figures used in doc 22 (28 Nov, after the adversarial pass)
+
+- S$3k version: holes 8 and 4 shortened to 3.66 m; 37 sheets of 12 mm (19 deck, 3 ribs, 5 rail 171, 3 tall rail, 1.5 caps, 5.5 parts); deck ≈ 38 m²; full rails ≈ 91 m. Lines S$2,742 + contingency S$258 = S$3,000. Putters and lights borrowed.
+- S$4k version: + yard rips visible strips S$200, LED line S$450, 15 putters S$195, primer S$60 → S$3,647 + contingency S$353 = S$4,000.
+- Volunteer hours ≈ 365 (≈ 46 days), plan ≈ 470 (≈ 60 days) for an inexperienced team.
+- Adversarial fixes: rail screws 3.5 x 40; stiffeners on 271/291 rails; ribs at 300 to keep the centreline free for cups; hole 10 cup 300 off centre; hole 2 tee/booth/cup on z 750 off the module joint (banks 42° near wall, 52° far wall); kids two shots at hole 9; tunnel stop rule at hole 3; ramp easing fallback; raised modules 36–40 kg.
