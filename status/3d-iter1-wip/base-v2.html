@@ -156,6 +156,14 @@ code{font-family:var(--font-mono);font-size:.9em}
 .run-btn{position:absolute;left:calc(134px + var(--inset-l));bottom:calc(14px + var(--inset-b));z-index:3;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(255,255,255,.28);background:var(--label-bg);color:var(--label-ink);font:800 .74rem/1 var(--font-display);letter-spacing:.04em;cursor:pointer;touch-action:none}
 .run-btn[aria-pressed="true"]{background:var(--now);color:#1b1404;border-color:var(--now)}
 .run-btn[hidden]{display:none}
+.xhair{position:absolute;left:50%;top:50%;z-index:4;width:26px;height:26px;margin:-13px 0 0 -13px;pointer-events:none;display:none}
+.viewer.walking .xhair{display:block}
+.xhair svg{width:100%;height:100%;stroke:#fff;stroke-width:2;fill:#fff;filter:drop-shadow(0 0 1.5px rgba(0,0,0,.95))}
+.xhair i{position:absolute;inset:2px;border:2px solid var(--now);border-radius:50%;opacity:0;transform:scale(.6);transition:opacity .15s,transform .15s}
+.xhair.act i{opacity:1;transform:none}
+.lockhint{position:absolute;left:50%;top:calc(50% + 26px);transform:translateX(-50%);z-index:4;font:650 .82rem/1.3 var(--font-body);color:#fff;background:rgba(10,12,20,.72);padding:6px 12px;border-radius:999px;pointer-events:none;white-space:nowrap;text-align:center}
+.lockhint[hidden]{display:none}
+.viewer.walking.hoverlook canvas:not(.minimap){cursor:none}
 .minimap{position:absolute;right:calc(12px + var(--inset-r));bottom:calc(12px + var(--inset-b));z-index:3;width:210px;aspect-ratio:var(--room-aspect,2.07);height:auto;border-radius:8px;border:1px solid rgba(255,255,255,.25);cursor:crosshair;touch-action:none}
 @media (max-width:640px){.minimap{width:160px}}
 
@@ -223,6 +231,8 @@ code{font-family:var(--font-mono);font-size:.9em}
       <div class="joy" id="joy" hidden aria-hidden="true"><div class="knob"></div></div>
       <button type="button" class="run-btn" id="runBtn" hidden aria-pressed="false" aria-label="Sprint" title="Sprint (or hold Shift)">RUN</button>
       <canvas class="minimap" id="minimap" hidden aria-label="Map: tap to jump there"></canvas>
+      <div class="xhair" id="xhair" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M13 3v6M13 17v6M3 13h6M17 13h6"/><circle cx="13" cy="13" r="1.3" stroke="none"/></svg><i></i></div>
+      <div class="lockhint" id="lockHint" hidden>Click to look around with the mouse · Esc frees it</div>
 
       <aside class="drawer" id="drawer" hidden aria-labelledby="dr-h">
         <div class="dr-head"><h2 id="dr-h">Settings</h2><button type="button" class="dr-x" id="dr-close" aria-label="Close settings">✕</button></div>
@@ -285,12 +295,14 @@ code{font-family:var(--font-mono);font-size:.9em}
           <div class="dr-range"><label for="fov">Field of view</label><output id="fovOut" for="fov">75°</output></div>
           <input type="range" id="fov" min="45" max="110" step="1" value="75">
           <p class="dr-fine">Measured across the long side of the screen. About 70–80° looks natural; wider shows more but stretches the edges.</p>
+          <div class="dr-range"><label for="sens">Mouse look speed</label><output id="sensOut" for="sens">1.0×</output></div>
+          <input type="range" id="sens" min="0.3" max="3" step="0.1" value="1">
           <div class="toggles">
             <button type="button" id="o-bob" data-opt="bob" aria-pressed="true">Step bob</button>
             <button type="button" id="o-map" data-opt="map" aria-pressed="true">Map</button>
             <button type="button" id="o-pad" data-opt="pad" aria-pressed="false">Touch pad</button>
           </div>
-          <p class="dr-fine" id="keysNote">W A S D or the arrow keys to walk, hold Shift to sprint, Q and E to turn, drag to look, Esc to stop. On a phone, switch on the touch pad.</p>
+          <p class="dr-fine" id="keysNote">Click the view and the mouse looks around (a crosshair marks the middle); Esc frees the mouse, and Esc again stops walking. W A S D or the arrow keys to walk, hold Shift to sprint, Q and E to turn. You can step onto the hole decks, ramps and steps; props stop you. On a phone, switch on the touch pad and drag to look.</p>
         </section>
 
         <section class="dr-sec" aria-labelledby="dj-h">
@@ -309,6 +321,7 @@ code{font-family:var(--font-mono);font-size:.9em}
       <details class="pcard note" open>
         <summary><h2>What changed on 27 Nov</h2><span>Iteration 1: doc 14's holes on a factory deck</span></summary>
         <ul>
+          <li><b>Play while you walk (28 Nov).</b> Golf is now part of walking, not a separate mode. Click the view and the mouse looks around with a crosshair (no button to hold). You carry a putter and ball: walk to any tee (they glow), click to place the ball, walk up to it, aim with the crosshair, hold the mouse button and let go to putt. You can walk while it rolls, choose where to stand, and play the holes in any order. You walk on the decks at their real height, and the "behind you" camera no longer goes through walls.</li>
           <li><b>Play it (new).</b> Every hole is playable with a putter and ball: the ⛳ button, "Play this hole" on a hole's card, or F at a tee while walking. The ball rolls on the holes exactly as modelled (steps, ramps, banks, tubes, pegs) with doc 14's 0.6 m/s² carpet drag, and the speed bar shows m/s so you can try doc 14's paces. Special rules: one-shot curling on 9, the rally on 7, plinko slots on 1. A model to argue with, not a rig result. Shift now sprints while you walk.</li>
           <li><b>Iteration-1 holes in every slot.</b> All ten holes are now doc 14's New York iteration 1, redesigned after the team's Kulnari visit (doc 13). Tap a hole for how it plays, its mechanism, build, sizes and Kulnari lesson.</li>
           <li><b>Layout v4.</b> New positions and walk routes; every clearance check passes. Holes 9, 6 and 3 need a little more floor than doc 14's boxes, because doc 14's own numbers don't fit them: hole 9 is 5.13 m long, hole 6 is 4.55 m and hole 3 is 2.55 m wide.</li>
@@ -1668,7 +1681,7 @@ function select(n, fly) {
 const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null;
 renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; });
 renderer.domElement.addEventListener('pointerup', e => {
-  if (!down || golfOn() || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return;
+  if (!down || lockOn || (walking && golf.carry) || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return;
   const r = renderer.domElement.getBoundingClientRect(); ndc.set((e.clientX - r.left) / r.width * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
   ray.setFromCamera(ndc, camera); const hit = ray.intersectObjects(pickables, false)[0];
   if (hit) select(hit.object.userData.n, !walking);
@@ -1687,11 +1700,12 @@ const PEOPLE = {
 };
 const TURN_V = 1.8;
 const coarse = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
-const settings = { fov: 75, person: 'adult', pov: 'first', bob: !reduceMotion, map: true, pad: coarse, walkLabels: false, walkTags: false };
+const settings = { fov: 75, person: 'adult', pov: 'first', bob: !reduceMotion, map: true, pad: coarse, walkLabels: false, walkTags: false, sens: 1 };
 try {
   const saved = JSON.parse(localStorage.getItem('countdownGolf3d.v1') || '{}');
   if (saved && typeof saved === 'object') {
     if (Number.isFinite(saved.fov)) settings.fov = Math.min(110, Math.max(45, Math.round(saved.fov)));
+    if (Number.isFinite(saved.sens)) settings.sens = Math.min(3, Math.max(0.3, Math.round(saved.sens * 10) / 10));
     if (PEOPLE[saved.person]) settings.person = saved.person;
     if (saved.pov === 'first' || saved.pov === 'third') settings.pov = saved.pov;
     for (const k of ['bob', 'map', 'pad', 'walkLabels', 'walkTags']) if (typeof saved[k] === 'boolean') settings[k] = saved[k];
@@ -1705,6 +1719,7 @@ const joy = document.getElementById('joy'), knob = joy.querySelector('.knob'), m
 const fovIn = document.getElementById('fov'), fovOut = document.getElementById('fovOut'), personNote = document.getElementById('personNote');
 let walking = false, yaw = 0, pitch = 0, bobPhase = 0, bobAmt = 0;
 let curV = 0, fovKick = 0, runLatch = false;   // sprint: speed eases up and down; the view widens a little while you run
+let footY = 0, standY = 0, camBack = 1;   // the surface under your feet (deck, ramp, step or floor), its eased height for the camera, and how far the 'behind you' camera can pull back (0..1)
 const me = new THREE.Vector2(34.6, RW_AXIS);
 const ARRIVE = { x: 34.6, z: RW_AXIS + 2.4, yaw: Math.atan2(1, 0.12) };   // party side of the golf limit, facing the Tee Booth
 const keys = new Set(), joyV = { x: 0, y: 0 };
@@ -1725,8 +1740,10 @@ fovIn.addEventListener('input', () => { settings.fov = +fovIn.value; applyFov();
 const RECTS = [], CIRCLES = [];
 function addPoly(Q) { const [a, b, c] = Q; const ex = [b[0] - a[0], b[1] - a[1]], ey = [c[0] - b[0], c[1] - b[1]]; const lu = Math.hypot(ex[0], ex[1]), lv = Math.hypot(ey[0], ey[1]); RECTS.push({ cx: (a[0] + c[0]) / 2, cz: (a[1] + c[1]) / 2, ux: ex[0] / lu, uz: ex[1] / lu, hu: lu / 2, hv: lv / 2 }); }
 const addBox = (x0, z0, x1, z1) => addPoly([[x0, z0], [x1, z0], [x1, z1], [x0, z1]]);
-for (const polys of Object.values(LAYOUT.footprints || {})) for (const Q of polys) addPoly(Q);
+// (28 Nov) the holes' own footprints no longer block: you can step onto a deck, and its props stop you (walkSolid in extra-golf.js)
+for (const [k, polys] of Object.entries(LAYOUT.footprints || {})) if (!H[k]) for (const Q of polys) addPoly(Q);
 for (const sc of LAYOUT.scenery || []) for (const Q of sc.footprint || []) addPoly(Q);
+const SCEN_N = RECTS.length;   // the rects so far are the shared scenery (the camera keeps out of those)
 addBox(-1, -1, SX, ROOM_W + 1);
 addBox(RW.x0, RW.z0 - STAND_OUT, RW.x1, RW.z1 + STAND_OUT);
 for (const it of SIDE_ITEMS) if (it.t === 'stairs') { addBox(RW.x1 - it.tip[1], RW.z0 - STAIR_OUT, RW.x1 - it.tip[0], RW.z0); addBox(RW.x1 - it.tip[1], RW.z1, RW.x1 - it.tip[0], RW.z1 + STAIR_OUT); }
@@ -1741,12 +1758,21 @@ for (const [x0, x1] of FLATS.bottom) addBox(x0, ROOM_W - 0.45, x1, ROOM_W + 1);
 }
 addBox(CONSOLE.x0, CONSOLE.z0, CONSOLE.x1, CONSOLE.z1);
 addBox(LF.x0, LF.z0, LF.x1, LF.z1);
-function blocked(x, z, r = P.shoulders / 2) {
+function blocked(x, z, r = P.shoulders / 2, fy = 0) {
   if (x < 0.3 || x > ROOM_L - 0.3 || z < 0.3 || z > ROOM_W - 0.3) return true;
   for (const [zw, along, out] of STAGE_CURVES) { const a = (x - SX) / (out + r), b = (z - zw) / (along + r); if (x >= SX && a * a + b * b < 1) return true; }
   for (const R of RECTS) { const dx = x - R.cx, dz = z - R.cz; if (Math.abs(dx * R.ux + dz * R.uz) < R.hu + r && Math.abs(-dx * R.uz + dz * R.ux) < R.hv + r) return true; }
   for (const C of CIRCLES) if (Math.hypot(x - C.x, z - C.z) < C.r + r) return true;
-  return false;
+  return walkSolid(x, z, r, fy);
+}
+/* where the 'behind you' camera may be: inside the room, under the ceiling, off the stage, runway, console and scenery, above the holes */
+function camFree(x, y, z) {
+  if (x < 0.25 || x > ROOM_L - 0.25 || z < 0.5 || z > ROOM_W - 0.5 || y > CEIL - 0.5 || x < SX + 0.25) return false;
+  if (y < STAGE_H + 0.45 && x > RW.x0 && x < RW.x1 + 0.2 && z > RW.z0 - STAND_OUT - 0.2 && z < RW.z1 + STAND_OUT + 0.2) return false;
+  if (y < 2.6 && x > CONSOLE.x0 - 0.2 && x < CONSOLE.x1 + 0.2 && z > CONSOLE.z0 - 0.2 && z < CONSOLE.z1 + 0.2) return false;
+  if (y < 1.6 && x > LF.x0 - 0.2 && x < LF.x1 + 0.2 && z > LF.z0 - 0.2) return false;
+  for (let i = 0; i < SCEN_N; i++) { const R = RECTS[i], dx = x - R.cx, dz = z - R.cz; if (y < 3.4 && Math.abs(dx * R.ux + dz * R.uz) < R.hu + 0.15 && Math.abs(-dx * R.uz + dz * R.ux) < R.hv + 0.15) return false; }
+  return walkTop(x, z) < y - 0.15;
 }
 
 /* you, seen from behind: the same proportions as the scale figures, in a yellow jacket with a cap showing which way you face */
@@ -1762,7 +1788,7 @@ function setPerson(id) {
   settings.person = id; P = PEOPLE[id]; buildAvatar();
   document.querySelectorAll('[data-person]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.person === id)));
   personNote.textContent = `${P.h.toFixed(2)} m tall, eyes at ${P.eye.toFixed(2)} m, ${Math.round(P.shoulders * 100)} cm across the shoulders. Walks at ${P.walk} m/s and sprints at ${P.sprint} m/s (hold Shift), so crossing the 27 m golf zone takes about ${Math.round(27 / P.walk)} seconds, as it would on the night.`;
-  if (walking && !tween) camera.position.y = P.eye;
+  if (walking && !tween) camera.position.y = standY + P.eye;
 }
 document.querySelectorAll('[data-person]').forEach(b => b.addEventListener('click', () => { setPerson(b.dataset.person); saveSettings(); }));
 function setPov(v) { settings.pov = v; document.querySelectorAll('[data-pov]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.pov === v))); }
@@ -1775,18 +1801,24 @@ document.querySelectorAll('[data-opt]').forEach(b => b.addEventListener('click',
 
 /* camera pose for the current position: at your eyes, or 3 m behind and above you */
 const dirFrom = (yw, pt) => [-Math.sin(yw) * Math.cos(pt), Math.sin(pt), -Math.cos(yw) * Math.cos(pt)];
-function camPose() {
+function camPose(dt = 0) {
   if (settings.pov === 'third') {
     const back = 2.4 * (P.h / 1.66) + 0.5, pt = pitch - 0.24, d = dirFrom(yaw, pt);
-    const pos = [me.x + Math.sin(yaw) * back, P.eye + 0.6, me.y + Math.cos(yaw) * back];
+    // from your head back to the camera: stop short of anything solid (walls, stage, runway, scenery, tall props), then ease back out
+    const hx = me.x, hy = standY + P.eye, hz = me.y, sh = 0.5 * (P.h / 1.66), ex = Math.sin(yaw) * back + Math.cos(yaw) * sh, ey = 0.6, ez = Math.cos(yaw) * back - Math.sin(yaw) * sh;   // over the right shoulder
+    let k = 1;
+    for (let f = 0.05; f <= 1.0001; f += 0.05) if (!camFree(hx + ex * f, hy + ey * f, hz + ez * f)) { k = Math.max(0, f - 0.08); break; }
+    camBack = k < camBack || !dt ? k : camBack + (k - camBack) * Math.min(1, dt * 2.5);
+    const pos = [hx + ex * camBack, hy + ey * camBack, hz + ez * camBack];
     return { pos, tgt: [pos[0] + d[0] * 4, pos[1] + d[1] * 4, pos[2] + d[2] * 4], pt };
   }
-  const d = dirFrom(yaw, pitch), pos = [me.x, P.eye, me.y];
+  const d = dirFrom(yaw, pitch), pos = [me.x, standY + P.eye, me.y];
   return { pos, tgt: [pos[0] + d[0] * 4, pos[1] + d[1] * 4, pos[2] + d[2] * 4], pt: pitch };
 }
 function placeAt(x, z, faceYaw, ms = 700) {
   me.set(x, z); yaw = faceYaw; pitch = -0.08;
-  avatar.position.set(x, 0, z); avatar.rotation.y = yaw;
+  footY = standY = walkFoot(x, z, 0.6); camBack = 1;
+  avatar.position.set(x, footY, z); avatar.rotation.y = yaw;
   const c = camPose(); flyTo(c.pos, c.tgt, ms);
 }
 function syncWalkButtons() {
@@ -1801,13 +1833,15 @@ function enterWalk(at) {   // at: { x, z, yaw } to start somewhere other than th
   syncWalkButtons(); applyOpts(); applyLayers();
   if (at) placeAt(at.x, at.z, at.yaw, 600); else placeAt(ARRIVE.x, ARRIVE.z, ARRIVE.yaw, 1100);
   try { viewer.focus({ preventScroll: true }); } catch (e) { /* focus is a convenience */ }
+  syncLock(); golfSync(); setTimeout(walkWarm, 300);
 }
 function exitWalk() {
   if (!walking) return;
   walking = false; keys.clear(); joyV.x = joyV.y = 0; knob.style.transform = ''; avatar.visible = false;
   curV = 0; runLatch = false; runBtn.setAttribute('aria-pressed', 'false'); if (fovKick) { fovKick = 0; applyFov(); }
   viewer.classList.remove('walking'); camera.near = 0.5; camera.updateProjectionMatrix();
-  syncWalkButtons(); applyOpts(); applyLayers();
+  if (document.pointerLockElement) document.exitPointerLock();
+  syncWalkButtons(); applyOpts(); applyLayers(); syncLock(); golfSync();
   const d = dirFrom(yaw, 0); controls.target.set(me.x + d[0] * 4, 1.0, me.y + d[2] * 4); controls.enabled = true; controls.update();
 }
 function goToTee(h) {
@@ -1819,8 +1853,8 @@ function goToTee(h) {
   }
 }
 const toggleWalk = () => walking ? exitWalk() : enterWalk();
-btnWalk.addEventListener('click', toggleWalk);
-dWalk.addEventListener('click', () => { openDrawer(false); toggleWalk(); });
+btnWalk.addEventListener('click', () => { toggleWalk(); if (walking) askLock(); });
+dWalk.addEventListener('click', () => { openDrawer(false); toggleWalk(); if (walking) askLock(); });
 
 function walkStep(dt) {
   let f = 0, s = 0, turn = 0;
@@ -1842,26 +1876,29 @@ function walkStep(dt) {
   const kick = sprinting && !reduceMotion ? 8 * Math.min(1, Math.max(0, (curV - P.walk) / (P.sprint - P.walk))) : 0;
   if (Math.abs(kick - fovKick) > 0.02) { fovKick += (kick - fovKick) * Math.min(1, dt * 6); applyFov(); }
   const dx = (-Math.sin(yaw) * f + Math.cos(yaw) * s) * v * dt, dz = (-Math.cos(yaw) * f - Math.sin(yaw) * s) * v * dt;
-  const x0 = me.x, z0 = me.y;
+  const x0 = me.x, z0 = me.y, r = P.shoulders / 2;
   if (dx || dz) {
-    if (blocked(me.x, me.y) || !blocked(me.x + dx, me.y + dz)) { me.x += dx; me.y += dz; }
-    else if (!blocked(me.x + dx, me.y)) me.x += dx;
-    else if (!blocked(me.x, me.y + dz)) me.y += dz;
+    if (blocked(me.x, me.y, r, footY) || !blocked(me.x + dx, me.y + dz, r, footY)) { me.x += dx; me.y += dz; }
+    else if (!blocked(me.x + dx, me.y, r, footY)) me.x += dx;
+    else if (!blocked(me.x, me.y + dz, r, footY)) me.y += dz;
   }
+  footY = walkFoot(me.x, me.y, footY);
+  standY += (footY - standY) * Math.min(1, dt * 12);
   // step bob: one gentle dip per step, at the real step rate for this walker (speed ÷ step length)
   const speed = Math.hypot(me.x - x0, me.y - z0) / Math.max(dt, 1e-4);
   bobAmt += ((speed > 0.05 ? 1 : 0) - bobAmt) * Math.min(1, dt * 6);
   const runK = Math.min(1, Math.max(0, (speed - P.walk) / (P.sprint - P.walk)));   // 0 walking .. 1 flat-out: longer steps, deeper dip
   bobPhase += dt * Math.PI * 2 * speed / ((0.41 + 0.45 * runK) * P.h);
   const dip = settings.bob && !reduceMotion ? bobAmt * (0.022 + 0.03 * runK) * (P.h / 1.66) * (1 - Math.cos(bobPhase)) / 2 : 0;
-  avatar.position.set(me.x, 0, me.y); avatar.rotation.y = yaw;
-  const c = camPose();
+  avatar.position.set(me.x, standY, me.y); avatar.rotation.y = yaw;
+  const c = camPose(dt);
   camera.position.set(c.pos[0], c.pos[1] - dip, c.pos[2]);
   camera.rotation.set(c.pt, yaw, 0, 'YXZ');
 }
 window.addEventListener('keydown', e => {
   if (e.code === 'Escape') {
     if (!drawer.hidden) { openDrawer(false); return; }
+    if (walking && (lockOn || performance.now() - lockLostAt < 600)) return;   // that Esc freed the mouse
     if (walking) { exitWalk(); return; }
     if (viewer.classList.contains('full')) { toggleFull(); return; }
     return;
@@ -1872,13 +1909,62 @@ window.addEventListener('keydown', e => {
 });
 window.addEventListener('keyup', e => keys.delete(e.code));
 window.addEventListener('blur', () => keys.clear());
-// drag on the view to look around (grab the scene, as in street-view maps)
+/* look with the mouse (28 Nov): click the view and the browser hands the mouse to the page (pointer lock), so moving it turns
+   your head and a crosshair marks the middle; Esc gives it back. Where the page isn't allowed to capture the mouse (some
+   embedded frames), the view follows the mouse while it's over the view instead, and turns on its own near the left and right
+   edges. Touch screens keep drag-to-look. */
+const xhair = document.getElementById('xhair'), lockHint = document.getElementById('lockHint');
+const sensIn = document.getElementById('sens'), sensOut = document.getElementById('sensOut');
+sensIn.value = settings.sens; sensOut.textContent = settings.sens.toFixed(1) + '×';
+sensIn.addEventListener('input', () => { settings.sens = +sensIn.value; sensOut.textContent = settings.sens.toFixed(1) + '×'; saveSettings(); });
+const canLock = !coarse && typeof renderer.domElement.requestPointerLock === 'function';
+let lockOn = false, lockBroken = !canLock, lockLostAt = -1e9, hoverX = null;
+const mouseLooks = () => walking && (lockOn || (lockBroken && !coarse));   // the mouse is steering, so a click is a golf click
+function syncLock() {
+  lockHint.hidden = !(walking && canLock && !lockBroken && !lockOn);
+  viewer.classList.toggle('hoverlook', walking && lockBroken && !coarse);
+}
+function lockFailed() {
+  // Chrome refuses a new capture for about a second after Esc; anything else means this page may not capture the mouse
+  if (performance.now() - lockLostAt < 1500) return;
+  lockBroken = true; syncLock();
+}
+function askLock() {
+  if (!walking || lockOn || lockBroken || !canLock) return;
+  try { const p = renderer.domElement.requestPointerLock(); if (p && typeof p.catch === 'function') p.catch(lockFailed); } catch (err) { lockFailed(); }
+}
+document.addEventListener('pointerlockchange', () => {
+  const was = lockOn; lockOn = document.pointerLockElement === renderer.domElement;
+  if (was && !lockOn) lockLostAt = performance.now();
+  syncLock();
+});
+document.addEventListener('pointerlockerror', lockFailed);
+const lookBy = (mx, my) => {
+  const k = 0.0022 * settings.sens * settings.fov / 75;
+  yaw -= mx * k; pitch = Math.max(-1.45, Math.min(1.45, pitch - my * k));
+};
+document.addEventListener('mousemove', e => {
+  if (!walking || tween) return;
+  if (lockOn) { lookBy(e.movementX || 0, e.movementY || 0); return; }
+  if (lockBroken && !coarse && e.target === renderer.domElement) {
+    if (hoverX != null) lookBy(e.movementX || 0, e.movementY || 0);
+    const r = renderer.domElement.getBoundingClientRect(); hoverX = (e.clientX - r.left) / r.width;
+  }
+});
+renderer.domElement.addEventListener('mouseleave', () => { hoverX = null; });
+renderer.domElement.addEventListener('pointerdown', e => { if (walking && e.pointerType === 'mouse' && e.button === 0 && !lockOn && !lockBroken) askLock(); });
+animators.push((t, dt) => {   // with the mouse free (no capture allowed), turn while it rests near the left or right edge
+  if (!walking || lockOn || !lockBroken || coarse || hoverX == null || tween) return;
+  const e = hoverX < 0.06 ? (0.06 - hoverX) / 0.06 : hoverX > 0.94 ? -(hoverX - 0.94) / 0.06 : 0;
+  yaw += e * TURN_V * dt;
+});
+// touch (and a mouse where nothing else works): drag on the view to look around, grabbing the scene as in street-view maps
 let look = null;
-renderer.domElement.addEventListener('pointerdown', e => { if (walking) look = { id: e.pointerId, x: e.clientX, y: e.clientY }; });
+renderer.domElement.addEventListener('pointerdown', e => { if (walking && !lockOn && (e.pointerType !== 'mouse' || !canLock)) look = { id: e.pointerId, x: e.clientX, y: e.clientY }; });
 window.addEventListener('pointermove', e => {
   if (!look || e.pointerId !== look.id || tween) return;
   const k = (e.pointerType === 'touch' ? 0.006 : 0.0045) * settings.fov / 75;
-  yaw += (e.clientX - look.x) * k; pitch = Math.max(-1.2, Math.min(1.2, pitch + (e.clientY - look.y) * k));
+  yaw += (e.clientX - look.x) * k; pitch = Math.max(-1.45, Math.min(1.45, pitch + (e.clientY - look.y) * k));
   look.x = e.clientX; look.y = e.clientY;
 });
 const endLook = e => { if (look && e.pointerId === look.id) look = null; };
@@ -1922,6 +2008,7 @@ function drawMini() {
   const px = me.x * S, pz = me.y * S, a = Math.atan2(-Math.cos(yaw), -Math.sin(yaw));
   x.fillStyle = 'rgba(255,255,255,.28)'; x.beginPath(); x.moveTo(px, pz); x.arc(px, pz, 22 * miniDpr, a - 0.55, a + 0.55); x.closePath(); x.fill();
   x.fillStyle = '#FFFFFF'; x.strokeStyle = '#111'; x.lineWidth = 1.5 * miniDpr; x.beginPath(); x.arc(px, pz, 3.6 * miniDpr, 0, Math.PI * 2); x.fill(); x.stroke();
+  golfMini(x, S);
 }
 mini.addEventListener('pointerdown', e => {
   e.preventDefault(); e.stopPropagation();
@@ -1995,11 +2082,12 @@ renderer.setAnimationLoop((now) => {
   const dt = Math.min((now - last) / 1000, 0.1); last = now;
   for (const f of animators) f(now / 1000, dt);
   if (tween) { const k = Math.min((now - tween.t0) / tween.ms, 1), e = ease(k); camera.position.lerpVectors(tween.p0, tween.p1, e); controls.target.lerpVectors(tween.q0, tween.q1, e); if (walking) camera.lookAt(controls.target); if (k >= 1) tween = null; }
-  if (golfOn()) golfFrame(dt);   // playing a hole: the golf camera, ball and putter (extra-golf.js)
-  else if (walking) { if (!tween) walkStep(dt); golfIdle(); } else controls.update();
-  avatar.visible = walking && settings.pov === 'third';
+  if (walking) { if (!tween) walkStep(dt); } else controls.update();
+  avatar.visible = walking && settings.pov === 'third' && camBack > 0.3;   // pulled in tight against a wall: your own head would fill the view
+  golfFrame(dt);   // golf while you walk: the ball's physics, your putter and ball, the hints (extra-golf.js)
   cullShell();
   renderer.render(scene, camera);
+  golfInset();   // the ball camera in its corner, when it's showing
   updateLabels();
   if (walking) drawMini();
 });

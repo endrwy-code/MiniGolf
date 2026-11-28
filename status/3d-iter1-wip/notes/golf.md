@@ -44,3 +44,27 @@ The team asked for: a sprint on Shift, the holes playable with putters and a bal
 
 - `extra-golf.js` (new), `base-v2.html` (sprint; loop, picking, card and `enterWalk(at)` hooks; `golfInit()`; a "Play it" bullet), `assemble.py` (the test hook exposes `window.__golf`).
 - `status/countdown-golf-3d.html` (doc 10 page): sprint only.
+
+# 28 Nov: golf moved into walking (cloud session)
+
+The team's feedback on the 27 Nov play mode: the camera got stuck in walls, you were teleported to stand by a raised ball and floated, the swing animation locked you in place, and looking needed a held mouse button. They asked for golf to be part of normal walking: walk round carrying a putter and ball, choose a hole, stand where you like, and look with the mouse and a crosshair.
+
+## What changed
+
+- **No separate golf mode or golf camera.** The physics (everything above `golfApi`) is unchanged; the game layer of `extra-golf.js` was rewritten.
+- **Mouse look** (`base-v2.html`, walk section): clicking the view captures the mouse (pointer lock), moving it turns your head, a crosshair marks the middle. Esc frees the mouse; a second Esc stops walking. Mouse look speed is a slider in Settings. Where the page may not capture the mouse (some embedded frames: `pointerlockerror`), the view follows the mouse while it's over the view and turns near the left and right edges. Touch keeps drag-to-look and the touch pad. Pitch now reaches ±83° so you can look down at a ball at your feet.
+- **Walking on the holes:** the holes' layout footprints no longer block. Each hole's own meshes become a 4 cm height field (`walkField`): you step onto decks, ramps and steps up to 0.24 m (a rail cap or deck edge), your eye height follows the surface, and anything taller below 2.05 m (props, totems, towers, covers) stops you. Fields build in the background once walking starts (about 50 ms for all ten).
+- **"Behind you" view:** the camera sits over your right shoulder and pulls in instead of entering walls, the stage, runway, console or scenery (`camFree`); your body hides when it's pulled in tight.
+- **Play:** you carry a putter and ball (G or the ⛳ button puts them away). With the ball in hand every tee shows a ring and a soft beam in its hole's colour; at a tee, click (or F, Space, or the touch button) to place the ball and start that hole. Within 1.2 m of your ball you address it: the line runs from the ball toward where the crosshair meets the ground (or your heading if you look up), shown by dots. Hold the button (or Space) to draw back: the speed rises 1.5 m/s per second from 0.2 to 4.5 m/s, shown in m/s with a tick at your last putt; let go to putt, right-click cancels. The line is fixed when you start holding, so you can look at the ball while you draw back. You can walk while the ball rolls. A marker floats over your ball.
+- **Ball camera** (Settings, on by default): a small inset from behind the ball along your line while you address it, and chasing it while it rolls, so you can look at the target and still see the ball. Rendered into a corner of the same canvas only while it shows.
+- **Scoring** as before (hole rules for 9, 7 and 1, five-stroke cap, out of bounds, Drop +1), but results show as a message, not a dialog; the ball comes back to your hand and the next unplayed hole's tee pulses. Placing the ball on another tee or picking it up leaves an unfinished hole off the card. R restarts the hole, hold V for an overhead view, C for the card.
+- **Test builds** also expose `window.__eval(src)` (module-scope access for headless checks).
+
+## Checks run (headless Chromium, SwiftShader)
+
+- No page errors. `window.__golf.putt` unchanged (8 at 2.4 m/s rolls up, 7 holes at 2.4, 9 scores the centre at 2.4).
+- Pointer lock is granted on a click; mouse right turns right; Esc frees the mouse without leaving walk; a second Esc leaves.
+- From every tee there's a standing spot 0.3 m away on the floor or a deck.
+- Place by click, address, hold-and-release putt, walking during the roll, finishes on 9, 8 and 7 recorded on the card, ball back in hand.
+- Walking up hole 8's lane: feet rise to the 0.1 m deck and the cart stops you. Behind-you camera at the top wall pulls in to 0.02 of its distance; on open floor it stays at 1.0.
+- Not checkable headless: mouse movement while captured (CDP sends no movementX under lock; the same `lookBy` path is checked in the fallback mode), and frame rate on real hardware.
